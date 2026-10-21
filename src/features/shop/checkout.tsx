@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { ButtonLink, Button } from '@/components/ui/button';
 import { Checkbox, Field, Input } from '@/components/ui/form';
-import { Eyebrow } from '@/components/ui/typography';
+import { Eyebrow, Title } from '@/components/ui/typography';
 import { products as contentProducts, site } from '@/content';
 import { getAdapter } from '@/data';
 import { voucherMessages } from '@/domain/vouchers';
@@ -139,12 +139,10 @@ export function Checkout() {
     );
 
   return (
-    <div className="mx-auto max-w-6xl px-5 pb-32 pt-10 md:px-10 md:pb-24 md:pt-14">
+    <div className="wrap pb-32 pt-10 md:pb-28 md:pt-16">
       <Eyebrow>Kasse</Eyebrow>
-      <h1 className="mt-3 text-5xl md:text-6xl">
-        Fast <em>geschafft</em>.
-      </h1>
-      <form onSubmit={onSubmit} noValidate className="mt-10 grid gap-12 md:grid-cols-[1.4fr_1fr]">
+      <Title as="h1" className="mt-6">Fast *geschafft*.</Title>
+      <form onSubmit={onSubmit} noValidate className="mt-14 grid gap-12 md:grid-cols-[1.4fr_1fr] lg:gap-20">
         <div className="min-w-0 space-y-10">
           <fieldset>
             <legend className="eyebrow mb-4">Kontakt</legend>
@@ -242,7 +240,7 @@ export function Checkout() {
         </div>
 
         <aside className="md:order-none order-first">
-          <div className="rounded-[2rem] border border-line bg-card p-6 md:sticky md:top-28">
+          <div className="rounded-[2rem] border border-line bg-card p-6 md:sticky md:top-[calc(var(--top-h,96px)+1rem)] lg:p-8">
             <p className="eyebrow">Deine Bestellung</p>
             <ul className="mt-4 divide-y divide-line-soft">
               {rows.map(({ line, product }, i) => (

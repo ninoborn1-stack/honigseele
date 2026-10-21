@@ -23,17 +23,17 @@ export function Account() {
   if (loading) return <div className="min-h-[60svh]" />;
   if (!session || session.role !== 'kundin' || !session.customerId)
     return (
-      <div className="honey-light px-5 py-16 md:py-24">
+      <div className="honey-light px-5 py-20 md:py-32">
         <LoginCard />
       </div>
     );
   const id = session.customerId;
   return (
-    <div className="mx-auto max-w-5xl px-5 pb-24 pt-10 md:px-10 md:pt-16">
+    <div className="wrap pb-24 pt-12 md:pt-20">
       <div className="flex items-end justify-between gap-4">
         <div>
           <p className="eyebrow">Mein Konto</p>
-          <h1 className="mt-3 text-5xl md:text-6xl">
+          <h1 className="mt-4 text-[clamp(3rem,7vw,7rem)] leading-[0.95]">
             Hallo <em>{session.name}</em>.
           </h1>
         </div>

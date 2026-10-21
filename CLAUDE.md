@@ -60,6 +60,10 @@ Warm, weich, hochwertig. Lifestyle-Marke. Nicht „KI-generisch“.
 | `line` | #CDB894 | feine Linien |
 
 - Schriften: **Cormorant Garamond** (Überschriften, kursive Akzentwörter via `<em>` bzw. `Title` mit `*Wort*`), **DM Sans** (Text/UI). Selbst gehostet über `@fontsource`.
+- **Layout volle Breite:** Container ist die Utility `wrap` (max. 1760 px, Rand `clamp(1.25rem, 3.5vw, 4rem)`). Keine schmalen `max-w-6xl`-Container mehr. Große Display-Typo über `Title size="display|h1|h2|h3"`.
+- **CTAs:** primär `ButtonLink`/`Button` mit `arrow`; sekundär `ArrowLink` (Versalien + runder Pfeil-Knopf). Keine reinen Unterstrich-Links als CTA.
+- **Bewegung** (`src/components/ui/motion.tsx`): `Title`/`RevealHeading` (Wörter steigen auf), `RevealImage` (Bild öffnet sich von unten), `Parallax`, `Marquee` (Laufband), `CountUp`, `useInView`. Karussells nur mit Pfeilen + Fortschritt, nie horizontales Mausrad-Scrollen.
+- **Kopfzeile** (`SiteTop`) ist immer fixiert; setzt `--top-h`. Sticky-Elemente mit `top-[calc(var(--top-h,96px)+1rem)]`.
 - Gestaltung: Split-Layouts mit dunklen Honigflächen (`Section tone="dark"`, `.honey-glow`), sanftes Licht (`.honey-light`), feine Linien statt Boxen, Eyebrows (`.eyebrow`), Nummern in Serif (`Numeral`), Lucide-Icons mit `strokeWidth={1.5}`.
 - **Keine Waben** als Icons, Aufzählungen, Avatare, Badges oder Muster. Einzige Ausnahme: `<SubtleHoneycomb />` im Hero, per `NEXT_PUBLIC_HONEYCOMB=true` (Standard aus).
 - Bewegung ruhig (Fade/Rise, `Reveal`), `prefers-reduced-motion` respektieren.

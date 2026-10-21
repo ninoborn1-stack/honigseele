@@ -70,11 +70,22 @@ function Shape({ shape }: { shape: Shape }) {
 
 export function ProductVisual({ product, className, large }: { product: Product; className?: string; large?: boolean }) {
   return (
-    <div className={cn('relative grid place-items-center overflow-hidden', surfaces[product.tone], ink[product.tone], className)}>
-      <svg viewBox="0 0 100 110" className={cn(large ? 'h-[58%]' : 'h-[62%]', 'w-auto drop-shadow-[0_18px_24px_rgba(43,33,24,0.12)]')} aria-hidden>
+    <div className={cn('group/visual relative grid place-items-center overflow-hidden', surfaces[product.tone], ink[product.tone], className)}>
+      {/* weiches Licht von oben, Lichtkreis hinter dem Gefäß */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_45%_at_50%_0%,rgba(255,250,240,0.55),transparent_70%)]" />
+      <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 aspect-square w-[62%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-current opacity-[0.12] transition-transform duration-[1200ms] ease-[var(--ease-soft)] group-hover/visual:scale-110" />
+      <svg
+        viewBox="0 0 100 110"
+        className={cn(
+          large ? 'h-[56%]' : 'h-[58%]',
+          'relative w-auto drop-shadow-[0_22px_26px_rgba(43,33,24,0.14)] transition-transform duration-[900ms] ease-[var(--ease-soft)] group-hover/visual:-translate-y-2 group-hover/visual:scale-[1.04]',
+        )}
+        aria-hidden
+      >
         <Shape shape={shapeOf(product)} />
       </svg>
-      <span className="absolute bottom-4 left-0 right-0 text-center font-serif text-sm italic opacity-70">Honigseele</span>
+      <div aria-hidden className="pointer-events-none absolute bottom-[17%] left-1/2 h-3 w-[34%] -translate-x-1/2 rounded-[50%] bg-honey-950/10 blur-md" />
+      <span className="absolute left-0 right-0 top-5 text-center font-serif text-sm italic opacity-70">Honigseele · Berlin</span>
     </div>
   );
 }

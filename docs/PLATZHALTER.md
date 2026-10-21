@@ -27,6 +27,7 @@ Alle Stellen sind in der Demo mit einem dezenten Badge „Platzhalter“ markier
 | MBSR (Kurslänge, Preis), Waxing-Schulung (Inhalte, Termine), Events | Kurse | `content/courses.json` |
 | **Schröpfen** und **Somatic Bodywork (Pantarei)**: Texte, Leistungen, Preise | eigene Bereichsseiten | `content/categories.json` (`isPlaceholder`), neue Einträge in `services.json` |
 | Pflegeserie: weitere Produkte (Shop-Seite 2), Beschreibungen, Anwendung, Inhaltsstoffe | Shop | `content/products.json` (`isPlaceholder`) |
+| Zuordnung der Produkte zu Ritualen (Gesicht, Augen & Lippen, Körper, Hände & Nägel, Rund ums Waxing) | Shop-Filter | `src/features/shop/rituals.ts` |
 | FAQ-Antworten Waxing/Laser (Entwürfe im Ton der Seite) | Bereichsseiten | `content/faq.json` |
 | Vorbereitung/Nachsorge für Gesicht, Körper, Mani/Pedi, Pakete (Entwürfe) | Bereichsseiten | `content/care.json` (`placeholder: true`) |
 | Echte Bewertungszitate (mit Erlaubnis) | Startseite, Über uns | `content/site.json` → `reviews` |

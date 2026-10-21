@@ -112,7 +112,7 @@ export function BookingFlow() {
     <div className="min-h-svh bg-cream-50">
       {/* Kopf mit Fortschritt */}
       <div className="pt-safe sticky top-0 z-30 border-b border-line-soft bg-cream-50/95 backdrop-blur-md">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-10">
+        <div className="wrap flex h-16 items-center justify-between md:h-20">
           <button onClick={back} className="grid h-11 w-11 place-items-center rounded-full hover:bg-cream-100" aria-label="Zurück">
             <ArrowLeft className="h-5 w-5" strokeWidth={1.5} />
           </button>
@@ -126,7 +126,7 @@ export function BookingFlow() {
             <X className="h-5 w-5" strokeWidth={1.5} />
           </Link>
         </div>
-        <ol className="mx-auto hidden max-w-6xl gap-6 px-10 pb-3 md:flex" aria-label="Fortschritt">
+        <ol className="wrap hidden gap-8 pb-4 md:flex" aria-label="Fortschritt">
           {STEPS.slice(0, 5).map((label, i) => (
             <li key={label} className={cn('flex items-center gap-2 text-sm', i === step ? 'text-honey-950' : i < step ? 'text-amber-800' : 'text-muted/60')}>
               <span className={cn('grid h-6 w-6 place-items-center rounded-full border font-serif text-sm', i === step ? 'border-honey-950 bg-honey-950 text-cream-50' : i < step ? 'border-amber-800' : 'border-line')}>{i + 1}</span>
@@ -139,12 +139,12 @@ export function BookingFlow() {
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 pb-40 pt-8 md:grid-cols-[1.5fr_1fr] md:px-10 md:pb-20 md:pt-12">
+      <div className="wrap grid gap-12 pb-40 pt-10 md:grid-cols-[1.6fr_1fr] md:pb-24 md:pt-16 xl:gap-20">
         <div key={step} className="min-w-0 animate-rise">
           {step < 5 && (
             <>
               <p className="eyebrow">{original ? 'Termin umbuchen' : STEPS[step]}</p>
-              <h1 className="mb-8 mt-3 text-4xl md:text-5xl">{titles[step]}</h1>
+              <h1 className="mb-10 mt-4 text-[clamp(2.6rem,5vw,5.2rem)] leading-[0.98]">{titles[step]}</h1>
             </>
           )}
           {step === 0 && <StepServices draft={draft} setDraft={setDraft} services={services} categories={categories} consultationDone={Boolean(customer?.laserConsultationDone)} initialCategory={presetCategory} />}

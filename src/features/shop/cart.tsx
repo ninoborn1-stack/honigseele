@@ -10,7 +10,8 @@ interface CartCtx {
   count: number;
   open: boolean;
   setOpen: (v: boolean) => void;
-  add: (line: CartLine) => void;
+  /** silent: Warenkorb nicht aufklappen (Schnell-Hinzufügen mit eigener Bestätigung) */
+  add: (line: CartLine, opts?: { silent?: boolean }) => void;
   update: (index: number, quantity: number) => void;
   remove: (index: number) => void;
   clear: () => void;
@@ -40,11 +41,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
       count: lines.reduce((s, l) => s + l.quantity, 0),
       open,
       setOpen,
-      add: (line) => {
+      add: (line, opts) => {
         const i = lines.findIndex((l) => l.productId === line.productId && !l.meta && !line.meta);
         if (i >= 0) save(lines.map((l, j) => (j === i ? { ...l, quantity: l.quantity + line.quantity } : l)));
         else save([...lines, line]);
-        setOpen(true);
+        if (!opts?.silent) setOpen(true);
       },
       update: (index, quantity) =>
         save(quantity <= 0 ? lines.filter((_, j) => j !== index) : lines.map((l, j) => (j === index ? { ...l, quantity } : l))),

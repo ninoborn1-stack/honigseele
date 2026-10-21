@@ -51,7 +51,7 @@ export function CoursePlan({ initialCourses }: { initialCourses: Course[] }) {
           <button disabled={week === 0} onClick={() => setWeek((w) => w - 1)} className="grid h-11 w-11 place-items-center rounded-full border border-line disabled:opacity-30" aria-label="Vorige Woche">
             <ChevronLeft className="h-4 w-4" strokeWidth={1.5} />
           </button>
-          <p className="min-w-44 text-center text-sm">
+          <p className="min-w-48 text-center font-serif text-xl">
             {inBerlin(berlinToISO(monday, '12:00')).toLocaleDateString('de-DE', { day: 'numeric', month: 'short' })} –{' '}
             {inBerlin(berlinToISO(days[6], '12:00')).toLocaleDateString('de-DE', { day: 'numeric', month: 'short' })}
           </p>
@@ -62,7 +62,7 @@ export function CoursePlan({ initialCourses }: { initialCourses: Course[] }) {
       </div>
 
       {/* Mobil: Tage als Leiste, darunter ein Tag */}
-      <div className="no-scrollbar -mx-5 mt-6 flex gap-2 overflow-x-auto px-5 md:hidden">
+      <div className="no-scrollbar -mx-[clamp(1.25rem,3.5vw,4rem)] mt-6 flex gap-2 overflow-x-auto px-[clamp(1.25rem,3.5vw,4rem)] md:hidden">
         {days.map((d) => (
           <button key={d} onClick={() => setDay(d)} className={cn('flex min-h-16 w-14 shrink-0 flex-col items-center justify-center rounded-2xl border', d === day ? 'border-honey-950 bg-honey-950 text-cream-50' : 'border-line')}>
             <span className="text-[0.66rem] uppercase tracking-widest">{inBerlin(berlinToISO(d, '12:00')).toLocaleDateString('de-DE', { weekday: 'short' })}</span>
@@ -76,12 +76,14 @@ export function CoursePlan({ initialCourses }: { initialCourses: Course[] }) {
       </div>
 
       {/* Desktop: Woche als Spalten */}
-      <div className="mt-8 hidden grid-cols-7 gap-px overflow-hidden rounded-[1.5rem] border border-line bg-line-soft md:grid">
+      <div className="mt-10 hidden grid-cols-7 gap-px overflow-hidden rounded-[2rem] border border-line bg-line-soft md:grid">
         {days.map((d) => (
-          <div key={d} className={cn('min-h-72 bg-cream-50 p-3', d === today && 'bg-card')}>
-            <p className="mb-3 flex items-baseline justify-between border-b border-line-soft pb-2">
-              <span className="text-xs uppercase tracking-widest text-muted">{inBerlin(berlinToISO(d, '12:00')).toLocaleDateString('de-DE', { weekday: 'short' })}</span>
-              <span className="font-serif text-2xl">{inBerlin(berlinToISO(d, '12:00')).getDate()}</span>
+          <div key={d} className={cn('min-h-96 bg-cream-50 p-3 lg:p-4', d === today && 'bg-card')}>
+            <p className="mb-4 flex items-baseline justify-between border-b border-line-soft pb-3">
+              <span className={cn('text-xs uppercase tracking-[0.18em]', d === today ? 'font-semibold text-amber-800' : 'text-muted')}>
+                {d === today ? 'Heute' : inBerlin(berlinToISO(d, '12:00')).toLocaleDateString('de-DE', { weekday: 'short' })}
+              </span>
+              <span className="font-serif text-3xl leading-none lg:text-4xl">{inBerlin(berlinToISO(d, '12:00')).getDate()}</span>
             </p>
             <SessionList sessions={byDay(d)} courses={courses} onPick={setSelected} compact />
           </div>
@@ -107,13 +109,15 @@ function SessionList({ sessions, courses, onPick, compact, empty }: { sessions: 
               onClick={() => onPick(s)}
               className={cn(
                 'w-full text-left transition-colors',
-                compact ? 'rounded-xl border border-line-soft bg-cream-50 p-2.5 hover:border-honey-950' : 'flex min-h-20 items-center gap-4 py-4',
+                compact
+                  ? 'rounded-2xl border border-line-soft bg-card p-3 transition-[border-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:border-honey-950 hover:shadow-lg hover:shadow-honey-950/5 focus-visible:border-honey-950'
+                  : 'flex min-h-20 items-center gap-4 py-4',
                 full && 'opacity-60',
               )}
             >
               <span className={cn('text-sm font-medium', !compact && 'w-14 shrink-0')}>{berlinTime(s.start)}</span>
               <span className={cn('block', !compact && 'flex-1')}>
-                <span className={cn('block font-serif leading-tight', compact ? 'text-lg' : 'text-2xl')}>{c?.name}</span>
+                <span className={cn('block font-serif leading-tight', compact ? 'mt-1 text-lg lg:text-xl' : 'text-2xl')}>{c?.name}</span>
                 <span className="block text-xs text-muted">mit {c?.leaderName}</span>
               </span>
               <span className={cn('mt-1 flex items-center gap-1 text-xs', full ? 'text-danger' : 'text-muted')}>
@@ -188,7 +192,7 @@ function TicketDrawer({ session, course, onClose }: { session: CourseSession | n
               <p className="mt-8 rounded-2xl bg-cream-100 p-5 text-center">Dieser Termin ist leider ausgebucht. Schau gern in die nächste Woche.</p>
             ) : (
               <div className="mt-8 space-y-4">
-                {!auth && (
+                {!auth?.customerId && (
                   <div className="grid gap-3 sm:grid-cols-2">
                     <Field label="Name">
                       <Input value={guest.name} onChange={(e) => setGuest({ ...guest, name: e.target.value })} autoComplete="name" />

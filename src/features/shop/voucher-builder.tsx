@@ -10,6 +10,7 @@ import { cn } from '@/lib/cn';
 import { formatEuro } from '@/lib/format';
 import { useData } from '@/lib/use-data';
 import { useCart } from './cart';
+import { Tilt } from './tilt';
 import { VoucherCard } from './voucher-card';
 
 const QUICK_EUR = [25, 50, 80, 100, 150];
@@ -45,11 +46,11 @@ export function VoucherBuilder() {
 
   return (
     <section className="honey-light">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 pb-24 pt-12 md:grid-cols-[1fr_1fr] md:gap-16 md:px-10 md:pt-20">
+      <div className="wrap grid gap-14 pb-28 pt-10 lg:grid-cols-[1fr_1.05fr] lg:gap-24 lg:pt-16">
         <div>
           <Eyebrow>Gutscheine</Eyebrow>
-          <Title as="h1" className="mt-4">Schenk ein bisschen *Honigseele*.</Title>
-          <p className="mt-6 max-w-md text-muted">
+          <Title as="h1" className="mt-8">Schenk ein bisschen *Honigseele*.</Title>
+          <p className="mt-8 max-w-md text-lg text-muted">
             Digital per E-Mail, {validYears} Jahre gültig, einlösbar für Behandlungen, Kurse und Produkte – auch direkt bei der Online-Buchung. Restwerte bleiben erhalten.
           </p>
 
@@ -103,16 +104,20 @@ export function VoucherBuilder() {
             </Field>
           </div>
 
-          <Button size="lg" className="mt-8 w-full sm:w-auto" disabled={!valid} onClick={submit}>
+          <Button size="lg" className="mt-10 w-full sm:w-auto" disabled={!valid} onClick={submit}>
             {added ? <Check className="h-4 w-4" strokeWidth={2} /> : null}
             {added ? 'Im Warenkorb' : `In den Warenkorb · ${valid ? formatEuro(valueCents) : '–'}`}
           </Button>
         </div>
 
-        <div className="md:sticky md:top-28 md:self-start">
-          <p className="eyebrow mb-4">Vorschau</p>
-          <VoucherCard title={kind?.name ?? 'Gutschein'} valueCents={valid ? valueCents : 0} recipient={recipient.trim() || undefined} message={message.trim() || undefined} />
-          <p className="mt-4 text-sm text-muted">Den Code erhältst Du nach dem Kauf per E-Mail und in Deinem Konto. Du kannst den Gutschein ausdrucken oder weiterleiten.</p>
+        <div className="lg:sticky lg:top-[calc(var(--top-h,96px)+2rem)] lg:self-start">
+          <div className="honey-glow rounded-[2.5rem] p-6 sm:p-10 lg:p-14">
+            <p className="eyebrow mb-8 !text-honey-300">Live-Vorschau</p>
+            <Tilt>
+              <VoucherCard title={kind?.name ?? 'Gutschein'} valueCents={valid ? valueCents : 0} recipient={recipient.trim() || undefined} message={message.trim() || undefined} className="shadow-2xl shadow-black/40 ring-1 ring-honey-300/35" />
+            </Tilt>
+          </div>
+          <p className="mt-5 text-sm text-muted">Den Code erhältst Du nach dem Kauf per E-Mail und in Deinem Konto. Du kannst den Gutschein ausdrucken oder weiterleiten.</p>
         </div>
       </div>
     </section>

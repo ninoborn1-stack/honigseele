@@ -7,9 +7,9 @@ import { site } from '@/content';
 export function LegalPage({ title, children }: { title: string; children?: ReactNode }) {
   return (
     <Section tone="light">
-      <div className="mx-auto max-w-3xl">
+      <div className="max-w-4xl">
         <Eyebrow>Rechtliches</Eyebrow>
-        <h1 className="mt-5 text-5xl md:text-7xl">{title}</h1>
+        <h1 className="mt-8 text-[clamp(3rem,7vw,7.5rem)] leading-[0.95]">{title}</h1>
         <div className="mt-8 rounded-2xl border border-dashed border-amber-600/60 bg-card p-6">
           <Placeholder label="Rechtstext folgt" />
           <p className="mt-3 text-muted">Dieser Text wird vor dem Livegang durch den geprüften Rechtstext ersetzt (z. B. über einen Rechtstext-Dienst mit automatischen Updates).</p>

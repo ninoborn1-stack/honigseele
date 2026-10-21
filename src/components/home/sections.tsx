@@ -85,7 +85,7 @@ export function Areas() {
                 className="group relative grid grid-cols-[auto_1fr_auto] items-center gap-5 py-7 md:gap-10 md:py-9"
               >
                 <span className="font-serif text-lg text-amber-800 md:text-2xl">{String(i + 1).padStart(2, '0')}</span>
-                <span>
+                <span className="min-w-0 [hyphens:auto]" lang="de">
                   <span className="block font-serif text-[clamp(2rem,4.2vw,4.4rem)] leading-none transition-[color,transform] duration-500 ease-[var(--ease-soft)] group-hover:translate-x-3 group-hover:text-amber-600">
                     {c.name}
                   </span>
@@ -93,7 +93,7 @@ export function Areas() {
                 </span>
                 <span className="flex items-center gap-4">
                   <Photo src={c.image} alt="" className="h-20 w-16 rounded-full lg:hidden" />
-                  <span className="grid h-12 w-12 place-items-center rounded-full border border-honey-950/25 transition-all duration-500 group-hover:rotate-45 group-hover:border-honey-950 group-hover:bg-honey-950 group-hover:text-cream-50">
+                  <span className="hidden h-12 w-12 place-items-center rounded-full border border-honey-950/25 transition-all duration-500 group-hover:rotate-45 sm:grid group-hover:border-honey-950 group-hover:bg-honey-950 group-hover:text-cream-50">
                     <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
                   </span>
                 </span>

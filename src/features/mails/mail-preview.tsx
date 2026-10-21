@@ -68,9 +68,9 @@ export function MailPreview() {
   const firstName = customers.find((c) => c.id === (kind === 'bestellung' ? order?.customerId : b?.customerId))?.firstName ?? 'Du';
 
   return (
-    <div className="mx-auto max-w-5xl px-5 py-12 md:px-10">
+    <div className="wrap py-14 md:py-20">
       <p className="eyebrow">Demo · E-Mails</p>
-      <h1 className="mt-3 text-5xl">Was Deine Kundinnen bekommen</h1>
+      <h1 className="mt-4 text-[clamp(2.6rem,5.5vw,5.5rem)] leading-[0.98]">Was Deine Kundinnen bekommen</h1>
       <p className="mt-3 max-w-xl text-muted">Automatisch nach Buchung, einen Tag vorher und am Tag danach. Später auch als Push in der App.</p>
       <Tabs
         className="mt-8"

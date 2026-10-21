@@ -24,7 +24,10 @@ export function Curtain() {
       return;
     }
     if (!root.classList.contains('is-leaving')) return;
-    window.scrollTo(0, 0);
+    // Anker (z. B. /#newsletter) anspringen, sonst nach oben
+    const target = location.hash ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
+    if (target) target.scrollIntoView();
+    else window.scrollTo(0, 0);
     root.classList.remove('is-leaving');
     root.classList.add('is-entering');
   }, [pathname]);

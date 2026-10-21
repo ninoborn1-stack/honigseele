@@ -62,50 +62,89 @@ export function AreaMarquee() {
   );
 }
 
-/** Was Dir guttut: ruhiges Raster mit Bogen-Bildern und viel Weißraum */
+/** Was Dir guttut: schmale Bildstreifen, der aktive öffnet sich (Klick, Fokus oder Hover). Mobil: schlichte Zeilen. */
 export function Areas() {
   const list = treatmentCategories.filter((c) => !c.isPlaceholder);
+  const [active, setActive] = useState(0);
+  const minPrice = (id: string) => Math.min(...servicesOf(id).filter((s) => s.priceCents > 0).map((s) => s.priceCents));
   return (
-    <section id="bereiche" className="bg-cream-50 py-28 md:py-44">
+    <section id="bereiche" className="bg-cream-50 py-24 md:py-36">
       <div className="wrap">
-        <div className="mx-auto max-w-2xl text-center">
-          <Eyebrow className="justify-center">Behandlungen</Eyebrow>
-          <Title className="mt-7">Was Dir *guttut*.</Title>
-          <Reveal delay={150}>
-            <p className="mt-7 text-muted md:text-lg">Sechs Bereiche, über 120 Behandlungen – alle mit unserer eigenen Naturkosmetik und mit ganz viel Zeit für Dich.</p>
-          </Reveal>
+        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <div>
+            <Eyebrow>Behandlungen</Eyebrow>
+            <Title className="mt-6">Was Dir *guttut*.</Title>
+          </div>
+          <div className="flex flex-col gap-6 md:items-end md:text-right">
+            <p className="max-w-sm text-muted">Sechs Bereiche, über 120 Behandlungen – alle mit unserer eigenen Naturkosmetik.</p>
+            <ArrowLink href="/behandlungen/">Alle Behandlungen</ArrowLink>
+          </div>
         </div>
-        <ul className="mt-20 grid gap-x-8 gap-y-16 sm:grid-cols-2 md:mt-28 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-24">
+
+        {/* Desktop: Streifen */}
+        <div className="mt-14 hidden h-[min(72svh,720px)] gap-3 md:flex">
           {list.map((c, i) => {
-            const prices = servicesOf(c.id).filter((s) => s.priceCents > 0).map((s) => s.priceCents);
+            const on = i === active;
             return (
-              <Reveal as="li" key={c.id} delay={(i % 3) * 120} className={cn(i % 3 === 1 && 'lg:mt-20')}>
-                <Link href={`/behandlungen/${c.id}/`} data-label={c.name} className="group block">
-                  <div className="overflow-hidden rounded-t-full">
-                    <Photo src={c.image} alt={c.name} className="aspect-[4/5]" imgClassName="transition-transform duration-[1.6s] ease-[var(--ease-soft)] group-hover:scale-[1.06]" />
+              <div
+                key={c.id}
+                onMouseEnter={() => setActive(i)}
+                className={cn('relative min-w-0 overflow-hidden rounded-[1.75rem] transition-[flex-grow] duration-[900ms] ease-[var(--ease-soft)]', on ? 'grow-[5]' : 'grow')}
+                style={{ flexBasis: 0 }}
+              >
+                <Photo src={c.image} alt="" className="!absolute inset-0" imgClassName={cn('transition-transform duration-[1.4s] ease-[var(--ease-soft)]', on ? 'scale-100' : 'scale-110')} />
+                <div aria-hidden className={cn('absolute inset-0 transition-opacity duration-700', on ? 'bg-[linear-gradient(0deg,rgb(28_21_15/0.88),rgb(28_21_15/0.15)_60%,transparent)]' : 'bg-honey-950/55')} />
+                {/* geschlossen: Nummer + Name senkrecht */}
+                <button
+                  onClick={() => setActive(i)}
+                  onFocus={() => setActive(i)}
+                  aria-expanded={on}
+                  aria-label={c.name}
+                  className={cn('absolute inset-0 flex flex-col items-center justify-between py-8 text-cream-50 transition-opacity duration-500', on ? 'pointer-events-none opacity-0' : 'opacity-100')}
+                >
+                  <span className="font-serif text-xl text-honey-300">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="font-serif text-2xl whitespace-nowrap [writing-mode:vertical-rl] rotate-180">{c.name}</span>
+                </button>
+                {/* offen: Inhalt */}
+                <div className={cn('absolute inset-x-0 bottom-0 p-8 text-cream-50 transition-all duration-700 lg:p-10', on ? 'translate-y-0 opacity-100 delay-300' : 'pointer-events-none translate-y-6 opacity-0')}>
+                  <div className="flex items-baseline gap-4 text-xs font-medium uppercase tracking-[0.2em] text-honey-300">
+                    <span>{String(i + 1).padStart(2, '0')}</span>
+                    <span className="h-px w-8 bg-honey-300/60" />
+                    <span>ab {formatEuro(minPrice(c.id))}</span>
                   </div>
-                  <div className="mt-7 flex items-start justify-between gap-6">
-                    <div>
-                      <span className="text-xs font-medium uppercase tracking-[0.22em] text-amber-800">
-                        {String(i + 1).padStart(2, '0')} · ab {formatEuro(Math.min(...prices))}
-                      </span>
-                      <h3 className="mt-3 font-serif text-[clamp(1.9rem,2.4vw,2.6rem)] leading-none transition-colors duration-500 group-hover:text-amber-600">{c.name}</h3>
-                      <p className="mt-3 max-w-xs text-sm text-muted">{c.teaser}</p>
-                    </div>
-                    <span className="mt-1 grid h-11 w-11 shrink-0 place-items-center rounded-full border border-honey-950/20 transition-all duration-500 group-hover:rotate-45 group-hover:border-honey-950 group-hover:bg-honey-950 group-hover:text-cream-50">
-                      <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
-                    </span>
+                  <h3 className="mt-4 font-serif text-[clamp(2.4rem,3.6vw,4rem)] leading-[0.95] whitespace-nowrap">{c.name}</h3>
+                  <p className="mt-3 max-w-sm text-cream-100/85">{c.teaser}</p>
+                  <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-3">
+                    <ButtonLink href={`/behandlungen/${c.id}/`} variant="honey" arrow data-label={c.name} tabIndex={on ? 0 : -1}>
+                      Ansehen
+                    </ButtonLink>
+                    <ArrowLink href={`/buchen/?kategorie=${c.id}`} light data-label="Buchen" tabIndex={on ? 0 : -1}>
+                      Buchen
+                    </ArrowLink>
                   </div>
-                </Link>
-              </Reveal>
+                </div>
+              </div>
             );
           })}
-        </ul>
-        <div className="mt-20 flex justify-center md:mt-28">
-          <ButtonLink href="/behandlungen/" variant="ghost" size="lg" arrow>
-            Alle Behandlungen & Preise
-          </ButtonLink>
         </div>
+
+        {/* Mobil: schlichte Zeilen */}
+        <ul className="mt-12 border-t border-honey-950/15 md:hidden">
+          {list.map((c, i) => (
+            <li key={c.id} className="border-b border-honey-950/15">
+              <Link href={`/behandlungen/${c.id}/`} data-label={c.name} className="flex items-center gap-5 py-5">
+                <Photo src={c.image} alt="" className="h-16 w-16 shrink-0 rounded-full" />
+                <span className="min-w-0 flex-1">
+                  <span className="block font-serif text-2xl leading-tight">{c.name}</span>
+                  <span className="text-xs font-medium uppercase tracking-[0.18em] text-amber-800">
+                    {String(i + 1).padStart(2, '0')} · ab {formatEuro(minPrice(c.id))}
+                  </span>
+                </span>
+                <ArrowUpRight className="h-5 w-5 shrink-0 text-amber-800" strokeWidth={1.5} />
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
@@ -338,7 +377,7 @@ export function CoursePreview() {
 /** Newsletter: Blüten aus dem Hero ziehen sanft vorbei – gefüllt und als Linie im Wechsel */
 export function NewsletterSection() {
   return (
-    <section className="honey-glow on-dark relative mt-6 overflow-hidden py-28 text-cream-50 md:py-40">
+    <section id="newsletter" className="honey-glow on-dark relative mt-6 overflow-hidden py-28 text-cream-50 md:py-40">
       <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-honey-300 opacity-[0.09]" aria-hidden>
         <Marquee
           speed={90}

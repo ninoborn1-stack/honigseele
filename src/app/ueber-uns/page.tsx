@@ -5,11 +5,11 @@ import { ArrowLink } from '@/components/ui/button';
 import { CountUp, Parallax, RevealHeading } from '@/components/ui/motion';
 import { Photo } from '@/components/ui/photo';
 import { Reveal } from '@/components/ui/reveal';
+import { StackCards } from '@/components/ui/stack-cards';
 import { Eyebrow, Title } from '@/components/ui/typography';
 import { block, site, staff } from '@/content';
 import { InquiryButton } from '@/features/about/inquiry-drawer';
 import { TeamGrid } from '@/features/about/team-grid';
-import { ValueStack } from '@/features/about/value-stack';
 
 export const metadata: Metadata = {
   title: 'Über uns – die Honigseelen',
@@ -86,7 +86,7 @@ export default function AboutPage() {
           <Eyebrow className="justify-center">Haltung</Eyebrow>
           <Title className="mt-7">Was uns *ausmacht*.</Title>
         </div>
-        <ValueStack values={values} />
+        <StackCards cards={values} kicker="Was uns ausmacht" />
       </section>
 
       {/* 5. Team */}

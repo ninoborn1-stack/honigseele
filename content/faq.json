@@ -1,0 +1,23 @@
+{
+  "waxing": [
+    { "q": "Wie lange hält das Ergebnis?", "a": "In der Regel drei bis sechs Wochen. Mit jeder Behandlung wachsen die Haare feiner und langsamer nach." },
+    { "q": "Tut Waxing weh?", "a": "Ein kurzes Ziepen gehört dazu. Honigwachs ist besonders sanft, und mit jeder Behandlung wird es angenehmer." },
+    { "q": "Wie lang müssen die Haare sein?", "a": "Ideal sind 3–5 mm, also etwa 10–14 Tage nach der letzten Rasur." },
+    { "q": "Was hilft gegen eingewachsene Haare?", "a": "Regelmäßiges, sanftes Peeling ab dem dritten Tag nach dem Waxing und gute Feuchtigkeitspflege." },
+    { "q": "Darf ich in der Schwangerschaft waxen?", "a": "Ja, in Absprache mit Deiner Hebamme oder Ärztin. Die Haut kann empfindlicher sein – sag uns einfach Bescheid." },
+    { "q": "Ab welchem Alter darf ich zum Waxing kommen?", "a": "Unter 16 Jahren nur in Begleitung oder mit Einverständnis einer erziehungsberechtigten Person." },
+    { "q": "Kann ich während der Menstruation kommen?", "a": "Ja, mit Tampon oder Menstruationstasse ist ein Intim-Waxing möglich. Die Haut kann an diesen Tagen empfindlicher sein." },
+    { "q": "Was ist mit Piercings?", "a": "Intim-Piercings bitte vorher herausnehmen, wenn möglich. Sonst arbeiten wir vorsichtig drumherum." },
+    { "q": "Warum ist die Pofalte bei manchen Zonen dabei?", "a": "Bei Bikini Tanga und Intim komplett gehört sie für ein sauberes Ergebnis dazu. Einzeln buchbar ist sie auch." }
+  ],
+  "laser": [
+    { "q": "Warum brauche ich ein Vorgespräch?", "a": "Wir prüfen Haut- und Haartyp, Medikamente und Vorerkrankungen und machen einen Probeschuss. So ist die Behandlung sicher und wirksam." },
+    { "q": "Wie viele Sitzungen brauche ich?", "a": "Meist 6–10, je nach Zone, Haartyp und Hormonen." },
+    { "q": "Wie funktioniert der Mehrzonen-Rabatt?", "a": "Buchst Du zwei Zonen in einem Termin, sparst Du 10 %, ab drei Zonen 20 %." }
+  ],
+  "allgemein": [
+    { "q": "Wie kann ich absagen?", "a": "Bis 24 Stunden vor dem Termin kostenlos in Deinem Konto oder telefonisch. Danach berechnen wir 50 % des Preises." },
+    { "q": "Gibt es Ermäßigungen?", "a": "Ja, beim Waxing für Schüler*innen und Studierende mit gültigem Nachweis." },
+    { "q": "Kann ich Gutscheine online einlösen?", "a": "Ja, gib den Code einfach beim Buchen oder im Warenkorb ein. Restwerte bleiben erhalten." }
+  ]
+}

@@ -1,0 +1,2354 @@
+[
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-achseln"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-achseln"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-achseln"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-achseln"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-achseln"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-achseln"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-achseln"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-achseln"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-arme-komplett"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-arme-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-arme-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-arme-komplett"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-arme-komplett"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-arme-komplett"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-arme-komplett"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-arme-komplett"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-arme-halb"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-arme-halb"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-arme-halb"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-arme-halb"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-arme-halb"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-arme-halb"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-arme-halb"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-arme-halb"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-beine-komplett"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-beine-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-beine-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-beine-komplett"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-beine-komplett"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-beine-komplett"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-beine-komplett"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-beine-komplett"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-oberschenkel"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-oberschenkel"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-oberschenkel"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-oberschenkel"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-oberschenkel"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-oberschenkel"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-oberschenkel"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-oberschenkel"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-unterschenkel"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-unterschenkel"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-unterschenkel"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-unterschenkel"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-unterschenkel"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-unterschenkel"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-unterschenkel"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-unterschenkel"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-bauch"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-bauch"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-bauch"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-bauch"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-bauch"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-bauch"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-bauch"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-bauch"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-brust"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-brust"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-brust"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-brust"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-brust"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-brust"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-brust"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-brust"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-ruecken-lende"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-ruecken-lende"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-ruecken-lende"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-ruecken-lende"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-ruecken-lende"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-ruecken-lende"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-ruecken-lende"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-ruecken-lende"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-kinn"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-kinn"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-kinn"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-kinn"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-kinn"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-kinn"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-kinn"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-kinn"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-nase"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-nase"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-nase"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-nase"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-nase"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-nase"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-nase"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-nase"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-oberlippe"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-oberlippe"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-oberlippe"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-oberlippe"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-oberlippe"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-oberlippe"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-oberlippe"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-oberlippe"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-wangen"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-wangen"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-wangen"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-wangen"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-wangen"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-wangen"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-wangen"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-wangen"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-augenbrauen"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-augenbrauen"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-augenbrauen"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-augenbrauen"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-augenbrauen"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-augenbrauen"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-augenbrauen"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-augenbrauen"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-pofalte"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-pofalte"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-pofalte"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-pofalte"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-pofalte"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-pofalte"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-pofalte"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-pofalte"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-bikini-ohne-pofalte"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-bikini-ohne-pofalte"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-bikini-ohne-pofalte"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-bikini-ohne-pofalte"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-bikini-ohne-pofalte"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-bikini-ohne-pofalte"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-bikini-ohne-pofalte"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-bikini-ohne-pofalte"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-bikini-inkl-pofalte"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-bikini-inkl-pofalte"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-bikini-inkl-pofalte"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-bikini-inkl-pofalte"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-bikini-inkl-pofalte"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-bikini-inkl-pofalte"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-bikini-inkl-pofalte"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-bikini-inkl-pofalte"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-bikini-tanga-inkl-pofalte"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-bikini-tanga-inkl-pofalte"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-bikini-tanga-inkl-pofalte"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-bikini-tanga-inkl-pofalte"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-bikini-tanga-inkl-pofalte"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-bikini-tanga-inkl-pofalte"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-bikini-tanga-inkl-pofalte"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-bikini-tanga-inkl-pofalte"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-intim-komplett-inkl-pofalte"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-intim-komplett-inkl-pofalte"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-intim-komplett-inkl-pofalte"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-intim-komplett-inkl-pofalte"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-intim-komplett-inkl-pofalte"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-intim-komplett-inkl-pofalte"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-intim-komplett-inkl-pofalte"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-intim-komplett-inkl-pofalte"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-intim-dreieck-inkl-pofalte"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-intim-dreieck-inkl-pofalte"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-intim-dreieck-inkl-pofalte"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-intim-dreieck-inkl-pofalte"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-intim-dreieck-inkl-pofalte"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-intim-dreieck-inkl-pofalte"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-intim-dreieck-inkl-pofalte"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-intim-dreieck-inkl-pofalte"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-intim-landing-strip-inkl-pofalte"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-intim-landing-strip-inkl-pofalte"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-intim-landing-strip-inkl-pofalte"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-intim-landing-strip-inkl-pofalte"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-intim-landing-strip-inkl-pofalte"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-intim-landing-strip-inkl-pofalte"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-intim-landing-strip-inkl-pofalte"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-intim-landing-strip-inkl-pofalte"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-d-pobacken-komplett"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-d-pobacken-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-d-pobacken-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-d-pobacken-komplett"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-d-pobacken-komplett"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-d-pobacken-komplett"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-d-pobacken-komplett"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-d-pobacken-komplett"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-achseln"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-achseln"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-achseln"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-achseln"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-achseln"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-achseln"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-achseln"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-achseln"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-arme-komplett"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-arme-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-arme-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-arme-komplett"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-arme-komplett"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-arme-komplett"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-arme-komplett"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-arme-komplett"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-beine-komplett"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-beine-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-beine-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-beine-komplett"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-beine-komplett"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-beine-komplett"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-beine-komplett"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-beine-komplett"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-bauch"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-bauch"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-bauch"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-bauch"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-bauch"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-bauch"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-bauch"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-bauch"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-brust"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-brust"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-brust"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-brust"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-brust"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-brust"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-brust"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-brust"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-ruecken-komplett"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-ruecken-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-ruecken-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-ruecken-komplett"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-ruecken-komplett"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-ruecken-komplett"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-ruecken-komplett"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-ruecken-komplett"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-ruecken-halb"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-ruecken-halb"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-ruecken-halb"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-ruecken-halb"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-ruecken-halb"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-ruecken-halb"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-ruecken-halb"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-ruecken-halb"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-nacken"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-nacken"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-nacken"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-nacken"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-nacken"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-nacken"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-nacken"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-nacken"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-schulterguertel-mit-nacken"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-schulterguertel-mit-nacken"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-schulterguertel-mit-nacken"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-schulterguertel-mit-nacken"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-schulterguertel-mit-nacken"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-schulterguertel-mit-nacken"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-schulterguertel-mit-nacken"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-schulterguertel-mit-nacken"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-lendenbereich"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-lendenbereich"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-lendenbereich"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-lendenbereich"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-lendenbereich"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-lendenbereich"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-lendenbereich"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-lendenbereich"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-nase"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-nase"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-nase"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-nase"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-nase"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-nase"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-nase"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-nase"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-augenbrauen"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-augenbrauen"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-augenbrauen"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-augenbrauen"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-augenbrauen"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-augenbrauen"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-augenbrauen"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-augenbrauen"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-augenbrauen-modellage"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-augenbrauen-modellage"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-augenbrauen-modellage"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-augenbrauen-modellage"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-augenbrauen-modellage"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-augenbrauen-modellage"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-augenbrauen-modellage"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-augenbrauen-modellage"
+  },
+  {
+    "staffId": "anna",
+    "serviceId": "waxing-h-ohren"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "waxing-h-ohren"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "waxing-h-ohren"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "waxing-h-ohren"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "waxing-h-ohren"
+  },
+  {
+    "staffId": "selena",
+    "serviceId": "waxing-h-ohren"
+  },
+  {
+    "staffId": "yvonne",
+    "serviceId": "waxing-h-ohren"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "waxing-h-ohren"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-vorgespraech"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-vorgespraech"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-achseln"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-achseln"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-arme-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-arme-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-arme-halb"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-arme-halb"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-beine-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-beine-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-oberschenkel"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-oberschenkel"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-unterschenkel"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-unterschenkel"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-bauch"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-bauch"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-bauchnabel-linie"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-bauchnabel-linie"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-brust"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-brust"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-pofalte"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-pofalte"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-ruecken-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-ruecken-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-kinn-hals"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-kinn-hals"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-oberlippe"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-oberlippe"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-wangen"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-wangen"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-hals"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-hals"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-gesicht-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-gesicht-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-bikini-ohne-pofalte"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-bikini-ohne-pofalte"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-bikini-tanga-mit-pofalte"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-bikini-tanga-mit-pofalte"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-intim-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-intim-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-intim-dreieck"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-intim-dreieck"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-intim-landing-strip"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-intim-landing-strip"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-pobacken"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-pobacken"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-d-ganzkoerper"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-d-ganzkoerper"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-h-achseln"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-h-achseln"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-h-arme-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-h-arme-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-h-arme-halb"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-h-arme-halb"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-h-beine-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-h-beine-komplett"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-h-beine-halb"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-h-beine-halb"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-h-bauch"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-h-bauch"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-h-brust"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-h-brust"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "laser-h-ruecken-komplett"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "laser-h-ruecken-komplett"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-zeit-fuer-dich"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-zeit-fuer-dich"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-reine-maennersache"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-reine-maennersache"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-dein-augenblick"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-dein-augenblick"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-fuehl-dich-wohl-collagen-boost"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-fuehl-dich-wohl-collagen-boost"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-du-bist-schoen-pure-intense"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-du-bist-schoen-pure-intense"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-die-kraft-der-kristalle-anti-age"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-die-kraft-der-kristalle-anti-age"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-anti-stress-massage-mit-shiatsu-klassische-behandlung"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-anti-stress-massage-mit-shiatsu-klassische-behandlung"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-deine-wohlfuehlzeit-ermaessigt-mit-nachweis"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-deine-wohlfuehlzeit-ermaessigt-mit-nachweis"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-gesicht-und-kopfmassage-inkl-lymphdrainage"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-gesicht-und-kopfmassage-inkl-lymphdrainage"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-jade-roller-und-gua-sha-massage"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-jade-roller-und-gua-sha-massage"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-mandelkern-peeling-massage"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-mandelkern-peeling-massage"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-ohrenkerzen"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-ohrenkerzen"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-wellness-gesichtsmassage-ohrenkerzen"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-wellness-gesichtsmassage-ohrenkerzen"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-sommer-detox-ritual"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-sommer-detox-ritual"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-belebendes-vital-ritual"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-belebendes-vital-ritual"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-beruhigendes-balance-ritual"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-beruhigendes-balance-ritual"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-microdermabrasion"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-microdermabrasion"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "meer-meer-zeit-fuer-dich"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "meer-meer-zeit-fuer-dich"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "meer-meer-zeit-fuer-dich"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "meer-reine-maennersache-meer"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "meer-reine-maennersache-meer"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "meer-reine-maennersache-meer"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "meer-die-kraft-der-algen"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "meer-die-kraft-der-algen"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "meer-die-kraft-der-algen"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "meer-meeres-hydro"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "meer-meeres-hydro"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "meer-meeres-hydro"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "meer-entspannendes-aroma-ritual"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "meer-entspannendes-aroma-ritual"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "meer-entspannendes-aroma-ritual"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "meer-die-kraft-der-kristalle-meer"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "meer-die-kraft-der-kristalle-meer"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "meer-die-kraft-der-kristalle-meer"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-extra-ampulle"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-extra-ampulle"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "gesicht-extra-ampulle"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "gesicht-extra-ampulle"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "gesicht-extra-ampulle"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-extra-enzympeeling"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-extra-enzympeeling"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "gesicht-extra-enzympeeling"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "gesicht-extra-enzympeeling"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "gesicht-extra-enzympeeling"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-extra-augenmaske"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-extra-augenmaske"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "gesicht-extra-augenmaske"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "gesicht-extra-augenmaske"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "gesicht-extra-augenmaske"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "gesicht-extra-milien"
+  },
+  {
+    "staffId": "isabell",
+    "serviceId": "gesicht-extra-milien"
+  },
+  {
+    "staffId": "lisz",
+    "serviceId": "gesicht-extra-milien"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "gesicht-extra-milien"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "gesicht-extra-milien"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "augen-lash-lifting-faerben-pflege"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "augen-lash-lifting-faerben-pflege"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "augen-brauen-faerben"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "augen-brauen-faerben"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "augen-brauen-zupfen"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "augen-brauen-zupfen"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "augen-wimpern-faerben"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "augen-wimpern-faerben"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "augen-brauen-wimpern-faerben"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "augen-brauen-wimpern-faerben"
+  },
+  {
+    "staffId": "jamilah",
+    "serviceId": "augen-brauen-faerben-formen"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "augen-brauen-faerben-formen"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "koerper-meereszauber"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "koerper-meereszauber"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "koerper-algen-wunder"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "koerper-algen-wunder"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "koerper-anti-cellulite-bandage"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "koerper-anti-cellulite-bandage"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "koerper-brasilianische-lymphdrainage"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "koerper-brasilianische-lymphdrainage"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "koerper-streicheleinheit-koerperpeeling"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "koerper-streicheleinheit-koerperpeeling"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-klassische-massage-30"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-klassische-massage-30"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-klassische-massage-60"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-klassische-massage-60"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-klassische-massage-90"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-klassische-massage-90"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-aromaoel-massage-30"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-aromaoel-massage-30"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-aromaoel-massage-60"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-aromaoel-massage-60"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-aromaoel-massage-90"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-aromaoel-massage-90"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-energetische-edelsteinmassage-30"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-energetische-edelsteinmassage-30"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-energetische-edelsteinmassage-60"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-energetische-edelsteinmassage-60"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-energetische-edelsteinmassage-90"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-energetische-edelsteinmassage-90"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-kinder-wohlfuehlmassage-30"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-kinder-wohlfuehlmassage-60"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-honig-fuer-die-seele-60"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-honig-fuer-die-seele-60"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-honig-fuer-die-seele-90"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-honig-fuer-die-seele-90"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-fussreflexzonen-massage-30"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-fussreflexzonen-massage-30"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-fussreflexzonen-massage-60"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-fussreflexzonen-massage-60"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-hot-stone-massage-60"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-hot-stone-massage-60"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-hot-stone-massage-90"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "massage-hot-stone-massage-90"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-buccal-sculpture-lifting-60"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-buccal-sculpture-lifting-90"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-buccal-jaw-release-60"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "massage-buccal-jaw-release-90"
+  },
+  {
+    "staffId": "juli",
+    "serviceId": "massage-japanische-gesichtsmassage"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "reset-tmj"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "reset-tmj-basis"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-klassische-manikuere"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-klassische-manikuere"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-klassische-manikuere"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-klassische-manikuere-mit-lack"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-klassische-manikuere-mit-lack"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-klassische-manikuere-mit-lack"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-spa-manikuere"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-spa-manikuere"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-spa-manikuere"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-spa-manikuere-mit-lack"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-spa-manikuere-mit-lack"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-spa-manikuere-mit-lack"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-klassische-pedikuere"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-klassische-pedikuere"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-klassische-pedikuere"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-klassische-pedikuere-mit-lack"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-klassische-pedikuere-mit-lack"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-klassische-pedikuere-mit-lack"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-medizinische-fusspflege"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-medizinische-fusspflege-mit-lack"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-spa-pedikuere",
+    "priceCents": 5800
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-spa-pedikuere",
+    "priceCents": 5800
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-spa-pedikuere"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-spa-pedikuere-mit-lack",
+    "priceCents": 6500
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-spa-pedikuere-mit-lack",
+    "priceCents": 6500
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-spa-pedikuere-mit-lack"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-spa-pedikuere-shellac"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-spa-pedikuere-shellac"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-verlaengerung-fussmassage"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-verlaengerung-fussmassage"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-verlaengerung-fussmassage"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-extra-peeling"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-extra-peeling"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-extra-peeling"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-extra-maske"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-extra-maske"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-extra-maske"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-extra-algen-fusspackung"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-extra-algen-fusspackung"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-extra-algen-fusspackung"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "mp-extra-lack"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "mp-extra-lack"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "mp-extra-lack"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "paket-deine-kleine-auszeit"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "paket-deine-kleine-auszeit"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "paket-deine-kleine-auszeit"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "paket-deine-kleine-auszeit"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "paket-deine-kleine-auszeit"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "paket-dein-wohlfuehltag-in-der-honigseele"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "paket-dein-wohlfuehltag-in-der-honigseele"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "paket-dein-wohlfuehltag-in-der-honigseele"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "paket-dein-wohlfuehltag-in-der-honigseele"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "paket-dein-wohlfuehltag-in-der-honigseele"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "paket-dein-tag-am-meer"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "paket-dein-tag-am-meer"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "paket-dein-tag-am-meer"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "paket-dein-tag-am-meer"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "paket-dein-tag-am-meer"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "paket-mama-fuer-dich"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "paket-mama-fuer-dich"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "paket-mama-fuer-dich"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "paket-mama-fuer-dich"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "paket-mama-fuer-dich"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "paket-die-braut-die-sich-traut"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "paket-die-braut-die-sich-traut"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "paket-die-braut-die-sich-traut"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "paket-die-braut-die-sich-traut"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "paket-die-braut-die-sich-traut"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "paket-balsam-fuer-die-seele"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "paket-balsam-fuer-die-seele"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "paket-balsam-fuer-die-seele"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "paket-balsam-fuer-die-seele"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "paket-balsam-fuer-die-seele"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "paket-teenysprechstunde"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "paket-teenysprechstunde"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "paket-teenysprechstunde"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "paket-teenysprechstunde"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "paket-teenysprechstunde"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "paket-zauberwichtel-kinder"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "paket-zauberwichtel-kinder"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "paket-zauberwichtel-kinder"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "paket-zauberwichtel-kinder"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "paket-zauberwichtel-kinder"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "paket-schoene-fuesse-schoene-haende"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "paket-schoene-fuesse-schoene-haende"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "paket-schoene-fuesse-schoene-haende"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "paket-schoene-fuesse-schoene-haende"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "paket-schoene-fuesse-schoene-haende"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "paket-miteinander-strahlen"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "paket-miteinander-strahlen"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "paket-miteinander-strahlen"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "paket-miteinander-strahlen"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "paket-miteinander-strahlen"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "paket-von-kopf-bis-fuss-auf-liebe-eingestellt-paare"
+  },
+  {
+    "staffId": "sandra",
+    "serviceId": "paket-von-kopf-bis-fuss-auf-liebe-eingestellt-paare"
+  },
+  {
+    "staffId": "elsa",
+    "serviceId": "paket-von-kopf-bis-fuss-auf-liebe-eingestellt-paare"
+  },
+  {
+    "staffId": "nadine",
+    "serviceId": "paket-von-kopf-bis-fuss-auf-liebe-eingestellt-paare"
+  },
+  {
+    "staffId": "justyna",
+    "serviceId": "paket-von-kopf-bis-fuss-auf-liebe-eingestellt-paare"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "coaching-seelengefluester"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "coaching-einzel"
+  },
+  {
+    "staffId": "asita",
+    "serviceId": "coaching-stress"
+  },
+  {
+    "staffId": "larissa",
+    "serviceId": "coaching-ernaehrung"
+  }
+]

@@ -1,0 +1,220 @@
+[
+  {
+    "id": "yoga-kati",
+    "name": "Yoga mit Kati",
+    "kind": "yoga",
+    "description": "Fließendes Hatha-Yoga für alle Level.",
+    "leaderName": "Kati",
+    "priceCents": 1800,
+    "durationMin": 75,
+    "capacity": 12,
+    "punchCardEligible": true,
+    "schedule": [
+      {
+        "weekday": 1,
+        "time": "18:30"
+      },
+      {
+        "weekday": 3,
+        "time": "18:30"
+      }
+    ],
+    "isPlaceholder": true,
+    "leaderId": "kati"
+  },
+  {
+    "id": "yoga-maria",
+    "name": "Yoga mit Maria",
+    "kind": "yoga",
+    "description": "Sanftes Yoga am Morgen.",
+    "leaderName": "Maria",
+    "priceCents": 1800,
+    "durationMin": 75,
+    "capacity": 12,
+    "punchCardEligible": true,
+    "schedule": [
+      {
+        "weekday": 2,
+        "time": "09:30"
+      },
+      {
+        "weekday": 4,
+        "time": "09:30"
+      }
+    ],
+    "isPlaceholder": true,
+    "leaderId": "maria"
+  },
+  {
+    "id": "yoga-praenatal",
+    "name": "Pränatal Yoga",
+    "kind": "yoga",
+    "description": "Yoga in der Schwangerschaft.",
+    "leaderName": "Kati",
+    "priceCents": 2000,
+    "durationMin": 75,
+    "capacity": 8,
+    "punchCardEligible": true,
+    "schedule": [
+      {
+        "weekday": 6,
+        "time": "10:00"
+      }
+    ],
+    "isPlaceholder": true,
+    "leaderId": "kati"
+  },
+  {
+    "id": "yoga-postnatal",
+    "name": "Postnatal Yoga",
+    "kind": "yoga",
+    "description": "Rückbildung und Ankommen – Babys sind willkommen.",
+    "leaderName": "Maria",
+    "priceCents": 2000,
+    "durationMin": 75,
+    "capacity": 8,
+    "punchCardEligible": true,
+    "schedule": [
+      {
+        "weekday": 5,
+        "time": "10:30"
+      }
+    ],
+    "isPlaceholder": true,
+    "leaderId": "maria"
+  },
+  {
+    "id": "bienenstock",
+    "name": "Bienenstock Frauen-Netzwerk",
+    "kind": "workshop",
+    "description": "Unser Netzwerk-Abend für Frauen: austauschen, stärken, verbinden.",
+    "leaderName": "Anna",
+    "priceCents": 2500,
+    "durationMin": 120,
+    "capacity": 20,
+    "punchCardEligible": false,
+    "schedule": [
+      {
+        "weekday": 4,
+        "time": "19:00"
+      }
+    ],
+    "isPlaceholder": true,
+    "leaderId": "anna",
+    "monthly": true
+  },
+  {
+    "id": "breathwork",
+    "name": "Breathwork",
+    "kind": "workshop",
+    "description": "Bewusstes Atmen für Klarheit und Ruhe.",
+    "leaderName": "Asita",
+    "priceCents": 3500,
+    "durationMin": 90,
+    "capacity": 12,
+    "punchCardEligible": false,
+    "schedule": [
+      {
+        "weekday": 5,
+        "time": "19:00"
+      }
+    ],
+    "isPlaceholder": true,
+    "leaderId": "asita"
+  },
+  {
+    "id": "lets-just-move",
+    "name": "Let’s Just Move",
+    "kind": "workshop",
+    "description": "Freie Bewegung zu Musik, ohne Choreo.",
+    "leaderName": "Team",
+    "priceCents": 1500,
+    "durationMin": 60,
+    "capacity": 15,
+    "punchCardEligible": false,
+    "schedule": [
+      {
+        "weekday": 7,
+        "time": "11:00"
+      }
+    ],
+    "isPlaceholder": true
+  },
+  {
+    "id": "lets-just-walk",
+    "name": "Let’s Just Walk",
+    "kind": "workshop",
+    "description": "Gemeinsamer Spaziergang durch den Kiez.",
+    "leaderName": "Team",
+    "priceCents": 1000,
+    "durationMin": 90,
+    "capacity": 15,
+    "punchCardEligible": false,
+    "schedule": [
+      {
+        "weekday": 6,
+        "time": "09:00"
+      }
+    ],
+    "isPlaceholder": true
+  },
+  {
+    "id": "kakaozeremonie",
+    "name": "Kakaozeremonie",
+    "kind": "workshop",
+    "description": "Zeremonieller Kakao, Stille und Austausch.",
+    "leaderName": "Asita",
+    "priceCents": 3500,
+    "durationMin": 120,
+    "capacity": 14,
+    "punchCardEligible": false,
+    "schedule": [
+      {
+        "weekday": 7,
+        "time": "17:00"
+      }
+    ],
+    "isPlaceholder": true,
+    "leaderId": "asita",
+    "biweekly": true
+  },
+  {
+    "id": "mbsr",
+    "name": "MBSR – Achtsamkeit",
+    "kind": "workshop",
+    "description": "8-Wochen-Kurs Stressbewältigung durch Achtsamkeit (Preis für den ganzen Kurs).",
+    "leaderName": "Asita",
+    "priceCents": 39000,
+    "durationMin": 150,
+    "capacity": 12,
+    "punchCardEligible": false,
+    "schedule": [
+      {
+        "weekday": 2,
+        "time": "19:00"
+      }
+    ],
+    "isPlaceholder": true,
+    "leaderId": "asita"
+  },
+  {
+    "id": "waxing-schulung",
+    "name": "Waxing-Schulung",
+    "kind": "schulung",
+    "description": "Lerne Waxing mit Honigwachs von Anna. Inhalte und Termine folgen.",
+    "leaderName": "Anna",
+    "priceCents": 39000,
+    "durationMin": 360,
+    "capacity": 4,
+    "punchCardEligible": false,
+    "schedule": [
+      {
+        "weekday": 7,
+        "time": "10:00"
+      }
+    ],
+    "isPlaceholder": true,
+    "leaderId": "anna",
+    "monthly": true
+  }
+]

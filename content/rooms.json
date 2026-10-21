@@ -1,0 +1,47 @@
+[
+  {
+    "id": "kabine-1",
+    "name": "Kabine Lindenblüte",
+    "type": "kabine"
+  },
+  {
+    "id": "kabine-2",
+    "name": "Kabine Akazie",
+    "type": "kabine"
+  },
+  {
+    "id": "kabine-3",
+    "name": "Kabine Lavendel",
+    "type": "kabine"
+  },
+  {
+    "id": "laser",
+    "name": "Laserraum",
+    "type": "laser"
+  },
+  {
+    "id": "massage-1",
+    "name": "Massageraum Bernstein",
+    "type": "massage"
+  },
+  {
+    "id": "massage-2",
+    "name": "Massageraum Wabe",
+    "type": "massage"
+  },
+  {
+    "id": "fuss",
+    "name": "Hand- & Fußraum",
+    "type": "fuss"
+  },
+  {
+    "id": "kursraum",
+    "name": "Kursraum",
+    "type": "kurs"
+  },
+  {
+    "id": "beratung",
+    "name": "Beratungsraum",
+    "type": "beratung"
+  }
+]

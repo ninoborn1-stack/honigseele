@@ -1,0 +1,103 @@
+[
+  {
+    "id": "waxing",
+    "name": "Waxing",
+    "eyebrow": "Mit warmem Honigwachs",
+    "teaser": "Sanft, gründlich und mit Wachs aus Honig – für Damen und Herren.",
+    "intro": "Bei uns wird mit Honigwachs gewachst: warm, hautfreundlich und so sanft wie möglich. Unsere Depiladoras arbeiten ruhig, gründlich und ohne Hektik – damit Du Dich vom ersten Moment an wohlfühlst.",
+    "image": "/images/stock/waxing.jpg",
+    "order": 1,
+    "roomType": "kabine",
+    "inTreatments": true
+  },
+  {
+    "id": "laser",
+    "name": "Laser-Haarentfernung",
+    "eyebrow": "Dauerhaft glatt",
+    "teaser": "Diodenlaser mit drei Wellenlängen – nach persönlichem Vorgespräch.",
+    "intro": "Unser Diodenlaser arbeitet mit drei Wellenlängen (755, 808 und 1064 nm) und ist damit für viele Haut- und Haartypen geeignet. Jede Behandlung beginnt mit einem Vorgespräch, in dem wir Deine Haut kennenlernen und gemeinsam planen. Für ein dauerhaftes Ergebnis brauchst Du meist 6–10 Sitzungen.",
+    "image": "/images/stock/laser.jpg",
+    "order": 2,
+    "roomType": "laser",
+    "inTreatments": true
+  },
+  {
+    "id": "gesicht-augen",
+    "name": "Gesicht & Augen",
+    "eyebrow": "Naturkosmetik",
+    "teaser": "Gesichtsbehandlungen, Rituale aus dem Meer, Wimpern & Brauen.",
+    "intro": "Unsere Gesichtsbehandlungen verbinden Handarbeit mit der eigenen Naturkosmetik aus der Crememanufaktur Berlin. Ob klassische Pflege, Anti-Age mit Kristallen oder Rituale aus dem Meer – jede Behandlung ist eine kleine Auszeit.",
+    "image": "/images/stock/face.jpg",
+    "order": 3,
+    "roomType": "kabine",
+    "inTreatments": true
+  },
+  {
+    "id": "koerper-massagen",
+    "name": "Körper & Massagen",
+    "eyebrow": "Für Körper und Seele",
+    "teaser": "Massagen, Lymphdrainage, Algen- und Meeresbehandlungen.",
+    "intro": "Von der klassischen Massage über Hot Stone bis zur Brasilianischen Lymphdrainage: Hier darfst Du loslassen. Unsere Massagen sind ein Angebot für Frauen.",
+    "image": "/images/stock/massage.jpg",
+    "order": 4,
+    "roomType": "massage",
+    "inTreatments": true
+  },
+  {
+    "id": "mani-pedikuere",
+    "name": "Mani- & Pediküre",
+    "eyebrow": "Hände & Füße",
+    "teaser": "Klassisch, Spa oder medizinisch – mit Liebe zum Detail.",
+    "intro": "Gepflegte Hände und Füße, ohne Eile. Von der klassischen Maniküre bis zur medizinischen Fußpflege durch unsere Podologin Justyna.",
+    "image": "/images/stock/hands.jpg",
+    "order": 5,
+    "roomType": "fuss",
+    "inTreatments": true
+  },
+  {
+    "id": "wohlfuehl-pakete",
+    "name": "Wohlfühl-Pakete",
+    "eyebrow": "Zeit für Dich",
+    "teaser": "Mehrere Behandlungen, ein Gefühl: angekommen.",
+    "intro": "Unsere Pakete sind kleine Fluchten aus dem Alltag – allein, zu zweit, mit Mama, als Braut oder für die Kleinen. Ein Willkommensgetränk wartet immer.",
+    "image": "/images/stock/package.jpg",
+    "order": 6,
+    "roomType": "massage",
+    "inTreatments": true
+  },
+  {
+    "id": "schroepfen",
+    "name": "Schröpfen",
+    "eyebrow": "Traditionelle Körperarbeit",
+    "teaser": "Angebot und Preise folgen.",
+    "intro": "Hier stellen wir bald unser Schröpf-Angebot vor.",
+    "image": "/images/stock/room.jpg",
+    "order": 7,
+    "roomType": "massage",
+    "inTreatments": true,
+    "isPlaceholder": true
+  },
+  {
+    "id": "somatic-bodywork",
+    "name": "Somatic Bodywork",
+    "eyebrow": "Pantarei",
+    "teaser": "Angebot und Preise folgen.",
+    "intro": "Hier stellen wir bald Somatic Bodywork (Pantarei) vor.",
+    "image": "/images/stock/plants.jpg",
+    "order": 8,
+    "roomType": "massage",
+    "inTreatments": true,
+    "isPlaceholder": true
+  },
+  {
+    "id": "coaching",
+    "name": "Coaching & Ernährung",
+    "eyebrow": "Honigseelengeflüster",
+    "teaser": "Einzelcoaching, Stress-Coaching und ganzheitliche Ernährungsberatung.",
+    "intro": "Manchmal braucht es mehr als Pflege von außen. Im Coaching nehmen wir uns Zeit für das, was Dich innen bewegt.",
+    "image": "/images/stock/coaching.jpg",
+    "order": 9,
+    "roomType": "beratung",
+    "inTreatments": false
+  }
+]

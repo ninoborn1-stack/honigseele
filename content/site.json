@@ -1,0 +1,67 @@
+{
+  "location": {
+    "id": "kreuzberg",
+    "name": "Honigseele Kreuzberg",
+    "street": "Hornstraße 1",
+    "zip": "10963",
+    "city": "Berlin",
+    "timezone": "Europe/Berlin",
+    "kind": "studio"
+  },
+  "brand": {
+    "name": "Honigseele",
+    "claim": "Ganzheitliche Naturkosmetik & professionelle Haarentfernung",
+    "owner": "Anna Kaiser",
+    "rating": { "value": 4.9, "count": 5500, "source": "Treatwell" },
+    "teamLanguages": ["Deutsch", "English", "Español", "Italiano"]
+  },
+  "settings": {
+    "openingHours": [
+      { "weekday": 1, "label": "Montag", "open": "10:00", "close": "20:00" },
+      { "weekday": 2, "label": "Dienstag", "open": "10:00", "close": "20:00" },
+      { "weekday": 3, "label": "Mittwoch", "open": "10:00", "close": "20:00" },
+      { "weekday": 4, "label": "Donnerstag", "open": "10:00", "close": "20:00" },
+      { "weekday": 5, "label": "Freitag", "open": "10:00", "close": "20:00" },
+      { "weekday": 6, "label": "Samstag", "open": "10:00", "close": "16:00" },
+      { "weekday": 7, "label": "Sonntag" }
+    ],
+    "openingHoursPlaceholder": true,
+    "cancellation": { "freeUntilHours": 24, "feePercent": 50 },
+    "bufferMin": 10,
+    "slotStepMin": 15,
+    "contact": {
+      "phone": "+49 30 208 593 48",
+      "email": "info@honigseele.de",
+      "whatsapp": "https://wa.me/1781686836",
+      "instagram": "https://instagram.com/honigseele.berlin",
+      "facebook": "https://facebook.com/Honigseele"
+    }
+  },
+  "shipping": { "flatCents": 300, "label": "Versand innerhalb Deutschlands" },
+  "voucher": { "minCents": 2000, "maxCents": 50000, "validYears": 3 },
+  "blocks": [
+    { "id": "home.hero.eyebrow", "page": "Startseite", "label": "Hero – Eyebrow", "kind": "text", "value": "Naturkosmetik · Haarentfernung · Körperarbeit" },
+    { "id": "home.hero.lead", "page": "Startseite", "label": "Hero – Kurztext", "kind": "text", "value": "Ein Ort in Kreuzberg, an dem Du ankommen darfst. Mit Honigwachs, eigener Naturkosmetik und einem Team, das sich Zeit nimmt." },
+    { "id": "home.hero.second", "page": "Startseite", "label": "Hero – zweite Botschaft", "kind": "text", "value": "So schön, dass Du da bist." },
+    { "id": "home.hero.image", "page": "Startseite", "label": "Hero – Einstiegsfoto", "kind": "image", "value": "/images/stock/hero.jpg" },
+    { "id": "home.intro.title", "page": "Startseite", "label": "Intro – Überschrift", "kind": "text", "value": "In der Honigseele verschmelzen Waxing und Beauty mit Coaching und Körperarbeit." },
+    { "id": "home.intro.text", "page": "Startseite", "label": "Intro – Text", "kind": "richtext", "value": "Wir glauben an ein selbstbestimmtes und zeitgemäßes Verständnis von Weiblichkeit – und daran, dass sich alle bei uns willkommen fühlen dürfen. Seit sieben Jahren ist die Honigseele ein Ort zum Durchatmen: herzlich, ehrlich und mit viel Liebe zum Detail." },
+    { "id": "home.products.title", "page": "Startseite", "label": "Pflegeserie – Überschrift", "kind": "text", "value": "Unsere eigene Naturkosmetik, handgemacht in Berlin." },
+    { "id": "home.products.text", "page": "Startseite", "label": "Pflegeserie – Text", "kind": "richtext", "value": "Jede Behandlung in der Honigseele arbeitet mit unserer eigenen Pflegeserie aus der Crememanufaktur Berlin. Ohne Schnickschnack, mit Zutaten, die Deine Haut kennt." },
+    { "id": "about.title", "page": "Über uns", "label": "Über uns – Überschrift", "kind": "text", "value": "Wir sind die Honigseelen." },
+    { "id": "about.text", "page": "Über uns", "label": "Über uns – Haltung", "kind": "richtext", "value": "Die Honigseele ist mehr als ein Kosmetikstudio. Sie ist ein Ort für Frauen und für alle Menschen, die sich Zeit für sich nehmen wollen. Wir arbeiten ganzheitlich, mit eigener Naturkosmetik und mit einem Team, in dem jede ihre ganz eigene Gabe mitbringt." },
+    { "id": "about.rent.text", "page": "Über uns", "label": "Raum mieten – Text", "kind": "richtext", "value": "Du bist Masseurin, Therapeutin oder Coach und suchst einen warmen Ort für Deine Arbeit? Unsere Räume sind stundenweise oder regelmäßig zu mieten. Schreib uns – wir freuen uns auf Dich." },
+    { "id": "jobs.text", "page": "Über uns", "label": "Jobs – Text", "kind": "richtext", "value": "Wir suchen immer wieder Honigseelen: Depiladoras, Kosmetiker*innen und Masseur*innen. Aktuelle Stellen folgen." }
+  ],
+  "trust": [
+    { "title": "Eigene Naturkosmetik", "text": "Handgemacht in der Crememanufaktur Berlin – in jeder Anwendung." },
+    { "title": "Honigwachs", "text": "Warm, hautfreundlich, sanft. Seit sieben Jahren unser Handwerk." },
+    { "title": "Alle sind willkommen", "text": "Damen, Herren, Kinder, Teens, Paare – und alle dazwischen." },
+    { "title": "Vier Sprachen", "text": "Wir sprechen Deutsch, English, Español und Italiano." }
+  ],
+  "reviews": [
+    { "text": "Die liebevollste Waxing-Erfahrung, die ich je hatte. Man fühlt sich einfach aufgehoben.", "name": "Kundin auf Treatwell", "placeholder": true },
+    { "text": "Toller Laden, tolles Team, tolle Produkte. Ich komme seit Jahren und gehe jedes Mal entspannter raus.", "name": "Kundin auf Treatwell", "placeholder": true },
+    { "text": "Mein Wohlfühltag war ein Geschenk – an mich selbst. Danke, Honigseele!", "name": "Kundin auf Treatwell", "placeholder": true }
+  ]
+}

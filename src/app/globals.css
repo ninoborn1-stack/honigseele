@@ -1,0 +1,408 @@
+@import 'tailwindcss';
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/500.css';
+@import '@fontsource/cormorant-garamond/400-italic.css';
+@import '@fontsource/cormorant-garamond/500-italic.css';
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/500.css';
+@import '@fontsource/dm-sans/600.css';
+
+/* ---------- Design-Tokens ---------- */
+@theme {
+  --color-honey-950: #2b2118;
+  --color-honey-900: #3a2c1f;
+  --color-honey-800: #4a3828;
+  --color-cream-50: #f6f0e6;
+  --color-cream-100: #efe4d2;
+  --color-cream-200: #e6d6bc;
+  --color-card: #fbf7f0;
+  --color-honey-200: #f1d49c;
+  --color-honey-300: #e6bd6e;
+  --color-honey-400: #d9a54a;
+  --color-amber-600: #b87a1e;
+  --color-amber-800: #8a5a12;
+  --color-muted: #5a4a3a;
+  --color-line: #cdb894;
+  --color-line-soft: #e2d3b8;
+  --color-sage: #c9cdb4;
+  --color-success: #4d6b3c;
+  --color-danger: #9a3b26;
+
+  --font-serif: 'Cormorant Garamond', ui-serif, Georgia, serif;
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-curtain: cubic-bezier(0.76, 0, 0.24, 1);
+
+  --animate-rise: rise 0.9s var(--ease-soft) both;
+  --animate-fade: fade 0.8s var(--ease-soft) both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+  }
+}
+
+/* ---------- Basis ---------- */
+html {
+  /* overflow-x: hidden auf body würde position: sticky im Hero brechen */
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-padding-top: 96px;
+}
+
+body {
+  background: var(--color-cream-50);
+  color: var(--color-honey-950);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-honey-200);
+  color: var(--color-honey-950);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-amber-600);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3,
+.font-serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+
+/* Kursive Akzentwörter in Überschriften */
+h1 em,
+h2 em,
+h3 em,
+.accent {
+  font-style: italic;
+  color: var(--color-amber-600);
+}
+.on-dark h1 em,
+.on-dark h2 em,
+.on-dark h3 em,
+.on-dark .accent {
+  color: var(--color-honey-300);
+}
+
+/* Eyebrow: Versalien, gesperrt */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-amber-800);
+}
+.on-dark .eyebrow {
+  color: var(--color-honey-300);
+}
+
+/* Sanftes Honiglicht */
+.honey-light {
+  background:
+    radial-gradient(60% 50% at 85% 0%, rgb(241 212 156 / 0.55), transparent 70%),
+    radial-gradient(50% 40% at 0% 100%, rgb(241 212 156 / 0.35), transparent 70%),
+    var(--color-cream-50);
+}
+.honey-glow {
+  background:
+    radial-gradient(70% 60% at 70% 20%, rgb(217 165 74 / 0.22), transparent 70%),
+    radial-gradient(60% 50% at 10% 90%, rgb(184 122 30 / 0.18), transparent 70%),
+    var(--color-honey-950);
+}
+
+/* Feine Linien statt Boxen */
+.rule {
+  border-color: var(--color-line);
+}
+
+/* Safe Areas (App) */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Scroll-Leisten ohne Balken */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Erscheinen beim Scrollen */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 1s var(--ease-soft),
+    transform 1s var(--ease-soft);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Vorhang-Übergang ---------- */
+.curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  contain: strict;
+}
+.curtain i {
+  background: var(--color-honey-950);
+  border-right: 1px solid rgb(246 240 230 / 0.08);
+  transform: scaleY(0);
+  transform-origin: top;
+  will-change: transform;
+}
+.curtain-label {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(34px, 6vw, 80px);
+  color: var(--color-honey-300);
+  opacity: 0;
+}
+html.is-entering .curtain i {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  animation: curtainOut 0.7s var(--ease-curtain) forwards;
+  animation-delay: calc(0.08s + var(--i) * 0.05s);
+}
+html.is-leaving .curtain {
+  pointer-events: all;
+}
+html.is-leaving .curtain i {
+  transform-origin: top;
+  animation: curtainIn 0.55s var(--ease-curtain) forwards;
+  animation-delay: calc(var(--i) * 0.045s);
+}
+html.is-leaving .curtain-label {
+  animation: curtainLabel 0.25s 0.4s forwards;
+}
+html.is-quick.is-entering .curtain i {
+  animation-duration: 0.45s;
+  animation-delay: calc(var(--i) * 0.03s);
+}
+html.is-quick.is-leaving .curtain i {
+  animation-duration: 0.35s;
+  animation-delay: calc(var(--i) * 0.025s);
+}
+html.is-quick .curtain-label {
+  display: none;
+}
+@keyframes curtainOut {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+@keyframes curtainIn {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes curtainLabel {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  height: 230vh;
+  background: var(--color-cream-50);
+  position: relative;
+}
+.hero__stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+  color: var(--color-cream-50);
+}
+.hero__frame,
+.hero__media {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0% 0% 0% 0% round 0vw 0vw 0vw 0vw);
+}
+.hero__media {
+  overflow: hidden;
+  background: var(--color-honey-950);
+  /* Blütenmaske: Grundzustand = voll sichtbar (keine Maske) */
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+.hero__zoom {
+  position: absolute;
+  inset: 0;
+}
+.hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.12);
+}
+.hero__shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgb(43 33 24 / 0.55), transparent 26%),
+    linear-gradient(0deg, rgb(43 33 24 / 0.78), transparent 55%),
+    radial-gradient(80% 60% at 50% 45%, rgb(217 165 74 / 0.12), transparent 70%),
+    rgb(43 33 24 / 0.22);
+}
+.hero__bloom {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  opacity: 0;
+  color: var(--color-amber-600);
+}
+.hero__content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  padding: calc(104px + env(safe-area-inset-top)) 5vw 104px;
+}
+.lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  line-height: 0.9;
+}
+.lockup__honig {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-honey-300);
+  font-size: clamp(3rem, 8vw, 8.5rem);
+  line-height: 0.7;
+  transform: translateX(-1.4em);
+  position: relative;
+  z-index: 2;
+}
+.lockup__seele {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(5.2rem, 19vw, 19rem);
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+  overflow: hidden;
+  padding: 0 0.04em 0.06em;
+}
+.lockup__seele .ch {
+  display: inline-block;
+}
+.hero__second {
+  position: absolute;
+  inset: auto 5vw 14vh 5vw;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+.hero__bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    height: 185vh;
+  }
+  .lockup__honig {
+    transform: translateX(-0.9em);
+  }
+  .hero__content {
+    padding-bottom: 150px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curtain {
+    display: none;
+  }
+  .hero {
+    height: auto;
+  }
+  .hero__stage {
+    position: relative;
+    height: 100svh;
+  }
+  .hero__second {
+    display: none;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Vor dem Intro (Klasse wird im <head> gesetzt): Blüte geschlossen, Text unsichtbar – kein Aufblitzen */
+html.hero-intro .hero__media {
+  -webkit-mask-image: url('/images/bloom-mask.svg');
+  mask-image: url('/images/bloom-mask.svg');
+  -webkit-mask-size: 0vmax;
+  mask-size: 0vmax;
+}
+html.hero-intro .hero__content,
+html.hero-intro .hero__bar,
+html.hero-intro [data-site-header] {
+  opacity: 0;
+}

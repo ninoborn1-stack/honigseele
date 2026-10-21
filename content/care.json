@@ -1,0 +1,52 @@
+{
+  "waxing": {
+    "preparation": [
+      "Deine Haut ist trocken und nicht eingecremt.",
+      "Ein sanftes Peeling ein bis zwei Tage vorher hilft dem Wachs.",
+      "Die Haare sind 3–5 mm lang – das sind etwa 10–14 Tage nach der letzten Rasur."
+    ],
+    "aftercare": [
+      "Pflege mit unserem Aloe-Vera-Gel aus der eigenen Serie.",
+      "24 Stunden keine Sonne, Sauna, Sport oder Baden.",
+      "24 Stunden keine parfümierten Cremes."
+    ],
+    "rhythm": "Alle 3–6 Wochen. Nach 2–3 Zyklen wird das Ergebnis richtig schön."
+  },
+  "laser": {
+    "preparation": [
+      "Ein bis drei Tage vorher rasieren.",
+      "Vier Wochen vorher kein Wachs, Zupfen oder Epilieren.",
+      "Zwei Wochen vorher keine Sonne und kein Solarium."
+    ],
+    "aftercare": [
+      "Die Haut kühlen.",
+      "48 Stunden kein Sport und keine Sauna.",
+      "Zwei Wochen nach der Behandlung keine Sonne."
+    ],
+    "rhythm": "6–10 Sitzungen im Abstand von 4–8 Wochen. Jede Erstbehandlung beginnt mit einem Vorgespräch."
+  },
+  "gesicht-augen": {
+    "preparation": ["Komm gern ungeschminkt.", "Sag uns, welche Produkte Du gerade benutzt."],
+    "aftercare": ["Am Behandlungstag möglichst kein Make-up.", "Sonnenschutz nicht vergessen."],
+    "rhythm": "Etwa alle 4–6 Wochen, passend zum Hautzyklus.",
+    "placeholder": true
+  },
+  "koerper-massagen": {
+    "preparation": ["Iss vorher nur leicht.", "Komm ein paar Minuten früher an und lass den Alltag draußen."],
+    "aftercare": ["Trink viel Wasser.", "Gönn Dir danach etwas Ruhe."],
+    "rhythm": "Wann immer Dein Körper danach fragt.",
+    "placeholder": true
+  },
+  "mani-pedikuere": {
+    "preparation": ["Bitte keinen Shellac oder Gel mitbringen – oder sag uns vorher Bescheid."],
+    "aftercare": ["Unser Nagel-Öl hält Nagelhaut und Nägel geschmeidig."],
+    "rhythm": "Alle 4–6 Wochen.",
+    "placeholder": true
+  },
+  "wohlfuehl-pakete": {
+    "preparation": ["Plane etwas Zeit nach dem Paket ein – es lohnt sich, nicht sofort weiterzuhetzen."],
+    "aftercare": ["Viel trinken, langsam machen, nachspüren."],
+    "rhythm": "Zum Geburtstag, zur Hochzeit oder einfach so.",
+    "placeholder": true
+  }
+}

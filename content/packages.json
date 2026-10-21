@@ -1,0 +1,226 @@
+[
+  {
+    "id": "paket-deine-kleine-auszeit",
+    "name": "Deine kleine Auszeit",
+    "tagline": "Zeit nur für Dich.",
+    "durationMin": 150,
+    "priceCents": 18500,
+    "audience": "alle",
+    "includes": [
+      "Willkommensgetränk",
+      "Gesichtsbehandlung „Zeit für Dich“",
+      "Rückenmassage 30 Min."
+    ],
+    "steps": [
+      {
+        "label": "Deine kleine Auszeit",
+        "durationMin": 150,
+        "roomType": "massage"
+      }
+    ]
+  },
+  {
+    "id": "paket-dein-wohlfuehltag-in-der-honigseele",
+    "name": "Dein Wohlfühltag in der Honigseele",
+    "tagline": "Ein ganzer Tag, um anzukommen.",
+    "durationMin": 240,
+    "priceCents": 35000,
+    "audience": "alle",
+    "includes": [
+      "Willkommensgetränk & Snack",
+      "Körperpeeling",
+      "Aromaöl-Massage 60 Min.",
+      "Gesichtsbehandlung",
+      "Spa-Pediküre"
+    ],
+    "steps": [
+      {
+        "label": "Dein Wohlfühltag in der Honigseele",
+        "durationMin": 240,
+        "roomType": "massage"
+      }
+    ]
+  },
+  {
+    "id": "paket-dein-tag-am-meer",
+    "name": "Dein Tag am Meer",
+    "tagline": "Algen, Salz und Meeresluft – mitten in Kreuzberg.",
+    "durationMin": 210,
+    "priceCents": 26500,
+    "audience": "alle",
+    "includes": [
+      "Willkommensgetränk",
+      "Meereszauber Körperpackung",
+      "Gesichtsbehandlung „Die Kraft der Algen“"
+    ],
+    "steps": [
+      {
+        "label": "Dein Tag am Meer",
+        "durationMin": 210,
+        "roomType": "massage"
+      }
+    ]
+  },
+  {
+    "id": "paket-mama-fuer-dich",
+    "name": "Mama, Für Dich",
+    "tagline": "Für alle Mamas, die mal wieder durchatmen dürfen.",
+    "durationMin": 150,
+    "priceCents": 21000,
+    "audience": "mamas",
+    "includes": [
+      "Willkommensgetränk",
+      "Massage 60 Min.",
+      "Gesichtsmassage",
+      "Hand-Pflege"
+    ],
+    "steps": [
+      {
+        "label": "Mama, Für Dich",
+        "durationMin": 150,
+        "roomType": "massage"
+      }
+    ]
+  },
+  {
+    "id": "paket-die-braut-die-sich-traut",
+    "name": "Die Braut die sich traut",
+    "tagline": "Strahlend in den großen Tag.",
+    "durationMin": 240,
+    "priceCents": 25000,
+    "audience": "braut",
+    "includes": [
+      "Willkommensgetränk",
+      "Waxing nach Wahl",
+      "Gesichtsbehandlung",
+      "Maniküre mit Lack",
+      "Brauen formen"
+    ],
+    "steps": [
+      {
+        "label": "Die Braut die sich traut",
+        "durationMin": 240,
+        "roomType": "massage"
+      }
+    ]
+  },
+  {
+    "id": "paket-balsam-fuer-die-seele",
+    "name": "Balsam für die Seele",
+    "tagline": "Wenn alles zu viel ist.",
+    "durationMin": 150,
+    "priceCents": 22500,
+    "audience": "alle",
+    "includes": [
+      "Willkommensgetränk",
+      "Honig für die Seele 60 Min.",
+      "Gesicht- und Kopfmassage"
+    ],
+    "steps": [
+      {
+        "label": "Balsam für die Seele",
+        "durationMin": 150,
+        "roomType": "massage"
+      }
+    ]
+  },
+  {
+    "id": "paket-teenysprechstunde",
+    "name": "Teenysprechstunde",
+    "tagline": "Hautpflege lernen, sich wohlfühlen.",
+    "durationMin": 150,
+    "priceCents": 19000,
+    "audience": "teens",
+    "includes": [
+      "Hautanalyse",
+      "Gesichtsbehandlung für junge Haut",
+      "Pflegeberatung",
+      "Brauen in Form"
+    ],
+    "steps": [
+      {
+        "label": "Teenysprechstunde",
+        "durationMin": 150,
+        "roomType": "massage"
+      }
+    ]
+  },
+  {
+    "id": "paket-zauberwichtel-kinder",
+    "name": "Zauberwichtel (Kinder)",
+    "tagline": "Für kleine Honigseelen.",
+    "durationMin": 90,
+    "priceCents": 9500,
+    "audience": "kinder",
+    "includes": [
+      "Kinder-Wohlfühlmassage",
+      "Mini-Maniküre",
+      "Kakao"
+    ],
+    "steps": [
+      {
+        "label": "Zauberwichtel (Kinder)",
+        "durationMin": 90,
+        "roomType": "massage"
+      }
+    ]
+  },
+  {
+    "id": "paket-schoene-fuesse-schoene-haende",
+    "name": "Schöne Füße & schöne Hände",
+    "tagline": "Hände und Füße in einem Termin.",
+    "durationMin": 60,
+    "priceCents": 10000,
+    "audience": "alle",
+    "includes": [
+      "Klassische Maniküre",
+      "Klassische Pediküre"
+    ],
+    "steps": [
+      {
+        "label": "Schöne Füße & schöne Hände",
+        "durationMin": 60,
+        "roomType": "massage"
+      }
+    ]
+  },
+  {
+    "id": "paket-miteinander-strahlen",
+    "name": "Miteinander strahlen",
+    "tagline": "Zu zweit, nebeneinander.",
+    "durationMin": 60,
+    "priceCents": 18000,
+    "audience": "paare",
+    "includes": [
+      "Willkommensgetränk",
+      "Zwei parallele Behandlungen nach Wahl"
+    ],
+    "steps": [
+      {
+        "label": "Miteinander strahlen",
+        "durationMin": 60,
+        "roomType": "massage"
+      }
+    ]
+  },
+  {
+    "id": "paket-von-kopf-bis-fuss-auf-liebe-eingestellt-paare",
+    "name": "Von Kopf bis Fuß auf Liebe eingestellt (Paare)",
+    "tagline": "Paarzeit in der Honigseele.",
+    "durationMin": 120,
+    "priceCents": 28000,
+    "audience": "paare",
+    "includes": [
+      "Willkommensgetränk",
+      "Paarmassage 60 Min.",
+      "Fußbad & Fußmassage"
+    ],
+    "steps": [
+      {
+        "label": "Von Kopf bis Fuß auf Liebe eingestellt (Paare)",
+        "durationMin": 120,
+        "roomType": "massage"
+      }
+    ]
+  }
+]

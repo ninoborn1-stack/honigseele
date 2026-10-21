@@ -1,0 +1,272 @@
+[
+  {
+    "id": "anna",
+    "name": "Anna",
+    "role": "Inhaberin · Depiladora",
+    "title": "Die Seele des Honigs",
+    "bio": "Vor sieben Jahren hat Anna die Honigseele gegründet – aus dem Wunsch nach einem Ort, an dem sich alle willkommen fühlen. Sie wachst mit Honigwachs, mit ruhiger Hand und viel Herz.",
+    "bioPlaceholder": false,
+    "skills": [
+      "Waxing"
+    ],
+    "avatarTone": "honey",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "EN"
+    ]
+  },
+  {
+    "id": "asita",
+    "name": "Asita",
+    "role": "Kosmetik · Massagen · Coaching",
+    "title": "Honigseelengeflüster",
+    "bio": "Asita verbindet Kosmetik, Massage und Coaching zu Behandlungen, die tiefer gehen als die Haut.",
+    "bioPlaceholder": false,
+    "skills": [
+      "Gesicht",
+      "Massagen",
+      "Coaching"
+    ],
+    "avatarTone": "amber",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "EN"
+    ]
+  },
+  {
+    "id": "juli",
+    "name": "Juli",
+    "role": "Depiladora · Japanische Gesichtsmassage",
+    "bio": "Juli ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Juli bald selbst vor.",
+    "bioPlaceholder": true,
+    "skills": [
+      "Waxing",
+      "Massagen"
+    ],
+    "avatarTone": "sand",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "EN"
+    ]
+  },
+  {
+    "id": "jamilah",
+    "name": "Jamilah",
+    "role": "Laser · Depiladora · Wimpernstylistin",
+    "bio": "Jamilah ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Jamilah bald selbst vor.",
+    "bioPlaceholder": true,
+    "skills": [
+      "Laser",
+      "Waxing",
+      "Wimpern & Brauen"
+    ],
+    "avatarTone": "cream",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "EN"
+    ]
+  },
+  {
+    "id": "sandra",
+    "name": "Sandra",
+    "role": "Laser · Depiladora · Körper · Kosmetik · Pediküre",
+    "bio": "Sandra ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Sandra bald selbst vor.",
+    "bioPlaceholder": true,
+    "skills": [
+      "Laser",
+      "Waxing",
+      "Körper",
+      "Gesicht",
+      "Mani & Pedi"
+    ],
+    "avatarTone": "honey",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE"
+    ]
+  },
+  {
+    "id": "lisz",
+    "name": "Lisz",
+    "role": "Depiladora · Kosmetik",
+    "bio": "Lisz ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Lisz bald selbst vor.",
+    "bioPlaceholder": true,
+    "skills": [
+      "Waxing",
+      "Gesicht"
+    ],
+    "avatarTone": "amber",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "EN"
+    ]
+  },
+  {
+    "id": "selena",
+    "name": "Selena",
+    "role": "Depiladora",
+    "bio": "Selena ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Selena bald selbst vor.",
+    "bioPlaceholder": true,
+    "skills": [
+      "Waxing"
+    ],
+    "avatarTone": "sand",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "ES",
+      "EN"
+    ]
+  },
+  {
+    "id": "yvonne",
+    "name": "Yvonne",
+    "role": "Depiladora",
+    "bio": "Yvonne ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Yvonne bald selbst vor.",
+    "bioPlaceholder": true,
+    "skills": [
+      "Waxing"
+    ],
+    "avatarTone": "cream",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE"
+    ]
+  },
+  {
+    "id": "justyna",
+    "name": "Justyna",
+    "role": "Kosmetikerin · Podologin",
+    "bio": "Justyna ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Justyna bald selbst vor.",
+    "bioPlaceholder": true,
+    "skills": [
+      "Gesicht",
+      "Mani & Pedi"
+    ],
+    "avatarTone": "honey",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "EN"
+    ]
+  },
+  {
+    "id": "nadine",
+    "name": "Nadine",
+    "role": "Kosmetik · Pediküre · Sugaring · Depiladora · Wimpern & Brow Lifting",
+    "bio": "Nadine ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Nadine bald selbst vor.",
+    "bioPlaceholder": true,
+    "skills": [
+      "Waxing",
+      "Gesicht",
+      "Mani & Pedi",
+      "Wimpern & Brauen"
+    ],
+    "avatarTone": "amber",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE"
+    ]
+  },
+  {
+    "id": "isabell",
+    "name": "Isabell",
+    "role": "Kosmetik · Make-up-Artist",
+    "bio": "Isabell ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Isabell bald selbst vor.",
+    "bioPlaceholder": true,
+    "skills": [
+      "Gesicht"
+    ],
+    "avatarTone": "sand",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "IT",
+      "EN"
+    ]
+  },
+  {
+    "id": "larissa",
+    "name": "Larissa Enni Inni",
+    "role": "Ernährungsberatung",
+    "bio": "Larissa Enni Inni ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Larissa Enni Inni bald selbst vor.",
+    "bioPlaceholder": true,
+    "skills": [
+      "Coaching"
+    ],
+    "avatarTone": "cream",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "EN"
+    ]
+  },
+  {
+    "id": "elsa",
+    "name": "Elsa",
+    "role": "Massagen",
+    "title": "Die Kuschel Seele",
+    "bio": "Elsa ist unsere Kuschel Seele: Ihre Massagen sind warm, langsam und ganz bei Dir.",
+    "bioPlaceholder": false,
+    "skills": [
+      "Massagen"
+    ],
+    "avatarTone": "honey",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE"
+    ]
+  },
+  {
+    "id": "kati",
+    "name": "Kati",
+    "role": "Yoga",
+    "bio": "Kati ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Kati bald selbst vor.",
+    "bioPlaceholder": true,
+    "skills": [
+      "Yoga"
+    ],
+    "avatarTone": "amber",
+    "bookable": false,
+    "visible": true,
+    "languages": [
+      "DE",
+      "EN"
+    ]
+  },
+  {
+    "id": "maria",
+    "name": "Maria",
+    "role": "Yoga",
+    "bio": "Maria ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Maria bald selbst vor.",
+    "bioPlaceholder": true,
+    "skills": [
+      "Yoga"
+    ],
+    "avatarTone": "sand",
+    "bookable": false,
+    "visible": true,
+    "languages": [
+      "DE",
+      "IT"
+    ]
+  }
+]

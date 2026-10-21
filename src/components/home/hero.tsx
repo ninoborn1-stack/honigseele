@@ -77,12 +77,11 @@ export function Hero() {
           .to('.hero__bloom', { scale: small ? 7 : 5, opacity: 0, rotate: 18, duration: 1.6, ease: 'expo.in' }, 0.85)
           .fromTo('.hero__media img', { scale: 1.45 }, { scale: 1.12, duration: 2.6, ease: 'expo.out' }, 0.75)
           .fromTo('.hero__shade', { opacity: 0 }, { opacity: 1, duration: 1.2, ease: 'power2.out' }, 1.8)
-          .fromTo('.lockup__seele .ch', { yPercent: 115 }, { yPercent: 0, duration: 1.4, stagger: 0.07, ease: 'expo.out' }, 1.95)
-          .fromTo('.lockup__honig', { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 1.6, ease: 'expo.out' }, 2.3)
+          .fromTo('.lockup .ch', { yPercent: 115 }, { yPercent: 0, duration: 1.4, stagger: 0.06, ease: 'expo.out' }, 1.95)
           .fromTo('.hero__eyebrow > *, .hero__foot > *', { opacity: 0, y: 20 }, { opacity: 1, y: 0, stagger: 0.08, duration: 1.1, ease: 'power3.out' }, 2.2)
           .fromTo('.hero__bar', { opacity: 0 }, { opacity: 1, duration: 1, ease: 'power2.out' }, 2.6)
           .eventCallback('onComplete', () => {
-            gsap.set(['.hero__bloom', '.bloom-path', '.hero__media img', '.hero__shade', '.ch', '.lockup__honig', '.hero__eyebrow > *', '.hero__foot > *', '.hero__bar'], { clearProps: 'all' });
+            gsap.set(['.hero__bloom', '.bloom-path', '.hero__media img', '.hero__shade', '.ch', '.hero__eyebrow > *', '.hero__foot > *', '.hero__bar'], { clearProps: 'all' });
             ['-webkit-mask-image', 'mask-image', '-webkit-mask-size', 'mask-size'].forEach((p) => media.style.removeProperty(p));
             if (header) gsap.set(header, { clearProps: 'opacity,transform' });
           });
@@ -159,7 +158,11 @@ export function Hero() {
           </p>
           <h1 className="lockup" aria-label="Honigseele">
             <span className="lockup__honig" aria-hidden>
-              Honig
+              {'Honig'.split('').map((c, i) => (
+                <span key={i} className="ch">
+                  {c}
+                </span>
+              ))}
             </span>
             <span className="lockup__seele" aria-hidden>
               {'seele'.split('').map((c, i) => (

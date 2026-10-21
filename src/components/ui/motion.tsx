@@ -109,13 +109,13 @@ export function Parallax({ children, speed = 0.12, className }: { children: Reac
 }
 
 /** Endlos-Laufband */
-export function Marquee({ items, className, speed = 45 }: { items: ReactNode[]; className?: string; speed?: number }) {
+export function Marquee({ items, className, speed = 45, dots = true }: { items: ReactNode[]; className?: string; speed?: number; dots?: boolean }) {
   const row = (hidden?: boolean) => (
     <div className="flex shrink-0 items-center" aria-hidden={hidden}>
       {items.map((it, i) => (
         <span key={i} className="flex items-center">
           {it}
-          <span className="mx-[0.5em] inline-block h-[0.18em] w-[0.18em] rounded-full bg-current opacity-50" />
+          {dots && <span className="mx-[0.5em] inline-block h-[0.18em] w-[0.18em] rounded-full bg-current opacity-50" />}
         </span>
       ))}
     </div>

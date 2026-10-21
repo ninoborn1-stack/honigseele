@@ -2,12 +2,14 @@ import type { Metadata } from 'next';
 import { Star } from 'lucide-react';
 import { Placeholder } from '@/components/ui/badge';
 import { ArrowLink } from '@/components/ui/button';
-import { CountUp, Marquee, Parallax, RevealHeading, RevealImage } from '@/components/ui/motion';
+import { CountUp, Parallax, RevealHeading } from '@/components/ui/motion';
+import { Photo } from '@/components/ui/photo';
 import { Reveal } from '@/components/ui/reveal';
-import { Eyebrow, Section, Title } from '@/components/ui/typography';
+import { Eyebrow, Title } from '@/components/ui/typography';
 import { block, site, staff } from '@/content';
-import { InquiryForm } from '@/features/about/inquiry-form';
+import { InquiryButton } from '@/features/about/inquiry-drawer';
 import { TeamGrid } from '@/features/about/team-grid';
+import { ValueStack } from '@/features/about/value-stack';
 
 export const metadata: Metadata = {
   title: 'Über uns – die Honigseelen',
@@ -15,144 +17,119 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  { title: 'Alle sind willkommen', text: 'Frauen, Männer, Kinder, Teens, Paare – und alle dazwischen. Bei uns wird niemand bewertet.' },
-  { title: 'Selbstbestimmt', text: 'Ein zeitgemäßes Verständnis von Weiblichkeit. Du entscheidest, was Dir guttut.' },
-  { title: 'Ganzheitlich', text: 'Haut, Körper und Seele gehören zusammen. Deshalb gibt es bei uns Waxing und Coaching unter einem Dach.' },
-  { title: 'Natürlich', text: 'Unsere eigene Naturkosmetik, handgemacht in der Crememanufaktur Berlin, in jeder Anwendung.' },
+  { title: 'Alle sind willkommen', text: 'Frauen, Männer, Kinder, Teens, Paare – und alle dazwischen. Bei uns wird niemand bewertet.', image: '/images/stock/room.jpg' },
+  { title: 'Selbstbestimmt', text: 'Ein zeitgemäßes Verständnis von Weiblichkeit. Du entscheidest, was Dir guttut – wir begleiten Dich dabei.', image: '/images/stock/plants.jpg' },
+  { title: 'Ganzheitlich', text: 'Haut, Körper und Seele gehören zusammen. Deshalb gibt es bei uns Waxing und Coaching unter einem Dach.', image: '/images/stock/towels.jpg' },
+  { title: 'Natürlich', text: 'Unsere eigene Naturkosmetik, handgemacht in der Crememanufaktur Berlin, steckt in jeder Anwendung.', image: '/images/stock/honey.jpg' },
 ];
 
 export default function AboutPage() {
+  const team = staff.filter((s) => s.visible);
+  const facts = [
+    { value: 7, label: 'Jahre in Kreuzberg' },
+    { value: team.length, label: 'Honigseelen' },
+    { value: site.brand.rating.value, decimals: 1, label: `Sterne bei ${site.brand.rating.source}` },
+    { value: site.brand.teamLanguages.length, label: 'Sprachen im Team' },
+  ];
+
   return (
     <>
-      {/* Kopf */}
-      <section className="honey-light pb-20 pt-16 md:pb-32 md:pt-24">
-        <div className="wrap">
-          <Eyebrow>Über uns</Eyebrow>
-          <Title as="h1" size="display" className="mt-8 max-w-[12ch]">
-            Wir sind die *Honigseelen*.
-          </Title>
-          <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-end lg:gap-24">
-            <Reveal>
-              <p className="max-w-xl text-lg leading-relaxed text-muted md:text-xl">{block('about.text')}</p>
-              <p className="mt-8 font-serif text-2xl italic text-amber-600">– Anna Kaiser, Gründerin</p>
-            </Reveal>
-            <Parallax speed={0.08}>
-              <RevealImage src="/images/stock/room.jpg" alt="Heller Raum mit Pflanzen" className="aspect-[5/4] rounded-[2.5rem]" />
-            </Parallax>
-          </div>
-        </div>
-      </section>
-
-      {/* Haltung */}
-      <Section tone="dark">
-        <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
-          <div className="lg:sticky lg:top-[calc(var(--top-h,96px)+2rem)] lg:self-start">
-            <Eyebrow>Haltung</Eyebrow>
-            <Title className="mt-6">Was uns *ausmacht*.</Title>
-          </div>
-          <ol>
-            {values.map((v, i) => (
-              <Reveal as="li" key={v.title} delay={i * 80} className="grid grid-cols-[auto_1fr] gap-8 border-t border-cream-50/15 py-10 md:gap-14 md:py-14">
-                <span className="font-serif text-6xl leading-none text-honey-300 md:text-8xl">{String(i + 1).padStart(2, '0')}</span>
-                <div>
-                  <h3 className="font-serif text-[clamp(2rem,3.4vw,3.4rem)] leading-tight">{v.title}</h3>
-                  <p className="mt-4 max-w-lg text-lg text-cream-100/80">{v.text}</p>
-                </div>
-              </Reveal>
-            ))}
-          </ol>
-        </div>
-      </Section>
-
-      {/* Team */}
-      <Section id="team">
-        <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <div>
-            <Eyebrow>Das Team</Eyebrow>
-            <Title className="mt-6">Wer Dich *empfängt*.</Title>
-          </div>
-          <Placeholder label="Teamfotos & Porträts folgen" />
-        </div>
-        <TeamGrid initialStaff={staff} />
-        <p className="mt-14 text-muted">Dazu kommen externe Masseur*innen und Therapeut*innen, die bei uns Räume mieten.</p>
-      </Section>
-
-      {/* Bewertungen */}
-      <section className="overflow-hidden border-y border-line bg-cream-100 py-24 md:py-36">
-        <div className="wrap grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
-          <div>
-            <Eyebrow>Bewertungen</Eyebrow>
-            <CountUp to={site.brand.rating.value} decimals={1} className="mt-8 block font-serif text-[clamp(8rem,18vw,15rem)] leading-[0.78] tracking-[-0.04em]" />
-            <div className="mt-6 flex gap-1 text-amber-600">
-              {[0, 1, 2, 3, 4].map((i) => (
-                <Star key={i} className="h-6 w-6 fill-current" strokeWidth={1} />
-              ))}
-            </div>
-            <p className="mt-3 text-lg text-muted">
-              aus ca. <CountUp to={site.brand.rating.count} className="font-medium text-honey-950" /> Bewertungen auf {site.brand.rating.source}
-            </p>
-          </div>
-          <div className="space-y-14">
-            {site.reviews.map((r, i) => (
-              <Reveal key={r.text} delay={i * 120}>
-                <figure className="border-l-2 border-honey-400 pl-8">
-                  <blockquote className="font-serif text-[clamp(1.8rem,2.8vw,2.8rem)] italic leading-snug">„{r.text}“</blockquote>
-                  <figcaption className="mt-4 text-sm uppercase tracking-[0.16em] text-muted">
-                    {r.name} {r.placeholder && <Placeholder label="Beispiel" />}
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Raum mieten */}
-      <section id="raum-mieten" className="bg-cream-50">
-        <div className="grid lg:grid-cols-2">
-          <div className="relative min-h-[55svh]">
-            <RevealImage src="/images/stock/towels.jpg" alt="Gerollte Handtücher" className="!absolute inset-0" />
-          </div>
-          <div className="px-[clamp(1.25rem,3.5vw,4rem)] py-24 md:py-36 lg:pl-20">
-            <Eyebrow>Raum mieten</Eyebrow>
-            <Title className="mt-6">Dein Raum in der *Honigseele*.</Title>
-            <p className="mt-8 max-w-lg text-lg text-muted">{block('about.rent.text')}</p>
-            <div className="mt-12 max-w-xl">
-              <InquiryForm kind="raum-mieten" cta="Anfrage senden" placeholder="Was bietest Du an, wann und wie oft möchtest Du den Raum nutzen?" />
-            </div>
-            <p className="mt-5 text-sm text-muted">Bald mit eigenem Profil in der Honigseele-Community.</p>
-          </div>
-        </div>
-      </section>
-
-      <div className="border-y border-line bg-cream-50 py-6" aria-hidden>
-        <Marquee
-          speed={60}
-          items={['Wir suchen Honigseelen', 'Depiladoras', 'Kosmetiker*innen', 'Masseur*innen'].map((t, i) => (
-            <span key={t} className={`whitespace-nowrap font-serif text-[clamp(2rem,4.5vw,4rem)] leading-none ${i % 2 ? 'italic text-amber-600' : ''}`}>
-              {t}
-            </span>
-          ))}
-        />
-      </div>
-
-      {/* Jobs */}
-      <Section tone="light" id="jobs">
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
-          <div>
-            <Eyebrow>Jobs</Eyebrow>
-            <RevealHeading as="h2" text="Werde eine *Honigseele*." className="mt-6 text-[clamp(2.5rem,5.6vw,6.2rem)] leading-[0.98]" />
-            <p className="mt-8 max-w-lg text-lg text-muted">{block('jobs.text')}</p>
-            <Placeholder label="Stellenanzeigen folgen" className="mt-5" />
-            <ArrowLink href="/kontakt/" className="mt-10">
-              Lieber persönlich?
+      {/* 1. Vollbild-Kopf */}
+      <section className="relative flex min-h-[560px] items-end overflow-hidden bg-honey-950 text-cream-50 md:h-[calc(88svh-var(--top-h,96px))]">
+        <Parallax speed={-0.18} className="absolute -inset-y-[12%] inset-x-0">
+          <Photo src="/images/stock/room.jpg" alt="Heller Raum mit Pflanzen in der Honigseele" priority className="h-full w-full !bg-honey-950" imgClassName="animate-fade" />
+        </Parallax>
+        <div aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgb(28_21_15/0.94)_0%,rgb(28_21_15/0.66)_42%,rgb(28_21_15/0.4)_72%,rgb(28_21_15/0.6)_100%)]" />
+        <div className="wrap relative pb-12 pt-40 md:pb-16">
+          <Eyebrow className="!text-honey-300">Über uns · seit sieben Jahren in Kreuzberg</Eyebrow>
+          <RevealHeading as="h1" text="Wir sind die *Honigseelen*." className="mt-6 max-w-[11ch] font-serif text-[clamp(3rem,10vw,11rem)] leading-[0.88] tracking-[-0.03em]" />
+          <div className="mt-10 grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
+            <p className="max-w-xl text-lg text-cream-100/90 md:text-xl">Ein Ort für Frauen und für alle Menschen, die sich Zeit für sich nehmen wollen.</p>
+            <ArrowLink href="#team" light data-no-curtain>
+              Das Team
             </ArrowLink>
           </div>
-          <div className="rounded-[2rem] border border-line bg-card p-8 md:p-12">
-            <InquiryForm kind="job" cta="Bewerbung senden" placeholder="Erzähl uns von Dir." />
+        </div>
+      </section>
+
+      {/* 2. Geschichte als ruhiges Statement */}
+      <section className="bg-cream-50 py-24 md:py-36">
+        <div className="wrap flex flex-col items-center text-center">
+          <Eyebrow className="justify-center">Unsere Geschichte</Eyebrow>
+          <Reveal delay={100}>
+            <p className="mx-auto mt-10 max-w-4xl font-serif text-[clamp(1.7rem,3vw,3rem)] leading-[1.25]">„{block('about.text')}“</p>
+          </Reveal>
+          <Reveal delay={250}>
+            <p className="mt-10 text-xs font-medium uppercase tracking-[0.22em] text-muted">Anna Kaiser · Gründerin, „Die Seele des Honigs“</p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 3. Zahlen */}
+      <section className="border-y border-line-soft bg-cream-50">
+        <ul className="wrap grid grid-cols-2 lg:grid-cols-4">
+          {facts.map((f, i) => (
+            <li key={f.label} className={`flex flex-col items-center gap-3 py-12 text-center md:py-16 ${i % 2 ? 'border-l border-line-soft' : ''} ${i === 2 ? 'border-t border-line-soft lg:border-l lg:border-t-0' : ''} ${i === 3 ? 'border-t border-line-soft lg:border-t-0' : ''}`}>
+              <span className="flex items-center gap-2 font-serif text-[clamp(3.2rem,6vw,5.5rem)] leading-none">
+                <CountUp to={f.value} decimals={f.decimals ?? 0} />
+                {f.decimals && <Star className="h-6 w-6 fill-amber-600 text-amber-600" strokeWidth={1} />}
+              </span>
+              <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">{f.label}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* 4. Haltung als Stapelkarten */}
+      <section className="bg-cream-50 pb-10 pt-24 md:pt-36">
+        <div className="wrap mb-14 text-center md:mb-20">
+          <Eyebrow className="justify-center">Haltung</Eyebrow>
+          <Title className="mt-7">Was uns *ausmacht*.</Title>
+        </div>
+        <ValueStack values={values} />
+      </section>
+
+      {/* 5. Team */}
+      <section id="team" className="bg-cream-50 py-24 md:py-36">
+        <div className="wrap">
+          <div className="mx-auto mb-14 max-w-2xl text-center">
+            <Eyebrow className="justify-center">Das Team</Eyebrow>
+            <Title className="mt-7">Wer Dich *empfängt*.</Title>
+            <p className="mt-6 text-muted md:text-lg">Dazu kommen externe Masseur*innen und Therapeut*innen, die bei uns Räume mieten.</p>
+            <Placeholder label="Teamfotos & Porträts folgen" className="mt-5" />
+          </div>
+          <TeamGrid initialStaff={staff} />
+        </div>
+      </section>
+
+      {/* 6. Raum mieten & Jobs */}
+      <section className="bg-cream-50 px-[clamp(0.75rem,1.6vw,1.75rem)] pb-24 md:pb-36">
+        <div className="grid gap-4 lg:grid-cols-2">
+          <div id="raum-mieten" className="honey-glow on-dark flex min-h-[440px] flex-col justify-between gap-10 rounded-t-[2.5rem] rounded-b-[1.5rem] p-8 text-cream-50 sm:p-12 md:rounded-t-[4rem] lg:p-16">
+            <div>
+              <Eyebrow>Raum mieten</Eyebrow>
+              <RevealHeading as="h2" text="Dein Raum in der *Honigseele*." className="mt-7 text-[clamp(2.4rem,4.4vw,4.6rem)] leading-[0.98]" />
+              <p className="mt-6 max-w-md text-lg text-cream-100/80">{block('about.rent.text')}</p>
+            </div>
+            <div>
+              <InquiryButton kind="raum-mieten" label="Raum anfragen" title="Raum mieten" variant="honey" placeholder="Was bietest Du an, wann und wie oft möchtest Du den Raum nutzen?" />
+              <p className="mt-4 text-sm text-cream-100/60">Bald mit eigenem Profil in der Honigseele-Community.</p>
+            </div>
+          </div>
+          <div id="jobs" className="flex min-h-[440px] flex-col justify-between gap-10 rounded-t-[2.5rem] rounded-b-[1.5rem] bg-cream-100 p-8 sm:p-12 md:rounded-t-[4rem] lg:p-16">
+            <div>
+              <Eyebrow>Jobs</Eyebrow>
+              <RevealHeading as="h2" text="Werde eine *Honigseele*." className="mt-7 text-[clamp(2.4rem,4.4vw,4.6rem)] leading-[0.98]" />
+              <p className="mt-6 max-w-md text-lg text-muted">{block('jobs.text')}</p>
+              <Placeholder label="Stellenanzeigen folgen" className="mt-4" />
+            </div>
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+              <InquiryButton kind="job" label="Bewerben" title="Bewerbung" placeholder="Erzähl uns von Dir." />
+              <ArrowLink href="/kontakt/">Lieber persönlich</ArrowLink>
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
     </>
   );
 }

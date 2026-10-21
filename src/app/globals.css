@@ -311,32 +311,30 @@ html.is-quick .curtain-label {
   padding: calc(var(--top-h, 104px) + 28px) clamp(1.25rem, 3.5vw, 4rem) 112px;
 }
 .lockup {
+  /* Markenname in einer Zeile: „Honig“ kursiv in Honiggold, „seele“ gerade – gemeinsame Grundlinie */
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: baseline;
   margin: 0;
-  line-height: 0.9;
-}
-.lockup__honig {
-  font-family: var(--font-serif);
-  font-style: italic;
-  color: var(--color-honey-300);
-  font-size: clamp(3rem, 8vw, 8.5rem);
-  line-height: 0.7;
-  transform: translateX(-1.4em);
-  position: relative;
-  z-index: 2;
-}
-.lockup__seele {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: clamp(5.2rem, 19vw, 19rem);
-  letter-spacing: -0.045em;
-  line-height: 0.92;
-  overflow: hidden;
-  padding: 0 0.04em 0.06em;
+  font-size: clamp(4.2rem, 14vw, 15rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
 }
-.lockup__seele .ch {
+.lockup__honig,
+.lockup__seele {
+  display: inline-flex;
+  overflow: hidden;
+  padding: 0.04em 0.02em 0.1em;
+}
+.lockup__honig {
+  font-style: italic;
+  color: var(--color-honey-300);
+  padding-right: 0.06em;
+}
+.lockup .ch {
   display: inline-block;
 }
 .hero__second {
@@ -358,12 +356,8 @@ html.is-quick .curtain-label {
   .hero {
     height: 185vh;
   }
-  .lockup__honig {
-    transform: translateX(-0.9em);
-    font-size: 15vw;
-  }
-  .lockup__seele {
-    font-size: 27vw;
+  .lockup {
+    font-size: 19vw;
   }
   .hero__content {
     padding-bottom: 150px;

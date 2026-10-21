@@ -1,5 +1,5 @@
 import { Hero } from '@/components/home/hero';
-import { AreaMarquee, Areas, CoursePreview, Intro, NewsletterSection, Packages, TeamTeaser, Trust } from '@/components/home/sections';
+import { AreaMarquee, Areas, CoursePreview, Intro, Manufaktur, NewsletterSection, Packages, TeamTeaser, Trust } from '@/components/home/sections';
 
 export default function HomePage() {
   return (
@@ -10,6 +10,7 @@ export default function HomePage() {
       <Areas />
       <Packages />
       <Trust />
+      <Manufaktur />
       <TeamTeaser />
       <CoursePreview />
       <NewsletterSection />

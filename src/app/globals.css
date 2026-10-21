@@ -359,6 +359,10 @@ html.is-quick .curtain-label {
   }
   .lockup__honig {
     transform: translateX(-0.9em);
+    font-size: 15vw;
+  }
+  .lockup__seele {
+    font-size: 27vw;
   }
   .hero__content {
     padding-bottom: 150px;

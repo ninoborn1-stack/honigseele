@@ -12,12 +12,9 @@ const notYet = () => {
   throw new Error('SupabaseAdapter ist noch nicht implementiert. NEXT_PUBLIC_DATA_MODE=mock nutzen.');
 };
 
-export class SupabaseAdapter implements DataAdapter {
-  constructor() {
-    return new Proxy(this, {
-      get: (target, prop) =>
-        prop === 'subscribe' ? () => () => undefined : prop in target ? Reflect.get(target, prop) : notYet,
-    });
-  }
+/** Platzhalter: jede Methode wirft, bis sie implementiert ist. */
+export function createSupabaseAdapter(): DataAdapter {
+  return new Proxy({} as DataAdapter, {
+    get: (_target, prop) => (prop === 'subscribe' ? () => () => undefined : notYet),
+  });
 }
-export interface SupabaseAdapter extends DataAdapter {}

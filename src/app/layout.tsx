@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   robots: DEMO ? { index: false, follow: false } : { index: true, follow: true },
   appleWebApp: { capable: true, title: 'Honigseele', statusBarStyle: 'default' },
   icons: {
-    icon: [{ url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' }],
+    icon: [{ url: '/icons/favicon-32.png', sizes: '32x32', type: 'image/png' }, { url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' }],
     apple: '/icons/apple-touch-icon.png',
   },
   openGraph: { type: 'website', locale: 'de_DE', siteName: 'Honigseele', images: ['/images/stock/hero.jpg'] },

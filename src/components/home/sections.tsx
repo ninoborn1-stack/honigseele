@@ -56,9 +56,11 @@ export function Areas() {
           <Eyebrow>Behandlungen</Eyebrow>
           <Title className="mt-4">Was Dir *guttut*</Title>
         </div>
-        <ButtonLink href="/behandlungen/" variant="link" className="hidden md:inline-flex">
-          Alle Behandlungen
-        </ButtonLink>
+        <span className="hidden md:block">
+          <ButtonLink href="/behandlungen/" variant="link">
+            Alle Behandlungen
+          </ButtonLink>
+        </span>
       </div>
       <div className="mt-14 grid gap-12 md:grid-cols-[1fr_0.85fr] md:gap-16">
         <ol className="border-t border-line">

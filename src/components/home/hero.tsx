@@ -174,9 +174,11 @@ export function Hero() {
               <ButtonLink href="/buchen/" variant="honey" size="lg" data-label="Buchen">
                 Termin buchen
               </ButtonLink>
-              <ButtonLink href="/behandlungen/" variant="light" size="lg" className="hidden sm:inline-flex">
-                Behandlungen
-              </ButtonLink>
+              <span className="hidden sm:block">
+                <ButtonLink href="/behandlungen/" variant="light" size="lg">
+                  Behandlungen
+                </ButtonLink>
+              </span>
             </div>
           </div>
         </div>

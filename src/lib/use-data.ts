@@ -2,7 +2,6 @@
 // Lädt Daten über den DataAdapter und lädt nach jeder Änderung neu.
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { getAdapter, type DataAdapter } from '@/data';
-import type { Session } from '@/domain/types';
 
 export function useData<T>(
   fetcher: (db: DataAdapter) => Promise<T>,

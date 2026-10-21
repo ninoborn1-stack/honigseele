@@ -3,7 +3,7 @@
 import { cancellationQuote } from '@/domain/cancellation';
 import { findSlots, type SlotContext } from '@/domain/slots';
 import { berlinDate } from '@/domain/time';
-import { checkVoucher, normalizeCode, redeem } from '@/domain/vouchers';
+import { checkVoucher, generateVoucherCode, normalizeCode, redeem } from '@/domain/vouchers';
 import type { Booking, Customer, Order, Voucher } from '@/domain/types';
 import type { DataAdapter, Inquiry, NewBooking, NewOrder } from '../adapter';
 import { createSeed, DB_VERSION, DEMO_CUSTOMER_ID, DEMO_STAFF_ID, type MockDB } from './seed';
@@ -326,6 +326,14 @@ export class MockAdapter implements DataAdapter {
     });
   }
 
+  async findOrCreateCustomer(input: Parameters<DataAdapter['findOrCreateCustomer']>[0]) {
+    return this.write((db) => {
+      const customer = this.upsertCustomer(db, input);
+      if (!db.session) db.session = { role: 'kundin', customerId: customer.id, name: customer.firstName };
+      return customer;
+    });
+  }
+
   // ---------- Kurse ----------
   listCourses() {
     return this.read((db) => db.courses);
@@ -430,7 +438,7 @@ export class MockAdapter implements DataAdapter {
         // Gutschein-Kauf erzeugt einlösbare Codes
         if (product.kind === 'gutschein') {
           for (let q = 0; q < item.quantity; q++) {
-            const code = `HS-${Math.random().toString(36).slice(2, 6).toUpperCase()}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+            const code = generateVoucherCode();
             const voucher: Voucher = {
               code,
               kind: product.id === 'gutschein-kosmetik' ? 'kosmetik' : product.id === 'gutschein-pedikuere' ? 'pediküre' : 'allgemein',

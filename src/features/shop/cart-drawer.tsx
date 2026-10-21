@@ -7,6 +7,7 @@ import { site } from '@/content';
 import { formatEuro } from '@/lib/format';
 import { useData } from '@/lib/use-data';
 import { unitPrice, useCart } from './cart';
+import { ProductVisual } from './product-visual';
 
 export function CartDrawer() {
   const { lines, open, setOpen, update, remove } = useCart();
@@ -61,10 +62,15 @@ export function CartDrawer() {
             const product = products.find((p) => p.id === line.productId);
             return (
               <li key={i} className="flex gap-4 py-4">
-                <img src={product?.image} alt="" className="h-20 w-16 rounded-lg object-cover" />
+                {product?.kind === 'pflege' ? (
+                  <ProductVisual product={product} className="h-20 w-16 shrink-0 rounded-lg [&_span]:hidden" />
+                ) : (
+                  <img src={product?.image} alt="" className="h-20 w-16 shrink-0 rounded-lg object-cover" />
+                )}
                 <div className="flex-1">
                   <p className="font-serif text-xl leading-tight">{product?.name}</p>
                   {product?.size && <p className="text-xs text-muted">{product.size}</p>}
+                  {line.meta?.valueCents && <p className="text-xs text-muted">Wert {formatEuro(Number(line.meta.valueCents))} · digital</p>}
                   {line.meta?.recipient && <p className="text-xs text-muted">für {line.meta.recipient}</p>}
                   <div className="mt-2 flex items-center gap-1">
                     <button className="grid h-9 w-9 place-items-center rounded-full border border-line" onClick={() => update(i, line.quantity - 1)} aria-label="Weniger">

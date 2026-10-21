@@ -102,6 +102,8 @@ export interface DataAdapter {
   getCustomer(id: string): Promise<Customer | null>;
   listCustomers(): Promise<Customer[]>;
   saveCustomer(customer: Customer): Promise<Customer>;
+  /** Gast-Kundin anlegen (oder per E-Mail finden); ohne Sitzung wird sie angemeldet */
+  findOrCreateCustomer(input: Pick<Customer, 'firstName' | 'lastName' | 'email'> & { phone?: string }): Promise<Customer>;
 
   // Kurse
   listCourses(): Promise<Course[]>;

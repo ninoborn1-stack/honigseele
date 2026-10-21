@@ -82,9 +82,11 @@ export function Header() {
               </span>
             )}
           </button>
-          <ButtonLink href="/buchen/" variant={overHero ? 'honey' : 'primary'} size="sm" className="ml-2 hidden md:inline-flex" data-label="Buchen">
-            {t('cta.book')}
-          </ButtonLink>
+          <span className="ml-2 hidden md:block">
+            <ButtonLink href="/buchen/" variant={overHero ? 'honey' : 'primary'} size="sm" data-label="Buchen">
+              {t('cta.book')}
+            </ButtonLink>
+          </span>
         </div>
       </div>
     </header>

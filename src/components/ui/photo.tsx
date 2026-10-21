@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { cn } from '@/lib/cn';
+import { withBase } from '@/lib/config';
 
 /**
  * Bild mit stilvollem Platzhalter (Honig-Verlauf + Motivbeschreibung), falls die Datei fehlt.
@@ -28,7 +29,7 @@ export function Photo({
         </div>
       ) : (
         <img
-          src={src}
+          src={withBase(src)}
           alt={alt}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"

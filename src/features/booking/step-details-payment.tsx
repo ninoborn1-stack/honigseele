@@ -16,6 +16,7 @@ import { bookingIcs, downloadFile } from '@/lib/ics';
 import { berlinTime, formatDateLong, formatEuro } from '@/lib/format';
 import { payMethods } from '../payment/payment-sheet';
 import { slotTotals, type BookingDraft } from './booking-state';
+import { withBase } from '@/lib/config';
 
 const detailsSchema = z.object({
   firstName: z.string().trim().min(1, 'Bitte gib Deinen Vornamen an.'),
@@ -214,7 +215,7 @@ export function StepPayment({
       <div className="rounded-2xl bg-cream-100 p-5 text-sm">
         <p className="font-medium">Storno-Regel</p>
         <p className="mt-1 text-muted">{policyText(settings.cancellation)}</p>
-        <Checkbox checked={accepted} onChange={(e) => setAccepted(e.target.checked)} label={<>Ich habe die Storno-Regel und die <a href="/agb/" target="_blank" rel="noreferrer" className="underline">AGB</a> gelesen und bin einverstanden.</>} />
+        <Checkbox checked={accepted} onChange={(e) => setAccepted(e.target.checked)} label={<>Ich habe die Storno-Regel und die <a href={withBase('/agb/')} target="_blank" rel="noreferrer" className="underline">AGB</a> gelesen und bin einverstanden.</>} />
       </div>
 
       <Button size="lg" className="w-full" disabled={!accepted} onClick={onPay}>

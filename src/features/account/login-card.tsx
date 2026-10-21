@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Field, Input } from '@/components/ui/form';
 import { getAdapter } from '@/data';
+import { withBase } from '@/lib/config';
 
 /** Anmeldung per Magic Link (später Supabase Auth). In der Demo: direkt als Lena. */
 export function LoginCard({ onDone }: { onDone?: () => void }) {
@@ -12,7 +13,7 @@ export function LoginCard({ onDone }: { onDone?: () => void }) {
   const login = async (role: 'kundin' | 'team') => {
     await getAdapter().loginAs(role);
     onDone?.();
-    if (role === 'team') location.href = '/admin/';
+    if (role === 'team') location.href = withBase('/admin/');
   };
   return (
     <div className="mx-auto max-w-md rounded-[2rem] border border-line bg-card p-7 md:p-10">

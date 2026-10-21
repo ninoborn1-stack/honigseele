@@ -3,6 +3,7 @@
 import { ImagePlus } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/cn';
+import { withBase } from '@/lib/config';
 
 export function AdminTitle({ eyebrow, title, children }: { eyebrow?: string; title: string; children?: ReactNode }) {
   return (
@@ -77,7 +78,7 @@ export function resizeImage(file: File, max = 1200, quality = 0.82): Promise<str
 export function ImageUpload({ value, onChange, label = 'Bild austauschen' }: { value: string; onChange: (dataUrl: string) => void; label?: string }) {
   return (
     <div className="flex items-center gap-4">
-      {value ? <img src={value} alt="" className="h-20 w-20 rounded-xl object-cover" /> : <div className="h-20 w-20 rounded-xl bg-cream-200" />}
+      {value ? <img src={withBase(value)} alt="" className="h-20 w-20 rounded-xl object-cover" /> : <div className="h-20 w-20 rounded-xl bg-cream-200" />}
       <label className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full border border-honey-950/25 px-4 text-sm hover:border-honey-950">
         <ImagePlus className="h-4 w-4" strokeWidth={1.5} />
         {label}

@@ -8,7 +8,7 @@ import { Header } from '@/components/layout/header';
 import { SmoothScroll } from '@/components/layout/smooth-scroll';
 import { WhatsAppButton } from '@/components/layout/whatsapp';
 import { site } from '@/content';
-import { DEMO, SITE_URL } from '@/lib/config';
+import { BASE_PATH, DEMO, SITE_URL, withBase } from '@/lib/config';
 import { Providers } from './providers';
 import './globals.css';
 
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
   },
   description:
     'Waxing mit Honigwachs, Laser-Haarentfernung, Gesichtsbehandlungen, Massagen, Yoga und Coaching in Kreuzberg. Eigene Naturkosmetik, handgemacht in Berlin. Jetzt online buchen.',
-  manifest: '/manifest.webmanifest',
+  manifest: withBase('/manifest.webmanifest'),
   // Demo nicht indexieren
   robots: DEMO ? { index: false, follow: false } : { index: true, follow: true },
   appleWebApp: { capable: true, title: 'Honigseele', statusBarStyle: 'default' },
   icons: {
-    icon: [{ url: '/icons/favicon-32.png', sizes: '32x32', type: 'image/png' }, { url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' }],
-    apple: '/icons/apple-touch-icon.png',
+    icon: [{ url: withBase('/icons/favicon-32.png'), sizes: '32x32', type: 'image/png' }, { url: withBase('/icons/icon-192.png'), sizes: '192x192', type: 'image/png' }],
+    apple: withBase('/icons/apple-touch-icon.png'),
   },
   openGraph: { type: 'website', locale: 'de_DE', siteName: 'Honigseele', images: ['/images/stock/hero.jpg'] },
   alternates: { languages: { de: '/', en: '/en/' } },
@@ -63,12 +63,12 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="de" suppressHydrationWarning>
+    <html lang="de" suppressHydrationWarning style={{ ['--bloom-mask' as string]: `url('${withBase('/images/bloom-mask.svg')}')` }}>
       <head>
         {/* Browser soll die Scroll-Position nicht wiederherstellen, sonst startet das Hero-Intro mittendrin */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `if("scrollRestoration" in history&&!location.hash)history.scrollRestoration="manual";try{if(location.pathname==="/"&&!location.hash&&!matchMedia("(prefers-reduced-motion: reduce)").matches){var h=document.documentElement;h.classList.add("hero-intro");setTimeout(function(){h.classList.remove("hero-intro")},4000)}}catch(e){}`,
+            __html: `if("scrollRestoration" in history&&!location.hash)history.scrollRestoration="manual";try{if(location.pathname==="${BASE_PATH}/"&&!location.hash&&!matchMedia("(prefers-reduced-motion: reduce)").matches){var h=document.documentElement;h.classList.add("hero-intro");setTimeout(function(){h.classList.remove("hero-intro")},4000)}}catch(e){}`,
           }}
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

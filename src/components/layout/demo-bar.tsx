@@ -3,7 +3,7 @@ import { RotateCcw } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import { getAdapter } from '@/data';
-import { DEMO } from '@/lib/config';
+import { DEMO, withBase } from '@/lib/config';
 import { useSession } from '@/lib/use-data';
 
 /** Schmale Leiste im Demo-Modus: Hinweis, Rollenwechsel, Reset */
@@ -20,7 +20,7 @@ export function DemoBar() {
     setBusy(true);
     await db.reset();
     setBusy(false);
-    location.href = '/';
+    location.href = withBase('/');
   };
   return (
     <div className="pt-safe relative z-[60] bg-honey-950 text-[0.72rem] text-cream-100">

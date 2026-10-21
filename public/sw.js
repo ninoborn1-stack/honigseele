@@ -1,6 +1,9 @@
 // Service Worker: Offline-Shell. Seiten network-first, statische Dateien cache-first.
 const VERSION = 'honigseele-v1';
-const SHELL = ['/', '/behandlungen/', '/buchen/', '/shop/', '/konto/', '/kurse/', '/offline/', '/manifest.webmanifest', '/icons/icon-192.png'];
+// Pfade relativ zum Scope, damit es auch im Unterordner (GitHub Pages) funktioniert
+const SCOPE = self.registration.scope;
+const at = (p) => new URL(p, SCOPE).href;
+const SHELL = ['./', 'behandlungen/', 'buchen/', 'shop/', 'konto/', 'kurse/', 'offline/', 'manifest.webmanifest', 'icons/icon-192.png'].map(at);
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -24,7 +27,7 @@ self.addEventListener('fetch', (event) => {
           caches.open(VERSION).then((c) => c.put(request, copy));
           return res;
         })
-        .catch(() => caches.match(request).then((r) => r || caches.match('/offline/'))),
+        .catch(() => caches.match(request).then((r) => r || caches.match(at('offline/')))),
     );
     return;
   }

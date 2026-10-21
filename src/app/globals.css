@@ -400,8 +400,8 @@ html.is-quick .curtain-label {
 
 /* Vor dem Intro (Klasse wird im <head> gesetzt): Blüte geschlossen, Text unsichtbar – kein Aufblitzen */
 html.hero-intro .hero__media {
-  -webkit-mask-image: url('/images/bloom-mask.svg');
-  mask-image: url('/images/bloom-mask.svg');
+  -webkit-mask-image: var(--bloom-mask);
+  mask-image: var(--bloom-mask);
   -webkit-mask-size: 0vmax;
   mask-size: 0vmax;
 }

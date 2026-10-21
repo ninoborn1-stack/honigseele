@@ -3,6 +3,7 @@
 // Angepasst an den Next-Router: kein Neuladen, sondern router.push nach dem Schließen.
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef } from 'react';
+import { stripBase } from '@/lib/config';
 
 const CLOSE_MS = 760;
 const QUICK_MS = 420;
@@ -41,7 +42,9 @@ export function Curtain() {
       const url = new URL(a.href, location.href);
       if (url.origin !== location.origin) return;
       if (url.pathname === location.pathname) return;
-      if (quiet(url.pathname) && quiet(location.pathname)) return;
+      // Router-Pfade sind ohne Unterordner (basePath)
+      const target = stripBase(url.pathname);
+      if (quiet(target) && quiet(stripBase(location.pathname))) return;
 
       e.preventDefault();
       e.stopPropagation();
@@ -51,8 +54,8 @@ export function Curtain() {
       root.classList.remove('is-entering');
       void root.offsetWidth;
       root.classList.add('is-leaving');
-      router.prefetch(url.pathname + url.search);
-      window.setTimeout(() => router.push(url.pathname + url.search + url.hash), quick ? QUICK_MS : CLOSE_MS);
+      router.prefetch(target + url.search);
+      window.setTimeout(() => router.push(target + url.search + url.hash), quick ? QUICK_MS : CLOSE_MS);
     };
     const onEnd = (e: AnimationEvent) => {
       if (e.animationName === 'curtainOut') root.classList.remove('is-entering', 'is-quick');

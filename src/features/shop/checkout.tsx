@@ -20,6 +20,7 @@ import { PaymentSheet, payMethods } from '../payment/payment-sheet';
 import { unitPrice, useCart } from './cart';
 import { ProductVisual } from './product-visual';
 import { VoucherCard } from './voucher-card';
+import { withBase } from '@/lib/config';
 
 const contactSchema = z.object({
   firstName: z.string().trim().min(1, 'Bitte gib Deinen Vornamen an.'),
@@ -222,11 +223,11 @@ export function Checkout() {
               label={
                 <>
                   Ich habe die{' '}
-                  <a href="/agb/" target="_blank" rel="noreferrer" className="underline">
+                  <a href={withBase('/agb/')} target="_blank" rel="noreferrer" className="underline">
                     AGB
                   </a>{' '}
                   und die{' '}
-                  <a href="/widerruf/" target="_blank" rel="noreferrer" className="underline">
+                  <a href={withBase('/widerruf/')} target="_blank" rel="noreferrer" className="underline">
                     Widerrufsbelehrung
                   </a>{' '}
                   gelesen. Bei digitalen Gutscheinen stimme ich zu, dass sie sofort ausgestellt werden.
@@ -249,7 +250,7 @@ export function Checkout() {
                   {product && product.kind === 'pflege' ? (
                     <ProductVisual product={product} className="h-16 w-14 shrink-0 rounded-lg [&_span]:hidden" />
                   ) : (
-                    <img src={product?.image} alt="" className="h-16 w-14 shrink-0 rounded-lg object-cover" />
+                    <img src={withBase(product?.image ?? '')} alt="" className="h-16 w-14 shrink-0 rounded-lg object-cover" />
                   )}
                   <div className="min-w-0 flex-1 text-sm">
                     <p className="font-serif text-lg leading-tight">{product?.name}</p>

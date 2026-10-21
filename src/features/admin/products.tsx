@@ -12,6 +12,7 @@ import { cn } from '@/lib/cn';
 import { formatEuro } from '@/lib/format';
 import { useData } from '@/lib/use-data';
 import { AdminTitle, ImageUpload, toCents, toEuroInput } from './ui';
+import { withBase } from '@/lib/config';
 
 const kinds: Record<Product['kind'], string> = { pflege: 'Pflegeserie', gutschein: 'Gutschein', karte: 'Karte', ticket: 'Ticket' };
 
@@ -100,7 +101,7 @@ export function AdminProducts() {
               }}
               className={cn('flex w-full items-center gap-4 rounded-2xl border border-line-soft bg-card p-3 text-left hover:border-line', !p.active && 'opacity-50')}
             >
-              <img src={p.image} alt="" className="h-20 w-16 shrink-0 rounded-xl object-cover" />
+              <img src={withBase(p.image)} alt="" className="h-20 w-16 shrink-0 rounded-xl object-cover" />
               <span className="min-w-0 flex-1">
                 <span className="block truncate font-serif text-xl">{p.name}</span>
                 <span className="block text-xs text-muted">

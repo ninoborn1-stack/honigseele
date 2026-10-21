@@ -1,26 +1,36 @@
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/cn';
+import { RevealHeading } from './motion';
 
 export function Eyebrow({ children, className }: { children: ReactNode; className?: string }) {
-  return <p className={cn('eyebrow', className)}>{children}</p>;
+  return (
+    <p className={cn('eyebrow flex items-center gap-3', className)}>
+      <span className="h-px w-8 bg-current opacity-60" />
+      {children}
+    </p>
+  );
 }
 
-/** Überschrift mit optionalem kursivem Akzentwort: title="Zeit für *Dich*" */
+const sizes = {
+  display: 'text-[clamp(3.4rem,9vw,10rem)] leading-[0.92] tracking-[-0.025em]',
+  h1: 'text-[clamp(3rem,7.5vw,8rem)] leading-[0.95] tracking-[-0.02em]',
+  h2: 'text-[clamp(2.5rem,5.6vw,6.2rem)] leading-[0.98] tracking-[-0.015em]',
+  h3: 'text-[clamp(1.8rem,3vw,3rem)] leading-[1.05]',
+};
+
+/** Überschrift mit Wort-für-Wort-Einblendung; *Wort* = kursiver Akzent */
 export function Title({
-  as: Tag = 'h2',
+  as = 'h2',
+  size,
   children,
   className,
 }: {
   as?: 'h1' | 'h2' | 'h3';
+  size?: keyof typeof sizes;
   children: string;
   className?: string;
 }) {
-  const parts = children.split(/\*(.+?)\*/g);
-  return (
-    <Tag className={cn(Tag === 'h1' ? 'text-5xl md:text-7xl' : Tag === 'h2' ? 'text-4xl md:text-6xl' : 'text-2xl md:text-3xl', className)}>
-      {parts.map((p, i) => (i % 2 ? <em key={i}>{p}</em> : p))}
-    </Tag>
-  );
+  return <RevealHeading as={as} text={children} className={cn(sizes[size ?? as], className)} />;
 }
 
 export function Section({
@@ -28,11 +38,14 @@ export function Section({
   className,
   id,
   tone = 'cream',
+  bleed,
 }: {
   children: ReactNode;
   className?: string;
   id?: string;
   tone?: 'cream' | 'cream2' | 'dark' | 'light';
+  /** ohne Innenabstand links/rechts */
+  bleed?: boolean;
 }) {
   const tones = {
     cream: 'bg-cream-50',
@@ -41,8 +54,8 @@ export function Section({
     light: 'honey-light',
   };
   return (
-    <section id={id} className={cn('px-5 py-20 md:px-10 md:py-28', tones[tone], className)}>
-      <div className="mx-auto max-w-6xl">{children}</div>
+    <section id={id} className={cn('py-24 md:py-36', tones[tone], className)}>
+      <div className={bleed ? '' : 'wrap'}>{children}</div>
     </section>
   );
 }

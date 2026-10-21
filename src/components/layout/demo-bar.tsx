@@ -24,7 +24,7 @@ export function DemoBar() {
   };
   return (
     <div className="pt-safe relative z-[60] bg-honey-950 text-[0.72rem] text-cream-100">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-1.5">
+      <div className="wrap flex items-center justify-between gap-3 py-1.5">
         <p className="truncate">
           <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-honey-400 align-middle" />
           Demo – Inhalte teilweise Platzhalter

@@ -2,9 +2,8 @@ import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import { BottomNav } from '@/components/layout/bottom-nav';
 import { Curtain } from '@/components/layout/curtain';
-import { DemoBar } from '@/components/layout/demo-bar';
 import { Footer } from '@/components/layout/footer';
-import { Header } from '@/components/layout/header';
+import { SiteTop } from '@/components/layout/site-top';
 import { SmoothScroll } from '@/components/layout/smooth-scroll';
 import { WhatsAppButton } from '@/components/layout/whatsapp';
 import { site } from '@/content';
@@ -79,8 +78,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <a href="#inhalt" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-honey-950 focus:px-4 focus:py-2 focus:text-cream-50">
             Zum Inhalt springen
           </a>
-          <DemoBar />
-          <Header />
+          <SiteTop />
           <main id="inhalt" className="min-h-[60svh]">{children}</main>
           <Footer />
           <WhatsAppButton />

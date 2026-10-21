@@ -45,10 +45,10 @@ export function Footer() {
   const c = settings.contact;
   return (
     <footer className="honey-glow on-dark pb-28 text-cream-100 md:pb-0">
-      <div className="mx-auto max-w-6xl px-5 pb-10 pt-20 md:px-10">
+      <div className="wrap pb-10 pt-24 md:pt-32">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <Logo light className="text-4xl" />
+            <Logo light className="text-[clamp(3rem,6vw,5.5rem)]" />
             <p className="mt-4 max-w-sm text-cream-100/75">{site.brand.claim}. Seit sieben Jahren in Kreuzberg.</p>
             <p className="eyebrow mt-10">Post aus der Honigseele</p>
             <p className="mb-4 mt-2 text-sm text-cream-100/70">Neue Kurse, Pflege-Tipps und kleine Überraschungen. Etwa einmal im Monat.</p>

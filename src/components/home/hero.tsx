@@ -152,7 +152,7 @@ export function Hero() {
         </div>
 
         <div className="hero__content">
-          <p className="hero__eyebrow eyebrow flex flex-wrap items-center justify-center gap-3 text-center !text-cream-100">
+          <p className="hero__eyebrow eyebrow flex flex-wrap items-center justify-center gap-3 text-center !text-cream-50 [text-shadow:0_1px_12px_rgb(28_21_15/0.6)]">
             <span>{eyebrow}</span>
             <i className="hidden h-px w-10 bg-cream-100/50 sm:block" />
             <span>Berlin-Kreuzberg</span>
@@ -170,7 +170,7 @@ export function Hero() {
             </span>
           </h1>
           <div className="hero__foot flex flex-col items-center gap-6 text-center md:flex-row md:items-end md:justify-between md:text-left">
-            <p className="max-w-md text-[0.98rem] leading-relaxed text-cream-100/90">{lead}</p>
+            <p className="max-w-md text-[1.02rem] leading-relaxed text-cream-50 [text-shadow:0_1px_14px_rgb(28_21_15/0.7)]">{lead}</p>
             <div className="flex gap-3">
               <ButtonLink href="/buchen/" variant="honey" size="lg" data-label="Buchen">
                 Termin buchen
@@ -192,7 +192,7 @@ export function Hero() {
         </div>
 
         <div className="hero__bar hidden border-t border-cream-50/15 text-[0.8rem] text-cream-100/85 md:block">
-          <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-10 py-4">
+          <div className="wrap flex items-center justify-between gap-6 py-4">
             <span className="flex items-center gap-2"><MapPin className="h-4 w-4" strokeWidth={1.5} />{site.location.street} · {site.location.zip} {site.location.city}</span>
             <span className="flex items-center gap-2"><Star className="h-4 w-4 fill-honey-300 text-honey-300" strokeWidth={1.5} />{site.brand.rating.value.toLocaleString('de-DE')} aus ca. {site.brand.rating.count.toLocaleString('de-DE')} Bewertungen</span>
             <a href={`tel:${site.settings.contact.phone.replace(/\s/g, '')}`} className="flex items-center gap-2 hover:text-cream-50"><Phone className="h-4 w-4" strokeWidth={1.5} />{site.settings.contact.phone}</a>

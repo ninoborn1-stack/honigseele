@@ -20,7 +20,12 @@ export function Header() {
   const overHero = pathname === '/' && !scrolled;
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 1.2);
+    // Startseite: transparent über dem Hero, fest sobald der Hero durchgescrollt ist
+    const onScroll = () => {
+      const hero = document.querySelector<HTMLElement>('.hero');
+      const limit = hero ? hero.offsetHeight - window.innerHeight * 0.85 : 40;
+      setScrolled(window.scrollY > Math.max(40, limit));
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -32,18 +37,16 @@ export function Header() {
     <header
       data-site-header
       className={cn(
-        'z-50 transition-colors duration-500',
-        // Startseite: Header liegt über dem Hero (absolut), danach fixiert – ohne Layout-Sprung
-        pathname === '/' ? (overHero ? 'absolute inset-x-0' : 'fixed inset-x-0 top-0') : 'sticky top-0',
-        overHero ? 'bg-transparent text-cream-50' : 'border-b border-line-soft bg-cream-50/90 backdrop-blur-md',
+        'transition-[background-color,color,border-color] duration-500',
+        overHero ? 'border-b border-transparent bg-transparent text-cream-50' : 'border-b border-line-soft bg-cream-50/92 text-honey-950 backdrop-blur-md',
       )}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-5 md:h-20 md:px-10">
+      <div className="wrap flex h-16 items-center justify-between gap-6 md:h-20">
         <Link href="/" aria-label="Honigseele – Startseite" data-label="Honigseele">
           <Logo light={overHero} />
         </Link>
         <nav aria-label="Hauptnavigation" className="hidden lg:block">
-          <ul className="flex items-center gap-7 text-[0.92rem]">
+          <ul className="flex items-center gap-6 whitespace-nowrap text-[0.78rem] font-medium uppercase tracking-[0.16em] xl:gap-10">
             {mainNav.slice(1, 5).map((item, i) => {
               const active = pathname.startsWith(item.href);
               return (
@@ -52,8 +55,8 @@ export function Header() {
                     href={item.href}
                     className={cn(
                       'relative py-2 transition-opacity hover:opacity-100',
-                      active ? 'opacity-100' : 'opacity-75',
-                      active && 'after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-current',
+                      'after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:bg-current after:transition-transform after:duration-500 hover:after:scale-x-100',
+                      active ? 'opacity-100 after:scale-x-100' : 'opacity-80 after:scale-x-0',
                     )}
                   >
                     {t(navKeys[i + 1])}

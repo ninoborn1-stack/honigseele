@@ -285,11 +285,12 @@ html.is-quick .curtain-label {
 .hero__shade {
   position: absolute;
   inset: 0;
+  /* oben kräftiger abgedunkelt, damit Navigation und Eyebrow lesbar sind */
   background:
-    linear-gradient(180deg, rgb(43 33 24 / 0.55), transparent 26%),
-    linear-gradient(0deg, rgb(43 33 24 / 0.78), transparent 55%),
-    radial-gradient(80% 60% at 50% 45%, rgb(217 165 74 / 0.12), transparent 70%),
-    rgb(43 33 24 / 0.22);
+    linear-gradient(180deg, rgb(28 21 15 / 0.82) 0%, rgb(28 21 15 / 0.45) 22%, transparent 42%),
+    linear-gradient(0deg, rgb(28 21 15 / 0.85), transparent 55%),
+    radial-gradient(60% 45% at 50% 48%, rgb(28 21 15 / 0.28), transparent 75%),
+    rgb(43 33 24 / 0.3);
 }
 .hero__bloom {
   position: absolute;
@@ -307,7 +308,7 @@ html.is-quick .curtain-label {
   display: grid;
   grid-template-rows: auto 1fr auto;
   align-items: center;
-  padding: calc(104px + env(safe-area-inset-top)) 5vw 104px;
+  padding: calc(var(--top-h, 104px) + 28px) clamp(1.25rem, 3.5vw, 4rem) 112px;
 }
 .lockup {
   display: flex;
@@ -409,4 +410,93 @@ html.hero-intro .hero__content,
 html.hero-intro .hero__bar,
 html.hero-intro [data-site-header] {
   opacity: 0;
+}
+
+/* ===================== Layout: volle Breite ===================== */
+@utility wrap {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 1760px;
+  padding-inline: clamp(1.25rem, 3.5vw, 4rem);
+}
+
+/* Platz unter der fixierten Kopfzeile (Höhe setzt SiteTop als --top-h) */
+.below-top {
+  padding-top: var(--top-h, 96px);
+}
+
+/* ===================== Bewegung ===================== */
+
+/* Wörter steigen aus einer unsichtbaren Kante */
+.split .w {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+.split .w > span {
+  display: inline-block;
+  transform: translateY(108%);
+  transition: transform 1.15s var(--ease-soft);
+  transition-delay: calc(var(--d, 0) * 55ms);
+}
+.split.is-visible .w > span {
+  transform: none;
+}
+
+/* Bild öffnet sich von unten, Foto zoomt sanft zurück */
+.img-reveal {
+  clip-path: inset(100% 0% 0% 0%);
+  transition: clip-path 1.5s var(--ease-curtain);
+}
+.img-reveal img {
+  transform: scale(1.22);
+  transition: transform 2s var(--ease-soft);
+}
+.img-reveal.is-visible {
+  clip-path: inset(0% 0% 0% 0%);
+}
+.img-reveal.is-visible img {
+  transform: scale(1);
+}
+
+/* Endlos-Laufband */
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee var(--marquee-speed, 45s) linear infinite;
+}
+.marquee-wrap:hover .marquee {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Linie, die sich beim Erscheinen zieht */
+.draw-line {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.4s var(--ease-soft);
+}
+.is-visible .draw-line,
+.draw-line.is-visible {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .split .w > span,
+  .img-reveal,
+  .img-reveal img,
+  .draw-line {
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+  .marquee {
+    animation: none;
+  }
 }

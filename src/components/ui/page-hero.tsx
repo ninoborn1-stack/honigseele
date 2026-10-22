@@ -34,7 +34,7 @@ export function PageHero({
       <div aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgb(28_21_15/0.94)_0%,rgb(28_21_15/0.66)_42%,rgb(28_21_15/0.4)_72%,rgb(28_21_15/0.6)_100%)]" />
       <div className="wrap relative pb-10 pt-32 md:pb-16 md:pt-40">
         <Eyebrow className="!text-honey-300">{eyebrow}</Eyebrow>
-        <RevealHeading as="h1" onLoad text={title} className="mt-6 max-w-[11ch] font-serif text-[clamp(2.8rem,9vw,10rem)] leading-[0.9] tracking-[-0.03em]" />
+        <RevealHeading as="h1" onLoad text={title} className="mt-6 max-w-[16ch] font-serif text-[clamp(2.6rem,7.6vw,8.5rem)] leading-[0.92] tracking-[-0.03em]" />
         <div className="mt-8 grid gap-7 md:mt-10 md:grid-cols-[1fr_auto] md:items-end">
           <p className="max-w-xl text-base text-cream-100/90 sm:text-lg md:text-xl">{lead}</p>
           {actions && <div className="flex flex-wrap items-center gap-x-8 gap-y-3">{actions}</div>}

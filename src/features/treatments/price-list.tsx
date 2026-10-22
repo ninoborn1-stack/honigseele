@@ -71,7 +71,7 @@ export function PriceList({
 
   return (
     <div className="grid gap-12 lg:grid-cols-[18rem_1fr] lg:gap-20 xl:grid-cols-[22rem_1fr]">
-      <aside className="lg:sticky lg:top-[calc(var(--top-h,96px)+2rem)] lg:self-start">
+      <aside className="min-w-0 lg:sticky lg:top-[calc(var(--top-h,96px)+2rem)] lg:self-start">
         {hasAudienceTabs && (
           <div role="tablist" aria-label="Zielgruppe" className="mb-8 inline-flex rounded-full border border-honey-950/15 p-1">
             {(['Damen', 'Herren'] as const).map((t) => (

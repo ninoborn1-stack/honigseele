@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { Star } from 'lucide-react';
 import { Placeholder } from '@/components/ui/badge';
 import { ArrowLink } from '@/components/ui/button';
-import { CountUp, Parallax, RevealHeading } from '@/components/ui/motion';
-import { Photo } from '@/components/ui/photo';
+import { CountUp, RevealHeading } from '@/components/ui/motion';
+import { PageHero } from '@/components/ui/page-hero';
 import { Reveal } from '@/components/ui/reveal';
 import { StackCards } from '@/components/ui/stack-cards';
 import { Eyebrow, Title } from '@/components/ui/typography';
@@ -34,23 +34,19 @@ export default function AboutPage() {
 
   return (
     <>
-      {/* 1. Vollbild-Kopf */}
-      <section className="relative flex min-h-[560px] items-end overflow-hidden bg-honey-950 text-cream-50 md:h-[calc(88svh-var(--top-h,96px))]">
-        <Parallax speed={-0.18} className="absolute -inset-y-[12%] inset-x-0">
-          <Photo src="/images/stock/room.jpg" alt="Heller Raum mit Pflanzen in der Honigseele" priority className="h-full w-full !bg-honey-950" imgClassName="animate-fade" />
-        </Parallax>
-        <div aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgb(28_21_15/0.94)_0%,rgb(28_21_15/0.66)_42%,rgb(28_21_15/0.4)_72%,rgb(28_21_15/0.6)_100%)]" />
-        <div className="wrap relative pb-12 pt-40 md:pb-16">
-          <Eyebrow className="!text-honey-300">Über uns · seit sieben Jahren in Kreuzberg</Eyebrow>
-          <RevealHeading as="h1" text="Wir sind die *Honigseelen*." className="mt-6 max-w-[11ch] font-serif text-[clamp(3rem,10vw,11rem)] leading-[0.88] tracking-[-0.03em]" />
-          <div className="mt-10 grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
-            <p className="max-w-xl text-lg text-cream-100/90 md:text-xl">Ein Ort für Frauen und für alle Menschen, die sich Zeit für sich nehmen wollen.</p>
-            <ArrowLink href="#team" light data-no-curtain>
-              Das Team
-            </ArrowLink>
-          </div>
-        </div>
-      </section>
+      {/* 1. Seitenkopf */}
+      <PageHero
+        image="/images/stock/room.jpg"
+        alt="Heller Raum mit Pflanzen in der Honigseele"
+        eyebrow="Über uns · seit sieben Jahren in Kreuzberg"
+        title="Wir sind die *Honigseelen*."
+        lead="Ein Ort für Frauen und für alle Menschen, die sich Zeit für sich nehmen wollen."
+        actions={
+          <ArrowLink href="#team" light data-no-curtain>
+            Das Team
+          </ArrowLink>
+        }
+      />
 
       {/* 2. Geschichte als ruhiges Statement */}
       <section className="bg-cream-50 py-24 md:py-36">

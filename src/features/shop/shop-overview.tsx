@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Placeholder } from '@/components/ui/badge';
 import { ArrowLink, Button, ButtonLink } from '@/components/ui/button';
-import { CountUp, Marquee, Parallax, RevealHeading, RevealImage } from '@/components/ui/motion';
+import { RevealHeading } from '@/components/ui/motion';
 import { Reveal } from '@/components/ui/reveal';
 import { Eyebrow, Title } from '@/components/ui/typography';
 import { care, site } from '@/content';
@@ -18,6 +18,8 @@ import { ProductTile } from './product-tile';
 import { ProductVisual } from './product-visual';
 import { FAVORITE_ID, rituals, ritualsOf, type Ritual } from './rituals';
 import { Tilt } from './tilt';
+import { PageHero } from '@/components/ui/page-hero';
+import { TickerBand } from '@/components/ui/ticker';
 import { VoucherCard } from './voucher-card';
 
 export function ShopOverview({ initialProducts }: { initialProducts: Product[] }) {
@@ -29,72 +31,30 @@ export function ShopOverview({ initialProducts }: { initialProducts: Product[] }
 
   return (
     <>
-      <Intro count={care_.length} />
-      <div className="border-y border-line bg-cream-50 py-6 md:py-8" aria-hidden>
-        <Marquee
-          speed={50}
-          items={['Handgemacht in Berlin', 'In jeder Behandlung', 'Ohne Schnickschnack', 'Crememanufaktur', 'Mit Zutaten, die Deine Haut kennt'].map((t, i) => (
-            <span key={t} className={cn('whitespace-nowrap font-serif text-[clamp(2rem,4.4vw,4.2rem)] leading-none', i % 2 ? 'italic text-amber-600' : 'text-honey-950')}>
-              {t}
-            </span>
-          ))}
-        />
-      </div>
+      <PageHero
+        image="/images/stock/products.jpg"
+        alt="Naturkosmetik in Glasflaschen mit Kerze"
+        eyebrow={`Die Crememanufaktur · ${care_.length} Produkte, handgemacht in Berlin`}
+        title="Pflege, die wir *selbst* benutzen."
+        lead="In jeder unserer Behandlungen im Einsatz – was Dir bei uns guttut, kannst Du mit nach Hause nehmen."
+        actions={
+          <>
+            <ArrowLink href="#sortiment" light data-no-curtain>
+              Zum Sortiment
+            </ArrowLink>
+            <ArrowLink href="/shop/gutscheine/" light data-label="Gutscheine">
+              Gutschein
+            </ArrowLink>
+          </>
+        }
+      />
+      <TickerBand items={['Handgemacht in Berlin', 'In jeder Behandlung', 'Ohne Schnickschnack', 'Crememanufaktur', `Versand ${formatEuro(site.shipping.flatCents)}`].map((label) => ({ label }))} />
       <Assortment products={care_} />
       {favorite && <Favorite product={favorite} />}
       <Gifts vouchers={vouchers} />
       <Cards cards={cards} />
       <Closing />
     </>
-  );
-}
-
-function Intro({ count }: { count: number }) {
-  return (
-    <section className="honey-light overflow-hidden">
-      <div className="wrap grid gap-14 pb-20 pt-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-20 lg:pb-28 lg:pt-16">
-        <div>
-          <Eyebrow>Die Crememanufaktur</Eyebrow>
-          <Title as="h1" size="display" className="mt-8">
-            Pflege, die wir *selbst* benutzen.
-          </Title>
-          <Reveal delay={250}>
-            <p className="mt-10 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
-              Handgemacht in der Crememanufaktur Berlin – und in jeder unserer Behandlungen im Einsatz. Was Dir bei uns guttut, kannst Du mit nach Hause nehmen.
-            </p>
-          </Reveal>
-          <Reveal delay={380} className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-4">
-            <a href="#sortiment" className="group/btn inline-flex min-h-14 items-center gap-2 whitespace-nowrap rounded-full bg-honey-950 px-8 text-base font-medium text-cream-50 transition-colors hover:bg-honey-800">
-              Sortiment entdecken
-            </a>
-            <ArrowLink href="/shop/gutscheine/" data-label="Gutscheine">
-              Gutschein verschenken
-            </ArrowLink>
-          </Reveal>
-          <dl className="mt-16 grid max-w-xl grid-cols-3 gap-6 border-t border-line pt-8">
-            <div>
-              <dt className="text-[0.7rem] uppercase tracking-[0.18em] text-muted">Produkte</dt>
-              <dd className="mt-2 font-serif text-5xl leading-none">
-                <CountUp to={count} />
-              </dd>
-            </div>
-            <div>
-              <dt className="text-[0.7rem] uppercase tracking-[0.18em] text-muted">Im Einsatz</dt>
-              <dd className="mt-2 font-serif text-2xl leading-tight md:text-3xl">
-                in jeder <em className="text-amber-600">Behandlung</em>
-              </dd>
-            </div>
-            <div>
-              <dt className="text-[0.7rem] uppercase tracking-[0.18em] text-muted">Versand</dt>
-              <dd className="mt-2 font-serif text-5xl leading-none">{formatEuro(site.shipping.flatCents)}</dd>
-            </div>
-          </dl>
-        </div>
-        <Parallax speed={0.08}>
-          <RevealImage src="/images/stock/products.jpg" alt="Naturkosmetik in Glasflaschen mit Kerze" className="aspect-[4/5] rounded-t-full lg:aspect-[3/4]" />
-        </Parallax>
-      </div>
-    </section>
   );
 }
 

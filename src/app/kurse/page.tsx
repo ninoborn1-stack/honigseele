@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Placeholder } from '@/components/ui/badge';
 import { ArrowLink, ButtonLink } from '@/components/ui/button';
-import { CountUp, Parallax, RevealHeading } from '@/components/ui/motion';
-import { Photo } from '@/components/ui/photo';
+import { CountUp, RevealHeading } from '@/components/ui/motion';
+import { PageHero } from '@/components/ui/page-hero';
 import { Reveal } from '@/components/ui/reveal';
 import { StackCards, type StackCard } from '@/components/ui/stack-cards';
 import { Eyebrow, Title } from '@/components/ui/typography';
@@ -90,23 +90,20 @@ export default function CoursesPage() {
 
   return (
     <>
-      {/* 1. Vollbild-Kopf */}
-      <section className="relative flex min-h-[560px] items-end overflow-hidden bg-honey-950 text-cream-50 md:h-[calc(88svh-var(--top-h,96px))]">
-        <Parallax speed={-0.18} className="absolute -inset-y-[12%] inset-x-0">
-          <Photo src="/images/stock/yoga.jpg" alt="Yoga in warmem Licht" priority className="h-full w-full !bg-honey-950" imgClassName="animate-fade" />
-        </Parallax>
-        <div aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgb(28_21_15/0.94)_0%,rgb(28_21_15/0.66)_42%,rgb(28_21_15/0.4)_72%,rgb(28_21_15/0.6)_100%)]" />
-        <div className="wrap relative pb-12 pt-40 md:pb-16">
-          <Eyebrow className="!text-honey-300">Kurse & Coaching · Gemeinschaft in Kreuzberg</Eyebrow>
-          <RevealHeading as="h1" text="Bewegen, atmen, *verbinden*." className="mt-6 max-w-[11ch] font-serif text-[clamp(3rem,10vw,11rem)] leading-[0.88] tracking-[-0.03em]" />
-          <div className="mt-10 grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
-            <p className="max-w-xl text-lg text-cream-100/90 md:text-xl">Yoga, Breathwork, Kakaozeremonie, unser Frauen-Netzwerk – und Coaching für das, was Dich innen bewegt.</p>
-            <ArrowLink href="#kursplan" light data-no-curtain>
-              Zum Kursplan
-            </ArrowLink>
-          </div>
-        </div>
-      </section>
+      {/* 1. Seitenkopf */}
+      <PageHero
+        image="/images/stock/yoga.jpg"
+        alt="Yoga in warmem Licht"
+        imageClassName="object-[50%_30%]"
+        eyebrow="Kurse & Coaching · Gemeinschaft in Kreuzberg"
+        title="Bewegen, atmen, *verbinden*."
+        lead="Yoga, Breathwork, Kakaozeremonie, unser Frauen-Netzwerk – und Coaching für das, was Dich innen bewegt."
+        actions={
+          <ArrowLink href="#kursplan" light data-no-curtain>
+            Zum Kursplan
+          </ArrowLink>
+        }
+      />
 
       {/* 2. Statement */}
       <section className="bg-cream-50 py-24 md:py-36">

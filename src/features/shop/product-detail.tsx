@@ -57,7 +57,7 @@ export function ProductDetail({ initial }: { initial: Product }) {
             </div>
             <div className="lg:py-10">
               <Eyebrow>{own.length ? own.map(ritualLabel).join(' · ') : 'Pflegeserie'}</Eyebrow>
-              <RevealHeading as="h1" text={product.name} className="mt-6 text-[clamp(3rem,6.5vw,6.8rem)] leading-[0.95] tracking-[-0.02em]" />
+              <RevealHeading as="h1" onLoad text={product.name} className="mt-6 text-[clamp(3rem,6.5vw,6.8rem)] leading-[0.95] tracking-[-0.02em]" />
               <div className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2">
                 <p className="font-serif text-5xl">{formatEuro(product.priceCents)}</p>
                 {product.size && <p className="text-lg text-muted">{product.size}</p>}

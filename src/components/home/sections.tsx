@@ -11,6 +11,7 @@ import { CountUp, Marquee, RevealHeading, RevealImage } from '@/components/ui/mo
 import { BigNumeral, Panel } from '@/components/ui/panel';
 import { Photo } from '@/components/ui/photo';
 import { Reveal } from '@/components/ui/reveal';
+import { TickerBand } from '@/components/ui/ticker';
 import { Eyebrow, Title } from '@/components/ui/typography';
 import { block, courses, packages, servicesOf, site, staff, treatmentCategories } from '@/content';
 import { formatDateShort } from '@/domain/time';
@@ -47,19 +48,8 @@ export function Intro() {
 
 /** Dezentes Laufband: kleine Versalien, viel Luft */
 export function AreaMarquee() {
-  const names = treatmentCategories.filter((c) => !c.isPlaceholder).map((c) => c.name);
-  return (
-    <div className="border-y border-line-soft bg-cream-50 py-4 text-muted" aria-hidden>
-      <Marquee
-        speed={70}
-        items={[...names, 'Yoga', 'Coaching', 'Naturkosmetik'].map((n) => (
-          <span key={n} className="whitespace-nowrap px-6 text-[0.72rem] font-medium uppercase tracking-[0.32em]">
-            {n}
-          </span>
-        ))}
-      />
-    </div>
-  );
+  const names = treatmentCategories.filter((c) => !c.isPlaceholder).map((c) => ({ label: c.name, href: `/behandlungen/${c.id}/` }));
+  return <TickerBand items={[...names, { label: 'Yoga', href: '/kurse/' }, { label: 'Coaching', href: '/kurse/#coaching' }, { label: 'Naturkosmetik', href: '/shop/' }]} />;
 }
 
 /** Was Dir guttut: schmale Bildstreifen, der aktive öffnet sich (Klick, Fokus oder Hover). Mobil: schlichte Zeilen. */

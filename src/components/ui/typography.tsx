@@ -4,7 +4,7 @@ import { RevealHeading } from './motion';
 
 export function Eyebrow({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <p className={cn('eyebrow flex items-center gap-3', className)}>
+    <p className={cn('eyebrow flex flex-wrap items-center gap-x-3 gap-y-2', className)}>
       <span className="h-px w-8 bg-current opacity-60" />
       {children}
     </p>
@@ -30,7 +30,7 @@ export function Title({
   children: string;
   className?: string;
 }) {
-  return <RevealHeading as={as} text={children} className={cn(sizes[size ?? as], className)} />;
+  return <RevealHeading as={as} onLoad={as === 'h1'} text={children} className={cn(sizes[size ?? as], className)} />;
 }
 
 export function Section({

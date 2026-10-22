@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { TickerBand } from '@/components/ui/ticker';
 import { notFound } from 'next/navigation';
 import { Placeholder } from '@/components/ui/badge';
 import { ArrowLink, ButtonLink } from '@/components/ui/button';
-import { Marquee, Parallax, RevealHeading } from '@/components/ui/motion';
+import { Parallax, RevealHeading } from '@/components/ui/motion';
 import { Photo } from '@/components/ui/photo';
 import { Reveal } from '@/components/ui/reveal';
 import { Eyebrow, Title } from '@/components/ui/typography';
@@ -101,7 +102,7 @@ export default async function AreaPage({ params }: { params: Promise<{ bereich: 
             <span className="text-honey-300">{String(index + 1).padStart(2, '0')} / {String(treatmentCategories.length).padStart(2, '0')}</span>
           </div>
           <Eyebrow className="mt-8 !text-honey-300">{category.eyebrow}</Eyebrow>
-          <RevealHeading as="h1" text={category.name} className="mt-5 max-w-[12ch] font-serif text-[clamp(2.6rem,11vw,12rem)] leading-[0.88] tracking-[-0.03em]" />
+          <RevealHeading as="h1" onLoad text={category.name} className="mt-5 max-w-[12ch] font-serif text-[clamp(2.6rem,11vw,12rem)] leading-[0.88] tracking-[-0.03em]" />
           <div className="mt-10 grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
             <p className="max-w-xl text-lg text-cream-100/90 md:text-xl">{category.teaser}</p>
             {category.isPlaceholder ? (
@@ -223,16 +224,7 @@ export default async function AreaPage({ params }: { params: Promise<{ bereich: 
             <ArrowLink href="/behandlungen/">Alle Behandlungen</ArrowLink>
           </div>
         </div>
-        <div className="mt-24 border-y border-line py-8 md:mt-32 md:py-10">
-          <Marquee
-            speed={60}
-            items={others.map((o) => (
-              <Link key={o.id} href={`/behandlungen/${o.id}/`} data-label={o.name} className="whitespace-nowrap font-serif text-[clamp(2.2rem,5vw,4.6rem)] leading-none transition-colors hover:text-amber-600">
-                {o.name}
-              </Link>
-            ))}
-          />
-        </div>
+        <TickerBand className="mt-24 md:mt-32" items={others.map((o) => ({ label: o.name, href: `/behandlungen/${o.id}/` }))} />
       </section>
 
       {!category.isPlaceholder && <StickyBook href={`/buchen/?kategorie=${category.id}`} label={`${category.name} buchen`} />}

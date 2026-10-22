@@ -27,16 +27,16 @@ export default function ContactPage() {
         </div>
       </section>
       <section className="bg-cream-50 pb-24 md:pb-36">
-        <div className="wrap grid gap-16 lg:grid-cols-[1fr_1fr] lg:gap-24">
+        <div className="wrap grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
           <div>
             <ul className="border-t border-honey-950/20">
               {rows.map(({ icon: Icon, label, value, href, hint }) => {
                 const inner = (
                   <>
                     <Icon className="mt-1 h-5 w-5 text-amber-800" strokeWidth={1.5} />
-                    <span>
+                    <span className="min-w-0">
                       <span className="block text-xs uppercase tracking-[0.18em] text-muted">{label}</span>
-                      <span className="mt-1 block font-serif text-[clamp(1.6rem,2.6vw,2.6rem)] leading-tight">{value}</span>
+                      <span className="mt-1 block break-words font-serif text-[clamp(1.5rem,2.6vw,2.6rem)] leading-tight">{value}</span>
                       {hint && <span className="mt-1 block text-sm text-muted">{hint}</span>}
                     </span>
                   </>

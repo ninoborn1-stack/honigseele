@@ -53,14 +53,17 @@ export function RevealHeading({
   as: Tag = 'h2',
   text,
   className,
+  onLoad,
 }: {
   as?: 'h1' | 'h2' | 'h3' | 'p';
   text: string;
   className?: string;
+  /** sofort beim Laden animieren (für Seitenköpfe), statt beim Hineinscrollen */
+  onLoad?: boolean;
 }) {
   const { ref, visible } = useInView<HTMLHeadingElement>();
   return (
-    <Tag ref={ref as never} aria-label={text.replace(/\*/g, '')} className={cn('split', visible && 'is-visible', className)}>
+    <Tag ref={ref as never} aria-label={text.replace(/\*/g, '')} className={cn('split', onLoad ? 'on-load' : visible && 'is-visible', className)}>
       <span aria-hidden>
         <SplitText text={text} />
       </span>

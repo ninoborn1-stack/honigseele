@@ -46,7 +46,7 @@ export function Footer() {
   return (
     <footer className="honey-glow on-dark pb-28 text-cream-100 md:pb-0">
       <div className="wrap pb-10 pt-24 md:pt-32">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Logo light className="text-[clamp(3rem,6vw,5.5rem)]" />
             <p className="mt-4 max-w-sm text-cream-100/75">{site.brand.claim}. Seit sieben Jahren in Kreuzberg.</p>

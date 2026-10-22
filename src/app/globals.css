@@ -426,8 +426,9 @@ html.hero-intro [data-site-header] {
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
-  padding-bottom: 0.12em;
-  margin-bottom: -0.12em;
+  /* Luft für Ober-/Unterlängen und kursive Überhänge, sonst werden z. B. „b“ oder „f“ abgeschnitten */
+  padding: 0.16em 0.08em 0.14em;
+  margin: -0.16em -0.08em -0.14em;
 }
 .split .w > span {
   display: inline-block;
@@ -492,5 +493,23 @@ html.hero-intro [data-site-header] {
   }
   .marquee {
     animation: none;
+  }
+}
+
+/* Seitenköpfe: Wörter steigen sofort beim Laden auf (reines CSS, wartet nicht auf JavaScript) */
+.split.on-load .w > span {
+  transform: translateY(108%);
+  animation: wordUp 1.15s var(--ease-soft) forwards;
+  animation-delay: calc(120ms + var(--d, 0) * 60ms);
+}
+@keyframes wordUp {
+  to {
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .split.on-load .w > span {
+    animation: none;
+    transform: none;
   }
 }

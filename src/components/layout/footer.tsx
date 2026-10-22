@@ -44,27 +44,27 @@ export function Footer() {
   if (pathname.startsWith('/admin') || pathname.startsWith('/buchen')) return null;
   const c = settings.contact;
   return (
-    <footer className="honey-glow on-dark pb-28 text-cream-100 md:pb-0">
+    <footer className="border-t border-line-soft bg-cream-50 pb-28 text-honey-950 md:pb-0">
       <div className="wrap pb-10 pt-24 md:pt-32">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <Logo light className="text-[clamp(3rem,6vw,5.5rem)]" />
-            <p className="mt-4 max-w-sm text-cream-100/75">{site.brand.claim}. Seit sieben Jahren in Kreuzberg.</p>
+            <Logo className="text-[clamp(3rem,6vw,5.5rem)]" />
+            <p className="mt-4 max-w-sm text-muted">{site.brand.claim}. Seit sieben Jahren in Kreuzberg.</p>
             <p className="eyebrow mt-10">Post aus der Honigseele</p>
-            <p className="mb-4 mt-2 text-sm text-cream-100/70">Neue Kurse, Pflege-Tipps und kleine Überraschungen. Etwa einmal im Monat.</p>
-            <NewsletterForm dark />
+            <p className="mb-4 mt-2 text-sm text-muted">Neue Kurse, Pflege-Tipps und kleine Überraschungen. Etwa einmal im Monat.</p>
+            <NewsletterForm />
           </div>
           <div>
             <p className="eyebrow">Besuch uns</p>
             <ul className="mt-4 space-y-3 text-sm">
-              <li className="flex gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0" strokeWidth={1.5} />{site.location.street}, {site.location.zip} {site.location.city}</li>
-              <li><a className="flex min-h-8 items-center gap-3 hover:text-cream-50" href={`tel:${c.phone.replace(/\s/g, '')}`}><Phone className="h-4 w-4" strokeWidth={1.5} />{c.phone}</a></li>
-              <li><a className="flex min-h-8 items-center gap-3 hover:text-cream-50" href={`mailto:${c.email}`}><Mail className="h-4 w-4" strokeWidth={1.5} />{c.email}</a></li>
-              <li><a className="flex min-h-8 items-center gap-3 hover:text-cream-50" href={c.whatsapp} target="_blank" rel="noreferrer"><MessageCircle className="h-4 w-4" strokeWidth={1.5} />WhatsApp</a></li>
+              <li className="flex gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-amber-800" strokeWidth={1.5} />{site.location.street}, {site.location.zip} {site.location.city}</li>
+              <li><a className="flex min-h-8 items-center gap-3 transition-colors hover:text-amber-600" href={`tel:${c.phone.replace(/\s/g, '')}`}><Phone className="h-4 w-4 text-amber-800" strokeWidth={1.5} />{c.phone}</a></li>
+              <li><a className="flex min-h-8 items-center gap-3 transition-colors hover:text-amber-600" href={`mailto:${c.email}`}><Mail className="h-4 w-4 text-amber-800" strokeWidth={1.5} />{c.email}</a></li>
+              <li><a className="flex min-h-8 items-center gap-3 transition-colors hover:text-amber-600" href={c.whatsapp} target="_blank" rel="noreferrer"><MessageCircle className="h-4 w-4 text-amber-800" strokeWidth={1.5} />WhatsApp</a></li>
             </ul>
             <div className="mt-5 flex gap-2">
-              <a href={c.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="grid h-11 w-11 place-items-center rounded-full border border-cream-50/20 hover:border-honey-300"><Instagram className="h-4 w-4" strokeWidth={1.5} /></a>
-              <a href={c.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="grid h-11 w-11 place-items-center rounded-full border border-cream-50/20 hover:border-honey-300"><Facebook className="h-4 w-4" strokeWidth={1.5} /></a>
+              <a href={c.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="grid h-11 w-11 place-items-center rounded-full border border-honey-950/20 transition-colors hover:border-honey-950 hover:bg-honey-950 hover:text-cream-50"><Instagram className="h-4 w-4" strokeWidth={1.5} /></a>
+              <a href={c.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="grid h-11 w-11 place-items-center rounded-full border border-honey-950/20 transition-colors hover:border-honey-950 hover:bg-honey-950 hover:text-cream-50"><Facebook className="h-4 w-4" strokeWidth={1.5} /></a>
             </div>
           </div>
           <div>
@@ -72,28 +72,28 @@ export function Footer() {
             <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-6 gap-y-1.5 text-sm">
               {settings.openingHours.map((h) => (
                 <div key={h.weekday} className="contents">
-                  <dt className="text-cream-100/70">{h.label}</dt>
+                  <dt className="text-muted">{h.label}</dt>
                   <dd>{h.open ? `${h.open} – ${h.close}` : 'geschlossen'}</dd>
                 </div>
               ))}
             </dl>
           </div>
         </div>
-        <div className="mt-16 flex flex-col gap-6 border-t border-cream-50/15 pt-8 text-sm md:flex-row md:items-center md:justify-between">
+        <div className="mt-16 flex flex-col gap-6 border-t border-line-soft pt-8 text-sm md:flex-row md:items-center md:justify-between">
           <nav aria-label="Seiten" className="flex flex-wrap gap-x-6 gap-y-2">
             {mainNav.slice(1).map((n) => (
-              <Link key={n.href} href={n.href} className="text-cream-100/80 hover:text-cream-50">{n.label}</Link>
+              <Link key={n.href} href={n.href} className="text-honey-950/80 transition-colors hover:text-amber-600">{n.label}</Link>
             ))}
-            <Link href="/kontakt/" className="text-cream-100/80 hover:text-cream-50">Kontakt</Link>
+            <Link href="/kontakt/" className="text-honey-950/80 transition-colors hover:text-amber-600">Kontakt</Link>
           </nav>
-          <nav aria-label="Rechtliches" className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-cream-100/60">
+          <nav aria-label="Rechtliches" className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted">
             {legalNav.map((n) => (
-              <Link key={n.href} href={n.href} className="hover:text-cream-50">{n.label}</Link>
+              <Link key={n.href} href={n.href} className="transition-colors hover:text-honey-950">{n.label}</Link>
             ))}
-            <Link href="/widerruf/#widerrufen" className="hover:text-cream-50">Vertrag widerrufen</Link>
+            <Link href="/widerruf/#widerrufen" className="transition-colors hover:text-honey-950">Vertrag widerrufen</Link>
           </nav>
         </div>
-        <p className="mt-6 text-xs text-cream-100/40">© {new Date().getFullYear()} Honigseele · Anna Kaiser · Stockfotos: Unsplash</p>
+        <p className="mt-6 text-xs text-muted/70">© {new Date().getFullYear()} Honigseele · Anna Kaiser · Stockfotos: Unsplash</p>
       </div>
     </footer>
   );

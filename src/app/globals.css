@@ -513,22 +513,3 @@ html.hero-intro [data-site-header] {
     transform: none;
   }
 }
-
-/* Shop-Regal: Produkte schweben sanft auf und ab */
-.shelf-float {
-  animation: shelfFloat 7s ease-in-out infinite;
-}
-@keyframes shelfFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .shelf-float {
-    animation: none;
-  }
-}

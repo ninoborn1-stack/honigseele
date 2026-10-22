@@ -17,7 +17,6 @@ import { useCart } from './cart';
 import { ProductTile } from './product-tile';
 import { ProductVisual } from './product-visual';
 import { FAVORITE_ID, rituals, ritualsOf, type Ritual } from './rituals';
-import { ShopIntro } from './shop-intro';
 import { Tilt } from './tilt';
 import { VoucherCard } from './voucher-card';
 
@@ -31,7 +30,6 @@ export function ShopOverview({ initialProducts }: { initialProducts: Product[] }
 
   return (
     <>
-      <ShopIntro products={care_} onRitual={setRitual} />
       <Assortment products={care_} ritual={ritual} setRitual={setRitual} />
       {favorite && <Favorite product={favorite} />}
       <Gifts vouchers={vouchers} />
@@ -43,25 +41,32 @@ export function ShopOverview({ initialProducts }: { initialProducts: Product[] }
 
 function Assortment({ products, ritual, setRitual }: { products: Product[]; ritual: Ritual | 'alle'; setRitual: (r: Ritual | 'alle') => void }) {
   const list = ritual === 'alle' ? products : products.filter((p) => ritualsOf(p.id).includes(ritual));
-  const active = rituals.find((r) => r.id === ritual);
   const counts = Object.fromEntries(rituals.map((r) => [r.id, products.filter((p) => ritualsOf(p.id).includes(r.id)).length]));
 
   return (
-    <section id="sortiment" className="scroll-mt-[calc(var(--top-h,96px)+1rem)] bg-cream-50 py-24 md:py-32">
-      <div className="wrap">
-        <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
-          <div>
-            <Eyebrow>Sortiment</Eyebrow>
-            <Title className="mt-6">Nach *Ritual* entdecken.</Title>
-          </div>
-          <p key={ritual} className="max-w-sm animate-rise font-serif text-2xl italic leading-snug text-amber-800 lg:text-right">
-            {active?.line ?? `${products.length} Produkte, eine Haltung: so wenig wie nötig, so gut wie möglich.`}
-          </p>
+    <section id="sortiment" className="scroll-mt-[var(--top-h,96px)] bg-cream-50 pb-24 md:pb-32">
+      {/* Schlichte Kopfzeile: Fokus auf die Produkte */}
+      <div className="wrap flex flex-col gap-8 pb-10 pt-12 md:flex-row md:items-end md:justify-between md:pb-12 md:pt-20">
+        <div>
+          <p className="text-xs font-medium uppercase tracking-[0.22em] text-amber-800">Die Crememanufaktur · handgemacht in Berlin</p>
+          <h1 className="mt-4 font-serif text-[clamp(3.6rem,8vw,7.5rem)] leading-[0.9] tracking-[-0.03em]">Shop</h1>
         </div>
+        <nav aria-label="Shop-Bereiche" className="flex flex-wrap items-center gap-x-7 gap-y-2 text-sm">
+          <a href="#sortiment" data-no-curtain className="min-h-11 content-center font-medium">
+            Pflege <span className="text-muted">{products.length}</span>
+          </a>
+          <a href="#gutscheine" data-no-curtain className="min-h-11 content-center text-muted transition-colors hover:text-honey-950">
+            Gutscheine
+          </a>
+          <a href="#karten" data-no-curtain className="min-h-11 content-center text-muted transition-colors hover:text-honey-950">
+            Yoga-Karten
+          </a>
+          <span className="min-h-11 content-center text-muted">Versand {formatEuro(site.shipping.flatCents)}</span>
+        </nav>
       </div>
 
       {/* Filterleiste bleibt beim Scrollen unter der Kopfzeile stehen */}
-      <div className="sticky top-[var(--top-h,96px)] z-20 mt-12 border-y border-line-soft bg-cream-50/92 backdrop-blur-md">
+      <div className="sticky top-[var(--top-h,96px)] z-20 border-y border-line-soft bg-cream-50/92 backdrop-blur-md">
         <div className="wrap no-scrollbar flex gap-2 overflow-x-auto py-3" role="tablist" aria-label="Nach Ritual filtern">
           {[{ id: 'alle' as const, label: 'Alle' }, ...rituals].map((r) => {
             const on = ritual === r.id;

@@ -135,7 +135,7 @@ export default function CoursesPage() {
       </section>
 
       {/* 4. Kursplan */}
-      <section id="kursplan" className="scroll-mt-[var(--top-h,96px)] bg-cream-50 py-24 md:py-36">
+      <section id="kursplan" className=" bg-cream-50 py-24 md:py-36">
         <div className="wrap">
           <div className="mx-auto mb-14 max-w-2xl text-center">
             <Eyebrow className="justify-center">Kursplan</Eyebrow>
@@ -147,7 +147,7 @@ export default function CoursesPage() {
       </section>
 
       {/* 5. Formate als Stapelkarten */}
-      <section id="coaching" className="scroll-mt-[var(--top-h,96px)] bg-cream-50 pb-10">
+      <section id="coaching" className=" bg-cream-50 pb-10">
         <div className="wrap mb-14 text-center md:mb-20">
           <Eyebrow className="justify-center">Formate</Eyebrow>
           <Title className="mt-7">Finde, was Dich *bewegt*.</Title>

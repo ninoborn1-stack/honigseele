@@ -56,7 +56,7 @@ html {
   overflow-x: clip;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  scroll-padding-top: 96px;
+  scroll-padding-top: var(--top-h, 96px);
 }
 
 body {

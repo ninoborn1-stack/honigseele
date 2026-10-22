@@ -48,20 +48,23 @@ export function Header() {
           <Logo light={overHero} />
         </Link>
         <nav aria-label="Hauptnavigation" className="hidden justify-self-center lg:block">
-          <ul className="flex items-center gap-5 whitespace-nowrap text-[0.76rem] font-medium uppercase tracking-[0.12em] xl:gap-10 xl:tracking-[0.16em]">
-            {mainNav.slice(1, 5).map((item, i) => {
-              const active = pathname.startsWith(item.href);
+          <ul className="flex items-center gap-4 whitespace-nowrap text-[0.74rem] font-medium uppercase tracking-[0.1em] min-[1360px]:gap-10 min-[1360px]:text-[0.76rem] min-[1360px]:tracking-[0.16em]">
+            {mainNav.slice(0, 5).map((item, i) => {
+              // „Start“ führt an den Willkommen-Bereich, nicht zurück in den Hero
+              const isStart = item.href === '/';
+              const active = isStart ? pathname === '/' : pathname.startsWith(item.href);
               return (
                 <li key={item.href}>
                   <Link
-                    href={item.href}
+                    href={isStart ? '/#willkommen' : item.href}
+                    data-label={isStart ? 'Willkommen' : undefined}
                     className={cn(
                       'relative py-2 transition-opacity hover:opacity-100',
                       'after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:bg-current after:transition-transform after:duration-500 hover:after:scale-x-100',
                       active ? 'opacity-100 after:scale-x-100' : 'opacity-80 after:scale-x-0',
                     )}
                   >
-                    {t(navKeys[i + 1])}
+                    {t(navKeys[i])}
                   </Link>
                 </li>
               );
@@ -71,7 +74,7 @@ export function Header() {
         <div className="flex items-center gap-1 justify-self-end">
           <button
             onClick={() => setLocale(locale === 'de' ? 'en' : 'de')}
-            className="hidden min-h-11 rounded-full px-3 text-xs font-medium tracking-widest opacity-75 hover:opacity-100 xl:block"
+            className="hidden min-h-11 rounded-full px-3 text-xs font-medium tracking-widest opacity-75 hover:opacity-100 min-[1360px]:block"
             aria-label="Sprache wechseln"
           >
             {locale === 'de' ? 'EN' : 'DE'}
@@ -89,7 +92,8 @@ export function Header() {
           </button>
           <span className="ml-2 hidden md:block">
             <ButtonLink href="/buchen/" variant={overHero ? 'honey' : 'primary'} size="sm" data-label="Buchen">
-              {t('cta.book')}
+              <span className="min-[1360px]:hidden">{t('nav.book')}</span>
+              <span className="hidden min-[1360px]:inline">{t('cta.book')}</span>
             </ButtonLink>
           </span>
           {/* Tablet: Menü, solange die Navigation oben nicht passt (Handy hat die untere Leiste) */}
@@ -103,7 +107,7 @@ export function Header() {
           <ul className="border-t border-line-soft">
             {mainNav.map((item, i) => (
               <li key={item.href} className="border-b border-line-soft">
-                <Link href={item.href} onClick={() => setMenu(false)} className="flex min-h-14 items-center justify-between font-serif text-3xl">
+                <Link href={item.href === '/' ? '/#willkommen' : item.href} onClick={() => setMenu(false)} className="flex min-h-14 items-center justify-between font-serif text-3xl">
                   {t(navKeys[i])}
                 </Link>
               </li>

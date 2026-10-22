@@ -44,7 +44,7 @@ function Assortment({ products, ritual, setRitual }: { products: Product[]; ritu
   const counts = Object.fromEntries(rituals.map((r) => [r.id, products.filter((p) => ritualsOf(p.id).includes(r.id)).length]));
 
   return (
-    <section id="sortiment" className="scroll-mt-[var(--top-h,96px)] bg-cream-50 pb-24 md:pb-32">
+    <section id="sortiment" className=" bg-cream-50 pb-24 md:pb-32">
       {/* Schlichte Kopfzeile: Fokus auf die Produkte */}
       <div className="wrap flex flex-col gap-8 pb-10 pt-12 md:flex-row md:items-end md:justify-between md:pb-12 md:pt-20">
         <div>
@@ -205,7 +205,7 @@ function Cards({ cards }: { cards: Product[] }) {
   const { add } = useCart();
   const [added, setAdded] = useState<string | null>(null);
   return (
-    <section id="karten" className="scroll-mt-[calc(var(--top-h,96px)+1rem)] bg-cream-50 py-24 md:py-32">
+    <section id="karten" className=" bg-cream-50 py-24 md:py-32">
       <div className="wrap grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
         <div>
           <Eyebrow>Yoga-Karten</Eyebrow>

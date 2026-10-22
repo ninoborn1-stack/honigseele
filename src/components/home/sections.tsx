@@ -24,7 +24,7 @@ export function Intro() {
   const title = useBlock('home.intro.title', block('home.intro.title'));
   const text = useBlock('home.intro.text', block('home.intro.text'));
   return (
-    <section className="bg-cream-50 py-20 md:py-28">
+    <section id="willkommen" className="bg-cream-50 py-20 md:py-28">
       <div className="wrap flex flex-col items-center text-center">
         <Eyebrow>Willkommen in der Honigseele</Eyebrow>
         <RevealHeading

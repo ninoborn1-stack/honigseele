@@ -1,6 +1,7 @@
 'use client';
 import { X } from 'lucide-react';
-import { useEffect, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
+import { createPortal } from 'react-dom';
 import { cn } from '@/lib/cn';
 
 export function Drawer({
@@ -18,6 +19,10 @@ export function Drawer({
   footer?: ReactNode;
   side?: 'right' | 'bottom';
 }) {
+  // Ins <body> rendern, damit Eltern mit backdrop-filter/transform die Schublade nicht einsperren
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
@@ -30,7 +35,8 @@ export function Drawer({
     };
   }, [open, onClose]);
 
-  return (
+  if (!mounted) return null;
+  return createPortal(
     <div className={cn('fixed inset-0 z-[120]', open ? 'pointer-events-auto' : 'pointer-events-none')} aria-hidden={!open}>
       <div
         className={cn('absolute inset-0 bg-honey-950/40 backdrop-blur-[2px] transition-opacity duration-500', open ? 'opacity-100' : 'opacity-0')}
@@ -59,6 +65,7 @@ export function Drawer({
         </div>
         {footer && <footer className="pb-safe border-t border-line-soft px-6 py-4">{footer}</footer>}
       </aside>
-    </div>
+    </div>,
+    document.body,
   );
 }

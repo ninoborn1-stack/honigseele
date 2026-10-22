@@ -17,9 +17,8 @@ import { useCart } from './cart';
 import { ProductTile } from './product-tile';
 import { ProductVisual } from './product-visual';
 import { FAVORITE_ID, rituals, ritualsOf, type Ritual } from './rituals';
+import { ShopIntro } from './shop-intro';
 import { Tilt } from './tilt';
-import { PageHero } from '@/components/ui/page-hero';
-import { TickerBand } from '@/components/ui/ticker';
 import { VoucherCard } from './voucher-card';
 
 export function ShopOverview({ initialProducts }: { initialProducts: Product[] }) {
@@ -28,28 +27,12 @@ export function ShopOverview({ initialProducts }: { initialProducts: Product[] }
   const vouchers = products.filter((p) => p.kind === 'gutschein' && p.active);
   const cards = products.filter((p) => p.kind === 'karte' && p.active);
   const favorite = care_.find((p) => p.id === FAVORITE_ID);
+  const [ritual, setRitual] = useState<Ritual | 'alle'>('alle');
 
   return (
     <>
-      <PageHero
-        image="/images/stock/products.jpg"
-        alt="Naturkosmetik in Glasflaschen mit Kerze"
-        eyebrow={`Die Crememanufaktur · ${care_.length} Produkte, handgemacht in Berlin`}
-        title="Pflege, die wir *selbst* benutzen."
-        lead="In jeder unserer Behandlungen im Einsatz – was Dir bei uns guttut, kannst Du mit nach Hause nehmen."
-        actions={
-          <>
-            <ArrowLink href="#sortiment" light data-no-curtain>
-              Zum Sortiment
-            </ArrowLink>
-            <ArrowLink href="/shop/gutscheine/" light data-label="Gutscheine">
-              Gutschein
-            </ArrowLink>
-          </>
-        }
-      />
-      <TickerBand items={['Handgemacht in Berlin', 'In jeder Behandlung', 'Ohne Schnickschnack', 'Crememanufaktur', `Versand ${formatEuro(site.shipping.flatCents)}`].map((label) => ({ label }))} />
-      <Assortment products={care_} />
+      <ShopIntro products={care_} onRitual={setRitual} />
+      <Assortment products={care_} ritual={ritual} setRitual={setRitual} />
       {favorite && <Favorite product={favorite} />}
       <Gifts vouchers={vouchers} />
       <Cards cards={cards} />
@@ -58,8 +41,7 @@ export function ShopOverview({ initialProducts }: { initialProducts: Product[] }
   );
 }
 
-function Assortment({ products }: { products: Product[] }) {
-  const [ritual, setRitual] = useState<Ritual | 'alle'>('alle');
+function Assortment({ products, ritual, setRitual }: { products: Product[]; ritual: Ritual | 'alle'; setRitual: (r: Ritual | 'alle') => void }) {
   const list = ritual === 'alle' ? products : products.filter((p) => ritualsOf(p.id).includes(ritual));
   const active = rituals.find((r) => r.id === ritual);
   const counts = Object.fromEntries(rituals.map((r) => [r.id, products.filter((p) => ritualsOf(p.id).includes(r.id)).length]));

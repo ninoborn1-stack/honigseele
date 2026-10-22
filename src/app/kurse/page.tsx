@@ -94,7 +94,6 @@ export default function CoursesPage() {
       <PageHero
         image="/images/stock/yoga.jpg"
         alt="Yoga in warmem Licht"
-        imageClassName="object-[50%_30%]"
         eyebrow="Kurse & Coaching · Gemeinschaft in Kreuzberg"
         title="Bewegen, atmen, *verbinden*."
         lead="Yoga, Breathwork, Kakaozeremonie, unser Frauen-Netzwerk – und Coaching für das, was Dich innen bewegt."

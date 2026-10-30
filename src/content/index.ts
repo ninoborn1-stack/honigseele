@@ -51,6 +51,13 @@ export const site = siteJson as {
   blocks: ContentBlock[];
   trust: { title: string; text: string }[];
   reviews: { text: string; name: string; placeholder?: boolean }[];
+  google: {
+    placeholder: boolean;
+    profileUrl: string;
+    rating: number;
+    reviews: { author: string; rating: number; date: string; text: string }[];
+  };
+  instagram: { placeholder: boolean; handle: string; url: string; tiles: string[] };
 };
 
 export interface CareInfo {

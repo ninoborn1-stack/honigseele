@@ -63,6 +63,8 @@ export function Hero() {
   const lead = useBlock('home.hero.lead', block('home.hero.lead'));
   const second = useBlock('home.hero.second', block('home.hero.second'));
   const image = useBlock('home.hero.image', block('home.hero.image'));
+  // Beim ersten Scroll blendet das Ladenbild weich ins Massage-Bild über (Massagen = Number One)
+  const image2 = useBlock('home.hero.image2', block('home.hero.image2'));
   const [secondA, secondB] = second.includes(',')
     ? [second.split(',')[0] + ',', second.split(',').slice(1).join(',').trim()]
     : ['', second];
@@ -196,6 +198,7 @@ export function Hero() {
           },
         })
         .fromTo('.hero__zoom', { scale: 1 }, { scale: 0.88, duration: 1 }, 0)
+        .fromTo('.hero__img2', { opacity: 0 }, { opacity: 1, duration: 0.3, ease: 'power1.inOut' }, 0.12)
         .fromTo(
           '.hero__content',
           { yPercent: 0, opacity: 1 },
@@ -250,6 +253,7 @@ export function Hero() {
                 alt="Ruhiger, sonniger Raum in der Honigseele"
                 fetchPriority="high"
               />
+              <img className="hero__img2" src={imageUrl(image2)} alt="" aria-hidden loading="lazy" decoding="async" />
             </div>
             <div className="hero__shade" />
             <SubtleHoneycomb />
@@ -334,7 +338,7 @@ export function Hero() {
           </div>
         </div>
         <Placeholder
-          label="Hier kommt Annas Einstiegsfoto"
+          label="Hier kommt das große Bild aus dem Laden"
           className="absolute bottom-4 left-4 z-[4] md:bottom-16"
         />
       </div>

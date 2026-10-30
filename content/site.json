@@ -116,7 +116,7 @@
     {
       "id": "home.hero.image",
       "page": "Startseite",
-      "label": "Hero – Einstiegsfoto",
+      "label": "Hero – großes Ladenbild",
       "kind": "image",
       "value": "hero.shop"
     },
@@ -175,6 +175,13 @@
       "label": "Jobs – Text",
       "kind": "richtext",
       "value": "Wir suchen immer wieder Honigseelen: Depiladoras, Kosmetiker*innen und Masseur*innen. Aktuelle Stellen folgen."
+    },
+    {
+      "id": "home.hero.image2",
+      "page": "Startseite",
+      "label": "Hero – Bild beim Scrollen (Massage)",
+      "kind": "image",
+      "value": "hero.massage"
     }
   ],
   "trust": [
@@ -211,5 +218,43 @@
       "name": "Kundin auf Treatwell",
       "placeholder": true
     }
-  ]
+  ],
+  "google": {
+    "placeholder": true,
+    "profileUrl": "https://www.google.com/maps/search/?api=1&query=Honigseele+Hornstra%C3%9Fe+1+10963+Berlin",
+    "rating": 4.9,
+    "reviews": [
+      {
+        "author": "Beispiel-Kundin A.",
+        "rating": 5,
+        "date": "vor 2 Wochen",
+        "text": "Ich fühle mich hier jedes Mal so willkommen. Waxing mit Honig ist eine ganz andere Erfahrung."
+      },
+      {
+        "author": "Beispiel-Kundin M.",
+        "rating": 5,
+        "date": "vor einem Monat",
+        "text": "Die Hot-Stone-Massage war genau das, was ich gebraucht habe. Ruhig, warm, herzlich."
+      },
+      {
+        "author": "Beispiel-Kunde J.",
+        "rating": 5,
+        "date": "vor 2 Monaten",
+        "text": "Super professionell und trotzdem total entspannt. Komme definitiv wieder."
+      }
+    ]
+  },
+  "instagram": {
+    "placeholder": true,
+    "handle": "@honigseele.berlin",
+    "url": "https://instagram.com/honigseele.berlin",
+    "tiles": [
+      "home.manufaktur",
+      "hero.massage",
+      "about.value.natural",
+      "about.value.holistic",
+      "home.packages",
+      "about.value.self"
+    ]
+  }
 }

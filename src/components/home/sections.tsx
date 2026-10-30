@@ -1,8 +1,9 @@
 'use client';
 import { ArrowUpRight, ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { NewsletterForm } from '@/components/layout/footer';
+import { GoogleReviews } from './social';
 import { Avatar } from '@/components/ui/avatar';
 import { Placeholder } from '@/components/ui/badge';
 import { Bloom } from '@/components/ui/bloom';
@@ -56,6 +57,12 @@ export function AreaMarquee() {
 export function Areas() {
   const list = treatmentCategories.filter((c) => !c.isPlaceholder);
   const [active, setActive] = useState(0);
+  const hoverTimer = useRef(0);
+  // Erst nach kurzem Verweilen öffnen – beim schnellen Überfahren springt so nichts
+  const hover = (i: number) => {
+    window.clearTimeout(hoverTimer.current);
+    hoverTimer.current = window.setTimeout(() => setActive(i), 140);
+  };
   const minPrice = (id: string) => Math.min(...servicesOf(id).filter((s) => s.priceCents > 0).map((s) => s.priceCents));
   return (
     <section id="bereiche" className="bg-cream-50 py-24 md:py-36">
@@ -78,7 +85,8 @@ export function Areas() {
             return (
               <div
                 key={c.id}
-                onMouseEnter={() => setActive(i)}
+                onMouseEnter={() => hover(i)}
+                onMouseLeave={() => window.clearTimeout(hoverTimer.current)}
                 className={cn('relative min-w-0 overflow-hidden rounded-[1.75rem] transition-[flex-grow] duration-[900ms] ease-[var(--ease-soft)]', on ? 'grow-[5]' : 'grow')}
                 style={{ flexBasis: 0 }}
               >
@@ -238,6 +246,7 @@ export function Trust() {
             <ChevronRight className="h-4 w-4" strokeWidth={1.5} />
           </button>
         </div>
+        <GoogleReviews />
       </div>
     </section>
   );

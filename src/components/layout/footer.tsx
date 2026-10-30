@@ -8,6 +8,7 @@ import { getAdapter } from '@/data';
 import { legalNav, mainNav } from '@/lib/nav';
 import { useData } from '@/lib/use-data';
 import { Placeholder } from '../ui/badge';
+import { FlowerOfLife } from '@/components/brand/flower-of-life';
 import { Logo } from './logo';
 import { InlineLoading } from '@/components/ui/loading';
 
@@ -50,8 +51,10 @@ export function Footer() {
   if (pathname.startsWith('/admin') || pathname.startsWith('/buchen')) return null;
   const c = settings.contact;
   return (
-    <footer className="border-t border-line-soft bg-cream-50 pb-28 text-honey-950 md:pb-0">
-      <div className="wrap pb-10 pt-24 md:pt-32">
+    <footer className="relative overflow-hidden border-t border-line-soft bg-cream-50 pb-28 text-honey-950 md:pb-0">
+      {/* Einziges statisches Ornament der Blume des Lebens: sehr zart, Deckkraft unter 8 % */}
+      <FlowerOfLife size="min(70vw, 640px)" className="pointer-events-none absolute -right-[12vw] -top-[10%] opacity-[0.07]" />
+      <div className="wrap relative pb-10 pt-24 md:pt-32">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Logo className="text-[clamp(3rem,6vw,5.5rem)]" />

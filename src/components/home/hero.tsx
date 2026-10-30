@@ -9,7 +9,6 @@ import { ArrowDown, MapPin, Phone, Star } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 import { ButtonLink } from '@/components/ui/button';
 import { Placeholder } from '@/components/ui/badge';
-import { SubtleHoneycomb } from '@/components/ui/honeycomb';
 import { block, site } from '@/content';
 import { useBlock } from '@/lib/use-data';
 import { withBase } from '@/lib/config';
@@ -256,7 +255,6 @@ export function Hero() {
               <img className="hero__img2" src={imageUrl(image2)} alt="" aria-hidden loading="lazy" decoding="async" />
             </div>
             <div className="hero__shade" />
-            <SubtleHoneycomb />
           </div>
         </div>
         <div className="hero__bloom">

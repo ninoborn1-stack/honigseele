@@ -65,10 +65,16 @@ Warm, weich, hochwertig. Lifestyle-Marke. Nicht „KI-generisch“.
 - **Bewegung** (`src/components/ui/motion.tsx`): `Title`/`RevealHeading` (Wörter steigen auf), `RevealImage` (Bild öffnet sich von unten), `Parallax`, `Marquee` (Laufband), `CountUp`, `useInView`. Karussells nur mit Pfeilen + Fortschritt, nie horizontales Mausrad-Scrollen.
 - **Kopfzeile** (`SiteTop`) ist immer fixiert; setzt `--top-h`. Sticky-Elemente mit `top-[calc(var(--top-h,96px)+1rem)]`.
 - Gestaltung: Split-Layouts mit dunklen Honigflächen (`Section tone="dark"`, `.honey-glow`), sanftes Licht (`.honey-light`), feine Linien statt Boxen, Eyebrows (`.eyebrow`), Nummern in Serif (`Numeral`), Lucide-Icons mit `strokeWidth={1.5}`.
-- **Keine Waben** als Icons, Aufzählungen, Avatare, Badges oder Muster. Einzige Ausnahme: `<SubtleHoneycomb />` im Hero, per `NEXT_PUBLIC_HONEYCOMB=true` (Standard aus).
+- **Keine Waben** als Stilmittel (keine Icons, Aufzählungen, Avatare, Muster).
+- **Markenzeichen: Blume des Lebens** (`src/components/brand/flower-of-life.tsx`, 19 Kreise + Umkreis, Strich, `animate="draw|bloom|pulse|none"`). Sparsam: nur Intro, Seitenwechsel, Laden und ein zartes Ornament im Footer (< 8 % Deckkraft). Nicht als Deko auf anderen Seiten.
+- **Animationswerte zentral** in `src/lib/motion-config.ts` (Intro, Seitenwechsel, Laden) – nur dort ändern.
+- **Intro** (`src/components/brand/intro.tsx`): nur beim ersten Aufruf pro Sitzung (sessionStorage, Skript im `<head>`), max. 1,8 s, überspringbar. Der Hero startet erst danach (Ereignis `honig:intro-done`).
+- **Seitenwechsel** (`src/components/layout/page-transition.tsx`): weiches Aus-/Einblenden von `[data-page]`, Navigation startet sofort, Blume nur bei langsamem Laden, danach Fokus auf die H1.
+- **Ladezustände** nur mit `Loading`/`InlineLoading` (`src/components/ui/loading.tsx`, Blume `pulse`, `role="status"`). Keine Spinner.
+- **Bilder** nur über Schlüssel aus `content/images.json` (`Photo`, `RevealImage`, `imageUrl()`), nie Pfade im Code. Annas Fotos: dort `src` tauschen, `placeholder: false`.
+- **Logo-Slot** (`src/components/layout/logo.tsx`) liest `content/brand.json`; Original-Logo nach `public/brand/`. Logo nie verzerren, umfärben oder animieren.
 - Bewegung ruhig (Fade/Rise, `Reveal`), `prefers-reduced-motion` respektieren.
-- **Hero** (`src/components/home/hero.tsx`): Foto öffnet sich aus einer Blütenmaske (`public/images/bloom-mask.svg`), „seele“ steigt Buchstabe für Buchstabe auf, beim Scrollen Rahmen + „So schön, dass Du da bist.“. Regel: jede CSS-Eigenschaft nur von einer Animation; CSS-Grundzustand = Endzustand. GSAP + ScrollTrigger, Lenis nur auf Desktop.
-- **Vorhang-Übergang** (`src/components/layout/curtain.tsx`): fünf Streifen, CSS-animiert, fängt interne Links in der Capture-Phase ab. Nicht innerhalb von /buchen, /admin, /kasse. `data-label` am Link setzt das Label, `data-no-curtain` schaltet ab, `data-quick-curtain` (Bottom-Nav) kürzt.
+- **Hero** (`src/components/home/hero.tsx`): Foto öffnet sich aus einer Blütenmaske (`public/images/bloom-mask.svg`), „seele“ steigt Buchstabe für Buchstabe auf, beim Scrollen blendet das Ladenbild ins Massage-Bild über, Rahmen + „So schön, dass Du da bist.“. Regel: jede CSS-Eigenschaft nur von einer Animation; CSS-Grundzustand = Endzustand. GSAP + ScrollTrigger, Lenis nur auf Desktop.
 - Mobil zuerst: Bottom-Nav (Start, Behandlungen, **Buchen** Mitte, Shop, Konto), Safe-Area-Insets, Touch-Ziele ≥ 44 px, keine Hover-only-Interaktion, Sticky-Buchen-Button auf Leistungsseiten.
 
 ## Ton

@@ -65,6 +65,8 @@ Eine Codebasis für **Website, PWA und App** (später iOS/Android über Capacito
 ### App (Capacitor)
 - `npm i @capacitor/core @capacitor/cli @capacitor/ios @capacitor/android`, `npx cap init Honigseele de.honigseele.app --web-dir=out`.
 - `npm run build && npx cap sync`, dann in Xcode/Android Studio öffnen.
+- `capacitor.config.json` liegt bereit (App-ID `de.honigseele.app`, `webDir: out`, Splash Honigbraun `#2B2118`, sofort ausblenden → nahtlos ins Web-Intro mit der Blume, kein doppeltes Logo).
+- Icon und Splash: `resources/icon.png` und `resources/splash.png` (Blume des Lebens, erzeugt von `scripts/make-icons.py`). Mit `npx @capacitor/assets generate` in die nativen Projekte übernehmen.
 - Push über `@capacitor/push-notifications` (APNs/FCM), Apple-Developer-Konto auf Anna.
 - Hinweis: Rein „verpackte Websites“ lehnt Apple gern ab. Mit Push, Konto, Buchung und Offline-Shell ist der App-Charakter gegeben.
 

@@ -6,8 +6,13 @@ Alle Stellen sind in der Demo mit einem dezenten Badge „Platzhalter“ markier
 
 | Was | Wo in der Demo | Datei |
 |---|---|---|
-| **Original-Logo und Schriftzug** (SVG/PNG) | Header, Footer, Mails, App-Icon | `src/components/layout/logo.tsx`, `public/icons/` (`scripts/make-icons.py`) |
-| **Annas Einstiegsfoto** der heutigen Seite in voller Auflösung (≥ 2400 px breit) | Hero Startseite | Block `home.hero.image` in `content/site.json` (oder im Admin unter „Texte & Seiten“ hochladen) |
+| **Original-Logo** (eingetragene Marke, SVG/PNG für hellen und dunklen Grund) | Header, Footer, Intro-Ende, Mails | Dateien nach `public/brand/`, Pfade in `content/brand.json` eintragen, `placeholder: false` |
+| **App-Icon, Favicon, Splash** (heute: Blume des Lebens als Platzhalter) | App, Browser-Tab, Capacitor | `scripts/make-icons.py` anpassen und ausführen (erzeugt `public/icons/` und `resources/`) |
+| **Großes Ladenbild** (Einstiegsfoto, quer, ≥ 2400 px breit) | Hero Startseite | `content/images.json` → `hero.shop` (oder im Admin „Texte & Seiten“) |
+| **Massage-Bild** (Number-One-Empfehlung, quer, ≥ 2400 px) | Hero beim ersten Scroll | `content/images.json` → `hero.massage` |
+| **Alle weiteren Fotos** (Räume, Behandlungen, Kurse, Produkte) | ganze Seite | `content/images.json`: je Schlüssel steht unter `wanted`, welches Motiv gebraucht wird |
+| **Google-Bewertungen** (Live-Anbindung, Place-ID, Profil-Link) | Startseite „Was andere sagen“ | `content/site.json` → `google` (heute Beispieldaten) |
+| **Instagram** (automatische Beiträge, Zugang Instagram Graph API) | Startseite | `content/site.json` → `instagram` (heute Platzhalter-Kacheln) |
 | Team-Fotos (Porträts aller Honigseelen) | Über uns, Buchung (Anbieterin), Startseite | `content/staff.json` → Feld `photo` |
 | Raum- und Behandlungsfotos (ersetzen Stockfotos) | Behandlungsbereiche, Kurse, Über uns | `public/images/stock/` (`CREDITS.md`) |
 | Produktfotos der Pflegeserie | Shop, Produktseiten | `content/products.json` → `image` (heute Linienzeichnungen) |

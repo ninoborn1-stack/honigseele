@@ -3,13 +3,16 @@
 Vorbereitung: `npm run dev`, Browser auf `http://localhost:3000`. Oben rechts in der Demo-Leiste **„Zurücksetzen“**, damit alles frisch ist. Für die Handy-Ansicht die Entwicklertools auf iPhone-Größe stellen oder die Seite am Handy im selben WLAN öffnen.
 
 ## 1. Ankommen (1 Min.)
-- **Startseite laden.** Eine goldene Blüte zeichnet sich, das Foto öffnet sich aus der Blüte, „Honigseele“ steigt auf.
-  > „Hier kommt Dein Einstiegsfoto hin – das bleibt.“
-- **Langsam scrollen.** Der Schriftzug zieht weg, „So schön, dass Du da bist.“ erscheint, das Bild rahmt sich ein.
-- Weiter scrollen: Intro, Behandlungen als Index, Wohlfühl-Pakete auf dunklem Honig, 4,9 Sterne, eigene Pflegeserie, Team, Kursvorschau, Newsletter.
+- **Neues privates Fenster** öffnen (das Intro kommt nur beim ersten Aufruf pro Sitzung) und die Startseite laden.
+- **Intro:** Auf Honigbraun zeichnet sich die **Blume des Lebens** Kreis für Kreis, blüht kurz auf und blendet in die Seite über (Tippen überspringt).
+  > „Die Blume aus dem Laden ist jetzt unser Zeichen – sie kommt immer, wenn etwas lädt oder wechselt.“
+- Danach öffnet sich das **Ladenbild** aus der Blüte, „Honigseele“ steigt auf.
+- **Langsam scrollen:** Das Ladenbild blendet in das **Massage-Bild** über, „So schön, dass Du da bist.“ erscheint.
+- Weiter scrollen: Willkommen, Behandlungen, Pakete, Bewertungen. **„Google-Bewertungen anzeigen“** klicken – sie laden erst jetzt (Blume als Ladezeichen). Weiter unten dasselbe mit **Instagram**.
+- Der Button **„Termin buchen“** bleibt beim Scrollen sichtbar.
 
 ## 2. Behandlungen (1 Min.)
-- Oben **Behandlungen** anklicken → Vorhang-Übergang mit dem Seitennamen.
+- Oben **Behandlungen** anklicken → ruhiger **Seitenwechsel**: die Seite blendet weich aus und ein (bei langsamer Verbindung erscheint die Blume).
 - **Waxing** öffnen: Einstieg, Preisliste mit Tabs Damen/Herren und Schüler*innen-Preisen in Klammern, Vorbereitung und Nachsorge, FAQ.
 - Zu **Mani- & Pediküre** wechseln: bei Spa-Pediküre steht „Preis je Anbieterin: Justyna 58 €, Sandra 58 €, sonst 57 €“.
 - Auf **Laser**: Hinweis Vorgespräch und Mehrzonen-Rabatt.
@@ -18,7 +21,7 @@ Vorbereitung: `npm run dev`, Browser auf `http://localhost:3000`. Oben rechts in
 - Unten bzw. oben **Termin buchen**.
 - **Leistung:** Waxing → *Achseln* + *Beine komplett* anhaken. Preis und Dauer summieren sich rechts.
 - **Anbieterin:** Liste zeigt nur, wer beides anbietet, mit Preis je Person. *Anna* wählen.
-- **Termin:** Tagesleiste mit Punkten für freie Tage, Zeiten nach Vormittag/Nachmittag/Abend. Eine Zeit wählen.
+- **Termin:** Beim Tageswechsel zeigt die **Blume** kurz an, dass freie Zeiten gesucht werden. Tagesleiste mit Punkten für freie Tage, Zeiten nach Vormittag/Nachmittag/Abend. Eine Zeit wählen.
 - **Daten:** „Demo-Login als Lena“ → alles ist ausgefüllt. Hinweis zur Vorbereitung (Haarlänge 3–5 mm).
 - **Zahlung:** „Jetzt bezahlen“ oder „Karte hinterlegen“. Gutschein **HONIG50** einlösen → 50 € werden angerechnet. Storno-Regel bestätigen.
 - Zahlungsmaske im Stripe-Look → bezahlen.

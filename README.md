@@ -27,7 +27,6 @@ npm run typecheck
 |---|---|---|
 | `NEXT_PUBLIC_DEMO` | `true` | Demo-Leiste, Platzhalter-Badges, `noindex` |
 | `NEXT_PUBLIC_DATA_MODE` | `mock` | `mock` oder später `supabase` |
-| `NEXT_PUBLIC_HONEYCOMB` | `false` | dezentes Wabenmuster im Hero |
 
 ## Dokumentation
 

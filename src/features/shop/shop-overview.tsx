@@ -52,13 +52,13 @@ function Assortment({ products, ritual, setRitual }: { products: Product[]; ritu
           <h1 className="mt-4 font-serif text-[clamp(3.6rem,8vw,7.5rem)] leading-[0.9] tracking-[-0.03em]">Shop</h1>
         </div>
         <nav aria-label="Shop-Bereiche" className="flex flex-wrap items-center gap-x-7 gap-y-2 text-sm">
-          <a href="#sortiment" data-no-curtain className="min-h-11 content-center font-medium">
+          <a href="#sortiment" className="min-h-11 content-center font-medium">
             Pflege <span className="text-muted">{products.length}</span>
           </a>
-          <a href="#gutscheine" data-no-curtain className="min-h-11 content-center text-muted transition-colors hover:text-honey-950">
+          <a href="#gutscheine" className="min-h-11 content-center text-muted transition-colors hover:text-honey-950">
             Gutscheine
           </a>
-          <a href="#karten" data-no-curtain className="min-h-11 content-center text-muted transition-colors hover:text-honey-950">
+          <a href="#karten" className="min-h-11 content-center text-muted transition-colors hover:text-honey-950">
             Yoga-Karten
           </a>
           <span className="min-h-11 content-center text-muted">Versand {formatEuro(site.shipping.flatCents)}</span>
@@ -139,7 +139,7 @@ function Favorite({ product }: { product: Product }) {
             {added ? <Check className="h-4 w-4" strokeWidth={2} /> : <Plus className="h-4 w-4" strokeWidth={1.5} />}
             {added ? 'Im Warenkorb' : `${product.name} · ${formatEuro(product.priceCents)}`}
           </Button>
-          <ArrowLink href={`/shop/${product.id}/`} data-label={product.name}>
+          <ArrowLink href={`/shop/${product.id}/`}>
             Mehr erfahren
           </ArrowLink>
         </div>
@@ -188,7 +188,7 @@ function Gifts({ vouchers }: { vouchers: Product[] }) {
             })}
           </div>
           <div className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-4">
-            <ButtonLink href={`/shop/gutscheine/?art=${kind?.id ?? 'gutschein'}`} variant="honey" size="lg" arrow data-label="Gutscheine">
+            <ButtonLink href={`/shop/gutscheine/?art=${kind?.id ?? 'gutschein'}`} variant="honey" size="lg" arrow>
               Gutschein gestalten
             </ButtonLink>
           </div>
@@ -211,7 +211,7 @@ function Cards({ cards }: { cards: Product[] }) {
           <Eyebrow>Yoga-Karten</Eyebrow>
           <Title className="mt-6">Einmal kaufen, *oft* kommen.</Title>
           <p className="mt-8 max-w-md text-lg text-muted">Mit einer 5er- oder 10er-Karte buchst Du Deine Yoga-Stunden mit einem Tipp. Einzeltickets für Kurse und Workshops gibt es direkt im Kursplan.</p>
-          <ArrowLink href="/kurse/" className="mt-10" data-label="Kurse">
+          <ArrowLink href="/kurse/" className="mt-10">
             Zum Kursplan
           </ArrowLink>
         </div>
@@ -258,7 +258,7 @@ function Closing() {
         <Title className="mt-6 max-w-[16ch]">Frag beim nächsten Termin nach einer *Probe*.</Title>
         <p className="mx-auto mt-8 max-w-lg text-lg text-muted">Wir beraten Dich gern, was zu Deiner Haut passt – ganz ohne Verkaufsdruck.</p>
         <div className="mt-10">
-          <Link href="/buchen/" data-label="Buchen" className="inline-flex min-h-14 items-center rounded-full bg-honey-950 px-8 text-base font-medium text-cream-50 transition-colors hover:bg-honey-800">
+          <Link href="/buchen/" className="inline-flex min-h-14 items-center rounded-full bg-honey-950 px-8 text-base font-medium text-cream-50 transition-colors hover:bg-honey-800">
             Termin buchen
           </Link>
         </div>

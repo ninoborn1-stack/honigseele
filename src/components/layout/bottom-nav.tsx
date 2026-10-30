@@ -20,7 +20,6 @@ export function BottomNav() {
   return (
     <nav
       aria-label="App-Navigation"
-      data-quick-curtain
       className="pb-safe fixed inset-x-0 bottom-0 z-50 border-t border-line-soft bg-cream-50/95 backdrop-blur-md md:hidden"
     >
       <ul className="grid grid-cols-5">

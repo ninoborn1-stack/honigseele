@@ -107,10 +107,10 @@ export function StackPanels({ panels }: { panels: PanelData[] }) {
                       ))}
                     </ul>
                     <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3">
-                      <ButtonLink href={`/buchen/?kategorie=${p.id}`} variant={dark ? 'honey' : 'primary'} size="lg" arrow data-label="Buchen">
+                      <ButtonLink href={`/buchen/?kategorie=${p.id}`} variant={dark ? 'honey' : 'primary'} size="lg" arrow>
                         Buchen
                       </ButtonLink>
-                      <ArrowLink href={`/behandlungen/${p.id}/`} light={dark} data-label={p.name}>
+                      <ArrowLink href={`/behandlungen/${p.id}/`} light={dark}>
                         Ansehen
                       </ArrowLink>
                     </div>
@@ -133,7 +133,7 @@ export function ComingSoon({ items }: { items: { id: string; name: string; eyebr
   return (
     <div className="wrap grid gap-4 pb-24 md:grid-cols-2 md:pb-36">
       {items.map((c) => (
-        <Link key={c.id} href={`/behandlungen/${c.id}/`} data-label={c.name} className="group relative flex min-h-72 items-end overflow-hidden rounded-[2rem] p-8 text-cream-50">
+        <Link key={c.id} href={`/behandlungen/${c.id}/`} className="group relative flex min-h-72 items-end overflow-hidden rounded-[2rem] p-8 text-cream-50">
           <Photo src={c.image} alt="" className="!absolute inset-0" imgClassName="transition-transform duration-[1.4s] ease-[var(--ease-soft)] group-hover:scale-105" />
           <span aria-hidden className="absolute inset-0 bg-gradient-to-t from-honey-950/85 via-honey-950/30 to-transparent" />
           <span className="relative">

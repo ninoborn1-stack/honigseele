@@ -16,7 +16,7 @@ export function StickyBook({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      data-label="Buchen"
+     
       className={cn(
         'fixed left-1/2 z-40 flex min-h-12 -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-honey-950 px-6 text-sm font-medium text-cream-50 shadow-xl shadow-honey-950/25 transition-all duration-500',
         'bottom-[calc(5.5rem+env(safe-area-inset-bottom))] md:bottom-8',

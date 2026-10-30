@@ -42,7 +42,7 @@ export default function AboutPage() {
         title="Wir sind die *Honigseelen*."
         lead="Ein Ort für Frauen und für alle Menschen, die sich Zeit für sich nehmen wollen."
         actions={
-          <ArrowLink href="#team" light data-no-curtain>
+          <ArrowLink href="#team" light>
             Das Team
           </ArrowLink>
         }

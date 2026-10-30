@@ -36,7 +36,7 @@ export function ProductTile({ product, index = 0, className }: { product: Produc
       style={{ transitionDelay: `${Math.min(index, 8) * 70}ms` }}
     >
       <div className="relative">
-        <Link href={`/shop/${product.id}/`} data-label={product.name} className="block" aria-label={product.name}>
+        <Link href={`/shop/${product.id}/`} className="block" aria-label={product.name}>
           <ProductVisual product={product} className="aspect-[4/5] rounded-[1.25rem] transition-[border-radius] duration-700 hover:rounded-[3.5rem] sm:rounded-[2rem]" />
         </Link>
         <button

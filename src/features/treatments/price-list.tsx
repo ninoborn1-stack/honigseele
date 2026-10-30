@@ -156,7 +156,7 @@ export function PriceList({
                               href={`/buchen/?leistung=${s.id}`}
                               className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-honey-950/20 text-honey-950 transition-all duration-300 hover:border-honey-950 hover:bg-honey-950 hover:text-honey-300 group-hover:border-honey-950"
                               aria-label={`${s.name} buchen`}
-                              data-label="Buchen"
+                             
                             >
                               <CalendarPlus className="h-4 w-4" strokeWidth={1.5} />
                             </Link>

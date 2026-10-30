@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import { BottomNav } from '@/components/layout/bottom-nav';
-import { Curtain } from '@/components/layout/curtain';
 import { Footer } from '@/components/layout/footer';
 import { SiteTop } from '@/components/layout/site-top';
 import { SmoothScroll } from '@/components/layout/smooth-scroll';
@@ -73,7 +72,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body>
-        <Curtain />
         <Providers>
           <a href="#inhalt" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-honey-950 focus:px-4 focus:py-2 focus:text-cream-50">
             Zum Inhalt springen

@@ -84,7 +84,7 @@ export function ServiceSearch({ initialServices, categories }: { initialServices
                         <Link href={`/behandlungen/${s.categoryId}/`} aria-label={`${cat?.name} ansehen`} className={cn('hidden h-11 w-11 place-items-center rounded-full border border-honey-950/20 transition-colors hover:border-honey-950 sm:grid', !cat?.inTreatments && '!hidden')}>
                           <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
                         </Link>
-                        <Link href={`/buchen/?leistung=${s.id}`} data-label="Buchen" aria-label={`${s.name} buchen`} className="grid h-11 w-11 place-items-center rounded-full bg-honey-950 text-honey-300 transition-colors hover:bg-amber-600 hover:text-cream-50">
+                        <Link href={`/buchen/?leistung=${s.id}`} aria-label={`${s.name} buchen`} className="grid h-11 w-11 place-items-center rounded-full bg-honey-950 text-honey-300 transition-colors hover:bg-amber-600 hover:text-cream-50">
                           <CalendarPlus className="h-4 w-4" strokeWidth={1.5} />
                         </Link>
                       </div>

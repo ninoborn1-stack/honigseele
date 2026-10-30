@@ -32,7 +32,7 @@ function OfferList({ rows, cta }: { rows: { name: string; meta: string; priceCen
         ))}
       </ul>
       <div className="mt-5">
-        <ArrowLink href={cta.href} className="!text-current" data-no-curtain={cta.href.startsWith('#') ? true : undefined}>
+        <ArrowLink href={cta.href} className="!text-current">
           {cta.label}
         </ArrowLink>
       </div>
@@ -98,7 +98,7 @@ export default function CoursesPage() {
         title="Bewegen, atmen, *verbinden*."
         lead="Yoga, Breathwork, Kakaozeremonie, unser Frauen-Netzwerk – und Coaching für das, was Dich innen bewegt."
         actions={
-          <ArrowLink href="#kursplan" light data-no-curtain>
+          <ArrowLink href="#kursplan" light>
             Zum Kursplan
           </ArrowLink>
         }
@@ -164,7 +164,7 @@ export default function CoursesPage() {
             <Reveal delay={200}>
               <p className="mx-auto mt-8 max-w-xl text-muted md:text-lg">{beehive.description} Einmal im Monat, mit {beehive.leaderName}.</p>
               <div className="mt-10 flex justify-center">
-                <ButtonLink href="#kursplan" size="lg" arrow data-no-curtain>
+                <ButtonLink href="#kursplan" size="lg" arrow>
                   Nächsten Abend finden
                 </ButtonLink>
               </div>
@@ -193,7 +193,7 @@ export default function CoursesPage() {
               </ul>
             </div>
             <div>
-              <ButtonLink href="/shop/#karten" variant="honey" size="lg" arrow data-label="Shop">
+              <ButtonLink href="/shop/#karten" variant="honey" size="lg" arrow>
                 Karte kaufen
               </ButtonLink>
             </div>

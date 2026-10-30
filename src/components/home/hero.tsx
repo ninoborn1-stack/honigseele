@@ -284,7 +284,7 @@ export function Hero() {
               {lead}
             </p>
             <div className="flex gap-3">
-              <ButtonLink href="/buchen/" variant="honey" size="lg" data-label="Buchen">
+              <ButtonLink href="/buchen/" variant="honey" size="lg">
                 Termin buchen
               </ButtonLink>
               <span className="hidden sm:block">

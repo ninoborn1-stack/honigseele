@@ -36,7 +36,7 @@ export function Intro() {
           <p className="mx-auto mt-7 max-w-xl leading-relaxed text-muted md:text-lg">{text}</p>
         </Reveal>
         <Reveal delay={350} className="mt-9 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-          <ButtonLink href="/buchen/" size="lg" arrow data-label="Buchen">
+          <ButtonLink href="/buchen/" size="lg" arrow>
             Termin buchen
           </ButtonLink>
           <ArrowLink href="/ueber-uns/">Wer wir sind</ArrowLink>
@@ -105,10 +105,10 @@ export function Areas() {
                   <h3 className="mt-4 font-serif text-[clamp(2.4rem,3.6vw,4rem)] leading-[0.95] whitespace-nowrap">{c.name}</h3>
                   <p className="mt-3 max-w-sm text-cream-100/85">{c.teaser}</p>
                   <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-3">
-                    <ButtonLink href={`/behandlungen/${c.id}/`} variant="honey" arrow data-label={c.name} tabIndex={on ? 0 : -1}>
+                    <ButtonLink href={`/behandlungen/${c.id}/`} variant="honey" arrow tabIndex={on ? 0 : -1}>
                       Ansehen
                     </ButtonLink>
-                    <ArrowLink href={`/buchen/?kategorie=${c.id}`} light data-label="Buchen" tabIndex={on ? 0 : -1}>
+                    <ArrowLink href={`/buchen/?kategorie=${c.id}`} light tabIndex={on ? 0 : -1}>
                       Buchen
                     </ArrowLink>
                   </div>
@@ -122,7 +122,7 @@ export function Areas() {
         <ul className="mt-12 border-t border-honey-950/15 md:hidden">
           {list.map((c, i) => (
             <li key={c.id} className="border-b border-honey-950/15">
-              <Link href={`/behandlungen/${c.id}/`} data-label={c.name} className="flex items-center gap-5 py-5">
+              <Link href={`/behandlungen/${c.id}/`} className="flex items-center gap-5 py-5">
                 <Photo src={c.image} alt="" className="h-16 w-16 shrink-0 rounded-full" />
                 <span className="min-w-0 flex-1">
                   <span className="block font-serif text-2xl leading-tight">{c.name}</span>
@@ -173,10 +173,10 @@ export function Packages() {
               ))}
             </ul>
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
-              <ButtonLink href="/behandlungen/wohlfuehl-pakete/" variant="honey" size="lg" arrow data-label="Wohlfühl-Pakete">
+              <ButtonLink href="/behandlungen/wohlfuehl-pakete/" variant="honey" size="lg" arrow>
                 Alle Pakete ansehen
               </ButtonLink>
-              <ArrowLink href="/buchen/?kategorie=wohlfuehl-pakete" light data-label="Buchen">
+              <ArrowLink href="/buchen/?kategorie=wohlfuehl-pakete" light>
                 Direkt buchen
               </ArrowLink>
             </div>
@@ -268,7 +268,7 @@ export function Manufaktur() {
             <p className="mt-6 max-w-md text-lg text-muted">{text}</p>
           </div>
           <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
-            <ButtonLink href="/shop/" size="lg" arrow data-label="Shop">
+            <ButtonLink href="/shop/" size="lg" arrow>
               Zur Pflegeserie
             </ButtonLink>
             <ArrowLink href="/shop/gutscheine/">Gutschein verschenken</ArrowLink>
@@ -353,7 +353,7 @@ export function CoursePreview() {
             </Link>
           )}
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3">
-            <ButtonLink href="/kurse/" size="lg" arrow data-label="Kurse & Coaching">
+            <ButtonLink href="/kurse/" size="lg" arrow>
               Zum Kursplan
             </ButtonLink>
             <ArrowLink href="/kurse/#coaching">Coaching</ArrowLink>

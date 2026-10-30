@@ -32,7 +32,7 @@
   --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
 
   --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-curtain: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-inout: cubic-bezier(0.76, 0, 0.24, 1);
 
   --animate-rise: rise 0.9s var(--ease-soft) both;
   --animate-fade: fade 0.8s var(--ease-soft) both;
@@ -166,84 +166,6 @@ h3 em,
   transform: none;
 }
 
-/* ---------- Vorhang-Übergang ---------- */
-.curtain {
-  position: fixed;
-  inset: 0;
-  z-index: 150;
-  pointer-events: none;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  contain: strict;
-}
-.curtain i {
-  background: var(--color-honey-950);
-  border-right: 1px solid rgb(246 240 230 / 0.08);
-  transform: scaleY(0);
-  transform-origin: top;
-  will-change: transform;
-}
-.curtain-label {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: clamp(34px, 6vw, 80px);
-  color: var(--color-honey-300);
-  opacity: 0;
-}
-html.is-entering .curtain i {
-  transform: scaleY(1);
-  transform-origin: bottom;
-  animation: curtainOut 0.7s var(--ease-curtain) forwards;
-  animation-delay: calc(0.08s + var(--i) * 0.05s);
-}
-html.is-leaving .curtain {
-  pointer-events: all;
-}
-html.is-leaving .curtain i {
-  transform-origin: top;
-  animation: curtainIn 0.55s var(--ease-curtain) forwards;
-  animation-delay: calc(var(--i) * 0.045s);
-}
-html.is-leaving .curtain-label {
-  animation: curtainLabel 0.25s 0.4s forwards;
-}
-html.is-quick.is-entering .curtain i {
-  animation-duration: 0.45s;
-  animation-delay: calc(var(--i) * 0.03s);
-}
-html.is-quick.is-leaving .curtain i {
-  animation-duration: 0.35s;
-  animation-delay: calc(var(--i) * 0.025s);
-}
-html.is-quick .curtain-label {
-  display: none;
-}
-@keyframes curtainOut {
-  from {
-    transform: scaleY(1);
-  }
-  to {
-    transform: scaleY(0);
-  }
-}
-@keyframes curtainIn {
-  from {
-    transform: scaleY(0);
-  }
-  to {
-    transform: scaleY(1);
-  }
-}
-@keyframes curtainLabel {
-  to {
-    opacity: 1;
-  }
-}
-
 /* ---------- Hero ---------- */
 .hero {
   height: 230vh;
@@ -365,9 +287,6 @@ html.is-quick .curtain-label {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .curtain {
-    display: none;
-  }
   .hero {
     height: auto;
   }
@@ -443,7 +362,7 @@ html.hero-intro [data-site-header] {
 /* Bild öffnet sich von unten, Foto zoomt sanft zurück */
 .img-reveal {
   clip-path: inset(100% 0% 0% 0%);
-  transition: clip-path 1.5s var(--ease-curtain);
+  transition: clip-path 1.5s var(--ease-inout);
 }
 .img-reveal img {
   transform: scale(1.22);

@@ -9,7 +9,7 @@ export function TickerBand({ items, className }: { items: { label: string; href?
         speed={70}
         items={items.map((it) =>
           it.href ? (
-            <Link key={it.label} href={it.href} data-label={it.label} className="whitespace-nowrap px-6 text-[0.72rem] font-medium uppercase tracking-[0.32em] transition-colors hover:text-honey-950">
+            <Link key={it.label} href={it.href} className="whitespace-nowrap px-6 text-[0.72rem] font-medium uppercase tracking-[0.32em] transition-colors hover:text-honey-950">
               {it.label}
             </Link>
           ) : (

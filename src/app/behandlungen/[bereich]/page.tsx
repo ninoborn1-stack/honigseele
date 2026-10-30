@@ -109,11 +109,11 @@ export default async function AreaPage({ params }: { params: Promise<{ bereich: 
               <Placeholder label="Inhalte folgen von Anna" />
             ) : (
               <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
-                <ButtonLink href={`/buchen/?kategorie=${category.id}`} variant="honey" size="lg" arrow data-label="Buchen">
+                <ButtonLink href={`/buchen/?kategorie=${category.id}`} variant="honey" size="lg" arrow>
                   Jetzt buchen
                 </ButtonLink>
                 {services.length > 0 && (
-                  <ArrowLink href="#preise" light data-no-curtain>
+                  <ArrowLink href="#preise" light>
                     Preise
                   </ArrowLink>
                 )}
@@ -217,7 +217,7 @@ export default async function AreaPage({ params }: { params: Promise<{ bereich: 
           </Title>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
             {!category.isPlaceholder && (
-              <ButtonLink href={`/buchen/?kategorie=${category.id}`} size="lg" arrow data-label="Buchen">
+              <ButtonLink href={`/buchen/?kategorie=${category.id}`} size="lg" arrow>
                 {category.name} buchen
               </ButtonLink>
             )}

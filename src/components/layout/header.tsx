@@ -44,7 +44,7 @@ export function Header() {
       )}
     >
       <div className="wrap grid h-16 grid-cols-[1fr_auto] items-center gap-4 md:h-20 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
-        <Link href="/" aria-label="Honigseele – Startseite" data-label="Honigseele" className="justify-self-start">
+        <Link href="/" aria-label="Honigseele – Startseite" className="justify-self-start">
           <Logo light={overHero} />
         </Link>
         <nav aria-label="Hauptnavigation" className="hidden justify-self-center lg:block">
@@ -57,7 +57,7 @@ export function Header() {
                 <li key={item.href}>
                   <Link
                     href={isStart ? '/#willkommen' : item.href}
-                    data-label={isStart ? 'Willkommen' : undefined}
+                   
                     className={cn(
                       'relative py-2 transition-opacity hover:opacity-100',
                       'after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:bg-current after:transition-transform after:duration-500 hover:after:scale-x-100',
@@ -79,7 +79,7 @@ export function Header() {
           >
             {locale === 'de' ? 'EN' : 'DE'}
           </button>
-          <Link href="/konto/" className="hidden h-11 w-11 place-items-center rounded-full opacity-80 hover:opacity-100 md:grid" aria-label="Mein Konto" data-label="Mein Konto">
+          <Link href="/konto/" className="hidden h-11 w-11 place-items-center rounded-full opacity-80 hover:opacity-100 md:grid" aria-label="Mein Konto">
             <User strokeWidth={1.5} className="h-5 w-5" />
           </Link>
           <button onClick={() => setOpen(true)} className="relative grid h-11 w-11 place-items-center rounded-full opacity-80 hover:opacity-100" aria-label={`Warenkorb, ${count} Artikel`}>
@@ -91,7 +91,7 @@ export function Header() {
             )}
           </button>
           <span className="ml-2 hidden md:block">
-            <ButtonLink href="/buchen/" variant={overHero ? 'honey' : 'primary'} size="sm" data-label="Buchen">
+            <ButtonLink href="/buchen/" variant={overHero ? 'honey' : 'primary'} size="sm">
               <span className="min-[1360px]:hidden">{t('nav.book')}</span>
               <span className="hidden min-[1360px]:inline">{t('cta.book')}</span>
             </ButtonLink>

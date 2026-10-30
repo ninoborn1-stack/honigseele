@@ -1,0 +1,191 @@
+{
+  "hero.shop": {
+    "src": "/images/stock/hero.jpg",
+    "alt": "Ruhiger, sonniger Raum in der Honigseele",
+    "placeholder": true,
+    "motif": "Warmer, ruhiger Spa-Raum mit Liegen",
+    "wanted": "Großes Foto aus dem Laden (Einstiegsbild der heutigen Seite), quer, mind. 2400 px breit"
+  },
+  "hero.massage": {
+    "src": "/images/stock/massage.jpg",
+    "alt": "Massage mit warmen Steinen",
+    "placeholder": true,
+    "motif": "Hot-Stone-Massage, Rücken",
+    "wanted": "Massage-Foto aus der Honigseele (Number-One-Empfehlung), quer, mind. 2400 px"
+  },
+  "home.packages": {
+    "src": "/images/stock/package.jpg",
+    "alt": "Handtuch, Kerze und Pflege",
+    "placeholder": true,
+    "motif": "Handtuch, Kerze, Pflege",
+    "wanted": "Stimmungsbild eines Wohlfühl-Pakets im Laden"
+  },
+  "home.manufaktur": {
+    "src": "/images/stock/products.jpg",
+    "alt": "Naturkosmetik in Glasflaschen",
+    "placeholder": true,
+    "motif": "Öle in Glasflaschen, Kerze",
+    "wanted": "Produktfoto der eigenen Pflegeserie"
+  },
+  "home.courses": {
+    "src": "/images/stock/yoga.jpg",
+    "alt": "Yoga in warmem Licht",
+    "placeholder": true,
+    "motif": "Yoga im Gegenlicht",
+    "wanted": "Foto aus einer Yoga-Stunde im Kursraum (ohne erkennbare Gesichter oder mit Einverständnis)"
+  },
+  "about.hero": {
+    "src": "/images/stock/room.jpg",
+    "alt": "Heller Raum mit Pflanzen in der Honigseele",
+    "placeholder": true,
+    "motif": "Heller Raum mit Pflanzen",
+    "wanted": "Raumfoto aus der Honigseele"
+  },
+  "about.value.welcome": {
+    "src": "/images/stock/room.jpg",
+    "alt": "Heller Raum",
+    "placeholder": true,
+    "motif": "Heller Raum",
+    "wanted": "Empfang / Wartebereich"
+  },
+  "about.value.self": {
+    "src": "/images/stock/plants.jpg",
+    "alt": "Pampasgras vor beigem Hintergrund",
+    "placeholder": true,
+    "motif": "Pampasgras",
+    "wanted": "Detailfoto aus dem Laden"
+  },
+  "about.value.holistic": {
+    "src": "/images/stock/towels.jpg",
+    "alt": "Gerollte Handtücher",
+    "placeholder": true,
+    "motif": "Gerollte Handtücher",
+    "wanted": "Behandlungsraum-Detail"
+  },
+  "about.value.natural": {
+    "src": "/images/stock/honey.jpg",
+    "alt": "Honig im Licht",
+    "placeholder": true,
+    "motif": "Honigglas im Licht",
+    "wanted": "Pflegeserie / Honigwachs"
+  },
+  "courses.hero": {
+    "src": "/images/stock/yoga.jpg",
+    "alt": "Yoga in warmem Licht",
+    "placeholder": true,
+    "motif": "Yoga im Gegenlicht",
+    "wanted": "Foto aus dem Kursraum"
+  },
+  "courses.community": {
+    "src": "/images/stock/plants.jpg",
+    "alt": "Pampasgras",
+    "placeholder": true,
+    "motif": "Pampasgras",
+    "wanted": "Foto von einem Workshop oder Netzwerk-Abend"
+  },
+  "courses.coaching": {
+    "src": "/images/stock/coaching.jpg",
+    "alt": "Notizbuch und Tee",
+    "placeholder": true,
+    "motif": "Notizbuch und Tee",
+    "wanted": "Foto aus dem Beratungsraum"
+  },
+  "courses.training": {
+    "src": "/images/stock/waxing.jpg",
+    "alt": "Glatte Beine",
+    "placeholder": true,
+    "motif": "Glatte Beine",
+    "wanted": "Foto aus der Waxing-Schulung"
+  },
+  "contact.side": {
+    "src": "/images/stock/plants.jpg",
+    "alt": "Pampasgras in warmem Licht",
+    "placeholder": true,
+    "motif": "Pampasgras",
+    "wanted": "Außen- oder Eingangsfoto der Hornstraße 1"
+  },
+  "category.waxing": {
+    "src": "/images/stock/waxing.jpg",
+    "alt": "Waxing",
+    "placeholder": true,
+    "motif": "Glatte Beine",
+    "wanted": "Foto Waxing-Kabine"
+  },
+  "category.laser": {
+    "src": "/images/stock/laser.jpg",
+    "alt": "Laser-Haarentfernung",
+    "placeholder": true,
+    "motif": "Laser am Bein",
+    "wanted": "Foto Laserraum / Gerät"
+  },
+  "category.gesicht-augen": {
+    "src": "/images/stock/face.jpg",
+    "alt": "Gesicht & Augen",
+    "placeholder": true,
+    "motif": "Serum auf Haut",
+    "wanted": "Foto Gesichtsbehandlung"
+  },
+  "category.koerper-massagen": {
+    "src": "/images/stock/massage.jpg",
+    "alt": "Körper & Massagen",
+    "placeholder": true,
+    "motif": "Hot Stones",
+    "wanted": "Foto Massageraum"
+  },
+  "category.mani-pedikuere": {
+    "src": "/images/stock/hands.jpg",
+    "alt": "Mani- & Pediküre",
+    "placeholder": true,
+    "motif": "Gepflegte Hände",
+    "wanted": "Foto Hand-/Fußpflege"
+  },
+  "category.wohlfuehl-pakete": {
+    "src": "/images/stock/package.jpg",
+    "alt": "Wohlfühl-Pakete",
+    "placeholder": true,
+    "motif": "Spa-Stillleben",
+    "wanted": "Foto Paket-Situation"
+  },
+  "category.schroepfen": {
+    "src": "/images/stock/room.jpg",
+    "alt": "Schröpfen",
+    "placeholder": true,
+    "motif": "Heller Raum",
+    "wanted": "Foto Schröpfen"
+  },
+  "category.somatic-bodywork": {
+    "src": "/images/stock/plants.jpg",
+    "alt": "Somatic Bodywork",
+    "placeholder": true,
+    "motif": "Pampasgras",
+    "wanted": "Foto Somatic Bodywork"
+  },
+  "category.coaching": {
+    "src": "/images/stock/coaching.jpg",
+    "alt": "Coaching & Ernährung",
+    "placeholder": true,
+    "motif": "Notizbuch und Tee",
+    "wanted": "Foto Coaching"
+  },
+  "product.placeholder": {
+    "src": "/images/stock/products.jpg",
+    "alt": "Pflegeprodukt",
+    "placeholder": true,
+    "motif": "Glasflaschen",
+    "wanted": "Einzelne Produktfotos der Pflegeserie (freigestellt)"
+  },
+  "product.voucher": {
+    "src": "/images/stock/voucher.jpg",
+    "alt": "Gutschein",
+    "placeholder": true,
+    "motif": "Geschenk mit Kordel",
+    "wanted": "Foto/Grafik Gutscheinkarte"
+  },
+  "product.yoga-card": {
+    "src": "/images/stock/yoga.jpg",
+    "alt": "Yoga-Karte",
+    "placeholder": true,
+    "motif": "Yoga",
+    "wanted": "Foto Kursraum"
+  }
+}

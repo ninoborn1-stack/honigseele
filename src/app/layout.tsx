@@ -12,6 +12,7 @@ import { MOTION } from '@/lib/motion-config';
 import { BASE_PATH, DEMO, SITE_URL, withBase } from '@/lib/config';
 import { Providers } from './providers';
 import './globals.css';
+import { resolveImage } from '@/content/images';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     icon: [{ url: withBase('/icons/favicon-32.png'), sizes: '32x32', type: 'image/png' }, { url: withBase('/icons/icon-192.png'), sizes: '192x192', type: 'image/png' }],
     apple: withBase('/icons/apple-touch-icon.png'),
   },
-  openGraph: { type: 'website', locale: 'de_DE', siteName: 'Honigseele', images: ['/images/stock/hero.jpg'] },
+  openGraph: { type: 'website', locale: 'de_DE', siteName: 'Honigseele', images: [resolveImage('hero.shop').src] },
   alternates: { languages: { de: '/', en: '/en/' } },
 };
 
@@ -48,7 +49,7 @@ const jsonLd = {
   url: SITE_URL,
   telephone: site.settings.contact.phone,
   email: site.settings.contact.email,
-  image: `${SITE_URL}/images/stock/hero.jpg`,
+  image: `${SITE_URL}${resolveImage('hero.shop').src}`,
   priceRange: '€€',
   address: {
     '@type': 'PostalAddress',

@@ -8,7 +8,7 @@ import { formatEuro } from '@/lib/format';
 import { useData } from '@/lib/use-data';
 import { unitPrice, useCart } from './cart';
 import { ProductVisual } from './product-visual';
-import { withBase } from '@/lib/config';
+import { imageUrl } from '@/components/ui/photo';
 
 export function CartDrawer() {
   const { lines, open, setOpen, update, remove } = useCart();
@@ -66,7 +66,7 @@ export function CartDrawer() {
                 {product?.kind === 'pflege' ? (
                   <ProductVisual product={product} className="h-20 w-16 shrink-0 rounded-lg [&_span]:hidden" />
                 ) : (
-                  <img src={withBase(product?.image ?? '')} alt="" className="h-20 w-16 shrink-0 rounded-lg object-cover" />
+                  <img src={imageUrl(product?.image ?? '')} alt="" className="h-20 w-16 shrink-0 rounded-lg object-cover" />
                 )}
                 <div className="flex-1">
                   <p className="font-serif text-xl leading-tight">{product?.name}</p>

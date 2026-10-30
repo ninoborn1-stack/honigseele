@@ -13,6 +13,7 @@ import { SubtleHoneycomb } from '@/components/ui/honeycomb';
 import { block, site } from '@/content';
 import { useBlock } from '@/lib/use-data';
 import { withBase } from '@/lib/config';
+import { imageUrl } from '@/components/ui/photo';
 
 const FULL = 'inset(0% 0% 0% 0% round 0vw 0vw 0vw 0vw)';
 const MASK = `url('${withBase('/images/bloom-mask.svg')}')`;
@@ -245,7 +246,7 @@ export function Hero() {
           <div className="hero__media">
             <div className="hero__zoom">
               <img
-                src={withBase(image)}
+                src={imageUrl(image)}
                 alt="Ruhiger, sonniger Raum in der Honigseele"
                 fetchPriority="high"
               />

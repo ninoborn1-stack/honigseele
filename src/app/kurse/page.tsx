@@ -62,28 +62,28 @@ export default function CoursesPage() {
       title: 'Yoga',
       kicker: `${yoga.length} Kurse · mit Kati & Maria`,
       text: 'Für alle Level, in kleinen Gruppen. Auch in der Schwangerschaft und danach – Babys sind willkommen.',
-      image: '/images/stock/yoga.jpg',
+      image: 'home.courses',
       extra: <OfferList rows={yoga.map(courseRow)} cta={{ href: '#kursplan', label: 'Zum Kursplan' }} />,
     },
     {
       title: 'Gemeinschaft',
       kicker: `${community.length} Formate`,
       text: 'Atmen, bewegen, teilen: Breathwork, Kakaozeremonie, gemeinsame Spaziergänge und unser Frauen-Netzwerk.',
-      image: '/images/stock/plants.jpg',
+      image: 'courses.community',
       extra: <OfferList rows={community.map(courseRow)} cta={{ href: '#kursplan', label: 'Termine ansehen' }} />,
     },
     {
       title: 'Coaching',
       kicker: 'Honigseelengeflüster',
       text: 'Mit Asita im Coaching, mit Larissa in der ganzheitlichen Ernährungsberatung. Einzeln, vertraulich, in Ruhe.',
-      image: '/images/stock/coaching.jpg',
+      image: 'courses.coaching',
       extra: <OfferList rows={coaching.map((s) => ({ name: s.name, meta: formatDuration(s.durationMin), priceCents: s.priceCents }))} cta={{ href: '/buchen/?kategorie=coaching', label: 'Coaching buchen' }} />,
     },
     {
       title: 'Schulungen',
       kicker: 'Von Anna lernen',
       text: 'Waxing mit Honigwachs – mit allem, was Anna in sieben Jahren gelernt hat. Kleine Gruppen, viel Praxis.',
-      image: '/images/stock/waxing.jpg',
+      image: 'courses.training',
       extra: <OfferList rows={training.map(courseRow)} cta={{ href: '/kontakt/', label: 'Anfragen' }} />,
     },
   ];
@@ -92,7 +92,7 @@ export default function CoursesPage() {
     <>
       {/* 1. Seitenkopf */}
       <PageHero
-        image="/images/stock/yoga.jpg"
+        image="courses.hero"
         alt="Yoga in warmem Licht"
         eyebrow="Kurse & Coaching · Gemeinschaft in Kreuzberg"
         title="Bewegen, atmen, *verbinden*."

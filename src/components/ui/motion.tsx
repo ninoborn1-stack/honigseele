@@ -2,7 +2,9 @@
 // Ruhige, aber spürbare Scroll-Animationen. Alle respektieren prefers-reduced-motion (CSS).
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { cn } from '@/lib/cn';
+import { resolveImage } from '@/content/images';
 import { withBase } from '@/lib/config';
+import { ImageBadge } from './photo';
 
 /** Setzt .is-visible, sobald das Element ins Bild kommt */
 export function useInView<T extends HTMLElement>(margin = '0px 0px -10% 0px') {
@@ -71,12 +73,14 @@ export function RevealHeading({
   );
 }
 
-/** Bild, das sich beim Scrollen von unten öffnet */
-export function RevealImage({ src, alt, className, imgClassName }: { src: string; alt: string; className?: string; imgClassName?: string }) {
+/** Bild, das sich beim Scrollen von unten öffnet (Schlüssel aus content/images.json oder Pfad) */
+export function RevealImage({ src, alt, className, imgClassName }: { src: string; alt?: string; className?: string; imgClassName?: string }) {
   const { ref, visible } = useInView<HTMLDivElement>('0px 0px -5% 0px');
+  const entry = resolveImage(src);
   return (
-    <div ref={ref} className={cn('img-reveal relative overflow-hidden bg-cream-200', visible && 'is-visible', className)}>
-      <img src={withBase(src)} alt={alt} loading="lazy" decoding="async" className={cn('h-full w-full object-cover', imgClassName)} />
+    <div ref={ref} className={cn('img-reveal @container relative overflow-hidden bg-cream-200', visible && 'is-visible', className)}>
+      <img src={withBase(entry.src)} alt={alt ?? entry.alt} loading="lazy" decoding="async" className={cn('h-full w-full object-cover', imgClassName)} />
+      <ImageBadge keyOrSrc={src} />
     </div>
   );
 }

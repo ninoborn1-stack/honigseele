@@ -3,6 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useState, type ReactNode } from 'react';
 import { Tabs } from '@/components/ui/tabs';
+import { Logo } from '@/components/layout/logo';
 import { site } from '@/content';
 import { policyText } from '@/domain/cancellation';
 import type { Booking, Order, Service, Staff } from '@/domain/types';
@@ -20,7 +21,7 @@ function Mail({ subject, preheader, children }: { subject: string; preheader: st
         <p className="truncate">{preheader}</p>
       </div>
       <div className="honey-glow px-8 py-10 text-center">
-        <p className="font-serif text-4xl text-cream-50"><em className="text-honey-300">Honig</em>seele</p>
+        <Logo light className="text-4xl" />
       </div>
       <div className="space-y-4 px-8 py-8 text-[15px] leading-relaxed text-honey-950">{children}</div>
       <div className="border-t border-line-soft bg-cream-50 px-8 py-6 text-center text-xs text-muted">

@@ -1,31 +1,45 @@
-# Platzhalter-App-Icons: goldene Blüte auf Honigbraun. Wird durch Annas Logo ersetzt.
+# App-Icon, Favicon und Splash: Blume des Lebens (Platzhalter) auf Honigbraun.
+# Wenn das Original-Logo kommt: diese eine Datei anpassen (oder die PNGs in public/icons
+# und resources/ ersetzen) und neu ausführen:  python3 scripts/make-icons.py
 import math
 from PIL import Image, ImageDraw
 
-def icon(size, maskable=False):
-    s = size * 4  # supersampling
-    img = Image.new('RGB', (s, s), (43, 33, 24))
+BG = (43, 33, 24)       # Honigbraun #2B2118
+GOLD = (217, 165, 74)   # Honiggold #D9A54A
+
+
+def flower(size, scale, stroke):
+    """Blume des Lebens: 19 Kreise (Mitte, 6, 12) + Umkreis. scale = Anteil der Fläche."""
+    s = size * 4  # Supersampling
+    img = Image.new('RGB', (s, s), BG)
     d = ImageDraw.Draw(img)
-    scale = 0.52 if maskable else 0.68
-    r = s * scale / 2
+    r = s * scale / 6  # Umkreis = 3r
     cx = cy = s / 2
-    def petal(angle, dist, rx, ry, color):
-        # Ellipse als Polygon, gedreht um die Mitte
-        pts = []
-        for k in range(64):
-            t = 2 * math.pi * k / 64
-            x, y = rx * math.cos(t), -dist + ry * math.sin(t)
-            a = math.radians(angle)
-            pts.append((cx + x * math.cos(a) - y * math.sin(a), cy + x * math.sin(a) + y * math.cos(a)))
-        d.polygon(pts, fill=color)
-    for k in range(5):
-        petal(k * 72, r * 0.52, r * 0.31, r * 0.48, (217, 165, 74))
-    for k in range(5):
-        petal(k * 72 + 36, r * 0.38, r * 0.22, r * 0.38, (230, 189, 110))
-    d.ellipse([cx - r * 0.2, cy - r * 0.2, cx + r * 0.2, cy + r * 0.2], fill=(43, 33, 24))
-    d.ellipse([cx - r * 0.1, cy - r * 0.1, cx + r * 0.1, cy + r * 0.1], fill=(241, 212, 156))
+    centers = [(0.0, 0.0)]
+    for k in range(6):
+        a = math.radians(k * 60 - 90)
+        centers.append((r * math.cos(a), r * math.sin(a)))
+    for k in range(6):
+        a = math.radians(k * 60 - 90)
+        centers.append((2 * r * math.cos(a), 2 * r * math.sin(a)))
+        b = math.radians(k * 60 - 60)
+        centers.append((r * math.sqrt(3) * math.cos(b), r * math.sqrt(3) * math.sin(b)))
+    w = max(2, int(stroke * 4))
+    for x, y in centers:
+        d.ellipse([cx + x - r, cy + y - r, cx + x + r, cy + y + r], outline=GOLD, width=w)
+    d.ellipse([cx - 3 * r, cy - 3 * r, cx + 3 * r, cy + 3 * r], outline=GOLD, width=w)
     return img.resize((size, size), Image.LANCZOS)
 
-for name, size, m in [('icon-192.png', 192, False), ('icon-512.png', 512, False), ('maskable-512.png', 512, True), ('apple-touch-icon.png', 180, True), ('favicon-32.png', 32, False)]:
-    icon(size, m).save(f'public/icons/{name}', optimize=True)
-print('ok')
+
+targets = [
+    ('public/icons/icon-192.png', 192, 0.72, 2.2),
+    ('public/icons/icon-512.png', 512, 0.72, 4),
+    ('public/icons/maskable-512.png', 512, 0.56, 4),
+    ('public/icons/apple-touch-icon.png', 180, 0.62, 2),
+    ('public/icons/favicon-32.png', 32, 0.86, 1.1),
+    ('resources/icon.png', 1024, 0.62, 7),
+    ('resources/splash.png', 2732, 0.22, 7),
+]
+for path, size, scale, stroke in targets:
+    flower(size, scale, stroke).save(path, optimize=True)
+print('Icons und Splash erzeugt')

@@ -183,7 +183,7 @@ export function Packages() {
           </div>
         </div>
         <div className="relative min-h-[46vh] md:min-h-0">
-          <RevealImage src="/images/stock/package.jpg" alt="Handtuch, Kerze und Pflege" className="!absolute inset-0 md:inset-6 md:rounded-[2rem] lg:inset-8 lg:rounded-t-[3rem]" />
+          <RevealImage src="home.packages" alt="Handtuch, Kerze und Pflege" className="!absolute inset-0 md:inset-6 md:rounded-[2rem] lg:inset-8 lg:rounded-t-[3rem]" />
         </div>
       </div>
     </Panel>
@@ -251,7 +251,7 @@ export function Manufaktur() {
     <Panel>
       <div className="grid md:grid-cols-[1fr_1.05fr]">
         <div className="relative order-2 min-h-[46vh] md:order-1 md:min-h-0">
-          <RevealImage src="/images/stock/products.jpg" alt="Naturkosmetik in Glasflaschen" className="!absolute inset-0 md:inset-6 md:rounded-[2rem] lg:inset-8 lg:rounded-t-[3rem]" />
+          <RevealImage src="home.manufaktur" alt="Naturkosmetik in Glasflaschen" className="!absolute inset-0 md:inset-6 md:rounded-[2rem] lg:inset-8 lg:rounded-t-[3rem]" />
         </div>
         <div className="order-1 flex flex-col justify-between gap-12 p-8 sm:p-12 md:order-2 lg:px-16 lg:py-20">
           <div>
@@ -330,7 +330,7 @@ export function CoursePreview() {
     <section className="bg-cream-50 pb-6">
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[60svh] lg:min-h-full">
-          <RevealImage src="/images/stock/yoga.jpg" alt="Yoga in warmem Licht" className="!absolute inset-0" />
+          <RevealImage src="home.courses" alt="Yoga in warmem Licht" className="!absolute inset-0" />
         </div>
         <div className="flex flex-col justify-center px-[clamp(1.25rem,3.5vw,4rem)] py-24 md:py-36 lg:pl-24">
           <Eyebrow>Kurse & Coaching</Eyebrow>

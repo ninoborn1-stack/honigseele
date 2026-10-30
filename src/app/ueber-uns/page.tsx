@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  { title: 'Alle sind willkommen', text: 'Frauen, Männer, Kinder, Teens, Paare – und alle dazwischen. Bei uns wird niemand bewertet.', image: '/images/stock/room.jpg' },
-  { title: 'Selbstbestimmt', text: 'Ein zeitgemäßes Verständnis von Weiblichkeit. Du entscheidest, was Dir guttut – wir begleiten Dich dabei.', image: '/images/stock/plants.jpg' },
-  { title: 'Ganzheitlich', text: 'Haut, Körper und Seele gehören zusammen. Deshalb gibt es bei uns Waxing und Coaching unter einem Dach.', image: '/images/stock/towels.jpg' },
-  { title: 'Natürlich', text: 'Unsere eigene Naturkosmetik, handgemacht in der Crememanufaktur Berlin, steckt in jeder Anwendung.', image: '/images/stock/honey.jpg' },
+  { title: 'Alle sind willkommen', text: 'Frauen, Männer, Kinder, Teens, Paare – und alle dazwischen. Bei uns wird niemand bewertet.', image: 'about.value.welcome' },
+  { title: 'Selbstbestimmt', text: 'Ein zeitgemäßes Verständnis von Weiblichkeit. Du entscheidest, was Dir guttut – wir begleiten Dich dabei.', image: 'about.value.self' },
+  { title: 'Ganzheitlich', text: 'Haut, Körper und Seele gehören zusammen. Deshalb gibt es bei uns Waxing und Coaching unter einem Dach.', image: 'about.value.holistic' },
+  { title: 'Natürlich', text: 'Unsere eigene Naturkosmetik, handgemacht in der Crememanufaktur Berlin, steckt in jeder Anwendung.', image: 'about.value.natural' },
 ];
 
 export default function AboutPage() {
@@ -36,7 +36,7 @@ export default function AboutPage() {
     <>
       {/* 1. Seitenkopf */}
       <PageHero
-        image="/images/stock/room.jpg"
+        image="about.hero"
         alt="Heller Raum mit Pflanzen in der Honigseele"
         eyebrow="Über uns · seit sieben Jahren in Kreuzberg"
         title="Wir sind die *Honigseelen*."

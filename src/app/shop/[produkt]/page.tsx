@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { products } from '@/content';
 import { SITE_URL } from '@/lib/config';
 import { ProductDetail } from '@/features/shop/product-detail';
+import { resolveImage } from '@/content/images';
 
 const careProducts = products.filter((p) => p.kind === 'pflege');
 
@@ -27,7 +28,7 @@ export default async function ProductPage({ params }: { params: Promise<{ produk
     name: product.name,
     description: product.description,
     brand: { '@type': 'Brand', name: 'Honigseele' },
-    image: `${SITE_URL}${product.image}`,
+    image: `${SITE_URL}${resolveImage(product.image).src}`,
     offers: {
       '@type': 'Offer',
       price: (product.priceCents / 100).toFixed(2),

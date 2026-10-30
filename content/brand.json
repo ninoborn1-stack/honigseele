@@ -1,0 +1,11 @@
+{
+  "name": "Honigseele",
+  "logo": {
+    "src": null,
+    "srcLight": null,
+    "width": null,
+    "height": null
+  },
+  "placeholder": true,
+  "note": "Original-Logo (eingetragene Marke) folgt mit Annas Inhalten. Dateien nach public/brand/ legen (logo.svg für hellen, logo-light.svg für dunklen Grund) und hier eintragen."
+}

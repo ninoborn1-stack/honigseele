@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { VoucherBuilder } from '@/features/shop/voucher-builder';
+import { Loading } from '@/components/ui/loading';
 
 export const metadata: Metadata = {
   title: 'Gutscheine',
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function VoucherPage() {
   return (
-    <Suspense fallback={<div className="min-h-svh" />}>
+    <Suspense fallback={<Loading className="min-h-[60svh]" />}>
       <VoucherBuilder />
     </Suspense>
   );

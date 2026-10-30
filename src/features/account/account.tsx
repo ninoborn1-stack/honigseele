@@ -14,13 +14,14 @@ import { cn } from '@/lib/cn';
 import { berlinTime, formatDateLong, formatDateShort, formatEuro } from '@/lib/format';
 import { useData, useSession } from '@/lib/use-data';
 import { LoginCard } from './login-card';
+import { Loading } from '@/components/ui/loading';
 
 type Tab = 'termine' | 'kurse' | 'gutscheine' | 'bestellungen' | 'profil';
 
 export function Account() {
   const { session, loading } = useSession();
   const [tab, setTab] = useState<Tab>('termine');
-  if (loading) return <div className="min-h-[60svh]" />;
+  if (loading) return <Loading className="min-h-[60svh]" label="Dein Konto wird geladen …" />;
   if (!session || session.role !== 'kundin' || !session.customerId)
     return (
       <div className="honey-light px-5 py-20 md:py-32">
@@ -91,12 +92,13 @@ function Empty({ icon: Icon, text, href, cta }: { icon: typeof Gift; text: strin
 }
 
 function Appointments({ customerId }: { customerId: string }) {
-  const { data: bookings = [] } = useData((db) => db.listBookings({ customerId }), [customerId]);
+  const { data: bookings = [], loading: bookingsLoading } = useData((db) => db.listBookings({ customerId }), [customerId]);
   const { data: services = [] } = useData((db) => db.listServices(), []);
   const { data: staff = [] } = useData((db) => db.listStaff(), []);
   const { data: settings } = useData((db) => db.getSettings(), []);
   const [cancel, setCancel] = useState<Booking | null>(null);
   const now = new Date().toISOString();
+  if (bookingsLoading) return <Loading label="Termine werden geladen …" />;
   const upcoming = bookings.filter((b) => b.end >= now && b.status === 'bestaetigt');
   const past = bookings.filter((b) => b.end < now || b.status !== 'bestaetigt').reverse();
   const name = (b: Booking) => b.items.map((i) => services.find((s) => s.id === i.serviceId)?.name).join(' + ');
@@ -209,10 +211,11 @@ function CancelDrawer({ booking, settings, label, onClose }: { booking: Booking 
 }
 
 function Tickets({ customerId }: { customerId: string }) {
-  const { data: tickets = [] } = useData((db) => db.listTickets(customerId), [customerId]);
+  const { data: tickets = [], loading: ticketsLoading } = useData((db) => db.listTickets(customerId), [customerId]);
   const { data: sessions = [] } = useData((db) => db.listSessions(), []);
   const { data: courses = [] } = useData((db) => db.listCourses(), []);
   const valid = tickets.filter((t) => t.status === 'gueltig');
+  if (ticketsLoading) return <Loading />;
   if (valid.length === 0) return <Empty icon={Ticket} text="Noch keine Kurs-Tickets." href="/kurse/" cta="Zum Kursplan" />;
   return (
     <ul className="space-y-3">
@@ -236,8 +239,9 @@ function Tickets({ customerId }: { customerId: string }) {
 }
 
 function Vouchers({ customerId }: { customerId: string }) {
-  const { data: vouchers = [] } = useData((db) => db.listVouchers(customerId), [customerId]);
+  const { data: vouchers = [], loading: vouchersLoading } = useData((db) => db.listVouchers(customerId), [customerId]);
   const { data: cards = [] } = useData((db) => db.listPunchCards(customerId), [customerId]);
+  if (vouchersLoading) return <Loading />;
   if (vouchers.length === 0 && cards.length === 0) return <Empty icon={Gift} text="Noch keine Gutscheine oder Karten." href="/shop/gutscheine/" cta="Gutschein verschenken" />;
   return (
     <div className="grid gap-4 md:grid-cols-2">
@@ -270,7 +274,8 @@ function Vouchers({ customerId }: { customerId: string }) {
 }
 
 function Orders({ customerId }: { customerId: string }) {
-  const { data: orders = [] } = useData((db) => db.listOrders(customerId), [customerId]);
+  const { data: orders = [], loading: ordersLoading } = useData((db) => db.listOrders(customerId), [customerId]);
+  if (ordersLoading) return <Loading />;
   if (orders.length === 0) return <Empty icon={Package} text="Noch keine Bestellungen." href="/shop/" cta="Zum Shop" />;
   const labels = { bezahlt: 'bezahlt', versendet: 'versendet', abgeschlossen: 'zugestellt', storniert: 'storniert' };
   return (

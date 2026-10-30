@@ -9,16 +9,20 @@ import { legalNav, mainNav } from '@/lib/nav';
 import { useData } from '@/lib/use-data';
 import { Placeholder } from '../ui/badge';
 import { Logo } from './logo';
+import { InlineLoading } from '@/components/ui/loading';
 
 export function NewsletterForm({ dark }: { dark?: boolean }) {
   const [email, setEmail] = useState('');
   const [done, setDone] = useState(false);
+  const [busy, setBusy] = useState(false);
   if (done) return <p className="font-serif text-xl italic">Danke! Du bekommst bald Post von uns.</p>;
   return (
     <form
       className="flex max-w-md gap-2"
+      aria-busy={busy}
       onSubmit={async (e) => {
         e.preventDefault();
+        setBusy(true);
         await getAdapter().subscribeNewsletter(email);
         setDone(true);
       }}
@@ -33,7 +37,9 @@ export function NewsletterForm({ dark }: { dark?: boolean }) {
         placeholder="Deine E-Mail"
         className={`min-h-12 flex-1 rounded-full border bg-transparent px-5 text-base focus:outline-none ${dark ? 'border-cream-50/30 placeholder:text-cream-100/50 focus:border-honey-300' : 'border-line placeholder:text-muted/60 focus:border-amber-600'}`}
       />
-      <button className={`min-h-12 rounded-full px-5 text-sm font-medium ${dark ? 'bg-honey-400 text-honey-950' : 'bg-honey-950 text-cream-50'}`}>Anmelden</button>
+      <button disabled={busy} className={`min-h-12 rounded-full px-5 text-sm font-medium ${dark ? 'bg-honey-400 text-honey-950' : 'bg-honey-950 text-cream-50'}`}>
+        {busy ? <InlineLoading variant={dark ? 'light' : 'dark'} label="…" /> : 'Anmelden'}
+      </button>
     </form>
   );
 }

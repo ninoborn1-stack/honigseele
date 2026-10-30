@@ -22,6 +22,7 @@ import { Button } from '@/components/ui/button';
 import { getAdapter } from '@/data';
 import { cn } from '@/lib/cn';
 import { useSession } from '@/lib/use-data';
+import { Loading } from '@/components/ui/loading';
 
 const nav = [
   { href: '/admin/', label: 'Übersicht', icon: LayoutDashboard },
@@ -60,7 +61,7 @@ function TeamLogin() {
 export function AdminShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const { session, loading } = useSession();
-  if (loading) return <div className="min-h-svh" />;
+  if (loading) return <Loading className="min-h-svh" />;
   if (session?.role !== 'team') return <TeamLogin />;
   const isActive = (href: string) => (href === '/admin/' ? pathname === '/admin' || pathname === '/admin/' : pathname.startsWith(href.slice(0, -1)));
 

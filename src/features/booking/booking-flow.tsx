@@ -7,6 +7,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
 import { Logo } from '@/components/layout/logo';
 import { Button } from '@/components/ui/button';
+import { Loading } from '@/components/ui/loading';
 import { site } from '@/content';
 import { getAdapter } from '@/data';
 import type { Booking } from '@/domain/types';
@@ -26,7 +27,7 @@ export function BookingFlow() {
   const presetCategory = params.get('kategorie') ?? undefined;
   const rescheduleId = params.get('umbuchen') ?? undefined;
 
-  const { data: services = [] } = useData((db) => db.listServices(), []);
+  const { data: services = [], loading: servicesLoading } = useData((db) => db.listServices(), []);
   const { data: categories = [] } = useData((db) => db.listCategories(), []);
   const { data: staff = [] } = useData((db) => db.listStaff(), []);
   const { data: staffServices = [] } = useData((db) => db.listStaffServices(), []);
@@ -147,7 +148,8 @@ export function BookingFlow() {
               <h1 className="mb-10 mt-4 text-[clamp(2.6rem,5vw,5.2rem)] leading-[0.98]">{titles[step]}</h1>
             </>
           )}
-          {step === 0 && <StepServices draft={draft} setDraft={setDraft} services={services} categories={categories} consultationDone={Boolean(customer?.laserConsultationDone)} initialCategory={presetCategory} />}
+          {step === 0 && servicesLoading && <Loading label="Leistungen werden geladen …" />}
+          {step === 0 && !servicesLoading && <StepServices draft={draft} setDraft={setDraft} services={services} categories={categories} consultationDone={Boolean(customer?.laserConsultationDone)} initialCategory={presetCategory} />}
           {step === 1 && <StepStaff draft={draft} setDraft={setDraft} services={services} staff={staff} staffServices={staffServices} onNext={() => setStep(2)} />}
           {step === 2 && <StepTime draft={draft} setDraft={setDraft} staff={staff} ignoreBookingId={original?.id} />}
           {step === 3 && <StepDetails draft={draft} setDraft={setDraft} services={services} session={session} customer={customer} onNext={() => setStep(4)} />}

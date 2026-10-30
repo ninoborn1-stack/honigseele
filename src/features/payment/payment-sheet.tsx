@@ -1,11 +1,12 @@
 'use client';
 // Simulierte Zahlung im Stripe-Look. In Produktion: Stripe Payment Element + Webhook (Supabase Edge Function).
-import { CreditCard, Loader2, Lock } from 'lucide-react';
+import { CreditCard, Lock } from 'lucide-react';
 import { useState } from 'react';
 import { Drawer } from '@/components/ui/drawer';
 import type { PaymentMethod } from '@/domain/types';
 import { cn } from '@/lib/cn';
 import { formatEuro } from '@/lib/format';
+import { InlineLoading } from '@/components/ui/loading';
 
 export const payMethods: { id: PaymentMethod; label: string; hint: string }[] = [
   { id: 'karte', label: 'Karte', hint: 'Visa, Mastercard, Amex' },
@@ -83,8 +84,14 @@ export function PaymentSheet({
             disabled={busy}
             className={cn('mt-5 flex min-h-12 w-full items-center justify-center gap-2 rounded-md text-[0.95rem] font-semibold text-white transition-colors', method === 'klarna' ? 'bg-[#17120f]' : method === 'paypal' ? 'bg-[#0070ba]' : 'bg-[#635bff] hover:bg-[#5249e0]')}
           >
-            {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Lock className="h-3.5 w-3.5" />}
-            {busy ? 'Wird verarbeitet …' : mode === 'vorab' ? `${formatEuro(amountCents)} mit ${label} bezahlen` : `${label} sicher hinterlegen`}
+            {busy ? (
+              <InlineLoading variant="dark" label="Wird verarbeitet …" />
+            ) : (
+              <>
+                <Lock className="h-3.5 w-3.5" />
+                {mode === 'vorab' ? `${formatEuro(amountCents)} mit ${label} bezahlen` : `${label} sicher hinterlegen`}
+              </>
+            )}
           </button>
           {error && <p className="mt-3 text-sm text-danger">{error}</p>}
           <p className="mt-4 text-center text-[0.68rem] text-[#6a7383]">Simulierte Zahlung · keine echten Daten · später Stripe</p>

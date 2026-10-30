@@ -10,6 +10,7 @@ import type { Service, Staff, StaffService } from '@/domain/types';
 import { cn } from '@/lib/cn';
 import { berlinTime, formatDateLong, formatEuro } from '@/lib/format';
 import { staffForAll, type BookingDraft } from './booking-state';
+import { Loading } from '@/components/ui/loading';
 
 export function StepStaff({
   draft,
@@ -167,7 +168,7 @@ export function StepTime({
       </div>
 
       <div className="mt-8">
-        {slots === null && <p className="py-10 text-center text-muted">Freie Zeiten werden gesucht …</p>}
+        {slots === null && <Loading label="Freie Zeiten werden gesucht …" />}
         {slots?.length === 0 && (
           <div className="rounded-2xl bg-cream-100 p-6 text-center">
             <p className="font-serif text-2xl">An diesem Tag ist leider nichts mehr frei.</p>

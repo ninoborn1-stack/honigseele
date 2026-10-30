@@ -12,9 +12,10 @@ import type { Booking, Customer, Service, Staff, StaffService, TimeOff } from '@
 import { cn } from '@/lib/cn';
 import { berlinTime, formatEuro } from '@/lib/format';
 import { statusLabels } from './ui';
+import { Loading } from '@/components/ui/loading';
 
 function SlotPicker({ slots, value, onChange, staff }: { slots: Slot[] | null; value?: Slot; onChange: (s: Slot) => void; staff: Staff[] }) {
-  if (slots === null) return <p className="text-sm text-muted">Freie Zeiten werden gesucht …</p>;
+  if (slots === null) return <Loading size={44} label="Freie Zeiten werden gesucht …" className="py-6" />;
   if (slots.length === 0) return <p className="text-sm text-muted">An diesem Tag ist nichts frei.</p>;
   return (
     <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">

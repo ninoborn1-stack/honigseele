@@ -11,12 +11,26 @@ import type { Product } from '@/domain/types';
 import { cn } from '@/lib/cn';
 import { formatEuro } from '@/lib/format';
 import { useData } from '@/lib/use-data';
-import { AdminTitle, ImageUpload, toCents, toEuroInput } from './ui';
+import { Loading } from '@/components/ui/loading';
+import { AdminTitle, ImageUpload, MoreOptions, notify, toCents, toEuroInput } from './ui';
 import { imageUrl } from '@/components/ui/photo';
 
-const kinds: Record<Product['kind'], string> = { pflege: 'Pflegeserie', gutschein: 'Gutschein', karte: 'Karte', ticket: 'Ticket' };
+const kinds: Record<Product['kind'], string> = {
+  pflege: 'Pflegeserie',
+  gutschein: 'Gutschein',
+  karte: 'Karte',
+  ticket: 'Ticket',
+};
 
-function ProductDrawer({ product, isNew, onClose }: { product: Product | null; isNew: boolean; onClose: () => void }) {
+function ProductDrawer({
+  product,
+  isNew,
+  onClose,
+}: {
+  product: Product | null;
+  isNew: boolean;
+  onClose: () => void;
+}) {
   const [form, setForm] = useState<Product | null>(null);
   const [price, setPrice] = useState('');
   const [loadedFor, setLoadedFor] = useState<string | null>(null);
@@ -30,11 +44,13 @@ function ProductDrawer({ product, isNew, onClose }: { product: Product | null; i
   const save = async () => {
     if (!form || !form.name.trim()) return;
     await getAdapter().saveProduct({ ...form, priceCents: toCents(price) });
+    notify('Gespeichert.');
     onClose();
   };
   const remove = async () => {
     if (!form || !confirm(`„${form.name}“ wirklich löschen?`)) return;
     await getAdapter().deleteProduct(form.id);
+    notify('Produkt gelöscht.');
     onClose();
   };
   return (
@@ -43,32 +59,81 @@ function ProductDrawer({ product, isNew, onClose }: { product: Product | null; i
       onClose={onClose}
       title={isNew ? 'Neues Produkt' : 'Produkt bearbeiten'}
       footer={
-        <div className="flex gap-2">
-          {!isNew && <Button variant="ghost" onClick={remove}>Löschen</Button>}
-          <Button className="flex-1" onClick={save}>Speichern</Button>
-        </div>
+        <Button size="lg" className="w-full" onClick={save} disabled={!form?.name.trim()}>
+          Speichern
+        </Button>
       }
     >
       {form && (
         <div className="space-y-5">
           <ImageUpload value={form.image} onChange={(image) => set({ image })} />
-          <Field label="Name"><Input value={form.name} onChange={(e) => set({ name: e.target.value })} /></Field>
-          <div className="grid grid-cols-3 gap-3">
-            <Field label="Größe"><Input value={form.size ?? ''} onChange={(e) => set({ size: e.target.value || undefined })} placeholder="50 ml" /></Field>
-            <Field label="Preis (€)"><Input inputMode="decimal" value={price} onChange={(e) => setPrice(e.target.value)} /></Field>
-            <Field label="Bestand"><Input type="number" min={0} value={form.stock} onChange={(e) => set({ stock: Number(e.target.value) })} /></Field>
-          </div>
-          <Field label="Art">
-            <Select value={form.kind} onChange={(e) => set({ kind: e.target.value as Product['kind'] })}>
-              {Object.entries(kinds).map(([k, v]) => (
-                <option key={k} value={k}>{v}</option>
-              ))}
-            </Select>
+          <Field label="Name">
+            <Input value={form.name} onChange={(e) => set({ name: e.target.value })} />
           </Field>
-          <Field label="Beschreibung"><Textarea value={form.description} onChange={(e) => set({ description: e.target.value, isPlaceholder: false })} /></Field>
-          <Field label="Anwendung"><Textarea value={form.usage ?? ''} onChange={(e) => set({ usage: e.target.value || undefined })} /></Field>
-          <Field label="Inhaltsstoffe"><Textarea value={form.ingredients ?? ''} onChange={(e) => set({ ingredients: e.target.value || undefined })} /></Field>
-          <Checkbox label="Im Shop sichtbar" checked={form.active} onChange={(e) => set({ active: e.target.checked })} />
+          <div className="grid grid-cols-2 gap-3">
+            <Field label="Preis in €">
+              <Input inputMode="decimal" value={price} onChange={(e) => setPrice(e.target.value)} />
+            </Field>
+            <Field label="Wie viele da?">
+              <Input
+                type="number"
+                min={0}
+                value={form.stock}
+                onChange={(e) => set({ stock: Number(e.target.value) })}
+              />
+            </Field>
+          </div>
+          <Field label="Beschreibung">
+            <Textarea
+              value={form.description}
+              onChange={(e) => set({ description: e.target.value, isPlaceholder: false })}
+            />
+          </Field>
+          <Checkbox
+            label={<span className="text-base">Im Shop zeigen</span>}
+            checked={form.active}
+            onChange={(e) => set({ active: e.target.checked })}
+          />
+          <MoreOptions>
+            <div className="grid grid-cols-2 gap-3">
+              <Field label="Größe">
+                <Input
+                  value={form.size ?? ''}
+                  onChange={(e) => set({ size: e.target.value || undefined })}
+                  placeholder="50 ml"
+                />
+              </Field>
+              <Field label="Art">
+                <Select
+                  value={form.kind}
+                  onChange={(e) => set({ kind: e.target.value as Product['kind'] })}
+                >
+                  {Object.entries(kinds).map(([k, v]) => (
+                    <option key={k} value={k}>
+                      {v}
+                    </option>
+                  ))}
+                </Select>
+              </Field>
+            </div>
+            <Field label="Anwendung">
+              <Textarea
+                value={form.usage ?? ''}
+                onChange={(e) => set({ usage: e.target.value || undefined })}
+              />
+            </Field>
+            <Field label="Inhaltsstoffe">
+              <Textarea
+                value={form.ingredients ?? ''}
+                onChange={(e) => set({ ingredients: e.target.value || undefined })}
+              />
+            </Field>
+            {!isNew && (
+              <Button variant="ghost" size="lg" className="w-full" onClick={remove}>
+                Produkt löschen
+              </Button>
+            )}
+          </MoreOptions>
         </div>
       )}
     </Drawer>
@@ -79,16 +144,26 @@ export function AdminProducts() {
   const [editing, setEditing] = useState<Product | null>(null);
   const [isNew, setIsNew] = useState(false);
   const { data: products } = useData((db) => db.listProducts(), []);
-  if (!products) return null;
+  if (!products) return <Loading label="Produkte werden geladen …" />;
   const openNew = () => {
     setIsNew(true);
-    setEditing({ id: `produkt-${Date.now().toString(36)}`, name: '', priceCents: 0, description: '', image: 'product.placeholder', tone: 'honey', kind: 'pflege', stock: 10, active: true });
+    setEditing({
+      id: `produkt-${Date.now().toString(36)}`,
+      name: '',
+      priceCents: 0,
+      description: '',
+      image: 'product.placeholder',
+      tone: 'honey',
+      kind: 'pflege',
+      stock: 10,
+      active: true,
+    });
   };
   return (
     <div>
       <AdminTitle eyebrow="Shop" title="Produkte">
-        <Button onClick={openNew}>
-          <Plus className="h-4 w-4" strokeWidth={1.5} /> Neues Produkt
+        <Button size="lg" onClick={openNew}>
+          <Plus className="h-5 w-5" strokeWidth={1.5} /> Neues Produkt
         </Button>
       </AdminTitle>
       <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -99,18 +174,27 @@ export function AdminProducts() {
                 setIsNew(false);
                 setEditing(p);
               }}
-              className={cn('flex w-full items-center gap-4 rounded-2xl border border-line-soft bg-card p-3 text-left hover:border-line', !p.active && 'opacity-50')}
+              className={cn(
+                'border-line-soft bg-card hover:border-honey-950 flex w-full items-center gap-4 rounded-2xl border p-3 text-left',
+                !p.active && 'opacity-60',
+              )}
             >
-              <img src={imageUrl(p.image)} alt="" className="h-20 w-16 shrink-0 rounded-xl object-cover" />
+              <img
+                src={imageUrl(p.image)}
+                alt=""
+                className="h-20 w-16 shrink-0 rounded-xl object-cover"
+              />
               <span className="min-w-0 flex-1">
                 <span className="block truncate font-serif text-xl">{p.name}</span>
-                <span className="block text-xs text-muted">
+                <span className="text-muted block text-sm">
                   {kinds[p.kind]} {p.size && `· ${p.size}`}
                 </span>
-                <span className="mt-1 flex items-center gap-2 text-sm">
+                <span className="mt-1 flex flex-wrap items-center gap-2 text-base">
                   {formatEuro(p.priceCents)}
-                  {p.kind === 'pflege' && <Badge tone={p.stock <= 3 ? 'danger' : 'line'}>{p.stock} auf Lager</Badge>}
-                  {!p.active && <Badge>versteckt</Badge>}
+                  {p.kind === 'pflege' && (
+                    <Badge tone={p.stock <= 3 ? 'danger' : 'line'}>noch {p.stock} da</Badge>
+                  )}
+                  {!p.active && <Badge>nicht im Shop</Badge>}
                 </span>
               </span>
             </button>

@@ -1,35 +1,53 @@
 'use client';
 // Kleine Bausteine für den Admin-Bereich.
-import { ImagePlus } from 'lucide-react';
-import type { ReactNode } from 'react';
+import { Check, ChevronDown, ImagePlus } from 'lucide-react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { cn } from '@/lib/cn';
 import { imageUrl } from '@/components/ui/photo';
 
-export function AdminTitle({ eyebrow, title, children }: { eyebrow?: string; title: string; children?: ReactNode }) {
+export function AdminTitle({
+  eyebrow,
+  title,
+  children,
+}: {
+  eyebrow?: string;
+  title: string;
+  children?: ReactNode;
+}) {
   return (
     <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
       <div>
         {eyebrow && <p className="eyebrow">{eyebrow}</p>}
         <h1 className="mt-2 text-4xl md:text-5xl">{title}</h1>
       </div>
-      {children && <div className="flex flex-wrap gap-2">{children}</div>}
+      {children && <div className="flex flex-wrap gap-3">{children}</div>}
     </div>
   );
 }
 
 export function Stat({ label, value, hint }: { label: string; value: string; hint?: string }) {
   return (
-    <div className="rounded-2xl border border-line-soft bg-card p-5">
-      <p className="text-xs uppercase tracking-[0.18em] text-muted">{label}</p>
-      <p className="mt-2 font-serif text-4xl leading-none">{value}</p>
-      {hint && <p className="mt-2 text-xs text-muted">{hint}</p>}
+    <div className="border-line-soft rounded-2xl border p-4">
+      <p className="text-muted text-sm">{label}</p>
+      <p className="mt-1 font-serif text-3xl leading-none">{value}</p>
+      {hint && <p className="text-muted mt-1.5 text-sm">{hint}</p>}
     </div>
   );
 }
 
-export function Panel({ title, children, className, action }: { title?: string; children: ReactNode; className?: string; action?: ReactNode }) {
+export function Panel({
+  title,
+  children,
+  className,
+  action,
+}: {
+  title?: string;
+  children: ReactNode;
+  className?: string;
+  action?: ReactNode;
+}) {
   return (
-    <section className={cn('rounded-2xl border border-line-soft bg-card p-5 md:p-6', className)}>
+    <section className={cn('border-line-soft bg-card rounded-2xl border p-5 md:p-6', className)}>
       {(title || action) && (
         <div className="mb-4 flex items-center justify-between gap-4">
           {title && <h2 className="text-2xl">{title}</h2>}
@@ -42,16 +60,21 @@ export function Panel({ title, children, className, action }: { title?: string; 
 }
 
 export function Notice({ children }: { children: ReactNode }) {
-  return <div className="rounded-2xl border border-honey-400 bg-honey-200/35 p-4 text-sm">{children}</div>;
+  return (
+    <div className="border-honey-400 bg-honey-200/35 rounded-2xl border p-4 text-base">
+      {children}
+    </div>
+  );
 }
 
 export function Empty({ children }: { children: ReactNode }) {
-  return <p className="py-8 text-center text-sm text-muted">{children}</p>;
+  return <p className="text-muted py-8 text-center text-base">{children}</p>;
 }
 
 /** Euro-Eingabe ↔ Cent */
 export const toCents = (v: string) => Math.round(Number(String(v).replace(',', '.')) * 100) || 0;
-export const toEuroInput = (cents?: number) => (cents === undefined ? '' : (cents / 100).toFixed(2).replace('.', ','));
+export const toEuroInput = (cents?: number) =>
+  cents === undefined ? '' : (cents / 100).toFixed(2).replace('.', ',');
 
 /** Bild verkleinern (max. 1200 px) und als JPEG-Data-URL zurückgeben */
 export function resizeImage(file: File, max = 1200, quality = 0.82): Promise<string> {
@@ -75,12 +98,24 @@ export function resizeImage(file: File, max = 1200, quality = 0.82): Promise<str
   });
 }
 
-export function ImageUpload({ value, onChange, label = 'Bild austauschen' }: { value: string; onChange: (dataUrl: string) => void; label?: string }) {
+export function ImageUpload({
+  value,
+  onChange,
+  label = 'Bild austauschen',
+}: {
+  value: string;
+  onChange: (dataUrl: string) => void;
+  label?: string;
+}) {
   return (
     <div className="flex items-center gap-4">
-      {value ? <img src={imageUrl(value)} alt="" className="h-20 w-20 rounded-xl object-cover" /> : <div className="h-20 w-20 rounded-xl bg-cream-200" />}
-      <label className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full border border-honey-950/25 px-4 text-sm hover:border-honey-950">
-        <ImagePlus className="h-4 w-4" strokeWidth={1.5} />
+      {value ? (
+        <img src={imageUrl(value)} alt="" className="h-20 w-20 rounded-xl object-cover" />
+      ) : (
+        <div className="bg-cream-200 h-20 w-20 rounded-xl" />
+      )}
+      <label className="border-honey-950/25 hover:border-honey-950 inline-flex min-h-12 cursor-pointer items-center gap-2 rounded-full border px-5 text-base">
+        <ImagePlus className="h-5 w-5" strokeWidth={1.5} />
         {label}
         <input
           type="file"
@@ -98,7 +133,7 @@ export function ImageUpload({ value, onChange, label = 'Bild austauschen' }: { v
 }
 
 export const statusLabels: Record<string, string> = {
-  bestaetigt: 'bestätigt',
+  bestaetigt: 'gebucht',
   storniert: 'storniert',
   abgeschlossen: 'abgeschlossen',
   'nicht-erschienen': 'nicht erschienen',
@@ -107,4 +142,133 @@ export const statusLabels: Record<string, string> = {
   aktiv: 'aktiv',
   eingeloest: 'eingelöst',
   entwertet: 'entwertet',
+};
+
+/** Aufklappbarer Bereich für seltene Felder */
+export function MoreOptions({
+  children,
+  label = 'Mehr Optionen',
+  className,
+}: {
+  children: ReactNode;
+  label?: string;
+  className?: string;
+}) {
+  return (
+    <details className={cn('group border-line-soft rounded-2xl border', className)}>
+      <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 px-4 text-base font-medium [&::-webkit-details-marker]:hidden">
+        {label}
+        <ChevronDown
+          className="text-muted h-5 w-5 transition-transform group-open:rotate-180"
+          strokeWidth={1.5}
+        />
+      </summary>
+      <div className="border-line-soft space-y-5 border-t p-4">{children}</div>
+    </details>
+  );
+}
+
+/** Große Auswahlfläche (z. B. Leistung, Mitarbeiterin, Uhrzeit) */
+export function Choice({
+  selected,
+  onClick,
+  title,
+  sub,
+  aside,
+  className,
+}: {
+  selected?: boolean;
+  onClick: () => void;
+  title: ReactNode;
+  sub?: ReactNode;
+  aside?: ReactNode;
+  className?: string;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={selected}
+      className={cn(
+        'flex min-h-14 w-full items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left text-base transition-colors',
+        selected
+          ? 'border-honey-950 bg-honey-950 text-cream-50'
+          : 'border-line bg-card hover:border-honey-950',
+        className,
+      )}
+    >
+      <span className="min-w-0">
+        <span className="block font-medium">{title}</span>
+        {sub && (
+          <span className={cn('block text-sm', selected ? 'text-cream-100/80' : 'text-muted')}>
+            {sub}
+          </span>
+        )}
+      </span>
+      {aside && <span className="shrink-0">{aside}</span>}
+    </button>
+  );
+}
+
+/** Kurze Rückmeldung unten im Bild, z. B. „Gespeichert.“ – von überall auslösbar */
+const TOAST_EVENT = 'admin-toast';
+export function notify(text = 'Gespeichert.') {
+  window.dispatchEvent(new CustomEvent(TOAST_EVENT, { detail: text }));
+}
+
+export function AdminToast() {
+  const [text, setText] = useState<string | null>(null);
+  useEffect(() => {
+    let t: ReturnType<typeof setTimeout>;
+    const on = (e: Event) => {
+      setText((e as CustomEvent<string>).detail);
+      clearTimeout(t);
+      t = setTimeout(() => setText(null), 2600);
+    };
+    window.addEventListener(TOAST_EVENT, on);
+    return () => {
+      window.removeEventListener(TOAST_EVENT, on);
+      clearTimeout(t);
+    };
+  }, []);
+  return (
+    <div
+      role="status"
+      aria-live="polite"
+      className="pb-safe pointer-events-none fixed inset-x-0 bottom-6 z-[130] flex justify-center px-4"
+    >
+      {text && (
+        <p className="bg-honey-950 text-cream-50 flex min-h-12 items-center gap-2 rounded-full px-6 text-base shadow-xl">
+          <Check className="text-honey-300 h-5 w-5" strokeWidth={1.5} /> {text}
+        </p>
+      )}
+    </div>
+  );
+}
+
+/** Kleine Inline-Bestätigung neben einem Speichern-Knopf */
+export function SavedHint({ show, text = 'Gespeichert.' }: { show: boolean; text?: string }) {
+  if (!show) return null;
+  return (
+    <span role="status" className="text-success flex items-center gap-1.5 text-base">
+      <Check className="h-5 w-5" strokeWidth={1.5} /> {text}
+    </span>
+  );
+}
+
+/** Zahlungsarten und Zahlungsstand in Alltagssprache */
+export const paymentMethodLabels: Record<string, string> = {
+  karte: 'Karte',
+  paypal: 'PayPal',
+  klarna: 'Klarna',
+  applepay: 'Apple Pay',
+  gutschein: 'Gutschein',
+  'vor-ort': 'vor Ort im Studio',
+};
+export const paymentStatusLabels: Record<string, string> = {
+  bezahlt: 'bezahlt',
+  autorisiert: 'vorgemerkt (noch nicht abgebucht)',
+  offen: 'noch offen',
+  erstattet: 'zurückgezahlt',
+  'teilweise-erstattet': 'teilweise zurückgezahlt',
 };

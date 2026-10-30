@@ -47,11 +47,11 @@ export function Drawer({
         aria-modal="true"
         aria-label={title}
         className={cn(
-          'absolute flex flex-col bg-cream-50 shadow-2xl transition-transform duration-500 ease-[var(--ease-soft)]',
+          'absolute flex flex-col bg-cream-50 transition-[transform,box-shadow] duration-500 ease-[var(--ease-soft)]',
           side === 'right'
             ? 'inset-y-0 right-0 w-full max-w-md'
             : 'inset-x-0 bottom-0 max-h-[88svh] rounded-t-3xl',
-          open ? 'translate-x-0 translate-y-0' : side === 'right' ? 'translate-x-full' : 'translate-y-full',
+          open ? 'translate-x-0 translate-y-0 shadow-2xl' : side === 'right' ? 'translate-x-full' : 'translate-y-full',
         )}
       >
         <header className="pt-safe flex items-center justify-between border-b border-line-soft px-6 py-4">

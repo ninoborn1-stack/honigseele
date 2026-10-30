@@ -509,3 +509,52 @@ html.hero-intro [data-site-header] {
     transform: none !important;
   }
 }
+
+/* ===================== Intro (erster Besuch) ===================== */
+.intro {
+  display: none;
+}
+html.intro-show .intro {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  background: var(--color-honey-950);
+  transition: opacity 0.35s var(--ease-soft);
+}
+html.intro-show.intro-out .intro {
+  opacity: 0;
+}
+.intro__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+}
+.intro__logo {
+  opacity: 0;
+  animation: introLogo 0.5s var(--ease-soft) 1.05s forwards;
+}
+.intro__skip {
+  position: fixed;
+  bottom: calc(1.5rem + env(safe-area-inset-bottom));
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgb(246 240 230 / 0.4);
+}
+@keyframes introLogo {
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.intro-show .intro {
+    transition-duration: 0.15s;
+  }
+  .intro__logo {
+    animation: none;
+    opacity: 1;
+  }
+}

@@ -172,6 +172,12 @@ export function Hero() {
             { opacity: 1, y: 0, duration: 1, ease: 'power3.out' },
             2.3,
           );
+        // Läuft gerade das Blumen-Intro (erster Besuch), startet der Hero erst danach
+        if (html.classList.contains('intro-show')) {
+          const timeline = intro;
+          timeline.pause();
+          addEventListener('honig:intro-done', () => timeline.play(), { once: true });
+        }
       } else {
         html.classList.remove('hero-intro');
       }

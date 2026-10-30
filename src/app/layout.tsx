@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout/footer';
 import { SiteTop } from '@/components/layout/site-top';
 import { SmoothScroll } from '@/components/layout/smooth-scroll';
 import { WhatsAppButton } from '@/components/layout/whatsapp';
+import { Intro, introHeadScript } from '@/components/brand/intro';
 import { site } from '@/content';
 import { BASE_PATH, DEMO, SITE_URL, withBase } from '@/lib/config';
 import { Providers } from './providers';
@@ -69,9 +70,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             __html: `if("scrollRestoration" in history&&!location.hash)history.scrollRestoration="manual";try{if(location.pathname==="${BASE_PATH}/"&&!location.hash&&!matchMedia("(prefers-reduced-motion: reduce)").matches){var h=document.documentElement;h.classList.add("hero-intro");setTimeout(function(){h.classList.remove("hero-intro")},4000)}}catch(e){}`,
           }}
         />
+        <script dangerouslySetInnerHTML={{ __html: introHeadScript }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body>
+        <Intro />
         <Providers>
           <a href="#inhalt" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-honey-950 focus:px-4 focus:py-2 focus:text-cream-50">
             Zum Inhalt springen

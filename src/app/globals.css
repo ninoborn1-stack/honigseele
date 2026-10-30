@@ -558,3 +558,54 @@ html.intro-show.intro-out .intro {
     opacity: 1;
   }
 }
+
+/* ===================== Seitenwechsel ===================== */
+/* Dauer/Versatz kommen als CSS-Variablen aus MOTION (layout.tsx) */
+[data-page] {
+  transition:
+    opacity var(--page-in-ms, 300ms) var(--ease-soft),
+    transform var(--page-in-ms, 300ms) var(--ease-soft);
+}
+html.page-out [data-page] {
+  opacity: 0;
+  transform: translateY(calc(var(--page-offset, 10px) * -0.6));
+  transition-duration: var(--page-out-ms, 200ms);
+}
+html.page-in-start [data-page] {
+  opacity: 0;
+  transform: translateY(var(--page-offset, 10px));
+  transition: none;
+}
+.page-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  background: rgb(246 240 230 / 0.6);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.25s var(--ease-soft),
+    visibility 0s linear 0.25s;
+}
+.page-veil .fol {
+  display: none;
+}
+html.page-loading .page-veil {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s var(--ease-soft);
+}
+html.page-loading .page-veil .fol {
+  display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-page],
+  html.page-out [data-page] {
+    transform: none !important;
+    transition: opacity var(--page-reduced-ms, 150ms) linear;
+  }
+}

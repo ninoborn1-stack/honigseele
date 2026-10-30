@@ -2,11 +2,13 @@ import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import { BottomNav } from '@/components/layout/bottom-nav';
 import { Footer } from '@/components/layout/footer';
+import { PageTransition } from '@/components/layout/page-transition';
 import { SiteTop } from '@/components/layout/site-top';
 import { SmoothScroll } from '@/components/layout/smooth-scroll';
 import { WhatsAppButton } from '@/components/layout/whatsapp';
 import { Intro, introHeadScript } from '@/components/brand/intro';
 import { site } from '@/content';
+import { MOTION } from '@/lib/motion-config';
 import { BASE_PATH, DEMO, SITE_URL, withBase } from '@/lib/config';
 import { Providers } from './providers';
 import './globals.css';
@@ -62,7 +64,13 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="de" suppressHydrationWarning style={{ ['--bloom-mask' as string]: `url('${withBase('/images/bloom-mask.svg')}')` }}>
+    <html lang="de" suppressHydrationWarning style={{
+        ['--bloom-mask' as string]: `url('${withBase('/images/bloom-mask.svg')}')`,
+        ['--page-out-ms' as string]: `${MOTION.page.outMs}ms`,
+        ['--page-in-ms' as string]: `${MOTION.page.inMs}ms`,
+        ['--page-offset' as string]: `${MOTION.page.offsetPx}px`,
+        ['--page-reduced-ms' as string]: `${MOTION.page.reducedMs}ms`,
+      }}>
       <head>
         {/* Browser soll die Scroll-Position nicht wiederherstellen, sonst startet das Hero-Intro mittendrin */}
         <script
@@ -80,7 +88,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             Zum Inhalt springen
           </a>
           <SiteTop />
-          <main id="inhalt" className="min-h-[60svh]">{children}</main>
+          <main id="inhalt" className="min-h-[60svh]">
+            <PageTransition>{children}</PageTransition>
+          </main>
           <Footer />
           <WhatsAppButton />
           <SmoothScroll />

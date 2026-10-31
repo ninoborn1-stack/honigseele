@@ -20,7 +20,7 @@ export function Loading({
 }) {
   return (
     <div role="status" aria-live="polite" className={cn('flex flex-col items-center justify-center gap-4 py-12', className)}>
-      <FlowerOfLife size={size} variant={variant} animate="pulse" />
+      <FlowerOfLife size={size} variant={variant} animate="pulse" strokeWidth={(1.2 * 62) / size} />
       <span className={cn('text-sm', showLabel ? (variant === 'dark' ? 'text-cream-100/70' : 'text-muted') : 'sr-only')}>{label}</span>
     </div>
   );
@@ -30,7 +30,7 @@ export function Loading({
 export function InlineLoading({ variant = 'dark', label = 'Wird gesendet …' }: { variant?: 'light' | 'dark'; label?: string }) {
   return (
     <span role="status" aria-live="polite" className="inline-flex items-center gap-2">
-      <FlowerOfLife size={18} variant={variant} animate="pulse" />
+      <FlowerOfLife size={18} variant={variant} animate="pulse" strokeWidth={3} />
       <span>{label}</span>
     </span>
   );

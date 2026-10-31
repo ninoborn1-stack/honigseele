@@ -76,7 +76,13 @@ export function Hero() {
           .fromTo(
             '.hero__bloom .fol__c',
             { strokeDasharray: 1, strokeDashoffset: 1 },
-            { strokeDashoffset: 0, duration: 0.9, stagger: 0.025, ease: 'power2.inOut' },
+            {
+              strokeDashoffset: 0,
+              duration: 0.55,
+              // gleiche Reihenfolge wie im Intro: Mitte → Ringe → Umkreis (Verzögerung aus MOTION.flower)
+              stagger: (_i: number, el: Element) => parseFloat((el as HTMLElement).style.getPropertyValue('--d')) * 0.75,
+              ease: 'power2.inOut',
+            },
             0.05,
           )
           // Das Foto blüht aus der Mitte auf
@@ -117,6 +123,7 @@ export function Hero() {
             2.6,
           )
           .eventCallback('onComplete', () => {
+            html.classList.remove('intro-handoff');
             gsap.set(
               [
                 '.hero__bloom',
@@ -146,7 +153,8 @@ export function Hero() {
         if (html.classList.contains('intro-show')) {
           const timeline = intro;
           timeline.pause();
-          addEventListener('honig:intro-done', () => timeline.play(0.9), { once: true });
+          // Nach dem Intro direkt mit dem Aufgehen des Fotos aus der Blume weitermachen
+          addEventListener('honig:intro-done', () => timeline.play(0.75), { once: true });
         }
       } else {
         html.classList.remove('hero-intro');

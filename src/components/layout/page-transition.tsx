@@ -67,7 +67,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
     <>
       <div data-page>{children}</div>
       <div className="page-veil" role="status" aria-live="polite">
-        <FlowerOfLife size={72} animate="bloom" label="Lädt …" />
+        <FlowerOfLife size={72} animate="bloom" label="Lädt …" strokeWidth={1} />
       </div>
     </>
   );

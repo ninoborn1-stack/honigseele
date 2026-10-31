@@ -79,6 +79,12 @@ body {
   outline-offset: 3px;
   border-radius: 4px;
 }
+/* Nach dem Seitenwechsel wird die H1 per Skript fokussiert (für Screenreader/Tastatur) –
+   das ist kein Bedienelement, daher ohne sichtbaren Rahmen */
+[tabindex='-1']:focus,
+[tabindex='-1']:focus-visible {
+  outline: none;
+}
 
 h1,
 h2,

@@ -71,10 +71,11 @@ Warm, weich, hochwertig. Lifestyle-Marke. Nicht „KI-generisch“.
 - **Intro** (`src/components/brand/intro.tsx`): nur beim ersten Aufruf pro Sitzung (sessionStorage, Skript im `<head>`), max. 1,8 s, überspringbar. Der Hero startet erst danach (Ereignis `honig:intro-done`).
 - **Seitenwechsel** (`src/components/layout/page-transition.tsx`): weiches Aus-/Einblenden von `[data-page]`, Navigation startet sofort, Blume nur bei langsamem Laden, danach Fokus auf die H1.
 - **Ladezustände** nur mit `Loading`/`InlineLoading` (`src/components/ui/loading.tsx`, Blume `pulse`, `role="status"`). Keine Spinner.
-- **Bilder** nur über Schlüssel aus `content/images.json` (`Photo`, `RevealImage`, `imageUrl()`), nie Pfade im Code. Annas Fotos: dort `src` tauschen, `placeholder: false`.
+- **Bilder** nur über Schlüssel aus `content/images.json` (`Photo`, `RevealImage`, `imageUrl()`), nie Pfade im Code. Annas Fotos: nach `public/images/stock/` legen, dort `src` tauschen, `placeholder: false`, dann **`npm run images`** (WebP-Varianten 480–2400 px + Unschärfe-Vorschau → `public/images/opt/`, `content/images.generated.json`). `sizes` setzen: `100vw` für volle Breite, kleine Pixelwerte für Vorschaubilder.
+- **Performance:** Seed der Demo-Daten muss schnell bleiben (kein `findSlots` in Schleifen). Hero-Bild wird per `preload` geladen. Ziel Lighthouse (Handy) ≥ 80.
 - **Logo-Slot** (`src/components/layout/logo.tsx`) liest `content/brand.json`; Original-Logo nach `public/brand/`. Logo nie verzerren, umfärben oder animieren.
 - Bewegung ruhig (Fade/Rise, `Reveal`), `prefers-reduced-motion` respektieren.
-- **Hero** (`src/components/home/hero.tsx`): Foto öffnet sich aus einer Blütenmaske (`public/images/bloom-mask.svg`), „seele“ steigt Buchstabe für Buchstabe auf, beim Scrollen blendet das Ladenbild ins Massage-Bild über, Rahmen + „So schön, dass Du da bist.“. Regel: jede CSS-Eigenschaft nur von einer Animation; CSS-Grundzustand = Endzustand. GSAP + ScrollTrigger, Lenis nur auf Desktop.
+- **Hero** (`src/components/home/hero.tsx`): Foto öffnet sich aus der Blume des Lebens (Maske `public/images/flower-mask.svg`, goldene Kreise zeichnen sich davor), „seele“ steigt Buchstabe für Buchstabe auf, beim Scrollen blendet das Ladenbild ins Massage-Bild über, Rahmen + „So schön, dass Du da bist.“. Regel: jede CSS-Eigenschaft nur von einer Animation; CSS-Grundzustand = Endzustand. GSAP + ScrollTrigger, Lenis nur auf Desktop.
 - Mobil zuerst: Bottom-Nav (Start, Behandlungen, **Buchen** Mitte, Shop, Konto), Safe-Area-Insets, Touch-Ziele ≥ 44 px, keine Hover-only-Interaktion, Sticky-Buchen-Button auf Leistungsseiten.
 
 ## Ton

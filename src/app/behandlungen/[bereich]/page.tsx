@@ -92,7 +92,7 @@ export default async function AreaPage({ params }: { params: Promise<{ bereich: 
       {/* 1. Vollbild-Kopf */}
       <section className="relative flex min-h-[560px] items-end overflow-hidden bg-honey-950 text-cream-50 md:h-[calc(88svh-var(--top-h,96px))]">
         <Parallax speed={-0.18} className="absolute -inset-y-[12%] inset-x-0">
-          <Photo src={category.image} alt={category.name} priority className="h-full w-full !bg-honey-950" imgClassName="animate-fade" />
+          <Photo src={category.image} alt={category.name} priority sizes="100vw" className="h-full w-full !bg-honey-950" imgClassName="animate-fade" />
         </Parallax>
         <div aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgb(28_21_15/0.94)_0%,rgb(28_21_15/0.68)_40%,rgb(28_21_15/0.42)_72%,rgb(28_21_15/0.6)_100%)]" />
         <div className="wrap relative pb-12 pt-40 md:pb-16">

@@ -249,7 +249,7 @@ export function Checkout() {
                   {product && product.kind === 'pflege' ? (
                     <ProductVisual product={product} className="h-16 w-14 shrink-0 rounded-lg [&_span]:hidden" />
                   ) : (
-                    <img src={imageUrl(product?.image ?? '')} alt="" className="h-16 w-14 shrink-0 rounded-lg object-cover" />
+                    <img src={imageUrl(product?.image ?? '', 160)} alt="" className="h-16 w-14 shrink-0 rounded-lg object-cover" />
                   )}
                   <div className="min-w-0 flex-1 text-sm">
                     <p className="font-serif text-lg leading-tight">{product?.name}</p>

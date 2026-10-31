@@ -12,49 +12,14 @@ import { Placeholder } from '@/components/ui/badge';
 import { block, site } from '@/content';
 import { useBlock } from '@/lib/use-data';
 import { withBase } from '@/lib/config';
-import { imageUrl } from '@/components/ui/photo';
+import { imageUrl, srcSetOf } from '@/components/ui/photo';
+import { resolveImage } from '@/content/images';
+import { preload } from 'react-dom';
+import { FlowerOfLife } from '@/components/brand/flower-of-life';
 
 const FULL = 'inset(0% 0% 0% 0% round 0vw 0vw 0vw 0vw)';
-const MASK = `url('${withBase('/images/bloom-mask.svg')}')`;
-
-function BloomLines() {
-  return (
-    <svg
-      viewBox="0 0 100 100"
-      className="h-[38vmin] w-[38vmin]"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="0.35"
-      aria-hidden
-    >
-      {[0, 1, 2, 3, 4].map((k) => (
-        <ellipse
-          key={`o${k}`}
-          className="bloom-path"
-          cx="50"
-          cy="24"
-          rx="15.5"
-          ry="24"
-          transform={`rotate(${k * 72} 50 50)`}
-          pathLength={1}
-        />
-      ))}
-      {[0, 1, 2, 3, 4].map((k) => (
-        <ellipse
-          key={`i${k}`}
-          className="bloom-path"
-          cx="50"
-          cy="31"
-          rx="11"
-          ry="19"
-          transform={`rotate(${k * 72 + 36} 50 50)`}
-          pathLength={1}
-        />
-      ))}
-      <circle className="bloom-path" cx="50" cy="50" r="6" pathLength={1} />
-    </svg>
-  );
-}
+// Maske aus den 19 Kreisen der Blume des Lebens – das Foto öffnet sich aus der Blume
+const MASK = `url('${withBase('/images/flower-mask.svg')}')`;
 
 export function Hero() {
   const root = useRef<HTMLElement>(null);
@@ -64,6 +29,9 @@ export function Hero() {
   const image = useBlock('home.hero.image', block('home.hero.image'));
   // Beim ersten Scroll blendet das Ladenbild weich ins Massage-Bild über (Massagen = Number One)
   const image2 = useBlock('home.hero.image2', block('home.hero.image2'));
+  // Großes Bild sofort laden (wichtigstes Bild der Seite), in passender Größe
+  const heroEntry = resolveImage(image);
+  preload(imageUrl(image), { as: 'image', imageSrcSet: srcSetOf(heroEntry), imageSizes: '100vw', fetchPriority: 'high' });
   const [secondA, secondB] = second.includes(',')
     ? [second.split(',')[0] + ',', second.split(',').slice(1).join(',').trim()]
     : ['', second];
@@ -106,9 +74,9 @@ export function Hero() {
             0,
           )
           .fromTo(
-            '.bloom-path',
+            '.hero__bloom .fol__c',
             { strokeDasharray: 1, strokeDashoffset: 1 },
-            { strokeDashoffset: 0, duration: 1.3, stagger: 0.04, ease: 'power2.inOut' },
+            { strokeDashoffset: 0, duration: 0.9, stagger: 0.025, ease: 'power2.inOut' },
             0.05,
           )
           // Das Foto blüht aus der Mitte auf
@@ -152,7 +120,7 @@ export function Hero() {
             gsap.set(
               [
                 '.hero__bloom',
-                '.bloom-path',
+                '.hero__bloom .fol__c',
                 '.hero__media img',
                 '.hero__shade',
                 '.ch',
@@ -178,7 +146,7 @@ export function Hero() {
         if (html.classList.contains('intro-show')) {
           const timeline = intro;
           timeline.pause();
-          addEventListener('honig:intro-done', () => timeline.play(), { once: true });
+          addEventListener('honig:intro-done', () => timeline.play(0.9), { once: true });
         }
       } else {
         html.classList.remove('hero-intro');
@@ -249,16 +217,29 @@ export function Hero() {
             <div className="hero__zoom">
               <img
                 src={imageUrl(image)}
+                srcSet={srcSetOf(heroEntry)}
+                sizes="100vw"
+                width={heroEntry.width}
+                height={heroEntry.height}
                 alt="Ruhiger, sonniger Raum in der Honigseele"
                 fetchPriority="high"
               />
-              <img className="hero__img2" src={imageUrl(image2)} alt="" aria-hidden loading="lazy" decoding="async" />
+              <img
+                className="hero__img2"
+                src={imageUrl(image2)}
+                srcSet={srcSetOf(resolveImage(image2))}
+                sizes="100vw"
+                alt=""
+                aria-hidden
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="hero__shade" />
           </div>
         </div>
         <div className="hero__bloom">
-          <BloomLines />
+          <FlowerOfLife size="38vmin" variant="light" />
         </div>
 
         <div className="hero__content">

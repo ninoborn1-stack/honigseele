@@ -180,7 +180,7 @@ export function AdminProducts() {
               )}
             >
               <img
-                src={imageUrl(p.image)}
+                src={imageUrl(p.image, 160)}
                 alt=""
                 className="h-20 w-16 shrink-0 rounded-xl object-cover"
               />

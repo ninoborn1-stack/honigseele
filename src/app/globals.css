@@ -319,8 +319,8 @@ h3 em,
 
 /* Vor dem Intro (Klasse wird im <head> gesetzt): Blüte geschlossen, Text unsichtbar – kein Aufblitzen */
 html.hero-intro .hero__media {
-  -webkit-mask-image: var(--bloom-mask);
-  mask-image: var(--bloom-mask);
+  -webkit-mask-image: var(--flower-mask);
+  mask-image: var(--flower-mask);
   -webkit-mask-size: 0vmax;
   mask-size: 0vmax;
 }

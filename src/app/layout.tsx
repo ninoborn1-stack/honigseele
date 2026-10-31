@@ -66,7 +66,7 @@ const jsonLd = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="de" suppressHydrationWarning style={{
-        ['--bloom-mask' as string]: `url('${withBase('/images/bloom-mask.svg')}')`,
+        ['--flower-mask' as string]: `url('${withBase('/images/flower-mask.svg')}')`,
         ['--page-out-ms' as string]: `${MOTION.page.outMs}ms`,
         ['--page-in-ms' as string]: `${MOTION.page.inMs}ms`,
         ['--page-offset' as string]: `${MOTION.page.offsetPx}px`,

@@ -102,7 +102,7 @@ export function InstagramFeed() {
                 {ig.tiles.map((key) => (
                   <li key={key}>
                     <a href={ig.url} target="_blank" rel="noreferrer" className="group block overflow-hidden rounded-2xl" aria-label={`Beitrag auf Instagram ansehen`}>
-                      <Photo src={key} className="aspect-square" imgClassName="transition-transform duration-700 group-hover:scale-105" />
+                      <Photo src={key} sizes="(min-width: 1024px) 16vw, 50vw" className="aspect-square" imgClassName="transition-transform duration-700 group-hover:scale-105" />
                     </a>
                   </li>
                 ))}

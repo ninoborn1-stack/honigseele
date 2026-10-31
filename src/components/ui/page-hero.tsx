@@ -29,7 +29,7 @@ export function PageHero({
   return (
     <section className="relative flex min-h-[520px] items-end overflow-hidden bg-honey-950 text-cream-50 md:h-[calc(88svh-var(--top-h,96px))] md:max-h-[860px] md:min-h-[600px]">
       <Parallax speed={-0.12} className="absolute -inset-y-[8%] inset-x-0">
-        <Photo src={image} alt={alt} priority className="h-full w-full !bg-honey-950" imgClassName={cn('animate-fade', imageClassName)} />
+        <Photo src={image} alt={alt} priority sizes="100vw" className="h-full w-full !bg-honey-950" imgClassName={cn('animate-fade', imageClassName)} />
       </Parallax>
       <div aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgb(28_21_15/0.94)_0%,rgb(28_21_15/0.66)_42%,rgb(28_21_15/0.4)_72%,rgb(28_21_15/0.6)_100%)]" />
       <div className="wrap relative pb-10 pt-32 md:pb-16 md:pt-40">

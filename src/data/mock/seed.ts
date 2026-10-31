@@ -136,18 +136,41 @@ export function createSeed(now: Date = new Date()): MockDB {
     'koerper-brasilianische-lymphdrainage', 'paket-deine-kleine-auszeit',
   ];
   const others = customers.filter((c) => c.id !== DEMO_CUSTOMER_ID);
+  // Schneller Direkt-Planer statt voller Slot-Suche (die ist für den Seed zu teuer):
+  // je Tag und Mitarbeiterin Termine nacheinander in die Arbeitszeit legen, Raum frei prüfen.
+  const roomBusy = new Map<string, { start: number; end: number }[]>();
+  const roomFree = (roomId: string, a: number, b: number) => !(roomBusy.get(roomId) ?? []).some((x) => a < x.end && x.start < b);
+  const roomTypeOf = (svc: Service) => db.categories.find((c) => c.id === svc.categoryId)?.roomType ?? 'kabine';
+  const bufferMs = settings.bufferMin * 60_000;
   let n = 0;
   for (let d = 0; d < 21; d++) {
     const date = addDaysToDate(today, d);
-    if (weekdayOf(date) === 7) continue;
-    const perDay = 6 + Math.floor(rand() * 8);
-    for (let k = 0; k < perDay; k++) {
-      const serviceId = popular[Math.floor(rand() * popular.length)];
-      const slots = findSlots(ctx(), { date, serviceIds: [serviceId], notBefore: now });
-      if (slots.length === 0) continue;
-      const slot = slots[Math.floor(rand() * slots.length)];
-      const customer = others[Math.floor(rand() * others.length)];
-      db.bookings.push(makeBooking(`b-seed-${++n}`, customer.id, slot.items, now, rand() < 0.15 ? 'treatwell' : 'web'));
+    const wd = weekdayOf(date);
+    if (wd === 7) continue;
+    for (const shift of db.workingHours.filter((w) => w.weekday === wd)) {
+      const offered = popular.filter((id) => db.services.some((x) => x.id === id) && db.staffServices.some((r) => r.staffId === shift.staffId && r.serviceId === id));
+      if (offered.length === 0) continue;
+      let t = new Date(berlinToISO(date, shift.start)).getTime();
+      const endOfShift = new Date(berlinToISO(date, shift.end)).getTime();
+      while (t < endOfShift) {
+        t += Math.floor(rand() * 5) * 30 * 60_000; // freie Lücken (ca. 40 % Auslastung)
+        const pickId = offered[Math.floor(rand() * offered.length)];
+        const svc = db.services.find((x) => x.id === pickId);
+        if (!svc) break;
+        const startMs = t;
+        const endMs = startMs + svc.durationMin * 60_000;
+        if (endMs > endOfShift) break;
+        const room = db.rooms.find((r) => r.type === roomTypeOf(svc) && roomFree(r.id, startMs, endMs + bufferMs));
+        const away = db.timeOff.some((o) => o.staffId === shift.staffId && startMs < new Date(o.end).getTime() && new Date(o.start).getTime() < endMs);
+        if (room && !away && startMs > now.getTime() + 3_600_000) {
+          roomBusy.set(room.id, [...(roomBusy.get(room.id) ?? []), { start: startMs, end: endMs + bufferMs }]);
+          const start = new Date(startMs).toISOString();
+          const item = { serviceId: svc.id, staffId: shift.staffId, roomId: room.id, start, end: new Date(endMs).toISOString(), priceCents: svc.priceCents };
+          const customer = others[Math.floor(rand() * others.length)];
+          db.bookings.push(makeBooking(`b-seed-${++n}`, customer.id, [item], now, rand() < 0.15 ? 'treatwell' : 'web'));
+        }
+        t = endMs + bufferMs;
+      }
     }
   }
 

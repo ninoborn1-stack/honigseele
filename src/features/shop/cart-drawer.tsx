@@ -66,7 +66,7 @@ export function CartDrawer() {
                 {product?.kind === 'pflege' ? (
                   <ProductVisual product={product} className="h-20 w-16 shrink-0 rounded-lg [&_span]:hidden" />
                 ) : (
-                  <img src={imageUrl(product?.image ?? '')} alt="" className="h-20 w-16 shrink-0 rounded-lg object-cover" />
+                  <img src={imageUrl(product?.image ?? '', 160)} alt="" className="h-20 w-16 shrink-0 rounded-lg object-cover" />
                 )}
                 <div className="flex-1">
                   <p className="font-serif text-xl leading-tight">{product?.name}</p>

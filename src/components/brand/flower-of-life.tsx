@@ -24,6 +24,8 @@ export function FlowerOfLife({
   variant = 'light',
   animate = 'none',
   label,
+  filled,
+  current,
   className,
 }: {
   size?: number | string;
@@ -32,9 +34,13 @@ export function FlowerOfLife({
   animate?: FlowerAnimation;
   /** Für Screenreader; ohne Label ist die Grafik dekorativ */
   label?: string;
+  /** Kreise zart gefüllt (Überlagerungen werden dichter) */
+  filled?: boolean;
+  /** Farbe aus currentColor statt aus der Variante */
+  current?: boolean;
   className?: string;
 }) {
-  const color = variant === 'dark' ? '#D9A54A' : '#B87A1E';
+  const color = current ? 'currentColor' : variant === 'dark' ? '#D9A54A' : '#B87A1E';
   return (
     <svg
       viewBox={`${-3 * R - 1} ${-3 * R - 1} ${6 * R + 2} ${6 * R + 2}`}
@@ -44,7 +50,8 @@ export function FlowerOfLife({
       aria-label={label}
       aria-hidden={label ? undefined : true}
       className={cn('fol', `fol--${animate}`, className)}
-      fill="none"
+      fill={filled ? color : 'none'}
+      fillOpacity={filled ? 0.16 : undefined}
       stroke={color}
       strokeWidth={1.25}
     >

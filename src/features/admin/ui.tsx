@@ -110,7 +110,7 @@ export function ImageUpload({
   return (
     <div className="flex items-center gap-4">
       {value ? (
-        <img src={imageUrl(value)} alt="" className="h-20 w-20 rounded-xl object-cover" />
+        <img src={imageUrl(value, 160)} alt="" className="h-20 w-20 rounded-xl object-cover" />
       ) : (
         <div className="bg-cream-200 h-20 w-20 rounded-xl" />
       )}

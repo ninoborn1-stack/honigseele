@@ -3,8 +3,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { cn } from '@/lib/cn';
 import { resolveImage } from '@/content/images';
-import { withBase } from '@/lib/config';
-import { ImageBadge } from './photo';
+import { blurStyle, ImageBadge, SmartImg } from './photo';
 
 /** Setzt .is-visible, sobald das Element ins Bild kommt */
 export function useInView<T extends HTMLElement>(margin = '0px 0px -10% 0px') {
@@ -73,13 +72,17 @@ export function RevealHeading({
   );
 }
 
-/** Bild, das sich beim Scrollen von unten öffnet (Schlüssel aus content/images.json oder Pfad) */
-export function RevealImage({ src, alt, className, imgClassName }: { src: string; alt?: string; className?: string; imgClassName?: string }) {
+/**
+ * Bild, das sich beim Scrollen von unten öffnet (Schlüssel aus content/images.json oder Pfad).
+ * Lädt etwas vorher und öffnet sich erst, wenn es da ist – so ruckelt nichts.
+ */
+export function RevealImage({ src, alt, className, imgClassName, sizes }: { src: string; alt?: string; className?: string; imgClassName?: string; sizes?: string }) {
   const { ref, visible } = useInView<HTMLDivElement>('0px 0px -5% 0px');
+  const [ready, setReady] = useState(false);
   const entry = resolveImage(src);
   return (
-    <div ref={ref} className={cn('img-reveal @container relative overflow-hidden bg-cream-200', visible && 'is-visible', className)}>
-      <img src={withBase(entry.src)} alt={alt ?? entry.alt} loading="lazy" decoding="async" className={cn('h-full w-full object-cover', imgClassName)} />
+    <div ref={ref} className={cn('img-reveal @container relative overflow-hidden bg-cream-200', visible && ready && 'is-visible', className)} style={blurStyle(entry)}>
+      <SmartImg entry={entry} alt={alt ?? entry.alt} sizes={sizes} onReady={() => setReady(true)} className={cn('h-full w-full object-cover', imgClassName)} />
       <ImageBadge keyOrSrc={src} />
     </div>
   );

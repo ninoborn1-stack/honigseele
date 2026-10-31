@@ -6,7 +6,7 @@ import { NewsletterForm } from '@/components/layout/footer';
 import { GoogleReviews } from './social';
 import { Avatar } from '@/components/ui/avatar';
 import { Placeholder } from '@/components/ui/badge';
-import { Bloom } from '@/components/ui/bloom';
+import { FlowerOfLife } from '@/components/brand/flower-of-life';
 import { ArrowLink, ButtonLink } from '@/components/ui/button';
 import { CountUp, Marquee, RevealHeading, RevealImage } from '@/components/ui/motion';
 import { BigNumeral, Panel } from '@/components/ui/panel';
@@ -131,7 +131,7 @@ export function Areas() {
           {list.map((c, i) => (
             <li key={c.id} className="border-b border-honey-950/15">
               <Link href={`/behandlungen/${c.id}/`} className="flex items-center gap-5 py-5">
-                <Photo src={c.image} alt="" className="h-16 w-16 shrink-0 rounded-full" />
+                <Photo src={c.image} alt="" sizes="64px" className="h-16 w-16 shrink-0 rounded-full" />
                 <span className="min-w-0 flex-1">
                   <span className="block font-serif text-2xl leading-tight">{c.name}</span>
                   <span className="text-xs font-medium uppercase tracking-[0.18em] text-amber-800">
@@ -339,7 +339,7 @@ export function CoursePreview() {
     <section className="bg-cream-50 pb-6">
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[60svh] lg:min-h-full">
-          <RevealImage src="home.courses" alt="Yoga in warmem Licht" className="!absolute inset-0" />
+          <RevealImage src="home.courses" alt="Yoga in warmem Licht" sizes="(min-width: 1024px) 50vw, 100vw" className="!absolute inset-0" />
         </div>
         <div className="flex flex-col justify-center px-[clamp(1.25rem,3.5vw,4rem)] py-24 md:py-36 lg:pl-24">
           <Eyebrow>Kurse & Coaching</Eyebrow>
@@ -382,7 +382,7 @@ export function NewsletterSection() {
           speed={90}
           items={Array.from({ length: 8 }, (_, i) => (
             <span key={i} className="px-[3vw]">
-              <Bloom outline={i % 2 === 1} className={cn('h-[30vw] w-[30vw] md:h-[22vw] md:w-[22vw]', i % 2 ? 'rotate-12' : '-rotate-6')} />
+              <FlowerOfLife current filled={i % 2 === 0} size="min(30vw, 340px)" className={cn('md:!h-[22vw] md:!w-[22vw]', i % 2 ? 'rotate-12' : '-rotate-6')} />
             </span>
           ))}
           dots={false}

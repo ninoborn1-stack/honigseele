@@ -23,7 +23,8 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches
       .keys()
-      .then((keys) => Promise.all(keys.filter((k) => k !== VERSION).map((k) => caches.delete(k))))
+      // Nur eigene alte Caches löschen – auf github.io teilen sich mehrere Projekte eine Domain
+      .then((keys) => Promise.all(keys.filter((k) => k.startsWith('honigseele-') && k !== VERSION).map((k) => caches.delete(k))))
       .then(() => self.clients.claim()),
   );
 });

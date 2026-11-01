@@ -16,6 +16,7 @@ import { imageUrl, srcSetOf } from '@/components/ui/photo';
 import { resolveImage } from '@/content/images';
 import { preload } from 'react-dom';
 import { FlowerOfLife } from '@/components/brand/flower-of-life';
+import { introExitAt } from '@/components/brand/intro';
 
 const FULL = 'inset(0% 0% 0% 0% round 0vw 0vw 0vw 0vw)';
 // Maske aus den 19 Kreisen der Blume des Lebens – das Foto öffnet sich aus der Blume
@@ -41,14 +42,18 @@ export function Hero() {
     const html = document.documentElement;
     if (!el) return;
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      html.classList.remove('hero-intro');
+      html.classList.remove('hero-intro', 'intro-handoff');
       return;
     }
     gsap.registerPlugin(ScrollTrigger);
+    // Ein- und Ausblenden der Adressleiste (iOS/Android) löst keine Neuberechnung aus – sonst springt der Hero
+    ScrollTrigger.config({ ignoreMobileResize: true });
     const small = innerWidth < 761;
     const q = gsap.utils.selector(el);
     const media = q('.hero__media')[0] as HTMLElement;
     let intro: gsap.core.Timeline | null = null;
+    let handoffTimer = 0;
+    let onSkip: (() => void) | null = null;
 
     const ctx = gsap.context(() => {
       if (!location.hash && html.classList.contains('hero-intro')) {
@@ -149,15 +154,26 @@ export function Hero() {
             { opacity: 1, y: 0, duration: 1, ease: 'power3.out' },
             2.3,
           );
-        // Läuft gerade das Blumen-Intro (erster Besuch), startet der Hero erst danach
-        if (html.classList.contains('intro-show')) {
+        // Läuft gerade das Blumen-Intro (erster Besuch): Hero startet genau zum Durchgang –
+        // nach derselben Uhr wie das Intro, nicht nach einem Signal (das am Handy verpasst werden könnte).
+        const exitAt = introExitAt();
+        if (exitAt !== null) {
           const timeline = intro;
           timeline.pause();
-          // Nach dem Intro direkt mit dem Aufgehen des Fotos aus der Blume weitermachen
-          addEventListener('honig:intro-done', () => timeline.play(0.75), { once: true });
+          // Foto öffnet sich aus der Größe der Intro-Blume (Durchmesser min(58vw, 300px))
+          mask.size = (Math.min(innerWidth * 0.58, 300) / Math.max(innerWidth, innerHeight)) * 100;
+          setMask();
+          const go = () => {
+            window.clearTimeout(handoffTimer);
+            if (onSkip) removeEventListener('honig:intro-skip', onSkip);
+            timeline.play(0.75);
+          };
+          onSkip = go;
+          handoffTimer = window.setTimeout(go, Math.max(0, exitAt - performance.now()));
+          addEventListener('honig:intro-skip', go, { once: true });
         }
       } else {
-        html.classList.remove('hero-intro');
+        html.classList.remove('hero-intro', 'intro-handoff');
       }
 
       // Scroll: nur fromTo mit festen Werten, damit jede Position eindeutig ist
@@ -210,6 +226,8 @@ export function Hero() {
     addEventListener('keydown', finishIntro, { once: true });
 
     return () => {
+      window.clearTimeout(handoffTimer);
+      if (onSkip) removeEventListener('honig:intro-skip', onSkip);
       removeEventListener('wheel', finishIntro);
       removeEventListener('touchmove', finishIntro);
       removeEventListener('keydown', finishIntro);

@@ -20,7 +20,7 @@ export function BottomNav() {
   return (
     <nav
       aria-label="App-Navigation"
-      className="pb-safe fixed inset-x-0 bottom-0 z-50 border-t border-line-soft bg-cream-50/95 backdrop-blur-md md:hidden"
+      className="pb-safe fixed inset-x-0 bottom-0 z-50 border-t border-line-soft bg-cream-50/[0.97] md:bg-cream-50/95 md:backdrop-blur-md md:hidden"
     >
       <ul className="grid grid-cols-5">
         {items.map(({ href, label, icon: Icon, center, match }) => {

@@ -40,7 +40,7 @@ export function Header() {
       data-site-header
       className={cn(
         'transition-[background-color,color,border-color] duration-500',
-        overHero ? 'border-b border-transparent bg-transparent text-cream-50' : 'border-b border-line-soft bg-cream-50/92 text-honey-950 backdrop-blur-md',
+        overHero ? 'border-b border-transparent bg-transparent text-cream-50' : 'border-b border-line-soft bg-cream-50/[0.97] text-honey-950 md:bg-cream-50/92 md:backdrop-blur-md',
       )}
     >
       <div className="wrap grid h-16 grid-cols-[1fr_auto] items-center gap-4 md:h-20 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">

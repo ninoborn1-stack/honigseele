@@ -112,7 +112,7 @@ export function BookingFlow() {
   return (
     <div className="min-h-svh bg-cream-50">
       {/* Kopf mit Fortschritt */}
-      <div className="pt-safe sticky top-0 z-30 border-b border-line-soft bg-cream-50/95 backdrop-blur-md">
+      <div className="pt-safe sticky top-0 z-30 border-b border-line-soft bg-cream-50/[0.97] md:bg-cream-50/95 md:backdrop-blur-md">
         <div className="wrap flex h-16 items-center justify-between md:h-20">
           <button onClick={back} className="grid h-11 w-11 place-items-center rounded-full hover:bg-cream-100" aria-label="Zurück">
             <ArrowLeft className="h-5 w-5" strokeWidth={1.5} />
@@ -207,7 +207,7 @@ export function BookingFlow() {
 
       {/* Mobile Fußleiste */}
       {(step === 0 || step === 2) && (
-        <div className="pb-safe fixed inset-x-0 bottom-0 z-30 border-t border-line-soft bg-cream-50/95 backdrop-blur-md md:hidden">
+        <div className="pb-safe fixed inset-x-0 bottom-0 z-30 border-t border-line-soft bg-cream-50/[0.97] md:bg-cream-50/95 md:backdrop-blur-md md:hidden">
           <div className="flex items-center justify-between gap-4 px-5 py-3">
             <div className="text-sm">
               <p className="font-serif text-2xl leading-none">{formatEuro(totals?.total ?? q.totalCents)}</p>

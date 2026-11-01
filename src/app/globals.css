@@ -522,7 +522,9 @@ html.hero-intro [data-site-header] {
 }
 
 /* ===================== Intro (erster Besuch) ===================== */
-/* Ablauf: Blume zeichnet sich → Goldschein + Schriftzug → Durchgang (Blume wächst, Grund verschwindet) */
+/* Komplett per CSS getaktet (ab Seitenbeginn) – langsames JavaScript am Handy verzögert nichts.
+   Ablauf: Blume zeichnet sich → Goldschein + Schriftzug → ab --intro-exit-at Durchgang:
+   Blume wächst, Grund verschwindet. Zeiten kommen aus MOTION.intro (layout.tsx). */
 .intro {
   display: none;
 }
@@ -533,6 +535,9 @@ html.intro-show .intro {
   display: grid;
   place-items: center;
   overflow: hidden;
+  animation:
+    introNoPointer 0s linear var(--intro-exit-at, 2100ms) forwards,
+    introGone 0s linear calc(var(--intro-exit-at, 2100ms) + var(--intro-exit-ms, 1000ms)) forwards;
 }
 .intro__bg {
   position: absolute;
@@ -540,7 +545,7 @@ html.intro-show .intro {
   background:
     radial-gradient(60% 50% at 50% 46%, rgb(217 165 74 / 0.1), transparent 70%),
     var(--color-honey-950);
-  transition: opacity 0.8s cubic-bezier(0.65, 0, 0.35, 1) 0.15s;
+  animation: introFade 0.8s cubic-bezier(0.65, 0, 0.35, 1) calc(var(--intro-exit-at, 2100ms) + 150ms) forwards;
 }
 .intro__glow {
   position: absolute;
@@ -552,7 +557,9 @@ html.intro-show .intro {
   border-radius: 50%;
   background: radial-gradient(closest-side, rgb(217 165 74 / 0.32), rgb(217 165 74 / 0.08) 55%, transparent);
   opacity: 0;
-  animation: introGlow 1.4s ease-out 1.3s forwards;
+  animation:
+    introGlow 1.4s ease-out 1.3s forwards,
+    introFade 0.4s ease var(--intro-exit-at, 2100ms) forwards;
 }
 .intro__inner {
   position: relative;
@@ -562,16 +569,14 @@ html.intro-show .intro {
   gap: 2rem;
 }
 .intro__stage {
-  will-change: transform, opacity;
-  transition:
-    transform 1s cubic-bezier(0.7, 0, 0.2, 1),
-    opacity 0.65s ease-in 0.05s;
+  animation: introStageOut var(--intro-exit-ms, 1000ms) cubic-bezier(0.7, 0, 0.2, 1) var(--intro-exit-at, 2100ms) forwards;
 }
 .intro__logo {
   opacity: 0;
   translate: 0 10px;
-  animation: introRise 0.8s var(--ease-soft) 1.35s forwards;
-  transition: opacity 0.3s ease;
+  animation:
+    introRise 0.8s var(--ease-soft) 1.35s forwards,
+    introFade 0.3s ease var(--intro-exit-at, 2100ms) forwards;
 }
 .intro__skip {
   position: fixed;
@@ -581,29 +586,50 @@ html.intro-show .intro {
   text-transform: uppercase;
   color: rgb(246 240 230 / 0.35);
   opacity: 0;
-  animation: introRise 0.6s ease 0.6s forwards;
+  animation:
+    introRise 0.6s ease 0.6s forwards,
+    introFade 0.3s ease var(--intro-exit-at, 2100ms) forwards;
 }
-/* Durchgang */
-html.intro-out .intro__stage {
-  transform: scale(4.5);
+/* Überspringen: alles ruhig ausblenden */
+html.intro-skip .intro {
   opacity: 0;
-}
-html.intro-out .intro__bg,
-html.intro-out .intro__glow,
-html.intro-out .intro__logo,
-html.intro-out .intro__skip {
-  opacity: 0 !important;
-  animation: none;
-}
-html.intro-out .intro__glow {
-  transition: opacity 0.4s ease;
-}
-html.intro-out .intro {
   pointer-events: none;
+  transition: opacity 0.35s ease;
 }
-/* Auf der Startseite übernimmt das Foto die Blume – die Hero-Linien werden dann nicht noch einmal gezeichnet */
+/* Auf der Startseite übernimmt das Foto die Blume: dunkler Grund, keine zweite Linienzeichnung */
+html.intro-handoff .hero {
+  background: var(--color-honey-950);
+}
 html.intro-handoff .hero__bloom {
   opacity: 0 !important;
+}
+@keyframes introStageOut {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(4.5);
+    opacity: 0;
+  }
+}
+@keyframes introFade {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes introNoPointer {
+  to {
+    pointer-events: none;
+  }
+}
+@keyframes introGone {
+  to {
+    visibility: hidden;
+  }
 }
 @keyframes introGlow {
   0% {
@@ -625,24 +651,28 @@ html.intro-handoff .hero__bloom {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .intro__bg,
+  /* Blume steht still, kurze ruhige Überblendung */
+  html {
+    --intro-exit-at: 500ms !important;
+  }
   .intro__stage,
-  .intro__logo {
-    transition-duration: 0.15s !important;
-    transition-delay: 0s !important;
-  }
-  html.intro-out .intro__stage {
-    transform: none;
-  }
+  .intro__glow,
   .intro__logo,
-  .intro__skip,
-  .intro__glow {
-    animation: none;
+  .intro__skip {
+    animation: none !important;
     opacity: 1;
     translate: 0 0;
   }
   .intro__glow {
-    opacity: 0.6;
+    opacity: 0.6 !important;
+  }
+  .intro__bg {
+    animation-duration: 0.15s;
+  }
+  html.intro-show .intro {
+    animation:
+      introFade 0.15s linear var(--intro-exit-at, 2100ms) forwards,
+      introGone 0s linear calc(var(--intro-exit-at, 2100ms) + 150ms) forwards;
   }
 }
 

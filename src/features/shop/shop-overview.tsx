@@ -66,7 +66,7 @@ function Assortment({ products, ritual, setRitual }: { products: Product[]; ritu
       </div>
 
       {/* Filterleiste bleibt beim Scrollen unter der Kopfzeile stehen */}
-      <div className="sticky top-[var(--top-h,96px)] z-20 border-y border-line-soft bg-cream-50/92 backdrop-blur-md">
+      <div className="sticky top-[var(--top-h,96px)] z-20 border-y border-line-soft bg-cream-50/[0.97] md:bg-cream-50/92 md:backdrop-blur-md">
         <div className="wrap no-scrollbar flex gap-2 overflow-x-auto py-3" role="tablist" aria-label="Nach Ritual filtern">
           {[{ id: 'alle' as const, label: 'Alle' }, ...rituals].map((r) => {
             const on = ritual === r.id;

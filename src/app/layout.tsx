@@ -71,6 +71,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         ['--page-in-ms' as string]: `${MOTION.page.inMs}ms`,
         ['--page-offset' as string]: `${MOTION.page.offsetPx}px`,
         ['--page-reduced-ms' as string]: `${MOTION.page.reducedMs}ms`,
+        ['--intro-exit-at' as string]: `${MOTION.intro.drawMs + MOTION.intro.holdMs}ms`,
+        ['--intro-exit-ms' as string]: `${MOTION.intro.exitMs}ms`,
       }}>
       <head>
         {/* Browser soll die Scroll-Position nicht wiederherstellen, sonst startet das Hero-Intro mittendrin */}

@@ -2,28 +2,13 @@
 import { useEffect, useRef, useState, type ImgHTMLAttributes } from 'react';
 import { resolveImage, variantFor, type ImageEntry } from '@/content/images';
 import { cn } from '@/lib/cn';
-import { DEMO, withBase } from '@/lib/config';
+import { withBase } from '@/lib/config';
 
 /** Bild-URL aus Schlüssel oder Pfad; mit `minWidth` die passende kleine Variante (z. B. Vorschaubilder) */
 export const imageUrl = (keyOrSrc: string, minWidth = 1600) => withBase(variantFor(resolveImage(keyOrSrc), minWidth));
 
 /** srcset aus den WebP-Varianten */
 export const srcSetOf = (entry: ImageEntry) => entry.variants?.map(([w, path]) => `${withBase(path)} ${w}w`).join(', ');
-
-/** Dezente Kennzeichnung im Demo-Modus, nur wenn das Bild groß genug ist (Container-Query) */
-export function ImageBadge({ keyOrSrc }: { keyOrSrc: string }) {
-  const entry = resolveImage(keyOrSrc);
-  if (!DEMO || !entry.placeholder) return null;
-  return (
-    <span
-      title={`Platzhalter – gewünscht: ${entry.wanted}`}
-      className="pointer-events-none absolute bottom-3 left-3 z-[1] hidden items-center gap-1.5 rounded-full bg-cream-50/80 px-2.5 py-1 text-[0.6rem] font-medium uppercase tracking-[0.16em] text-honey-950/80 backdrop-blur @min-[14rem]:inline-flex"
-    >
-      <span className="h-1.5 w-1.5 rounded-full bg-amber-600" />
-      Platzhalter
-    </span>
-  );
-}
 
 /**
  * Optimiertes Bild: WebP-Varianten per srcset, Unschärfe-Vorschau sofort, scharfes Bild blendet
@@ -105,7 +90,6 @@ export function Photo({
       ) : (
         <SmartImg entry={entry} alt={text} sizes={sizes} priority={priority} onError={() => setFailed(true)} className={cn('h-full w-full object-cover', imgClassName)} />
       )}
-      <ImageBadge keyOrSrc={src} />
     </div>
   );
 }

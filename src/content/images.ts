@@ -1,6 +1,6 @@
 // Zentrale Bildzuordnung. Bilder werden über Schlüssel (z. B. "hero.shop") eingebunden.
-// Annas Fotos: Datei nach public/images/stock/ legen, in content/images.json "src" eintragen,
-// "placeholder" auf false setzen und `npm run images` ausführen (WebP-Varianten + Vorschau).
+// Echte Fotos liegen verkleinert in public/images/real/ (Originale im ignorierten Ordner "Pics Website").
+// Neues Foto: Datei dort ablegen, in content/images.json "src" eintragen und `npm run images` ausführen.
 import imagesJson from '@content/images.json';
 import generatedJson from '@content/images.generated.json';
 
@@ -8,8 +8,9 @@ export interface ImageEntry {
   src: string;
   alt: string;
   placeholder: boolean;
-  motif: string;
-  wanted: string;
+  /** Motiv-Beschreibung (Ersatzanzeige, falls das Bild nicht lädt) */
+  motif?: string;
+  wanted?: string;
   /** aus scripts/optimize-images.py */
   width?: number;
   height?: number;

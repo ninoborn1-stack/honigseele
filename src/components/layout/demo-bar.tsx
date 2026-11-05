@@ -27,7 +27,7 @@ export function DemoBar() {
       <div className="wrap flex items-center justify-between gap-3 py-1.5">
         <p className="truncate">
           <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-honey-400 align-middle" />
-          Demo – Inhalte teilweise Platzhalter
+          Demo-Version
         </p>
         <div className="flex shrink-0 items-center gap-1">
           <span className="hidden text-cream-100/60 sm:inline">Ansicht:</span>

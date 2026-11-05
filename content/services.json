@@ -420,7 +420,7 @@
     "categoryId": "laser",
     "group": "Vorgespräch",
     "name": "Vorgespräch & Probeschuss",
-    "description": "Pflicht vor der ersten Laser-Behandlung: Hauttyp, Haartyp, Medikamente, Behandlungsplan. Dauer und Preis: Platzhalter.",
+    "description": "Pflicht vor der ersten Laser-Behandlung: Hauttyp, Haartyp, Medikamente, Behandlungsplan. Dauer und",
     "durationMin": 30,
     "priceCents": 0,
     "isConsultation": true,
@@ -1867,7 +1867,7 @@
     "categoryId": "coaching",
     "group": "Coaching",
     "name": "Seelengeflüster",
-    "description": "Coaching-Session mit Asita. Preis und Dauer: Platzhalter.",
+    "description": "Coaching-Session mit Asita.",
     "durationMin": 60,
     "priceCents": 9000,
     "isPlaceholder": true
@@ -1880,7 +1880,7 @@
     "categoryId": "coaching",
     "group": "Coaching",
     "name": "Einzelcoaching",
-    "description": "Preis und Dauer: Platzhalter.",
+    "description": "Preis und Dauer erfährst Du bei uns im Studio.",
     "durationMin": 60,
     "priceCents": 9000,
     "isPlaceholder": true
@@ -1893,7 +1893,7 @@
     "categoryId": "coaching",
     "group": "Coaching",
     "name": "Stress-Coaching",
-    "description": "Preis und Dauer: Platzhalter.",
+    "description": "Preis und Dauer erfährst Du bei uns im Studio.",
     "durationMin": 60,
     "priceCents": 9000,
     "isPlaceholder": true
@@ -1906,7 +1906,7 @@
     "categoryId": "coaching",
     "group": "Ernährung",
     "name": "Ganzheitliche Ernährungsberatung",
-    "description": "Mit Larissa. Preis und Dauer: Platzhalter.",
+    "description": "Mit Larissa.",
     "durationMin": 60,
     "priceCents": 8000,
     "isPlaceholder": true

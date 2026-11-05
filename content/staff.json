@@ -2,7 +2,7 @@
   {
     "id": "anna",
     "name": "Anna",
-    "role": "Inhaberin · Depiladora",
+    "role": "Geschäftsführerin · Depiladora",
     "title": "Die Seele des Honigs",
     "bio": "Vor sieben Jahren hat Anna die Honigseele gegründet – aus dem Wunsch nach einem Ort, an dem sich alle willkommen fühlen. Sie wachst mit Honigwachs, mit ruhiger Hand und viel Herz.",
     "bioPlaceholder": false,
@@ -15,7 +15,123 @@
     "languages": [
       "DE",
       "EN"
-    ]
+    ],
+    "photo": "team.anna"
+  },
+  {
+    "id": "justyna",
+    "name": "Justyna",
+    "role": "Kosmetikerin · Podologin",
+    "bio": "Justyna ist Kosmetikerin und Podologin: Sie pflegt Gesicht, Hände und Füße – auch medizinisch.",
+    "bioPlaceholder": false,
+    "skills": [
+      "Gesicht",
+      "Mani & Pedi"
+    ],
+    "avatarTone": "honey",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "EN"
+    ],
+    "photo": "team.justyna"
+  },
+  {
+    "id": "sandra",
+    "name": "Sandra",
+    "role": "Laser · Depiladora · Körper · Kosmetik · Pediküre",
+    "bio": "Sandra arbeitet mit Laser und Honigwachs, kümmert sich um Körperbehandlungen, Gesichtspflege und Pediküre.",
+    "bioPlaceholder": false,
+    "skills": [
+      "Laser",
+      "Waxing",
+      "Körper",
+      "Gesicht",
+      "Mani & Pedi"
+    ],
+    "avatarTone": "honey",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE"
+    ],
+    "photo": "team.sandra"
+  },
+  {
+    "id": "jamilah",
+    "name": "Jamilah",
+    "role": "Laser · Depiladora · Wimpernstylistin",
+    "bio": "Jamilah ist bei uns Expertin für Laser-Haarentfernung, wachst mit Honigwachs und bringt Wimpern und Brauen in Form.",
+    "bioPlaceholder": false,
+    "skills": [
+      "Laser",
+      "Waxing",
+      "Wimpern & Brauen"
+    ],
+    "avatarTone": "cream",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "EN"
+    ],
+    "photo": "team.jamilah"
+  },
+  {
+    "id": "lisz",
+    "name": "Lisz",
+    "role": "Depiladora · Kosmetik",
+    "bio": "Lisz wachst mit ruhiger Hand und verwöhnt Dich mit Gesichtsbehandlungen aus unserer Naturkosmetik.",
+    "bioPlaceholder": false,
+    "skills": [
+      "Waxing",
+      "Gesicht"
+    ],
+    "avatarTone": "amber",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "EN"
+    ],
+    "photo": "team.lisz"
+  },
+  {
+    "id": "selena",
+    "name": "Selena",
+    "role": "Depiladora",
+    "bio": "Selena ist Depiladora und wachst mit warmem Honigwachs – auf Deutsch, Spanisch oder Englisch.",
+    "bioPlaceholder": false,
+    "skills": [
+      "Waxing"
+    ],
+    "avatarTone": "sand",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE",
+      "ES",
+      "EN"
+    ],
+    "photo": "team.selena"
+  },
+  {
+    "id": "yvonne",
+    "name": "Yvonne",
+    "role": "Depiladora",
+    "bio": "Yvonne ist Depiladora und nimmt sich für jede Waxing-Behandlung genau die Zeit, die Du brauchst.",
+    "bioPlaceholder": false,
+    "skills": [
+      "Waxing"
+    ],
+    "avatarTone": "cream",
+    "bookable": true,
+    "visible": true,
+    "languages": [
+      "DE"
+    ],
+    "photo": "team.yvonne"
   },
   {
     "id": "asita",
@@ -31,7 +147,7 @@
     ],
     "avatarTone": "amber",
     "bookable": true,
-    "visible": true,
+    "visible": false,
     "languages": [
       "DE",
       "EN"
@@ -49,116 +165,7 @@
     ],
     "avatarTone": "sand",
     "bookable": true,
-    "visible": true,
-    "languages": [
-      "DE",
-      "EN"
-    ]
-  },
-  {
-    "id": "jamilah",
-    "name": "Jamilah",
-    "role": "Laser · Depiladora · Wimpernstylistin",
-    "bio": "Jamilah ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Jamilah bald selbst vor.",
-    "bioPlaceholder": true,
-    "skills": [
-      "Laser",
-      "Waxing",
-      "Wimpern & Brauen"
-    ],
-    "avatarTone": "cream",
-    "bookable": true,
-    "visible": true,
-    "languages": [
-      "DE",
-      "EN"
-    ]
-  },
-  {
-    "id": "sandra",
-    "name": "Sandra",
-    "role": "Laser · Depiladora · Körper · Kosmetik · Pediküre",
-    "bio": "Sandra ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Sandra bald selbst vor.",
-    "bioPlaceholder": true,
-    "skills": [
-      "Laser",
-      "Waxing",
-      "Körper",
-      "Gesicht",
-      "Mani & Pedi"
-    ],
-    "avatarTone": "honey",
-    "bookable": true,
-    "visible": true,
-    "languages": [
-      "DE"
-    ]
-  },
-  {
-    "id": "lisz",
-    "name": "Lisz",
-    "role": "Depiladora · Kosmetik",
-    "bio": "Lisz ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Lisz bald selbst vor.",
-    "bioPlaceholder": true,
-    "skills": [
-      "Waxing",
-      "Gesicht"
-    ],
-    "avatarTone": "amber",
-    "bookable": true,
-    "visible": true,
-    "languages": [
-      "DE",
-      "EN"
-    ]
-  },
-  {
-    "id": "selena",
-    "name": "Selena",
-    "role": "Depiladora",
-    "bio": "Selena ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Selena bald selbst vor.",
-    "bioPlaceholder": true,
-    "skills": [
-      "Waxing"
-    ],
-    "avatarTone": "sand",
-    "bookable": true,
-    "visible": true,
-    "languages": [
-      "DE",
-      "ES",
-      "EN"
-    ]
-  },
-  {
-    "id": "yvonne",
-    "name": "Yvonne",
-    "role": "Depiladora",
-    "bio": "Yvonne ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Yvonne bald selbst vor.",
-    "bioPlaceholder": true,
-    "skills": [
-      "Waxing"
-    ],
-    "avatarTone": "cream",
-    "bookable": true,
-    "visible": true,
-    "languages": [
-      "DE"
-    ]
-  },
-  {
-    "id": "justyna",
-    "name": "Justyna",
-    "role": "Kosmetikerin · Podologin",
-    "bio": "Justyna ist Teil der Honigseelen. Kurzporträt folgt – hier stellt sich Justyna bald selbst vor.",
-    "bioPlaceholder": true,
-    "skills": [
-      "Gesicht",
-      "Mani & Pedi"
-    ],
-    "avatarTone": "honey",
-    "bookable": true,
-    "visible": true,
+    "visible": false,
     "languages": [
       "DE",
       "EN"
@@ -178,7 +185,7 @@
     ],
     "avatarTone": "amber",
     "bookable": true,
-    "visible": true,
+    "visible": false,
     "languages": [
       "DE"
     ]
@@ -194,7 +201,7 @@
     ],
     "avatarTone": "sand",
     "bookable": true,
-    "visible": true,
+    "visible": false,
     "languages": [
       "DE",
       "IT",
@@ -212,7 +219,7 @@
     ],
     "avatarTone": "cream",
     "bookable": true,
-    "visible": true,
+    "visible": false,
     "languages": [
       "DE",
       "EN"
@@ -230,7 +237,7 @@
     ],
     "avatarTone": "honey",
     "bookable": true,
-    "visible": true,
+    "visible": false,
     "languages": [
       "DE"
     ]
@@ -246,7 +253,7 @@
     ],
     "avatarTone": "amber",
     "bookable": false,
-    "visible": true,
+    "visible": false,
     "languages": [
       "DE",
       "EN"
@@ -263,7 +270,7 @@
     ],
     "avatarTone": "sand",
     "bookable": false,
-    "visible": true,
+    "visible": false,
     "languages": [
       "DE",
       "IT"

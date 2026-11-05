@@ -7,7 +7,6 @@ import { site } from '@/content';
 import { getAdapter } from '@/data';
 import { legalNav, mainNav } from '@/lib/nav';
 import { useData } from '@/lib/use-data';
-import { Placeholder } from '../ui/badge';
 import { FlowerOfLife } from '@/components/brand/flower-of-life';
 import { Logo } from './logo';
 import { InlineLoading } from '@/components/ui/loading';
@@ -77,7 +76,7 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <p className="eyebrow">Öffnungszeiten {settings.openingHoursPlaceholder && <Placeholder className="ml-1" />}</p>
+            <p className="eyebrow">Öffnungszeiten</p>
             <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-6 gap-y-1.5 text-sm">
               {settings.openingHours.map((h) => (
                 <div key={h.weekday} className="contents">

@@ -4,7 +4,6 @@
 import { CalendarPlus, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
-import { Placeholder } from '@/components/ui/badge';
 import { priceRange } from '@/domain/pricing';
 import type { Service, Staff, StaffService } from '@/domain/types';
 import { cn } from '@/lib/cn';
@@ -130,7 +129,7 @@ export function PriceList({
                       <div className="grid grid-cols-1 items-center gap-x-5 gap-y-3 py-5 sm:grid-cols-[1fr_7rem_auto] md:px-3">
                         <div className="min-w-0">
                           <p className="font-serif text-[1.55rem] leading-tight md:text-[1.8rem]">
-                            {s.name} {s.isPlaceholder && <Placeholder className="ml-1 align-middle" />}
+                            {s.name}
                           </p>
                           {s.requiresConsultation && <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-amber-800">nach Vorgespräch</p>}
                           {s.description && <p className="mt-1.5 max-w-xl text-sm text-muted">{s.description}</p>}

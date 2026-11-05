@@ -2,7 +2,6 @@
 import { ArrowLeft, Check, Minus, Plus, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Placeholder } from '@/components/ui/badge';
 import { ArrowLink, Button } from '@/components/ui/button';
 import { RevealHeading } from '@/components/ui/motion';
 import { Reveal } from '@/components/ui/reveal';
@@ -66,7 +65,6 @@ export function ProductDetail({ initial }: { initial: Product }) {
 
               <Reveal delay={150}>
                 <p className="mt-10 max-w-lg text-lg leading-relaxed text-muted md:text-xl">{product.description}</p>
-                {product.isPlaceholder && <Placeholder label="Produkttext folgt" className="mt-4" />}
               </Reveal>
 
               <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -113,7 +111,7 @@ export function ProductDetail({ initial }: { initial: Product }) {
                         <Plus className="h-4 w-4" strokeWidth={1.5} />
                       </span>
                     </summary>
-                    <div className="max-w-lg pb-6 text-muted">{s.text ?? <Placeholder label="Text folgt von Anna" />}</div>
+                    <div className="max-w-lg pb-6 text-muted">{s.text}</div>
                   </details>
                 ))}
               </div>

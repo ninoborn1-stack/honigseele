@@ -46,18 +46,18 @@ docs/               ARCHITEKTUR.md, PLATZHALTER.md, DEMO-RUNDGANG.md
 
 Warm, weich, hochwertig. Lifestyle-Marke. Nicht „KI-generisch“.
 
-| Token | Wert | Einsatz |
-|---|---|---|
-| `honey-950` | #2B2118 | dunkle Flächen, Text |
-| `cream-50` | #F6F0E6 | Hintergrund |
-| `cream-100` | #EFE4D2 | zweiter Hintergrund |
-| `card` | #FBF7F0 | Karten |
+| Token       | Wert    | Einsatz                                                |
+| ----------- | ------- | ------------------------------------------------------ |
+| `honey-950` | #2B2118 | dunkle Flächen, Text                                   |
+| `cream-50`  | #F6F0E6 | Hintergrund                                            |
+| `cream-100` | #EFE4D2 | zweiter Hintergrund                                    |
+| `card`      | #FBF7F0 | Karten                                                 |
 | `honey-400` | #D9A54A | Akzent (nur Flächen/Buttons, nicht als Text auf Creme) |
-| `honey-300` | #E6BD6E | Akzent-Text auf dunkel |
-| `amber-600` | #B87A1E | kursive Akzentwörter |
-| `amber-800` | #8A5A12 | Eyebrows, Links |
-| `muted` | #5A4A3A | Fließtext sekundär |
-| `line` | #CDB894 | feine Linien |
+| `honey-300` | #E6BD6E | Akzent-Text auf dunkel                                 |
+| `amber-600` | #B87A1E | kursive Akzentwörter                                   |
+| `amber-800` | #8A5A12 | Eyebrows, Links                                        |
+| `muted`     | #5A4A3A | Fließtext sekundär                                     |
+| `line`      | #CDB894 | feine Linien                                           |
 
 - Schriften: **Cormorant Garamond** (Überschriften, kursive Akzentwörter via `<em>` bzw. `Title` mit `*Wort*`), **DM Sans** (Text/UI). Selbst gehostet über `@fontsource`.
 - **Layout volle Breite:** Container ist die Utility `wrap` (max. 1760 px, Rand `clamp(1.25rem, 3.5vw, 4rem)`). Keine schmalen `max-w-6xl`-Container mehr. Große Display-Typo über `Title size="display|h1|h2|h3"`.
@@ -72,7 +72,7 @@ Warm, weich, hochwertig. Lifestyle-Marke. Nicht „KI-generisch“.
 - `FlowerOfLife` nie mit `vector-effect: non-scaling-stroke` kombinieren (Chrome berechnet sonst die Strichlänge falsch); Strichstärke per `strokeWidth` in Zeichnungseinheiten.
 - **Seitenwechsel** (`src/components/layout/page-transition.tsx`): weiches Aus-/Einblenden von `[data-page]`, Navigation startet sofort, Blume nur bei langsamem Laden, danach Fokus auf die H1.
 - **Ladezustände** nur mit `Loading`/`InlineLoading` (`src/components/ui/loading.tsx`, Blume `pulse`, `role="status"`). Keine Spinner.
-- **Bilder** nur über Schlüssel aus `content/images.json` (`Photo`, `RevealImage`, `imageUrl()`), nie Pfade im Code. Annas Fotos: nach `public/images/stock/` legen, dort `src` tauschen, `placeholder: false`, dann **`npm run images`** (WebP-Varianten 480–2400 px + Unschärfe-Vorschau → `public/images/opt/`, `content/images.generated.json`). `sizes` setzen: `100vw` für volle Breite, kleine Pixelwerte für Vorschaubilder.
+- **Bilder** nur über Schlüssel aus `content/images.json` (`Photo`, `RevealImage`, `imageUrl()`), nie Pfade im Code. Echte Fotos: Originale im ignorierten Ordner `Pics Website/`, verkleinert (≤ 2400 px) nach `public/images/real/`, in `images.json` eintragen, dann **`npm run images`** (WebP-Varianten 480–2400 px + Unschärfe-Vorschau → `public/images/opt/`, `content/images.generated.json`). `sizes` setzen: `100vw` für volle Breite, kleine Pixelwerte für Vorschaubilder.
 - **Performance:** Seed der Demo-Daten muss schnell bleiben (kein `findSlots` in Schleifen). Hero-Bild wird per `preload` geladen. Ziel Lighthouse (Handy) ≥ 80.
 - **Logo-Slot** (`src/components/layout/logo.tsx`) liest `content/brand.json`; Original-Logo nach `public/brand/`. Logo nie verzerren, umfärben oder animieren.
 - Bewegung ruhig (Fade/Rise, `Reveal`), `prefers-reduced-motion` respektieren.
@@ -85,12 +85,14 @@ Du-Ansprache, herzlich, gendergerecht (Kund*innen), „alle sind willkommen“. 
 
 ## Demo-Modus (`NEXT_PUBLIC_DEMO=true`)
 
-Leiste oben (Rollenwechsel Kundin/Team, Mails, Zurücksetzen), Platzhalter-Badges (`<Placeholder />`, nur im Demo-Modus sichtbar), `robots: noindex`. Seed: Termine der nächsten 3 Wochen, Kundin **Lena** (Termin in < 24 Std. für Storno-Demo), Gutschein **HONIG50** (50 €), abgelaufener **SOMMER2024**, Lenas Gutschein **HS-LENA-2026**. Mail-Vorschau unter `/demo/mails/`.
+Leiste oben (Rollenwechsel Kundin/Team, Mails, Zurücksetzen), `robots: noindex`. Keine sichtbaren Platzhalter-Hinweise mehr; nur ausgedachte Bewertungen tragen `<Placeholder label="Beispiel" />`. Seed: Termine der nächsten 3 Wochen, Kundin **Lena** (Termin in < 24 Std. für Storno-Demo), Gutschein **HONIG50** (50 €), abgelaufener **SOMMER2024**, Lenas Gutschein **HS-LENA-2026**. Mail-Vorschau unter `/demo/mails/`.
 
 ## Konventionen
 
 - TypeScript strict, kleine Komponenten, Kommentare knapp und auf Deutsch.
 - Formulare: react-hook-form + zod. Datum: date-fns + @date-fns/tz.
-- Neue Platzhalter immer mit `<Placeholder />` markieren **und** in `docs/PLATZHALTER.md` eintragen.
+- Offene Inhalte in `docs/PLATZHALTER.md` eintragen (nicht sichtbar auf der Seite markieren).
+- **Team** zeigt nur Personen mit echtem Foto (`visible: true` + `photo: "team.<id>"`). Anna ist Geschäftsführerin. Ausgeblendete bleiben buchbar.
+- Ändern sich Inhalte, die der MockAdapter seedet (Team, Leistungen), `DB_VERSION` in `src/data/mock/seed.ts` erhöhen.
 - Vor dem Commit: `npm run typecheck && npm run lint && npm test && npm run build`.
 - Änderungen erst als Vorschau-Deploy ansehen, dann freigeben.

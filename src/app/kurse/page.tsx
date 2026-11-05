@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Placeholder } from '@/components/ui/badge';
 import { ArrowLink, ButtonLink } from '@/components/ui/button';
 import { CountUp, RevealHeading } from '@/components/ui/motion';
 import { PageHero } from '@/components/ui/page-hero';
@@ -93,7 +92,6 @@ export default function CoursesPage() {
       {/* 1. Seitenkopf */}
       <PageHero
         image="courses.hero"
-        alt="Yoga in warmem Licht"
         eyebrow="Kurse & Coaching · Gemeinschaft in Kreuzberg"
         title="Bewegen, atmen, *verbinden*."
         lead="Yoga, Breathwork, Kakaozeremonie, unser Frauen-Netzwerk – und Coaching für das, was Dich innen bewegt."
@@ -129,9 +127,6 @@ export default function CoursesPage() {
             </li>
           ))}
         </ul>
-        <p className="wrap pb-6 text-center">
-          <Placeholder label="Termine, Preise & Plätze: Demo-Werte" />
-        </p>
       </section>
 
       {/* 4. Kursplan */}
@@ -203,7 +198,6 @@ export default function CoursesPage() {
               <Eyebrow>Events</Eyebrow>
               <RevealHeading as="h2" text="Lesungen, Märkte, *Abende*." className="mt-7 text-[clamp(2.4rem,4.4vw,4.6rem)] leading-[0.98]" />
               <p className="mt-6 max-w-md text-lg text-muted">Hier stehen bald unsere Events. Melde Dich zum Newsletter an, dann verpasst Du nichts.</p>
-              <Placeholder label="Event-Inhalte folgen" className="mt-4" />
             </div>
             <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
               <ButtonLink href="/#newsletter" size="lg" arrow>

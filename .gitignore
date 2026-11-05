@@ -6,3 +6,6 @@ next-env.d.ts
 .DS_Store
 .env*.local
 .claude/launch.json
+
+# Original-Fotos (groß), verkleinert liegen sie in public/images/real/
+Pics Website/

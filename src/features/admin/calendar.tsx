@@ -363,7 +363,7 @@ export function AdminCalendar() {
                       className="border-line-soft flex flex-1 items-center gap-2 border-l px-3 py-3"
                       style={{ minWidth: COL_MIN }}
                     >
-                      <Avatar name={s.name} tone={s.avatarTone} size="sm" />
+                      <Avatar name={s.name} tone={s.avatarTone} photo={s.photo} size="sm" />
                       <span>
                         <span className="block text-base font-medium">{s.name}</span>
                         <span className="text-muted text-sm">

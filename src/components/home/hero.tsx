@@ -8,7 +8,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowDown, MapPin, Phone, Star } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 import { ButtonLink } from '@/components/ui/button';
-import { Placeholder } from '@/components/ui/badge';
 import { block, site } from '@/content';
 import { useBlock } from '@/lib/use-data';
 import { withBase } from '@/lib/config';
@@ -342,10 +341,6 @@ export function Hero() {
             </span>
           </div>
         </div>
-        <Placeholder
-          label="Hier kommt das große Bild aus dem Laden"
-          className="absolute bottom-4 left-4 z-[4] md:bottom-16"
-        />
       </div>
     </section>
   );

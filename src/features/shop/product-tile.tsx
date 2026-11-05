@@ -3,7 +3,6 @@
 import { Check, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Placeholder } from '@/components/ui/badge';
 import type { Product } from '@/domain/types';
 import { cn } from '@/lib/cn';
 import { formatEuro } from '@/lib/format';
@@ -63,7 +62,7 @@ export function ProductTile({ product, index = 0, className }: { product: Produc
         </Link>
         <div className="mt-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-t border-line-soft pt-3">
           <p className="min-w-0 text-sm text-muted">
-            {product.size ?? 'Handgemacht in Berlin'} {product.isPlaceholder && <Placeholder label="Text folgt" className="ml-1" />}
+            {product.size ?? 'Handgemacht in Berlin'}
           </p>
           <p className="whitespace-nowrap font-serif text-xl sm:text-2xl">{formatEuro(product.priceCents)}</p>
         </div>

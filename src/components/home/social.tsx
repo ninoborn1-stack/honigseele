@@ -107,12 +107,7 @@ export function InstagramFeed() {
                   </li>
                 ))}
               </ul>
-              {ig.placeholder && (
-                <p className="mt-6 text-center">
-                  <Placeholder label="Platzhalter-Kacheln · Live-Anbindung folgt" />
-                </p>
-              )}
-            </div>
+                          </div>
           )}
         </div>
       </div>

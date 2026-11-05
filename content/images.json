@@ -1,191 +1,207 @@
 {
   "hero.shop": {
-    "src": "/images/stock/hero.jpg",
-    "alt": "Ruhiger, sonniger Raum in der Honigseele",
-    "placeholder": true,
-    "motif": "Warmer, ruhiger Spa-Raum mit Liegen",
-    "wanted": "Großes Foto aus dem Laden (Einstiegsbild der heutigen Seite), quer, mind. 2400 px breit"
+    "src": "/images/real/laden-blume.jpg",
+    "alt": "Sonniger Raum der Honigseele mit der Blume des Lebens an der Wand",
+    "placeholder": false
   },
   "hero.massage": {
-    "src": "/images/stock/massage.jpg",
-    "alt": "Massage mit warmen Steinen",
-    "placeholder": true,
-    "motif": "Hot-Stone-Massage, Rücken",
-    "wanted": "Massage-Foto aus der Honigseele (Number-One-Empfehlung), quer, mind. 2400 px"
+    "src": "/images/real/massage-kerze.jpg",
+    "alt": "Massage im warmen Kerzenlicht",
+    "placeholder": false
   },
   "home.packages": {
-    "src": "/images/stock/package.jpg",
-    "alt": "Handtuch, Kerze und Pflege",
-    "placeholder": true,
-    "motif": "Handtuch, Kerze, Pflege",
-    "wanted": "Stimmungsbild eines Wohlfühl-Pakets im Laden"
+    "src": "/images/real/gesicht-maske.jpg",
+    "alt": "Kundin entspannt mit Gesichtsmaske",
+    "placeholder": false
   },
   "home.manufaktur": {
-    "src": "/images/stock/products.jpg",
-    "alt": "Naturkosmetik in Glasflaschen",
-    "placeholder": true,
-    "motif": "Öle in Glasflaschen, Kerze",
-    "wanted": "Produktfoto der eigenen Pflegeserie"
+    "src": "/images/real/regal-pflege.jpg",
+    "alt": "Regal mit der eigenen Naturkosmetik der Honigseele",
+    "placeholder": false
   },
   "home.courses": {
-    "src": "/images/stock/yoga.jpg",
-    "alt": "Yoga in warmem Licht",
-    "placeholder": true,
-    "motif": "Yoga im Gegenlicht",
-    "wanted": "Foto aus einer Yoga-Stunde im Kursraum (ohne erkennbare Gesichter oder mit Einverständnis)"
+    "src": "/images/real/laden-weit.jpg",
+    "alt": "Heller Raum der Honigseele mit Holzboden und Pflanzen",
+    "placeholder": false
   },
   "about.hero": {
-    "src": "/images/stock/room.jpg",
-    "alt": "Heller Raum mit Pflanzen in der Honigseele",
-    "placeholder": true,
-    "motif": "Heller Raum mit Pflanzen",
-    "wanted": "Raumfoto aus der Honigseele"
+    "src": "/images/real/team-gruppe.jpg",
+    "alt": "Das Team der Honigseele",
+    "placeholder": false
   },
   "about.value.welcome": {
-    "src": "/images/stock/room.jpg",
-    "alt": "Heller Raum",
-    "placeholder": true,
-    "motif": "Heller Raum",
-    "wanted": "Empfang / Wartebereich"
+    "src": "/images/real/team-empfang.jpg",
+    "alt": "Justyna und Sandra am Empfang der Honigseele",
+    "placeholder": false
   },
   "about.value.self": {
-    "src": "/images/stock/plants.jpg",
-    "alt": "Pampasgras vor beigem Hintergrund",
-    "placeholder": true,
-    "motif": "Pampasgras",
-    "wanted": "Detailfoto aus dem Laden"
+    "src": "/images/real/gesicht-ruhe.jpg",
+    "alt": "Kundin mit geschlossenen Augen bei der Gesichtsbehandlung",
+    "placeholder": false
   },
   "about.value.holistic": {
-    "src": "/images/stock/towels.jpg",
-    "alt": "Gerollte Handtücher",
-    "placeholder": true,
-    "motif": "Gerollte Handtücher",
-    "wanted": "Behandlungsraum-Detail"
+    "src": "/images/real/gesicht-massage.jpg",
+    "alt": "Sanfte Gesichtsmassage",
+    "placeholder": false
   },
   "about.value.natural": {
-    "src": "/images/stock/honey.jpg",
-    "alt": "Honig im Licht",
-    "placeholder": true,
-    "motif": "Honigglas im Licht",
-    "wanted": "Pflegeserie / Honigwachs"
+    "src": "/images/real/koerperpackung.jpg",
+    "alt": "Naturkosmetische Körperpackung wird aufgetragen",
+    "placeholder": false
   },
   "courses.hero": {
-    "src": "/images/stock/yoga.jpg",
-    "alt": "Yoga in warmem Licht",
-    "placeholder": true,
-    "motif": "Yoga im Gegenlicht",
-    "wanted": "Foto aus dem Kursraum"
+    "src": "/images/real/laden-raum.jpg",
+    "alt": "Lichtdurchfluteter Raum der Honigseele",
+    "placeholder": false
   },
   "courses.community": {
-    "src": "/images/stock/plants.jpg",
-    "alt": "Pampasgras",
-    "placeholder": true,
-    "motif": "Pampasgras",
-    "wanted": "Foto von einem Workshop oder Netzwerk-Abend"
+    "src": "/images/real/team-empfang-hoch.jpg",
+    "alt": "Zwei Honigseelen am Empfang",
+    "placeholder": false
   },
   "courses.coaching": {
     "src": "/images/stock/coaching.jpg",
     "alt": "Notizbuch und Tee",
-    "placeholder": true,
-    "motif": "Notizbuch und Tee",
-    "wanted": "Foto aus dem Beratungsraum"
+    "placeholder": true
   },
   "courses.training": {
-    "src": "/images/stock/waxing.jpg",
-    "alt": "Glatte Beine",
-    "placeholder": true,
-    "motif": "Glatte Beine",
-    "wanted": "Foto aus der Waxing-Schulung"
+    "src": "/images/real/waxing-gesicht.jpg",
+    "alt": "Waxing mit Honigwachs",
+    "placeholder": false
   },
   "contact.side": {
-    "src": "/images/stock/plants.jpg",
-    "alt": "Pampasgras in warmem Licht",
-    "placeholder": true,
-    "motif": "Pampasgras",
-    "wanted": "Außen- oder Eingangsfoto der Hornstraße 1"
+    "src": "/images/real/empfang.jpg",
+    "alt": "Empfang der Honigseele in der Hornstraße 1",
+    "placeholder": false
   },
   "category.waxing": {
-    "src": "/images/stock/waxing.jpg",
-    "alt": "Waxing",
-    "placeholder": true,
-    "motif": "Glatte Beine",
-    "wanted": "Foto Waxing-Kabine"
+    "src": "/images/real/waxing-arm.jpg",
+    "alt": "Waxing am Arm",
+    "placeholder": false
   },
   "category.laser": {
-    "src": "/images/stock/laser.jpg",
-    "alt": "Laser-Haarentfernung",
-    "placeholder": true,
-    "motif": "Laser am Bein",
-    "wanted": "Foto Laserraum / Gerät"
+    "src": "/images/real/laser.jpg",
+    "alt": "Laser-Haarentfernung in der Honigseele",
+    "placeholder": false
   },
   "category.gesicht-augen": {
-    "src": "/images/stock/face.jpg",
-    "alt": "Gesicht & Augen",
-    "placeholder": true,
-    "motif": "Serum auf Haut",
-    "wanted": "Foto Gesichtsbehandlung"
+    "src": "/images/real/gesicht-pinsel.jpg",
+    "alt": "Gesichtsbehandlung mit Pinsel und Maske",
+    "placeholder": false
   },
   "category.koerper-massagen": {
-    "src": "/images/stock/massage.jpg",
-    "alt": "Körper & Massagen",
-    "placeholder": true,
-    "motif": "Hot Stones",
-    "wanted": "Foto Massageraum"
+    "src": "/images/real/massage-kerze.jpg",
+    "alt": "Massage im warmen Kerzenlicht",
+    "placeholder": false
   },
   "category.mani-pedikuere": {
     "src": "/images/stock/hands.jpg",
     "alt": "Mani- & Pediküre",
-    "placeholder": true,
-    "motif": "Gepflegte Hände",
-    "wanted": "Foto Hand-/Fußpflege"
+    "placeholder": true
   },
   "category.wohlfuehl-pakete": {
-    "src": "/images/stock/package.jpg",
-    "alt": "Wohlfühl-Pakete",
-    "placeholder": true,
-    "motif": "Spa-Stillleben",
-    "wanted": "Foto Paket-Situation"
+    "src": "/images/real/maske-tonerde.jpg",
+    "alt": "Tonerde-Maske im Wohlfühl-Paket",
+    "placeholder": false
   },
   "category.schroepfen": {
-    "src": "/images/stock/room.jpg",
-    "alt": "Schröpfen",
-    "placeholder": true,
-    "motif": "Heller Raum",
-    "wanted": "Foto Schröpfen"
+    "src": "/images/real/laden-weit.jpg",
+    "alt": "Behandlungsraum der Honigseele",
+    "placeholder": false
   },
   "category.somatic-bodywork": {
-    "src": "/images/stock/plants.jpg",
-    "alt": "Somatic Bodywork",
-    "placeholder": true,
-    "motif": "Pampasgras",
-    "wanted": "Foto Somatic Bodywork"
+    "src": "/images/real/massage-arm.jpg",
+    "alt": "Achtsame Berührung am Arm",
+    "placeholder": false
   },
   "category.coaching": {
     "src": "/images/stock/coaching.jpg",
     "alt": "Coaching & Ernährung",
-    "placeholder": true,
-    "motif": "Notizbuch und Tee",
-    "wanted": "Foto Coaching"
+    "placeholder": true
   },
   "product.placeholder": {
-    "src": "/images/stock/products.jpg",
-    "alt": "Pflegeprodukt",
-    "placeholder": true,
-    "motif": "Glasflaschen",
-    "wanted": "Einzelne Produktfotos der Pflegeserie (freigestellt)"
+    "src": "/images/real/regal-pflege.jpg",
+    "alt": "Pflegeprodukt der Honigseele",
+    "placeholder": false
   },
   "product.voucher": {
     "src": "/images/stock/voucher.jpg",
     "alt": "Gutschein",
-    "placeholder": true,
-    "motif": "Geschenk mit Kordel",
-    "wanted": "Foto/Grafik Gutscheinkarte"
+    "placeholder": true
   },
   "product.yoga-card": {
-    "src": "/images/stock/yoga.jpg",
-    "alt": "Yoga-Karte",
-    "placeholder": true,
-    "motif": "Yoga",
-    "wanted": "Foto Kursraum"
+    "src": "/images/real/laden-raum.jpg",
+    "alt": "Kursraum der Honigseele",
+    "placeholder": false
+  },
+  "insta.1": {
+    "src": "/images/real/gesicht-roller.jpg",
+    "alt": "Gesichtsbehandlung mit Jade-Roller",
+    "placeholder": false
+  },
+  "insta.2": {
+    "src": "/images/real/waxing-gesicht.jpg",
+    "alt": "Waxing mit Honigwachs",
+    "placeholder": false
+  },
+  "insta.3": {
+    "src": "/images/real/gua-sha.jpg",
+    "alt": "Gua-Sha-Massage",
+    "placeholder": false
+  },
+  "insta.4": {
+    "src": "/images/real/brauen.jpg",
+    "alt": "Augenbrauen-Styling",
+    "placeholder": false
+  },
+  "insta.5": {
+    "src": "/images/real/gesicht-haende.jpg",
+    "alt": "Gesichtsmassage",
+    "placeholder": false
+  },
+  "insta.6": {
+    "src": "/images/real/koerperpackung-2.jpg",
+    "alt": "Körperpackung",
+    "placeholder": false
+  },
+  "team.anna": {
+    "src": "/images/real/team-anna.jpg",
+    "alt": "Porträt von Anna",
+    "placeholder": false
+  },
+  "team.justyna": {
+    "src": "/images/real/team-justyna.jpg",
+    "alt": "Porträt von Justyna",
+    "placeholder": false
+  },
+  "team.lisz": {
+    "src": "/images/real/team-lisz.jpg",
+    "alt": "Porträt von Lisz",
+    "placeholder": false
+  },
+  "team.sandra": {
+    "src": "/images/real/team-sandra.jpg",
+    "alt": "Porträt von Sandra",
+    "placeholder": false
+  },
+  "team.selena": {
+    "src": "/images/real/team-selena.jpg",
+    "alt": "Porträt von Selena",
+    "placeholder": false
+  },
+  "team.yvonne": {
+    "src": "/images/real/team-yvonne.jpg",
+    "alt": "Porträt von Yvonne",
+    "placeholder": false
+  },
+  "team.jamilah": {
+    "src": "/images/real/team-jamilah.jpg",
+    "alt": "Porträt von Jamilah",
+    "placeholder": false
+  },
+  "team.gruppe": {
+    "src": "/images/real/team-gruppe.jpg",
+    "alt": "Das Team der Honigseele",
+    "placeholder": false
   }
 }

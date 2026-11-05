@@ -2,7 +2,6 @@
 // Kursplan als Wochenansicht mit Ticket-Buchung (Einzelticket oder 5er/10er-Karte).
 import { ChevronLeft, ChevronRight, Ticket, Users } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import { Placeholder } from '@/components/ui/badge';
 import { Button, ButtonLink } from '@/components/ui/button';
 import { Drawer } from '@/components/ui/drawer';
 import { Field, Input } from '@/components/ui/form';
@@ -180,7 +179,7 @@ function TicketDrawer({ session, course, onClose }: { session: CourseSession | n
               {berlinTime(session.start)} – {berlinTime(session.end)} · {formatDuration(course.durationMin)} · mit {course.leaderName}
             </p>
             <p className="mt-4 text-sm">
-              {course.description} {course.isPlaceholder && <Placeholder label="Details folgen" />}
+              {course.description}
             </p>
             {done ? (
               <div className="mt-8 rounded-2xl bg-honey-200/40 p-5">

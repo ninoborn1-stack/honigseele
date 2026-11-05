@@ -58,7 +58,7 @@ export function StepStaff({
         {people.map((p) => (
           <li key={p.id}>
             <button onClick={() => choose(p.id)} className={cn('flex min-h-20 w-full items-center gap-4 rounded-2xl border p-4 text-left transition-colors', draft.staffId === p.id ? 'border-honey-950 bg-card' : 'border-line hover:border-honey-950')}>
-              <Avatar name={p.name} tone={p.avatarTone} />
+              <Avatar name={p.name} tone={p.avatarTone} photo={p.photo} />
               <span className="flex-1">
                 <span className="block font-serif text-2xl">{p.name}</span>
                 <span className="text-sm text-muted">{p.title ?? p.role}</span>

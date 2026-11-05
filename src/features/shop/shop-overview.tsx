@@ -3,7 +3,6 @@
 import { Check, Plus, Ticket } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Placeholder } from '@/components/ui/badge';
 import { ArrowLink, Button, ButtonLink } from '@/components/ui/button';
 import { RevealHeading } from '@/components/ui/motion';
 import { Reveal } from '@/components/ui/reveal';
@@ -95,7 +94,7 @@ function Assortment({ products, ritual, setRitual }: { products: Product[]; ritu
         </ul>
         {list.length === 0 && <p className="py-16 text-center text-muted">In diesem Ritual gibt es gerade nichts.</p>}
         <p className="mt-16 text-sm text-muted">
-          Alle Preise inkl. MwSt. Versand innerhalb Deutschlands {formatEuro(site.shipping.flatCents)}. <Placeholder label="Weitere Produkte folgen" className="ml-1" />
+          Alle Preise inkl. MwSt. Versand innerhalb Deutschlands {formatEuro(site.shipping.flatCents)}.
         </p>
       </div>
     </section>
@@ -220,7 +219,7 @@ function Cards({ cards }: { cards: Product[] }) {
             <Reveal as="li" key={c.id} className="grid grid-cols-[1fr_auto] items-center gap-6 border-b border-honey-950/20 py-8 md:py-10">
               <div>
                 <p className="font-serif text-[clamp(2rem,3.6vw,3.6rem)] leading-none">
-                  {c.name} {c.isPlaceholder && <Placeholder className="ml-1 align-middle" />}
+                  {c.name}
                 </p>
                 <p className="mt-3 max-w-md text-muted">{c.description}</p>
               </div>

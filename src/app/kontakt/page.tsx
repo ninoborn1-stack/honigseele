@@ -55,7 +55,7 @@ export default function ContactPage() {
               })}
             </ul>
             <p className="mt-8 text-muted">Wir sprechen {site.brand.teamLanguages.join(', ')}.</p>
-            <RevealImage src="contact.side" alt="Pampasgras in warmem Licht" className="mt-14 hidden aspect-[16/10] rounded-[2rem] lg:block" />
+            <RevealImage src="contact.side" className="mt-14 hidden aspect-[16/10] rounded-[2rem] lg:block" />
           </div>
           <div className="lg:sticky lg:top-[calc(var(--top-h,96px)+2rem)] lg:self-start">
             <div className="rounded-[2rem] border border-line bg-card p-8 md:p-12">

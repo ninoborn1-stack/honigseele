@@ -278,7 +278,7 @@ export function AdminTeam() {
                 onClick={() => setEditing(p)}
                 className="border-line-soft bg-card hover:border-honey-950 flex min-h-24 w-full items-start gap-4 rounded-2xl border p-5 text-left"
               >
-                <Avatar name={p.name} tone={p.avatarTone} />
+                <Avatar name={p.name} tone={p.avatarTone} photo={p.photo} />
                 <span className="min-w-0 flex-1">
                   <span className="flex items-center gap-2 font-serif text-2xl">
                     {p.name}

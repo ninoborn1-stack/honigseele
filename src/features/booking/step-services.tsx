@@ -1,7 +1,6 @@
 'use client';
 import { Check, Info, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import { Placeholder } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/form';
 import { laserGate } from '@/domain/slots';
@@ -110,7 +109,7 @@ export function StepServices({
                         </span>
                         <span className="flex-1">
                           <span className="block">
-                            {s.name} {s.isPlaceholder && <Placeholder className="ml-1" />}
+                            {s.name}
                           </span>
                           <span className="block text-xs text-muted">
                             {formatDuration(s.durationMin)}

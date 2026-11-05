@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { cn } from '@/lib/cn';
 import { resolveImage } from '@/content/images';
-import { blurStyle, ImageBadge, SmartImg } from './photo';
+import { blurStyle, SmartImg } from './photo';
 
 /** Setzt .is-visible, sobald das Element ins Bild kommt */
 export function useInView<T extends HTMLElement>(margin = '0px 0px -10% 0px') {
@@ -83,7 +83,6 @@ export function RevealImage({ src, alt, className, imgClassName, sizes }: { src:
   return (
     <div ref={ref} className={cn('img-reveal @container relative overflow-hidden bg-cream-200', visible && ready && 'is-visible', className)} style={blurStyle(entry)}>
       <SmartImg entry={entry} alt={alt ?? entry.alt} sizes={sizes} onReady={() => setReady(true)} className={cn('h-full w-full object-cover', imgClassName)} />
-      <ImageBadge keyOrSrc={src} />
     </div>
   );
 }

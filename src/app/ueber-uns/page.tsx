@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Star } from 'lucide-react';
-import { Placeholder } from '@/components/ui/badge';
 import { ArrowLink } from '@/components/ui/button';
 import { CountUp, RevealHeading } from '@/components/ui/motion';
 import { PageHero } from '@/components/ui/page-hero';
@@ -13,7 +12,7 @@ import { TeamGrid } from '@/features/about/team-grid';
 
 export const metadata: Metadata = {
   title: 'Über uns – die Honigseelen',
-  description: 'Das Team der Honigseele in Berlin-Kreuzberg: Depiladoras, Kosmetikerinnen, Masseurinnen, Podologin, Coaches und Yogalehrerinnen.',
+  description: 'Das Team der Honigseele in Berlin-Kreuzberg: Depiladoras, Kosmetikerinnen, Laser-Expertinnen und Podologin – mit Anna als Geschäftsführerin.',
 };
 
 const values = [
@@ -29,7 +28,7 @@ export default function AboutPage() {
     { value: 7, label: 'Jahre in Kreuzberg' },
     { value: team.length, label: 'Honigseelen' },
     { value: site.brand.rating.value, decimals: 1, label: `Sterne bei ${site.brand.rating.source}` },
-    { value: site.brand.teamLanguages.length, label: 'Sprachen im Team' },
+    { value: new Set(team.flatMap((s) => s.languages)).size, label: 'Sprachen im Team' },
   ];
 
   return (
@@ -37,7 +36,7 @@ export default function AboutPage() {
       {/* 1. Seitenkopf */}
       <PageHero
         image="about.hero"
-        alt="Heller Raum mit Pflanzen in der Honigseele"
+        imageClassName="object-[50%_8%]"
         eyebrow="Über uns · seit sieben Jahren in Kreuzberg"
         title="Wir sind die *Honigseelen*."
         lead="Ein Ort für Frauen und für alle Menschen, die sich Zeit für sich nehmen wollen."
@@ -56,7 +55,7 @@ export default function AboutPage() {
             <p className="mx-auto mt-10 max-w-4xl font-serif text-[clamp(1.7rem,3vw,3rem)] leading-[1.25]">„{block('about.text')}“</p>
           </Reveal>
           <Reveal delay={250}>
-            <p className="mt-10 text-xs font-medium uppercase tracking-[0.22em] text-muted">Anna Kaiser · Gründerin, „Die Seele des Honigs“</p>
+            <p className="mt-10 text-xs font-medium uppercase tracking-[0.22em] text-muted">Anna Kaiser · Gründerin & Geschäftsführerin, „Die Seele des Honigs“</p>
           </Reveal>
         </div>
       </section>
@@ -92,7 +91,6 @@ export default function AboutPage() {
             <Eyebrow className="justify-center">Das Team</Eyebrow>
             <Title className="mt-7">Wer Dich *empfängt*.</Title>
             <p className="mt-6 text-muted md:text-lg">Dazu kommen externe Masseur*innen und Therapeut*innen, die bei uns Räume mieten.</p>
-            <Placeholder label="Teamfotos & Porträts folgen" className="mt-5" />
           </div>
           <TeamGrid initialStaff={staff} />
         </div>
@@ -117,7 +115,6 @@ export default function AboutPage() {
               <Eyebrow>Jobs</Eyebrow>
               <RevealHeading as="h2" text="Werde eine *Honigseele*." className="mt-7 text-[clamp(2.4rem,4.4vw,4.6rem)] leading-[0.98]" />
               <p className="mt-6 max-w-md text-lg text-muted">{block('jobs.text')}</p>
-              <Placeholder label="Stellenanzeigen folgen" className="mt-4" />
             </div>
             <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
               <InquiryButton kind="job" label="Bewerben" title="Bewerbung" placeholder="Erzähl uns von Dir." />

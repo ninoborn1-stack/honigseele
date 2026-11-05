@@ -18,7 +18,7 @@ export function PageHero({
   imageClassName,
 }: {
   image: string;
-  alt: string;
+  alt?: string;
   eyebrow: string;
   title: string;
   lead: string;

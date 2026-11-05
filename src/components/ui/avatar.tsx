@@ -1,4 +1,6 @@
+import { resolveImage, variantFor } from '@/content/images';
 import type { Tone } from '@/domain/types';
+import { withBase } from '@/lib/config';
 import { cn } from '@/lib/cn';
 import { initials } from '@/lib/format';
 
@@ -10,8 +12,11 @@ const tones: Record<Tone, string> = {
   sage: 'bg-[radial-gradient(circle_at_30%_25%,#e5e7d6,#c9cdb4)] text-honey-950',
 };
 
-export function Avatar({ name, tone, size = 'md', className }: { name: string; tone: Tone; size?: 'sm' | 'md' | 'lg'; className?: string }) {
+/** Rundes Bild der Person (Foto-Schlüssel aus content/images.json) oder Initialen */
+export function Avatar({ name, tone, photo, size = 'md', className }: { name: string; tone: Tone; photo?: string; size?: 'sm' | 'md' | 'lg'; className?: string }) {
   const sizes = { sm: 'h-10 w-10 text-sm', md: 'h-16 w-16 text-xl', lg: 'h-28 w-28 text-4xl' };
+  if (photo)
+    return <img src={withBase(variantFor(resolveImage(photo), 240))} alt="" loading="lazy" decoding="async" className={cn('inline-block shrink-0 rounded-full bg-cream-200 object-cover object-[50%_20%]', sizes[size], className)} />;
   return (
     <span
       aria-hidden

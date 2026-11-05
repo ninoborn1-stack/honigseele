@@ -245,16 +245,16 @@
     ]
   },
   "instagram": {
-    "placeholder": true,
+    "placeholder": false,
     "handle": "@honigseele.berlin",
     "url": "https://instagram.com/honigseele.berlin",
     "tiles": [
-      "home.manufaktur",
-      "hero.massage",
-      "about.value.natural",
-      "about.value.holistic",
-      "home.packages",
-      "about.value.self"
+      "insta.1",
+      "insta.2",
+      "insta.3",
+      "insta.4",
+      "insta.5",
+      "insta.6"
     ]
   }
 }

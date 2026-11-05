@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TickerBand } from '@/components/ui/ticker';
 import { notFound } from 'next/navigation';
-import { Placeholder } from '@/components/ui/badge';
 import { ArrowLink, ButtonLink } from '@/components/ui/button';
 import { Parallax, RevealHeading } from '@/components/ui/motion';
 import { Photo } from '@/components/ui/photo';
@@ -105,9 +104,7 @@ export default async function AreaPage({ params }: { params: Promise<{ bereich: 
           <RevealHeading as="h1" onLoad text={category.name} className="mt-5 max-w-[12ch] font-serif text-[clamp(2.6rem,11vw,12rem)] leading-[0.88] tracking-[-0.03em]" />
           <div className="mt-10 grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
             <p className="max-w-xl text-lg text-cream-100/90 md:text-xl">{category.teaser}</p>
-            {category.isPlaceholder ? (
-              <Placeholder label="Inhalte folgen von Anna" />
-            ) : (
+            {category.isPlaceholder ? null : (
               <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
                 <ButtonLink href={`/buchen/?kategorie=${category.id}`} variant="honey" size="lg" arrow>
                   Jetzt buchen
@@ -166,7 +163,6 @@ export default async function AreaPage({ params }: { params: Promise<{ bereich: 
                 <Eyebrow>Vorbereitung & Nachsorge</Eyebrow>
                 <Title className="mt-6">So wird es *richtig schön*.</Title>
               </div>
-              {info.placeholder && <Placeholder />}
             </div>
             <div className="mt-20 grid gap-16 md:grid-cols-3 md:gap-10 lg:gap-16">
               {[
@@ -201,7 +197,6 @@ export default async function AreaPage({ params }: { params: Promise<{ bereich: 
               <Eyebrow>Häufige Fragen</Eyebrow>
               <Title className="mt-6">Gut zu *wissen*.</Title>
               <p className="mt-6 max-w-sm text-muted">Noch etwas offen? Ruf uns an oder schreib uns auf WhatsApp – wir helfen gern.</p>
-              <Placeholder label="Antworten: Entwurf" className="mt-6" />
             </div>
             <Accordion items={questions} />
           </div>

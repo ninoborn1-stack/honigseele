@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { NewsletterForm } from '@/components/layout/footer';
 import { GoogleReviews } from './social';
-import { Avatar } from '@/components/ui/avatar';
 import { Placeholder } from '@/components/ui/badge';
 import { FlowerOfLife } from '@/components/brand/flower-of-life';
 import { ArrowLink, ButtonLink } from '@/components/ui/button';
@@ -191,7 +190,7 @@ export function Packages() {
           </div>
         </div>
         <div className="relative min-h-[46vh] md:min-h-0">
-          <RevealImage src="home.packages" alt="Handtuch, Kerze und Pflege" className="!absolute inset-0 md:inset-6 md:rounded-[2rem] lg:inset-8 lg:rounded-t-[3rem]" />
+          <RevealImage src="home.packages" className="!absolute inset-0 md:inset-6 md:rounded-[2rem] lg:inset-8 lg:rounded-t-[3rem]" />
         </div>
       </div>
     </Panel>
@@ -260,7 +259,7 @@ export function Manufaktur() {
     <Panel>
       <div className="grid md:grid-cols-[1fr_1.05fr]">
         <div className="relative order-2 min-h-[46vh] md:order-1 md:min-h-0">
-          <RevealImage src="home.manufaktur" alt="Naturkosmetik in Glasflaschen" className="!absolute inset-0 md:inset-6 md:rounded-[2rem] lg:inset-8 lg:rounded-t-[3rem]" />
+          <RevealImage src="home.manufaktur" className="!absolute inset-0 md:inset-6 md:rounded-[2rem] lg:inset-8 lg:rounded-t-[3rem]" />
         </div>
         <div className="order-1 flex flex-col justify-between gap-12 p-8 sm:p-12 md:order-2 lg:px-16 lg:py-20">
           <div>
@@ -296,29 +295,23 @@ export function TeamTeaser() {
       <div className="wrap flex flex-col items-center text-center">
         <Eyebrow className="justify-center">Unser Team</Eyebrow>
         <Title className="mt-7 max-w-[16ch]">Die Hände hinter der *Honigseele*.</Title>
+      </div>
+      <div className="mt-14 px-[clamp(0.75rem,1.6vw,1.75rem)] md:mt-20">
+        <RevealImage src="team.gruppe" sizes="100vw" className="aspect-[4/3] rounded-t-[2.5rem] rounded-b-[1.5rem] sm:aspect-[16/9] md:rounded-t-[4rem] lg:aspect-[21/9]" imgClassName="object-[50%_35%]" />
+      </div>
+      <div className="wrap flex flex-col items-center text-center">
         <Reveal delay={150}>
-          <ul className="mt-12 flex justify-center" aria-label={`${shown.length} Honigseelen`}>
-            {shown.map((s, i) => (
-              <li key={s.id} className={cn('-ml-3.5 first:ml-0', i >= 6 && 'hidden md:block')} style={{ zIndex: shown.length - i }}>
-                <Avatar name={s.name} tone={s.avatarTone} className="!h-14 !w-14 text-lg ring-4 ring-cream-50 lg:!h-16 lg:!w-16 lg:text-xl" />
-                <span className="sr-only">{s.name}</span>
-              </li>
+          <ul className="mt-12 flex flex-wrap justify-center gap-x-6 gap-y-2 font-serif text-2xl md:gap-x-9 md:text-3xl" aria-label={`${shown.length} Honigseelen`}>
+            {shown.map((s) => (
+              <li key={s.id}>{s.name}</li>
             ))}
-            <li className="-ml-3.5 md:hidden" aria-hidden>
-              <span className="grid h-14 w-14 place-items-center rounded-full bg-honey-950 text-sm font-medium text-cream-50 ring-4 ring-cream-50">+{shown.length - 6}</span>
-            </li>
           </ul>
-        </Reveal>
-        <Reveal delay={250}>
-          <p className="mx-auto mt-10 max-w-lg text-muted md:text-lg">
-            Depiladoras, Kosmetikerinnen, Masseurinnen, eine Podologin, Coaches und Yogalehrerinnen – jede mit ihrer eigenen Gabe und mit Zeit für Dich.
+          <p className="mx-auto mt-8 max-w-lg text-muted md:text-lg">
+            Depiladoras, Kosmetikerinnen, Laser-Expertinnen und eine Podologin – jede mit ihrer eigenen Gabe und mit Zeit für Dich.
           </p>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
             <ArrowLink href="/ueber-uns/#team">Lerne uns kennen</ArrowLink>
           </div>
-          <p className="mt-6">
-            <Placeholder label="Teamfotos folgen" />
-          </p>
         </Reveal>
       </div>
     </section>
@@ -339,7 +332,7 @@ export function CoursePreview() {
     <section className="bg-cream-50 pb-6">
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[60svh] lg:min-h-full">
-          <RevealImage src="home.courses" alt="Yoga in warmem Licht" sizes="(min-width: 1024px) 50vw, 100vw" className="!absolute inset-0" />
+          <RevealImage src="home.courses" sizes="(min-width: 1024px) 50vw, 100vw" className="!absolute inset-0" />
         </div>
         <div className="flex flex-col justify-center px-[clamp(1.25rem,3.5vw,4rem)] py-24 md:py-36 lg:pl-24">
           <Eyebrow>Kurse & Coaching</Eyebrow>

@@ -1,10 +1,10 @@
 import brand from '@content/brand.json';
 import { cn } from '@/lib/cn';
-import { DEMO, withBase } from '@/lib/config';
+import { withBase } from '@/lib/config';
 
 /**
  * Logo-Slot: liest aus content/brand.json. Solange das Original fehlt, dezente Wortmarke
- * in Cormorant Garamond – im Demo-Modus mit kleinem Platzhalter-Punkt.
+ * in Cormorant Garamond. Original-Logo über content/brand.json.
  * Das Logo wird nie verzerrt, umgefärbt oder animiert.
  */
 export function Logo({ className, light }: { className?: string; light?: boolean }) {
@@ -26,7 +26,6 @@ export function Logo({ className, light }: { className?: string; light?: boolean
         Honig
       </em>
       seele
-      {DEMO && brand.placeholder && <span title="Platzhalter: Original-Logo folgt" className="absolute -right-2 top-0 h-1.5 w-1.5 rounded-full bg-amber-600/70" />}
     </span>
   );
 }

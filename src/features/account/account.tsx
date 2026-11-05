@@ -2,7 +2,7 @@
 import { CalendarClock, Gift, LogOut, Package, Sparkles, Ticket, User } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Badge, Placeholder } from '@/components/ui/badge';
+import { Badge } from '@/components/ui/badge';
 import { Button, ButtonLink } from '@/components/ui/button';
 import { Drawer } from '@/components/ui/drawer';
 import { Checkbox, Field, Input } from '@/components/ui/form';
@@ -334,7 +334,7 @@ function ProfileForm({ customer }: { customer: Customer }) {
       <Checkbox checked={Boolean(c.newsletter)} onChange={(e) => setC({ ...c, newsletter: e.target.checked })} label="Ich möchte Post aus der Honigseele (Newsletter)." />
       <Checkbox checked={Boolean(c.student)} onChange={(e) => setC({ ...c, student: e.target.checked })} label="Ich bin Schüler*in oder studiere (Ermäßigung beim Waxing)." />
       <p className="text-sm text-muted">
-        Laser-Vorgespräch: {c.laserConsultationDone ? 'erledigt – Du kannst Laser-Behandlungen direkt buchen.' : 'noch offen.'} <Placeholder label="Demo" />
+        Laser-Vorgespräch: {c.laserConsultationDone ? 'erledigt – Du kannst Laser-Behandlungen direkt buchen.' : 'noch offen.'}
       </p>
       <Button type="submit">{saved ? 'Gespeichert' : 'Speichern'}</Button>
     </form>

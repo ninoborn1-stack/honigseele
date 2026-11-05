@@ -36,7 +36,6 @@ export default function AboutPage() {
       {/* 1. Seitenkopf */}
       <PageHero
         image="about.hero"
-        imageClassName="object-[50%_8%]"
         eyebrow="Über uns · seit sieben Jahren in Kreuzberg"
         title="Wir sind die *Honigseelen*."
         lead="Ein Ort für Frauen und für alle Menschen, die sich Zeit für sich nehmen wollen."

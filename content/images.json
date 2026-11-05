@@ -27,12 +27,14 @@
   "about.hero": {
     "src": "/images/real/team-gruppe.jpg",
     "alt": "Das Team der Honigseele",
-    "placeholder": false
+    "placeholder": false,
+    "position": "50% 0%"
   },
   "about.value.welcome": {
     "src": "/images/real/team-empfang.jpg",
     "alt": "Justyna und Sandra am Empfang der Honigseele",
-    "placeholder": false
+    "placeholder": false,
+    "position": "50% 0%"
   },
   "about.value.self": {
     "src": "/images/real/gesicht-ruhe.jpg",
@@ -57,7 +59,8 @@
   "courses.community": {
     "src": "/images/real/team-empfang-hoch.jpg",
     "alt": "Zwei Honigseelen am Empfang",
-    "placeholder": false
+    "placeholder": false,
+    "position": "50% 0%"
   },
   "courses.coaching": {
     "src": "/images/stock/coaching.jpg",
@@ -202,6 +205,7 @@
   "team.gruppe": {
     "src": "/images/real/team-gruppe.jpg",
     "alt": "Das Team der Honigseele",
-    "placeholder": false
+    "placeholder": false,
+    "position": "50% 0%"
   }
 }

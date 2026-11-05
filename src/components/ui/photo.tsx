@@ -21,6 +21,7 @@ export function SmartImg({
   priority,
   className,
   onReady,
+  style,
   ...rest
 }: { entry: ImageEntry; alt: string; sizes?: string; priority?: boolean; onReady?: () => void } & Omit<ImgHTMLAttributes<HTMLImageElement>, 'src' | 'srcSet' | 'sizes' | 'alt'>) {
   const ref = useRef<HTMLImageElement>(null);
@@ -47,6 +48,7 @@ export function SmartImg({
       fetchPriority={priority ? 'high' : undefined}
       decoding="async"
       onLoad={done}
+      style={entry.position ? { objectPosition: entry.position, transformOrigin: entry.position, ...style } : style}
       className={cn('transition-opacity duration-700 ease-[var(--ease-soft)]', loaded ? 'opacity-100' : 'opacity-0', className)}
       {...rest}
     />
@@ -54,7 +56,7 @@ export function SmartImg({
 }
 
 /** Hintergrund mit Unschärfe-Vorschau, bis das echte Bild da ist */
-export const blurStyle = (entry: ImageEntry) => (entry.blur ? { backgroundImage: `url(${entry.blur})`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined);
+export const blurStyle = (entry: ImageEntry) => (entry.blur ? { backgroundImage: `url(${entry.blur})`, backgroundSize: 'cover', backgroundPosition: entry.position ?? 'center' } : undefined);
 
 /**
  * Bild aus der zentralen Zuordnung (Schlüssel wie "hero.shop") oder per Pfad.

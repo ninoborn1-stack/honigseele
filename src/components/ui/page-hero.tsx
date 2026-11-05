@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { resolveImage } from '@/content/images';
 import { cn } from '@/lib/cn';
 import { Parallax, RevealHeading } from './motion';
 import { Photo } from './photo';
@@ -26,12 +27,15 @@ export function PageHero({
   /** z. B. object-[50%_30%], um den Bildausschnitt zu steuern */
   imageClassName?: string;
 }) {
+  // Bilder mit Ausschnitt „oben“ (z. B. Teamfotos): oben bündig, Parallaxe-Reserve nur nach unten,
+  // damit keine Köpfe abgeschnitten werden (die Parallaxe bewegt das Bild nur nach oben).
+  const top = resolveImage(image).position?.endsWith(' 0%');
   return (
     <section className="relative flex min-h-[520px] items-end overflow-hidden bg-honey-950 text-cream-50 md:h-[calc(88svh-var(--top-h,96px))] md:max-h-[860px] md:min-h-[600px]">
-      <Parallax speed={-0.12} className="absolute -inset-y-[8%] inset-x-0">
+      <Parallax speed={-0.12} className={cn('absolute inset-x-0', top ? '-bottom-[16%] -top-[2%]' : '-inset-y-[8%]')}>
         <Photo src={image} alt={alt} priority sizes="100vw" className="h-full w-full !bg-honey-950" imgClassName={cn('animate-fade', imageClassName)} />
       </Parallax>
-      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgb(28_21_15/0.94)_0%,rgb(28_21_15/0.66)_42%,rgb(28_21_15/0.4)_72%,rgb(28_21_15/0.6)_100%)]" />
+      <div aria-hidden className={cn('absolute inset-0', top ? 'bg-[linear-gradient(0deg,rgb(28_21_15/0.94)_0%,rgb(28_21_15/0.66)_42%,rgb(28_21_15/0.3)_72%,rgb(28_21_15/0.3)_100%)]' : 'bg-[linear-gradient(0deg,rgb(28_21_15/0.94)_0%,rgb(28_21_15/0.66)_42%,rgb(28_21_15/0.4)_72%,rgb(28_21_15/0.6)_100%)]')} />
       <div className="wrap relative pb-10 pt-32 md:pb-16 md:pt-40">
         <Eyebrow className="!text-honey-300">{eyebrow}</Eyebrow>
         <RevealHeading as="h1" onLoad text={title} className="mt-6 max-w-[16ch] font-serif text-[clamp(2.6rem,7.6vw,8.5rem)] leading-[0.92] tracking-[-0.03em]" />

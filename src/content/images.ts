@@ -11,6 +11,8 @@ export interface ImageEntry {
   /** Motiv-Beschreibung (Ersatzanzeige, falls das Bild nicht lädt) */
   motif?: string;
   wanted?: string;
+  /** Bildausschnitt (CSS object-position), z. B. "50% 0%" damit Köpfe oben nie abgeschnitten werden */
+  position?: string;
   /** aus scripts/optimize-images.py */
   width?: number;
   height?: number;

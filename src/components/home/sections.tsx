@@ -297,7 +297,7 @@ export function TeamTeaser() {
         <Title className="mt-7 max-w-[16ch]">Die Hände hinter der *Honigseele*.</Title>
       </div>
       <div className="mt-14 px-[clamp(0.75rem,1.6vw,1.75rem)] md:mt-20">
-        <RevealImage src="team.gruppe" sizes="100vw" className="aspect-[4/3] rounded-t-[2.5rem] rounded-b-[1.5rem] sm:aspect-[16/9] md:rounded-t-[4rem] lg:aspect-[21/9]" imgClassName="object-[50%_35%]" />
+        <RevealImage src="team.gruppe" sizes="100vw" className="aspect-[4/3] rounded-t-[2.5rem] rounded-b-[1.5rem] sm:aspect-[16/9] md:rounded-t-[4rem] lg:aspect-[21/9]" />
       </div>
       <div className="wrap flex flex-col items-center text-center">
         <Reveal delay={150}>

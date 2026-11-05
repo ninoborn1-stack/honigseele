@@ -83,6 +83,16 @@ function Assortment({ products, ritual, setRitual }: { products: Product[]; ritu
               </button>
             );
           })}
+          {/* Sprungmarken zu Bestseller und Gutscheinen weiter unten */}
+          <span aria-hidden className="mx-1 w-px shrink-0 self-stretch bg-line-soft" />
+          {[
+            { href: '#bestseller', label: 'Bestseller' },
+            { href: '#gutscheine', label: 'Gutscheine' },
+          ].map((l) => (
+            <a key={l.href} href={l.href} className="flex min-h-11 shrink-0 items-center rounded-full border border-line px-5 text-sm text-honey-950 transition-colors duration-300 hover:border-honey-950">
+              {l.label}
+            </a>
+          ))}
         </div>
       </div>
 
@@ -106,10 +116,10 @@ function Favorite({ product }: { product: Product }) {
   const [added, setAdded] = useState(false);
   const steps = care.waxing?.aftercare ?? [];
   return (
-    <section className="grid bg-cream-100 lg:grid-cols-2">
+    <section id="bestseller" className="grid bg-cream-100 lg:grid-cols-2">
       <div className="relative min-h-[70svh] lg:min-h-full">
         <ProductVisual product={product} large className="absolute inset-0" />
-        <span className="absolute left-[clamp(1.25rem,3.5vw,4rem)] top-8 rounded-full bg-cream-50/90 px-4 py-2 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-honey-950 backdrop-blur">Unser Liebling</span>
+        <span className="absolute left-[clamp(1.25rem,3.5vw,4rem)] top-8 rounded-full bg-cream-50/90 px-4 py-2 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-honey-950 backdrop-blur">Bestseller · Unser Liebling</span>
       </div>
       <div className="px-[clamp(1.25rem,3.5vw,4rem)] py-24 md:py-32 lg:pl-20">
         <Eyebrow>Nach dem Waxing</Eyebrow>

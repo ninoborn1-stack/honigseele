@@ -1,8 +1,9 @@
+import { Photo } from '@/components/ui/photo';
 import type { Product, Tone } from '@/domain/types';
 import { cn } from '@/lib/cn';
 
-// Platzhalter-Darstellung der Pflegeserie: Tiegel, Flasche oder Tube als feine Linienzeichnung
-// auf getönter Fläche. Wird durch echte Produktfotos ersetzt (docs/PLATZHALTER.md).
+// Produktbild: echtes Foto aus content/images.json; ohne Foto (neues Produkt im Admin) eine feine
+// Linienzeichnung (Tiegel, Flasche oder Tube) auf getönter Fläche.
 const surfaces: Record<Tone, string> = {
   honey: 'bg-[radial-gradient(80%_70%_at_30%_20%,#f1d49c,#e6bd6e)]',
   cream: 'bg-[radial-gradient(80%_70%_at_30%_20%,#fbf7f0,#e6d6bc)]',
@@ -68,7 +69,22 @@ function Shape({ shape }: { shape: Shape }) {
   }
 }
 
-export function ProductVisual({ product, className, large }: { product: Product; className?: string; large?: boolean }) {
+/** Hat das Produkt ein echtes Foto? */
+export const hasPhoto = (p: Product) => p.kind === 'pflege' && Boolean(p.image) && p.image !== 'product.placeholder';
+
+export function ProductVisual({ product, className, large, image, sizes }: { product: Product; className?: string; large?: boolean; image?: string; sizes?: string }) {
+  if (hasPhoto(product))
+    return (
+      <div className={cn('group/visual relative overflow-hidden bg-cream-100', className)}>
+        <Photo
+          src={image ?? product.image}
+          alt={product.name}
+          sizes={sizes ?? (large ? '(min-width: 1024px) 55vw, 100vw' : '(min-width: 1024px) 30vw, 50vw')}
+          className="!absolute inset-0 !bg-cream-100"
+          imgClassName="transition-transform duration-[1200ms] ease-[var(--ease-soft)] group-hover/visual:scale-[1.04]"
+        />
+      </div>
+    );
   return (
     <div className={cn('group/visual relative grid place-items-center overflow-hidden', surfaces[product.tone], ink[product.tone], className)}>
       {/* weiches Licht von oben, Lichtkreis hinter dem Gefäß */}

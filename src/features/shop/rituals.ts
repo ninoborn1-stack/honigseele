@@ -6,25 +6,29 @@ export type Ritual = 'gesicht' | 'augen-lippen' | 'koerper' | 'haende' | 'waxing
 
 export const rituals: { id: Ritual; label: string; line: string }[] = [
   { id: 'gesicht', label: 'Gesicht', line: 'Reinigen, nähren, über Nacht ruhen lassen.' },
-  { id: 'augen-lippen', label: 'Augen & Lippen', line: 'Für die zarteste Haut, die Du hast.' },
+  { id: 'augen-lippen', label: 'Augen', line: 'Für die zarteste Haut, die Du hast.' },
   { id: 'koerper', label: 'Körper', line: 'Streicheleinheiten zum Mitnehmen.' },
-  { id: 'haende', label: 'Hände & Nägel', line: 'Für Hände, die viel tragen.' },
+  { id: 'haende', label: 'Hände & Füße', line: 'Für Hände und Füße, die viel tragen.' },
   { id: 'waxing', label: 'Rund ums Waxing', line: 'Vorher sanft peelen, nachher kühlen und beruhigen.' },
 ];
 
 const map: Record<string, Ritual[]> = {
   'aloe-vera-gel': ['waxing', 'koerper'],
-  'augengel-mit-hyaluronsaeure': ['augen-lippen'],
-  'gute-nacht-creme': ['gesicht'],
-  handzahm: ['haende'],
-  'jungbrunnen-serum': ['gesicht'],
+  'peeling-mit-mandel-olive': ['koerper', 'waxing'],
   'kaolin-crememaske': ['gesicht'],
+  'jungbrunnen-serum': ['gesicht'],
+  'milde-tagescreme': ['gesicht'],
+  'gute-nacht-creme': ['gesicht'],
+  'augengel-mit-hyaluronsaeure': ['augen-lippen', 'gesicht'],
+  'reinigungsschaum-honigmelone': ['gesicht'],
+  'reinigungsmilch-honigmelone': ['gesicht'],
+  'tonic-honigmelone': ['gesicht'],
+  'mizellenwasser-lindenbluete': ['gesicht', 'augen-lippen'],
+  handzahm: ['haende'],
+  'nagel-oel': ['haende'],
+  'schoene-fuesse': ['haende', 'koerper'],
   'koerpercreme-streicheleinheit': ['koerper'],
   lippenbalsam: ['augen-lippen'],
-  'milde-tagescreme': ['gesicht'],
-  'mizellenwasser-lindenbluete': ['gesicht'],
-  'nagel-oel': ['haende'],
-  'peeling-mit-mandel-olive': ['koerper', 'waxing'],
 };
 
 export const ritualsOf = (productId: string): Ritual[] => map[productId] ?? [];

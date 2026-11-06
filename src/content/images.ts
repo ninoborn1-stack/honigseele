@@ -13,6 +13,8 @@ export interface ImageEntry {
   wanted?: string;
   /** Bildausschnitt (CSS object-position), z. B. "50% 0%" damit Köpfe oben nie abgeschnitten werden */
   position?: string;
+  /** "multiply": weißer Fotogrund verschmilzt mit dem cremefarbenen Hintergrund (freigestellte Produkte) */
+  blend?: 'multiply';
   /** aus scripts/optimize-images.py */
   width?: number;
   height?: number;

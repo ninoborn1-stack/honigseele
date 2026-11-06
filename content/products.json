@@ -1,81 +1,233 @@
 [
   {
     "id": "aloe-vera-gel",
-    "name": "Aloe Vera Gel",
+    "name": "Aloe Vera Gel mit Allantoin",
     "size": "100 ml",
     "priceCents": 1290,
-    "description": "Kühlt und beruhigt die Haut – unser Begleiter nach jedem Waxing.",
-    "image": "product.placeholder",
+    "description": "Kühlt und beruhigt die Haut – unser Begleiter nach jedem Waxing. Mit Allantoin.",
+    "image": "product.aloe-vera-gel.1",
+    "gallery": [
+      "product.aloe-vera-gel.1",
+      "product.aloe-vera-gel.2"
+    ],
     "tone": "sage",
     "kind": "pflege",
     "stock": 20,
-    "active": true,
-    "isPlaceholder": true
+    "active": true
   },
   {
-    "id": "augengel-mit-hyaluronsaeure",
-    "name": "Augengel mit Hyaluronsäure",
-    "size": "15 ml",
-    "priceCents": 2090,
-    "description": "Handgemacht in der Crememanufaktur Berlin. Ausführliche Beschreibung, Anwendung und Inhaltsstoffe folgen.",
-    "image": "product.placeholder",
-    "tone": "cream",
+    "id": "peeling-mit-mandel-olive",
+    "name": "Peeling mit Mandel & Olive",
+    "size": "50 g",
+    "priceCents": 1690,
+    "description": "Feines Peeling mit Mandel und Olive – ideal ein bis zwei Tage vor dem Waxing. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.peeling-mit-mandel-olive.1",
+    "gallery": [
+      "product.peeling-mit-mandel-olive.1",
+      "product.peeling-mit-mandel-olive.2",
+      "product.peeling-mit-mandel-olive.3",
+      "product.peeling-mit-mandel-olive.4",
+      "product.peeling-mit-mandel-olive.5"
+    ],
+    "tone": "sand",
     "kind": "pflege",
     "stock": 20,
-    "active": true,
-    "isPlaceholder": true
-  },
-  {
-    "id": "gute-nacht-creme",
-    "name": "Gute Nacht Creme",
-    "size": "50 ml",
-    "priceCents": 2690,
-    "description": "Handgemacht in der Crememanufaktur Berlin. Ausführliche Beschreibung, Anwendung und Inhaltsstoffe folgen.",
-    "image": "product.placeholder",
-    "tone": "amber",
-    "kind": "pflege",
-    "stock": 20,
-    "active": true,
-    "isPlaceholder": true
-  },
-  {
-    "id": "handzahm",
-    "name": "Handzahm",
-    "size": "30 g",
-    "priceCents": 890,
-    "description": "Handgemacht in der Crememanufaktur Berlin. Ausführliche Beschreibung, Anwendung und Inhaltsstoffe folgen.",
-    "image": "product.placeholder",
-    "tone": "honey",
-    "kind": "pflege",
-    "stock": 20,
-    "active": true,
-    "isPlaceholder": true
-  },
-  {
-    "id": "jungbrunnen-serum",
-    "name": "Jungbrunnen Serum",
-    "size": "30 ml",
-    "priceCents": 2490,
-    "description": "Handgemacht in der Crememanufaktur Berlin. Ausführliche Beschreibung, Anwendung und Inhaltsstoffe folgen.",
-    "image": "product.placeholder",
-    "tone": "amber",
-    "kind": "pflege",
-    "stock": 20,
-    "active": true,
-    "isPlaceholder": true
+    "active": true
   },
   {
     "id": "kaolin-crememaske",
     "name": "Kaolin Crememaske",
     "size": "100 g",
     "priceCents": 2690,
-    "description": "Handgemacht in der Crememanufaktur Berlin. Ausführliche Beschreibung, Anwendung und Inhaltsstoffe folgen.",
-    "image": "product.placeholder",
+    "description": "Cremige Maske mit Kaolin (weißer Tonerde) – eine kleine Auszeit für Dein Gesicht. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.kaolin-crememaske.1",
+    "gallery": [
+      "product.kaolin-crememaske.1",
+      "product.kaolin-crememaske.2",
+      "product.kaolin-crememaske.3",
+      "product.kaolin-crememaske.4"
+    ],
     "tone": "sand",
     "kind": "pflege",
     "stock": 20,
+    "active": true
+  },
+  {
+    "id": "jungbrunnen-serum",
+    "name": "Jungbrunnen Serum",
+    "size": "30 ml",
+    "priceCents": 2490,
+    "description": "Unser Serum für Dein Gesicht, im praktischen Pumpspender. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.jungbrunnen-serum.1",
+    "gallery": [
+      "product.jungbrunnen-serum.1",
+      "product.jungbrunnen-serum.2"
+    ],
+    "tone": "amber",
+    "kind": "pflege",
+    "stock": 20,
+    "active": true
+  },
+  {
+    "id": "milde-tagescreme",
+    "name": "Milde Tagescreme",
+    "size": "50 ml",
+    "priceCents": 2390,
+    "description": "Milde Pflege für den Tag. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.milde-tagescreme.1",
+    "gallery": [
+      "product.milde-tagescreme.1",
+      "product.milde-tagescreme.2",
+      "product.milde-tagescreme.3"
+    ],
+    "tone": "cream",
+    "kind": "pflege",
+    "stock": 20,
     "active": true,
-    "isPlaceholder": true
+    "needsInfo": "Etikett auf dem weißen Tiegel unscharf – gibt es zwei Größen?"
+  },
+  {
+    "id": "gute-nacht-creme",
+    "name": "Gute Nacht Creme",
+    "size": "50 ml",
+    "priceCents": 2690,
+    "description": "Pflege für die Nacht, damit Deine Haut in Ruhe auftanken kann. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.gute-nacht-creme.1",
+    "gallery": [
+      "product.gute-nacht-creme.1",
+      "product.gute-nacht-creme.2",
+      "product.gute-nacht-creme.3"
+    ],
+    "tone": "amber",
+    "kind": "pflege",
+    "stock": 20,
+    "active": true,
+    "needsInfo": "Zwei Verpackungen auf den Fotos – gibt es zwei Größen?"
+  },
+  {
+    "id": "augengel-mit-hyaluronsaeure",
+    "name": "Augengel mit Hyaluronsäure",
+    "size": "15 ml",
+    "priceCents": 2090,
+    "description": "Leichtes Gel mit Hyaluronsäure für die zarte Haut rund um die Augen. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.augengel-mit-hyaluronsaeure.1",
+    "gallery": [
+      "product.augengel-mit-hyaluronsaeure.1",
+      "product.augengel-mit-hyaluronsaeure.2"
+    ],
+    "tone": "cream",
+    "kind": "pflege",
+    "stock": 20,
+    "active": true
+  },
+  {
+    "id": "reinigungsschaum-honigmelone",
+    "name": "Reinigungsschaum Honigmelone",
+    "priceCents": 0,
+    "description": "Feiner Reinigungsschaum für Dein Gesicht – Honigmelone. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.reinigungsschaum-honigmelone.1",
+    "gallery": [
+      "product.reinigungsschaum-honigmelone.1"
+    ],
+    "tone": "amber",
+    "kind": "pflege",
+    "stock": 20,
+    "active": true,
+    "needsInfo": "Preis und Größe"
+  },
+  {
+    "id": "reinigungsmilch-honigmelone",
+    "name": "Reinigungsmilch Honigmelone",
+    "priceCents": 0,
+    "description": "Milde Reinigungsmilch für Dein Gesicht – Honigmelone. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.reinigungsmilch-honigmelone.1",
+    "gallery": [
+      "product.reinigungsmilch-honigmelone.1"
+    ],
+    "tone": "cream",
+    "kind": "pflege",
+    "stock": 20,
+    "active": true,
+    "needsInfo": "Preis und Größe"
+  },
+  {
+    "id": "tonic-honigmelone",
+    "name": "Tonic Honigmelone",
+    "priceCents": 0,
+    "description": "Gesichtswasser nach der Reinigung – Honigmelone. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.tonic-honigmelone.1",
+    "gallery": [
+      "product.tonic-honigmelone.1"
+    ],
+    "tone": "amber",
+    "kind": "pflege",
+    "stock": 20,
+    "active": true,
+    "needsInfo": "Preis und Größe"
+  },
+  {
+    "id": "mizellenwasser-lindenbluete",
+    "name": "Mizellenwasser Lindenblüte",
+    "size": "60 ml",
+    "priceCents": 1690,
+    "description": "Sanfte Reinigung mit Lindenblüte für Gesicht und Augen. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.mizellenwasser-lindenbluete.1",
+    "gallery": [
+      "product.mizellenwasser-lindenbluete.1",
+      "product.mizellenwasser-lindenbluete.2"
+    ],
+    "tone": "sage",
+    "kind": "pflege",
+    "stock": 20,
+    "active": true
+  },
+  {
+    "id": "handzahm",
+    "name": "Handzahm",
+    "size": "30 g",
+    "priceCents": 890,
+    "description": "Pflege für Hände, die viel tragen – in der kleinen Dose immer dabei. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.handzahm.1",
+    "gallery": [
+      "product.handzahm.1",
+      "product.handzahm.2"
+    ],
+    "tone": "honey",
+    "kind": "pflege",
+    "stock": 20,
+    "active": true
+  },
+  {
+    "id": "nagel-oel",
+    "name": "Nagelpflege mit BIO Arganöl",
+    "size": "20 ml",
+    "priceCents": 990,
+    "description": "Pflege für Nägel und Nagelhaut mit BIO-Arganöl. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.nagel-oel.1",
+    "gallery": [
+      "product.nagel-oel.1"
+    ],
+    "tone": "amber",
+    "kind": "pflege",
+    "stock": 20,
+    "active": true,
+    "needsInfo": "Größe (bisher 20 ml)"
+  },
+  {
+    "id": "schoene-fuesse",
+    "name": "Schöne Füße",
+    "priceCents": 0,
+    "description": "Pflege für Deine Füße – schön nach der Pediküre und für jeden Tag. Handgemacht in der Crememanufaktur Berlin.",
+    "image": "product.schoene-fuesse.1",
+    "gallery": [
+      "product.schoene-fuesse.1",
+      "product.schoene-fuesse.2"
+    ],
+    "tone": "honey",
+    "kind": "pflege",
+    "stock": 20,
+    "active": true,
+    "needsInfo": "Preis und Größe"
   },
   {
     "id": "koerpercreme-streicheleinheit",
@@ -86,7 +238,7 @@
     "tone": "honey",
     "kind": "pflege",
     "stock": 20,
-    "active": true,
+    "active": false,
     "isPlaceholder": true
   },
   {
@@ -98,59 +250,7 @@
     "tone": "honey",
     "kind": "pflege",
     "stock": 20,
-    "active": true,
-    "isPlaceholder": true
-  },
-  {
-    "id": "milde-tagescreme",
-    "name": "Milde Tagescreme",
-    "size": "50 ml",
-    "priceCents": 2390,
-    "description": "Handgemacht in der Crememanufaktur Berlin. Ausführliche Beschreibung, Anwendung und Inhaltsstoffe folgen.",
-    "image": "product.placeholder",
-    "tone": "cream",
-    "kind": "pflege",
-    "stock": 20,
-    "active": true,
-    "isPlaceholder": true
-  },
-  {
-    "id": "mizellenwasser-lindenbluete",
-    "name": "Mizellenwasser Lindenblüte",
-    "size": "60 ml",
-    "priceCents": 1690,
-    "description": "Handgemacht in der Crememanufaktur Berlin. Ausführliche Beschreibung, Anwendung und Inhaltsstoffe folgen.",
-    "image": "product.placeholder",
-    "tone": "sage",
-    "kind": "pflege",
-    "stock": 20,
-    "active": true,
-    "isPlaceholder": true
-  },
-  {
-    "id": "nagel-oel",
-    "name": "Nagel Öl",
-    "size": "20 ml",
-    "priceCents": 990,
-    "description": "Handgemacht in der Crememanufaktur Berlin. Ausführliche Beschreibung, Anwendung und Inhaltsstoffe folgen.",
-    "image": "product.placeholder",
-    "tone": "amber",
-    "kind": "pflege",
-    "stock": 20,
-    "active": true,
-    "isPlaceholder": true
-  },
-  {
-    "id": "peeling-mit-mandel-olive",
-    "name": "Peeling mit Mandel & Olive",
-    "size": "50 g",
-    "priceCents": 1690,
-    "description": "Handgemacht in der Crememanufaktur Berlin. Ausführliche Beschreibung, Anwendung und Inhaltsstoffe folgen.",
-    "image": "product.placeholder",
-    "tone": "sand",
-    "kind": "pflege",
-    "stock": 20,
-    "active": true,
+    "active": false,
     "isPlaceholder": true
   },
   {

@@ -15,9 +15,10 @@
     "placeholder": false
   },
   "home.manufaktur": {
-    "src": "/images/real/regal-pflege.jpg",
-    "alt": "Regal mit der eigenen Naturkosmetik der Honigseele",
-    "placeholder": false
+    "src": "/images/real/anna-laden.jpg",
+    "alt": "Anna Kaiser in der Honigseele vor dem Regal mit der eigenen Naturkosmetik",
+    "placeholder": false,
+    "position": "50% 20%"
   },
   "home.courses": {
     "src": "/images/real/laden-weit.jpg",
@@ -63,9 +64,10 @@
     "position": "50% 0%"
   },
   "courses.coaching": {
-    "src": "/images/stock/coaching.jpg",
-    "alt": "Notizbuch und Tee",
-    "placeholder": true
+    "src": "/images/real/anna-gespraech.jpg",
+    "alt": "Anna im Gespräch in der Honigseele",
+    "placeholder": false,
+    "position": "50% 30%"
   },
   "courses.training": {
     "src": "/images/real/waxing-gesicht.jpg",
@@ -118,13 +120,14 @@
     "placeholder": false
   },
   "category.coaching": {
-    "src": "/images/stock/coaching.jpg",
-    "alt": "Coaching & Ernährung",
-    "placeholder": true
+    "src": "/images/real/anna-gespraech.jpg",
+    "alt": "Anna im Gespräch in der Honigseele",
+    "placeholder": false,
+    "position": "50% 30%"
   },
   "product.placeholder": {
-    "src": "/images/real/regal-pflege.jpg",
-    "alt": "Pflegeprodukt der Honigseele",
+    "src": "/images/real/anna-laden.jpg",
+    "alt": "Naturkosmetik der Honigseele",
     "placeholder": false
   },
   "product.voucher": {
@@ -207,5 +210,171 @@
     "alt": "Das Team der Honigseele",
     "placeholder": false,
     "position": "50% 0%"
+  },
+  "product.schoene-fuesse.1": {
+    "src": "/images/real/produkt-schoene-fuesse-1.jpg",
+    "alt": "Schöne Füße von Honigseele",
+    "placeholder": false
+  },
+  "product.schoene-fuesse.2": {
+    "src": "/images/real/produkt-schoene-fuesse-2.jpg",
+    "alt": "Schöne Füße von Honigseele",
+    "placeholder": false,
+    "blend": "multiply"
+  },
+  "product.handzahm.1": {
+    "src": "/images/real/produkt-handzahm-1.jpg",
+    "alt": "Handzahm von Honigseele",
+    "placeholder": false
+  },
+  "product.handzahm.2": {
+    "src": "/images/real/produkt-handzahm-2.jpg",
+    "alt": "Handzahm von Honigseele",
+    "placeholder": false,
+    "blend": "multiply"
+  },
+  "product.augengel-mit-hyaluronsaeure.1": {
+    "src": "/images/real/produkt-augengel-mit-hyaluronsaeure-1.jpg",
+    "alt": "Augengel mit Hyaluronsäure von Honigseele",
+    "placeholder": false
+  },
+  "product.augengel-mit-hyaluronsaeure.2": {
+    "src": "/images/real/produkt-augengel-mit-hyaluronsaeure-2.jpg",
+    "alt": "Augengel mit Hyaluronsäure von Honigseele",
+    "placeholder": false,
+    "blend": "multiply"
+  },
+  "product.peeling-mit-mandel-olive.1": {
+    "src": "/images/real/produkt-peeling-mit-mandel-olive-1.jpg",
+    "alt": "Peeling mit Mandel & Olive von Honigseele",
+    "placeholder": false
+  },
+  "product.peeling-mit-mandel-olive.2": {
+    "src": "/images/real/produkt-peeling-mit-mandel-olive-2.jpg",
+    "alt": "Peeling mit Mandel & Olive von Honigseele",
+    "placeholder": false
+  },
+  "product.peeling-mit-mandel-olive.3": {
+    "src": "/images/real/produkt-peeling-mit-mandel-olive-3.jpg",
+    "alt": "Peeling mit Mandel & Olive von Honigseele",
+    "placeholder": false
+  },
+  "product.peeling-mit-mandel-olive.4": {
+    "src": "/images/real/produkt-peeling-mit-mandel-olive-4.jpg",
+    "alt": "Peeling mit Mandel & Olive von Honigseele",
+    "placeholder": false,
+    "blend": "multiply"
+  },
+  "product.peeling-mit-mandel-olive.5": {
+    "src": "/images/real/produkt-peeling-mit-mandel-olive-5.jpg",
+    "alt": "Peeling mit Mandel & Olive von Honigseele",
+    "placeholder": false,
+    "blend": "multiply"
+  },
+  "product.jungbrunnen-serum.1": {
+    "src": "/images/real/produkt-jungbrunnen-serum-1.jpg",
+    "alt": "Jungbrunnen Serum von Honigseele",
+    "placeholder": false
+  },
+  "product.jungbrunnen-serum.2": {
+    "src": "/images/real/produkt-jungbrunnen-serum-2.jpg",
+    "alt": "Jungbrunnen Serum von Honigseele",
+    "placeholder": false,
+    "blend": "multiply"
+  },
+  "product.aloe-vera-gel.1": {
+    "src": "/images/real/produkt-aloe-vera-gel-1.jpg",
+    "alt": "Aloe Vera Gel mit Allantoin von Honigseele",
+    "placeholder": false
+  },
+  "product.aloe-vera-gel.2": {
+    "src": "/images/real/produkt-aloe-vera-gel-2.jpg",
+    "alt": "Aloe Vera Gel mit Allantoin von Honigseele",
+    "placeholder": false,
+    "blend": "multiply"
+  },
+  "product.mizellenwasser-lindenbluete.1": {
+    "src": "/images/real/produkt-mizellenwasser-lindenbluete-1.jpg",
+    "alt": "Mizellenwasser Lindenblüte von Honigseele",
+    "placeholder": false
+  },
+  "product.mizellenwasser-lindenbluete.2": {
+    "src": "/images/real/produkt-mizellenwasser-lindenbluete-2.jpg",
+    "alt": "Mizellenwasser Lindenblüte von Honigseele",
+    "placeholder": false,
+    "blend": "multiply"
+  },
+  "product.kaolin-crememaske.1": {
+    "src": "/images/real/produkt-kaolin-crememaske-1.jpg",
+    "alt": "Kaolin Crememaske von Honigseele",
+    "placeholder": false
+  },
+  "product.kaolin-crememaske.2": {
+    "src": "/images/real/produkt-kaolin-crememaske-2.jpg",
+    "alt": "Kaolin Crememaske von Honigseele",
+    "placeholder": false
+  },
+  "product.kaolin-crememaske.3": {
+    "src": "/images/real/produkt-kaolin-crememaske-3.jpg",
+    "alt": "Kaolin Crememaske von Honigseele",
+    "placeholder": false
+  },
+  "product.kaolin-crememaske.4": {
+    "src": "/images/real/produkt-kaolin-crememaske-4.jpg",
+    "alt": "Kaolin Crememaske von Honigseele",
+    "placeholder": false,
+    "blend": "multiply"
+  },
+  "product.gute-nacht-creme.1": {
+    "src": "/images/real/produkt-gute-nacht-creme-1.jpg",
+    "alt": "Gute Nacht Creme von Honigseele",
+    "placeholder": false
+  },
+  "product.gute-nacht-creme.2": {
+    "src": "/images/real/produkt-gute-nacht-creme-2.jpg",
+    "alt": "Gute Nacht Creme von Honigseele",
+    "placeholder": false
+  },
+  "product.gute-nacht-creme.3": {
+    "src": "/images/real/produkt-gute-nacht-creme-3.jpg",
+    "alt": "Gute Nacht Creme von Honigseele",
+    "placeholder": false,
+    "blend": "multiply"
+  },
+  "product.milde-tagescreme.1": {
+    "src": "/images/real/produkt-milde-tagescreme-1.jpg",
+    "alt": "Milde Tagescreme von Honigseele",
+    "placeholder": false
+  },
+  "product.milde-tagescreme.2": {
+    "src": "/images/real/produkt-milde-tagescreme-2.jpg",
+    "alt": "Milde Tagescreme von Honigseele",
+    "placeholder": false,
+    "blend": "multiply"
+  },
+  "product.milde-tagescreme.3": {
+    "src": "/images/real/produkt-milde-tagescreme-3.jpg",
+    "alt": "Milde Tagescreme von Honigseele",
+    "placeholder": false
+  },
+  "product.nagel-oel.1": {
+    "src": "/images/real/produkt-nagel-oel-1.jpg",
+    "alt": "Nagelpflege mit BIO Arganöl von Honigseele",
+    "placeholder": false
+  },
+  "product.reinigungsschaum-honigmelone.1": {
+    "src": "/images/real/produkt-reinigungsschaum-honigmelone-1.jpg",
+    "alt": "Reinigungsschaum Honigmelone von Honigseele",
+    "placeholder": false
+  },
+  "product.reinigungsmilch-honigmelone.1": {
+    "src": "/images/real/produkt-reinigungsmilch-honigmelone-1.jpg",
+    "alt": "Reinigungsmilch Honigmelone von Honigseele",
+    "placeholder": false
+  },
+  "product.tonic-honigmelone.1": {
+    "src": "/images/real/produkt-tonic-honigmelone-1.jpg",
+    "alt": "Tonic Honigmelone von Honigseele",
+    "placeholder": false
   }
 }

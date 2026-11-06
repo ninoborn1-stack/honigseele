@@ -116,9 +116,9 @@ function Favorite({ product }: { product: Product }) {
   const [added, setAdded] = useState(false);
   const steps = care.waxing?.aftercare ?? [];
   return (
-    <section id="bestseller" className="grid bg-cream-100 lg:grid-cols-2">
+    <section id="bestseller" className="grid grid-cols-1 bg-cream-100 lg:grid-cols-2">
       <div className="relative min-h-[70svh] lg:min-h-full">
-        <ProductVisual product={product} large className="absolute inset-0" />
+        <ProductVisual product={product} large sizes="(min-width: 1024px) 50vw, 100vw" className="absolute inset-0" />
         <span className="absolute left-[clamp(1.25rem,3.5vw,4rem)] top-8 rounded-full bg-cream-50/90 px-4 py-2 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-honey-950 backdrop-blur">Bestseller · Unser Liebling</span>
       </div>
       <div className="px-[clamp(1.25rem,3.5vw,4rem)] py-24 md:py-32 lg:pl-20">
@@ -146,7 +146,7 @@ function Favorite({ product }: { product: Product }) {
             }}
           >
             {added ? <Check className="h-4 w-4" strokeWidth={2} /> : <Plus className="h-4 w-4" strokeWidth={1.5} />}
-            {added ? 'Im Warenkorb' : `${product.name} · ${formatEuro(product.priceCents)}`}
+            {added ? 'Im Warenkorb' : `In den Warenkorb · ${formatEuro(product.priceCents)}`}
           </Button>
           <ArrowLink href={`/shop/${product.id}/`}>
             Mehr erfahren

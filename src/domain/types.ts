@@ -232,6 +232,10 @@ export interface Product {
   usage?: string;
   ingredients?: string;
   image: string;
+  /** weitere Fotos (Bild-Schlüssel), das erste ist `image` */
+  gallery?: string[];
+  /** Was Anna noch bestätigen muss (Demo: sichtbar markiert) */
+  needsInfo?: string;
   tone: Tone;
   kind: 'pflege' | 'gutschein' | 'karte' | 'ticket';
   stock: number;

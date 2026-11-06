@@ -55,7 +55,7 @@ export interface MockDB {
   prefs: Record<string, unknown>;
 }
 
-export const DB_VERSION = 2; // erhöhen, wenn sich Inhalte (z. B. Team) ändern → Demo-Daten neu anlegen
+export const DB_VERSION = 3; // erhöhen, wenn sich Inhalte (z. B. Team) ändern → Demo-Daten neu anlegen
 
 /** Deterministischer Zufall, damit der Seed bei jedem Reset gleich aussieht */
 function rng(seed: number) {

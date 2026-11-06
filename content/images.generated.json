@@ -1,4 +1,42 @@
 {
+  "/images/real/anna-gespraech.jpg": {
+    "width": 1600,
+    "height": 2400,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-anna-gespraech-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-anna-gespraech-960.webp"
+      ],
+      [
+        1600,
+        "/images/opt/real-anna-gespraech-1600.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRjoBAABXRUJQVlA4IC4BAAAwBwCdASoYACQAPu1mpk4ppaMiKq35MB2JYgCl28WrmvekVRqIa5R5qmcr9Vqdgou8eFbmrCE4eH5ERyKSO4f47GgA/O5mPKFvDrw0sGewoFP5xbgySXBkxQOlwh7lAiipBFV25vOuNYgXWMOYyE0IZfR5sW9Jjkz+c2CbFBHZ7H4b+R887Gga0+xs58zVTHKfsVGhhfvcDdB2FDrDsyr9Mmsyi2SMFK/O8j6wWZbWBDFhhVnMy/OFxS2PfnFiZHKUrGsNpCDs7PK6xjCc/M/J1MhXnES1AQ0SFfPehq2P2jWDfQqBfizVwtPRSjwF1Wzj6boS+13yqd+KAdZOv3NQyhkePUNMeBmfsufiywh2U1KAPcYreBgYf9FdCCx/Sqx9LMXnS7gK0KV4GgAAAA=="
+  },
+  "/images/real/anna-laden.jpg": {
+    "width": 1600,
+    "height": 2400,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-anna-laden-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-anna-laden-960.webp"
+      ],
+      [
+        1600,
+        "/images/opt/real-anna-laden-1600.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRiABAABXRUJQVlA4IBQBAADQBgCdASoYACQAPu1oqE8ppiOiKqwBMB2JQBZ0JtMDniYYxI8GvhBiEXZqLdM0gKzHx5A0OgBIVvE4eN4oQgAA/tOS5V1/JUfi5Ph65lnmnmD34upcvGoxq9gxL9AKHCRxzjcoDV9qKLVfUbeej8lDvlla3mFl6nSttqqJrfORDEkPGRuec7GAAXWk7yfQZYMUw+xT2/F7MSGPQa10OjY/AhPYAH51eoTjlGcPmUCH2CjvY4PONqSkNYWAmxC0B7qxpJGvXq21ohkLzEeEaEzgDp39xU4ewM18EHRhTmGpPJW6GJ4tDMZ1CzEr+WRAci1xLDodNo6A3jvp6XUGEgAL5wo3jWuWAGEfYHhG8MXSNMQAAAA="
+  },
   "/images/real/brauen.jpg": {
     "width": 1080,
     "height": 720,
@@ -376,6 +414,595 @@
     ],
     "blur": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACwBACdASoYABAAPu1iqk2ppaQiMAgBMB2JZgCdMoR4Lf/gN7vmYOjtscQXjPUAAP7uoU7iSxhx/8tMH+OR09dmKPWtVhI/xmc+yremupo1+P/OB38rzAZe4wozyWoJTnMtf42Fb38oKeq9kziddK5hDADl9dwYe8wH+tIlcdSQdhXWnHIeiEOCvvuq4AAA"
   },
+  "/images/real/produkt-aloe-vera-gel-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-aloe-vera-gel-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-aloe-vera-gel-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-aloe-vera-gel-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABQBQCdASoYABgAPulep02pJSOsN/VYAYAdCWUAvVhFYXcGcl2NGQNx9Key1JPDP+GN3wAA/ucpjj3K0kqoCIpm55knJbhPPAutGampxiiWST5BpDfE2xURd3Z9EB0dHNGPmmBnoNZDv6zoXjDywAAA"
+  },
+  "/images/real/produkt-aloe-vera-gel-2.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-aloe-vera-gel-2-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-aloe-vera-gel-2-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-aloe-vera-gel-2-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAwBACdASoYABgAPu1irVAppSQisBgIATAdiWcAznQQ7+/1+g2GvkPXUAAA/vN0hMgp4deqZEh92LgYU6ZsyuF/gJPVAAAA"
+  },
+  "/images/real/produkt-augengel-mit-hyaluronsaeure-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-augengel-mit-hyaluronsaeure-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-augengel-mit-hyaluronsaeure-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-augengel-mit-hyaluronsaeure-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwBACdASoYABgAPuFYpk2opSOiN/qoARAcCWcAxkAh371YDmAmXisKAOuO6kQAAP7S1cvwbJKcAGYpkgn2Mk7ZQ8qMLIYB2/x5aQbzqSKO6sTaO2OO1ZlxhE+tAAAA"
+  },
+  "/images/real/produkt-augengel-mit-hyaluronsaeure-2.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-augengel-mit-hyaluronsaeure-2-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-augengel-mit-hyaluronsaeure-2-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-augengel-mit-hyaluronsaeure-2-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAwCdASoYABgAPu1iqk2ppaQiMAgBMB2JaQAAW+s3O3+huoDAAAD+82sjBfzXKl2vayNK7KV0FJAAAAA="
+  },
+  "/images/real/produkt-gute-nacht-creme-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-gute-nacht-creme-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-gute-nacht-creme-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-gute-nacht-creme-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABwBQCdASoYABgAPu1krE+ppSQiMBgIATAdiUAWHYIgGaatqXiJPkpRw3AswTNAv1N9Uk2QAP6yOpn4h3dG6Fj+JkpZFr7TF20OBWzItNVIe9omJ0o/So+iyL0f/v+zMEcFeFxc1MBJg3ibfEqMmrvETE7NsZPcOhC4e1tprYfFk6QNd5kUcetI/VKdvNhNarrIpFIV4gguaMtE6dU3Z4yKQK21sg9yijrQAAAA"
+  },
+  "/images/real/produkt-gute-nacht-creme-2.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-gute-nacht-creme-2-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-gute-nacht-creme-2-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-gute-nacht-creme-2-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwBACdASoYABgAPu1urU8ppyQiMBgIATAdiUAZGoaN9EqN/AROqDS3hbRS5jR8UXAA/u1EAGRk3GpU2fE0gfnLXtIG2BVV3QZRSZ/EyAg2uxvk3F1a6QMtlGyaQCVzM0a09Sxy32hSGIAA"
+  },
+  "/images/real/produkt-gute-nacht-creme-3.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-gute-nacht-creme-3-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-gute-nacht-creme-3-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-gute-nacht-creme-3-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwBACdASoYABgAPtVao02oJaMiN+gBABqJZAAAiOZY2wFRvPQ9XJYckEAA/vYA5+tyo/tnEeyv8PqVN/yj9jnrnmi07v/fABsXQWfggYTAAA=="
+  },
+  "/images/real/produkt-handzahm-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-handzahm-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-handzahm-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-handzahm-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAACwBACdASoYABgAPu1mqU4ppaOiMAgBMB2JYwAAW+oXW8iI6KF+EKL7ubym+cFQAP7ermF6GAPXiPGhbw2CXMl0HuhwG2eARGGTR1fcI0atd7jnuNqzgzg+qGmwJ8Gs9a5kD4NFCirzxol0VvFKWqQqf2GotkAAAAA="
+  },
+  "/images/real/produkt-handzahm-2.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-handzahm-2-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-handzahm-2-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-handzahm-2-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAwCdASoYABgAPtlepE2oJaOiN/qoAQAbCUAaAwQ7+DrD4VkEAP70yRexx0OpaEwHPH9QyB6nhZo9mQcZ6XOHf9Uadm2BfacOxeAA"
+  },
+  "/images/real/produkt-jungbrunnen-serum-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-jungbrunnen-serum-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-jungbrunnen-serum-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-jungbrunnen-serum-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQBACdASoYABgAPu1kp02ppaOiMBgMATAdiWcAvdA0b6dED2o7PxHS+R16ntwUAAD+04Up36mU1SGUYvAJ4eJr5XelZoybcTbcuS1Y59uWwMftbzy6KkmkKMaH3z9ecfFd0hMpvUO0BERwAAA="
+  },
+  "/images/real/produkt-jungbrunnen-serum-2.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-jungbrunnen-serum-2-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-jungbrunnen-serum-2-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-jungbrunnen-serum-2-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACQAwCdASoYABgAPu1kqk2ppaQiMAgBMB2JaQAAW+qpd5LVs4QAAP7zayV3FyEnTvxxEJHpsdwAAAAA"
+  },
+  "/images/real/produkt-kaolin-crememaske-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-kaolin-crememaske-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-kaolin-crememaske-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-kaolin-crememaske-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAADwBACdASoYABgAPu1gqU6ppSOiMBgMATAdiUAXYAIcgnfTzBzrzVCvQsN/LjrJwFAA/rIw4Nl1cITj5A0L5SYti3h3rteEiJXvcJar6MeyUGmBSJ3JcOu9/1LA2ckW45CEWioupw830FLdW+d5hiHt/Rxi/1VCkyWibhXm4nHYfIrUIfLVT/YnnI4edSKXrQFoW9JjbgAAAA=="
+  },
+  "/images/real/produkt-kaolin-crememaske-2.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-kaolin-crememaske-2-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-kaolin-crememaske-2-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-kaolin-crememaske-2-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQBQCdASoYABgAPu1qqVAppiOiqA1RMB2JQBgbiLwsvo2xNaioXMwDVyAkQxU061vAAP7x1J5zD+IGIaznT+vwh5senfhV0yzD5kieoQwNNP+QGDUYBWj9YYLmp0L4ERVb5B40oLVuD+bqs/EZSoP3rPmYG9EawIAAAA=="
+  },
+  "/images/real/produkt-kaolin-crememaske-3.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-kaolin-crememaske-3-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-kaolin-crememaske-3-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-kaolin-crememaske-3-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQBQCdASoYABgAPu1krU6ppaSiKA1RMB2JZACzgEXhTOfZh1KAbegOZxaFXpzVlaAAAP7tTzRsBbILdQR7GDnmpQg52vOa+QupufHX26VDiZmjDJzZoQWHBjAlPUp24fKWvzP0YbiCTaUGMWlLiafVmcQz49PAAGAAAA=="
+  },
+  "/images/real/produkt-kaolin-crememaske-4.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-kaolin-crememaske-4-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-kaolin-crememaske-4-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-kaolin-crememaske-4-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQBACdASoYABgAPtVao02oJaMiN+gBABqJYwAAiOZw+XCYcd9ykSXZ5cCAAP72AlLK7u0l7cEjYcqGrY/pQ0aEATqNDJY8TvAKUCAA"
+  },
+  "/images/real/produkt-milde-tagescreme-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-milde-tagescreme-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-milde-tagescreme-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-milde-tagescreme-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADQBACdASoYABgAPu1qr1CppaSiqAqpMB2JZAC06BEY3Rb6N2TYdVGVQ5HhZ9yIAAD+wxasAxfzPLEmSwujTvKMMRmzaBaAXJf/rjbqDedCvm3JKqgTAdSgCzQtDmH2d/SOELZSn8iFlud3o+B4dynnYFWCAAAA"
+  },
+  "/images/real/produkt-milde-tagescreme-2.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-milde-tagescreme-2-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-milde-tagescreme-2-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-milde-tagescreme-2-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQBACdASoYABgAPuVgpk2pJaOiN/VYASAciWgAyrQQ8Abb4XZDdoW4Nm0gAP7za9QvjRxO9ZVI9Xo6xB2FoPXiLMGNEMONMhFXRNmuhQwG6ArhA0yf4bckX49ACHwAAAA="
+  },
+  "/images/real/produkt-milde-tagescreme-3.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-milde-tagescreme-3-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-milde-tagescreme-3-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-milde-tagescreme-3-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAQBQCdASoYABgAPu1krU+ppSQiMBgIATAdiWcAxNg0b9eywBVgCTulLm9fhdPRYcWAAP7vxvps6NWRrKEdGHp9v937FhMvjiMLnFdiiS0cTXAlrZydnBnpyya11Ea/IQ3L0Z6HwiapIMwAAAA="
+  },
+  "/images/real/produkt-mizellenwasser-lindenbluete-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-mizellenwasser-lindenbluete-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-mizellenwasser-lindenbluete-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-mizellenwasser-lindenbluete-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwBACdASoYABgAPulcqE2pJKQpN/VYASAdCWcAzBxFYfmfmvklcD7VtxSKsK7TxMAA/uc5/TfcVJzeSQWJ4oAl/nmNfcc7ng/fBpEhAKPR5UYMDko3bPg4ZJmjuYKyu2wAAAAA"
+  },
+  "/images/real/produkt-mizellenwasser-lindenbluete-2.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-mizellenwasser-lindenbluete-2-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-mizellenwasser-lindenbluete-2-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-mizellenwasser-lindenbluete-2-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACQAwCdASoYABgAPu1qq08ppiOiMBgIATAdiWkAAD44ZHGbLZsAAP7wrUFVXU3+Qu5LLrURBUAbbAAAAAA="
+  },
+  "/images/real/produkt-nagel-oel-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-nagel-oel-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-nagel-oel-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-nagel-oel-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACwBACdASoYABgAPu1kqU2ppaOiMAgBMB2JZQDBzCHfwQdDhzmgQDuDhILSbKqAAP7eU/byP22k4lBNH9eDXCH40HNHAaE9uMue7c6hvVIQY4W2LVVz9+URwiiibQ1ybcAoWNL7FRhCWKDj3Xd/IaA0YvxGKSGmijQgAAAA"
+  },
+  "/images/real/produkt-peeling-mit-mandel-olive-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADQBACdASoYABgAPu1qsFAppaSiqAqpMB2JQBdgAiAdPsNAy8bCtQeSkZKMA/uPAAD+3/SNAMB31vsQiYsmA2kpy9+/bLznTDqdnIiZmcWmjdA8Kds9O8i/FGohH2xqy9coWSSCmDTN+U8YgUz5jlT/22g5FzKYnXKe2I62cWrqJQAAAAA="
+  },
+  "/images/real/produkt-peeling-mit-mandel-olive-2.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-2-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-2-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-2-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBQCdASoYABgAPu1oqk8ppiOiMBgIATAdiWMAvkhpYYDvok4aQHgpUWZxKFkymDEAAP7366/jhOftClfGaBZJyQ1UBiJOpXZqwl1t0J0GFCZRC8Maul0aBRba3Tb/fE9sl+PKTAnYudRtUI2QAA=="
+  },
+  "/images/real/produkt-peeling-mit-mandel-olive-3.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-3-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-3-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-3-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwBACdASoYABgAPt1WpU2opKOiN/qoARAbiUAZC4Q8LrrFWtL/VQ2Okvehm1UAAP7tTzH01W+Y3nnON/IeHK6k4I1xEmSBd5VG8APNslZzKs5H/F966v865lPSiSQgAAA="
+  },
+  "/images/real/produkt-peeling-mit-mandel-olive-4.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-4-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-4-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-4-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABwBACdASoYABgAPt1apU2opSOiN/qoARAbiWUAAFu14hxcKBHYvxe0Rw5okAD+9Mq8RrHxOgT4E2ioXn3psoPJtLcwR6E9XyAAAA=="
+  },
+  "/images/real/produkt-peeling-mit-mandel-olive-5.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-5-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-5-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-peeling-mit-mandel-olive-5-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoYABgAPu1kpk2ppaMiMBgMATAdiWQAAI91m3JSEdfxIAD+9gDnO9pspDe6QzVZGLye/gxWEE/r6WpRhVpHnGwFUZYUzysijM0FAAAA"
+  },
+  "/images/real/produkt-reinigungsmilch-honigmelone-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-reinigungsmilch-honigmelone-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-reinigungsmilch-honigmelone-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-reinigungsmilch-honigmelone-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQBACdASoYABgAPu1irE4ppaSiKA1RMB2JZwDHMEXhgqFyOirKVyDaFdgHPJOlwAD+5zn3o7ZWla8M6SnlTTOnUFtuVnuS0CqmYhwohXIMCCDE8pkZVLXdznXzrnFKiLwgccAA"
+  },
+  "/images/real/produkt-reinigungsschaum-honigmelone-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-reinigungsschaum-honigmelone-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-reinigungsschaum-honigmelone-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-reinigungsschaum-honigmelone-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABwBACdASoYABgAPu1cqE2ppKOiN/VYATAdiWMAzBxUJ3uV5RraSIeAqj+IAAD+8E9uP6zbfYvg8l0RMcyC0A+nOsg1LhsOofoVxGiNgogRmSybBXEeTCrzsbehIt4RDPv6zcL/9oZUuAAA"
+  },
+  "/images/real/produkt-schoene-fuesse-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-schoene-fuesse-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-schoene-fuesse-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-schoene-fuesse-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwBACdASoYABgAPu1gqk4ppSQiMBgMATAdiWMAuwAQ8L0Kcw9sWfAzy3D1E4uOVAAA/lLR43+awtVjthGx2xjQhMBz+vtGcZtiECcd7q5k/ewgP3AVF7jyD2TKSvSafXNCAGfod2kWTCFAAAA="
+  },
+  "/images/real/produkt-schoene-fuesse-2.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-schoene-fuesse-2-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-schoene-fuesse-2-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-schoene-fuesse-2-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwBACdASoYABgAPu1cqE2ppKOiN/VYATAdiUAABb65fFqyk4+V3KJA5NB5QAD+82r4kfamtm8JLjrKdDD99jtL290Fs4oyC+tAoAAA"
+  },
+  "/images/real/produkt-tonic-honigmelone-1.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      [
+        480,
+        "/images/opt/real-produkt-tonic-honigmelone-1-480.webp"
+      ],
+      [
+        960,
+        "/images/opt/real-produkt-tonic-honigmelone-1-960.webp"
+      ],
+      [
+        1080,
+        "/images/opt/real-produkt-tonic-honigmelone-1-1080.webp"
+      ]
+    ],
+    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBACdASoYABgAPuFgqU2opiQiMAwBEBwJYmZAUgIWCMX5JpuMYyEMiZAA/u70G9pJhuwb1hR2CNxMUWxvGoOZ7hEY7EAGS/NMihJzQVc4v4AWINLgjQFR0QaQomqylQ9XsOZTrFkJi1d2Y46Cesq2Q1/lsdXeYti1MwvanlL9+5MQXSR+GAAA"
+  },
   "/images/real/regal-pflege.jpg": {
     "width": 540,
     "height": 720,
@@ -626,25 +1253,6 @@
       ]
     ],
     "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAACwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JaACdMoAlsBePb/bHrxKIA/ajVVQAAPKnY85243zqIpOKmK29BMmiQ/T9VhAquoirYS/GIng81HX6xoOlpKsifAqHG/gR5LWzO8r3omLN4IinwvuRY8l/1hoiHrTnMbsgqXaPdv3BuZn0tbkyEI3/qFZ1bgXVRnKoPSnQhLYmpaDgT2Fo23PcikbYmGBPRDq6LqlTi8kp4XTIWQAAAA=="
-  },
-  "/images/stock/coaching.jpg": {
-    "width": 1200,
-    "height": 675,
-    "variants": [
-      [
-        480,
-        "/images/opt/coaching-480.webp"
-      ],
-      [
-        960,
-        "/images/opt/coaching-960.webp"
-      ],
-      [
-        1200,
-        "/images/opt/coaching-1200.webp"
-      ]
-    ],
-    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBACdASoYAA4APu1iqU2ppaOiMAgBMB2JYgCw7B3ebAxAEqpVN/Q3kAD+4MtMFyS8Jl1PRWG+nxB2zxg5yKnhAg0uw36Hxh6G+iRLbRNryZhQdZOSMzWg8+5EDXYbuwjjwO+P50ctPiMocnspn9AgjXtOJ0RaC/Kn7LCdG8fr91QMwYIcWAAA"
   },
   "/images/stock/hands.jpg": {
     "width": 1600,

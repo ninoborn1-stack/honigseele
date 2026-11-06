@@ -2,17 +2,20 @@
 import { ArrowLeft, Check, Minus, Plus, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import { Placeholder } from '@/components/ui/badge';
 import { ArrowLink, Button } from '@/components/ui/button';
 import { RevealHeading } from '@/components/ui/motion';
+import { Photo } from '@/components/ui/photo';
 import { Reveal } from '@/components/ui/reveal';
 import { Eyebrow, Title } from '@/components/ui/typography';
 import { products as contentProducts, site } from '@/content';
 import type { Product } from '@/domain/types';
+import { cn } from '@/lib/cn';
 import { formatEuro } from '@/lib/format';
 import { useData } from '@/lib/use-data';
 import { useCart } from './cart';
 import { ProductTile } from './product-tile';
-import { ProductVisual } from './product-visual';
+import { hasPhoto, ProductVisual } from './product-visual';
 import { ritualLabel, ritualsOf } from './rituals';
 
 export function ProductDetail({ initial }: { initial: Product }) {
@@ -20,6 +23,9 @@ export function ProductDetail({ initial }: { initial: Product }) {
   const { data: all = contentProducts } = useData((db) => db.listProducts(), [], contentProducts);
   const product = all.find((p) => p.id === initial.id) ?? initial;
   const [qty, setQty] = useState(1);
+  const [shot, setShot] = useState(0);
+  const gallery = hasPhoto(product) ? (product.gallery?.length ? product.gallery : [product.image]) : [];
+  const noPrice = product.priceCents <= 0;
   const [added, setAdded] = useState(false);
   const { add } = useCart();
 
@@ -30,8 +36,8 @@ export function ProductDetail({ initial }: { initial: Product }) {
     .slice(0, 4);
 
   const sections = [
-    { title: 'Anwendung', text: product.usage },
-    { title: 'Inhaltsstoffe', text: product.ingredients },
+    ...(product.usage ? [{ title: 'Anwendung', text: product.usage }] : []),
+    ...(product.ingredients ? [{ title: 'Inhaltsstoffe', text: product.ingredients }] : []),
     { title: 'Versand & Rückgabe', text: `Versand innerhalb Deutschlands ${formatEuro(site.shipping.flatCents)}. Alles Weitere unter „Zahlung & Versand“ und in der Widerrufsbelehrung.` },
   ];
 
@@ -52,16 +58,33 @@ export function ProductDetail({ initial }: { initial: Product }) {
           </nav>
           <div className="mt-6 grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
             <div className="lg:sticky lg:top-[calc(var(--top-h,96px)+1rem)] lg:self-start">
-              <ProductVisual product={product} large className="aspect-[4/5] animate-fade rounded-[2.5rem] lg:aspect-auto lg:h-[calc(100svh-var(--top-h,96px)-3rem)]" />
+              <ProductVisual key={gallery[shot] ?? 'zeichnung'} product={product} image={gallery[shot]} large className="aspect-[4/5] animate-fade rounded-[2.5rem] lg:aspect-auto lg:h-[calc(100svh-var(--top-h,96px)-8rem)]" />
+              {gallery.length > 1 && (
+                <div className="mt-4 flex gap-3" role="tablist" aria-label="Produktfotos">
+                  {gallery.map((key, i) => (
+                    <button
+                      key={key}
+                      role="tab"
+                      aria-selected={shot === i}
+                      aria-label={`Foto ${i + 1} von ${gallery.length}`}
+                      onClick={() => setShot(i)}
+                      className={cn('h-16 w-16 overflow-hidden rounded-2xl border-2 transition-colors md:h-20 md:w-20', shot === i ? 'border-honey-950' : 'border-transparent opacity-70 hover:opacity-100')}
+                    >
+                      <Photo src={key} alt="" sizes="80px" className="h-full w-full !bg-cream-100" />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
             <div className="lg:py-10">
               <Eyebrow>{own.length ? own.map(ritualLabel).join(' · ') : 'Pflegeserie'}</Eyebrow>
               <RevealHeading as="h1" onLoad text={product.name} className="mt-6 text-[clamp(3rem,6.5vw,6.8rem)] leading-[0.95] tracking-[-0.02em]" />
               <div className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2">
-                <p className="font-serif text-5xl">{formatEuro(product.priceCents)}</p>
+                <p className="font-serif text-5xl">{noPrice ? 'Preis folgt' : formatEuro(product.priceCents)}</p>
                 {product.size && <p className="text-lg text-muted">{product.size}</p>}
               </div>
-              <p className="mt-2 text-xs text-muted">inkl. MwSt., zzgl. {formatEuro(site.shipping.flatCents)} Versand</p>
+              {!noPrice && <p className="mt-2 text-xs text-muted">inkl. MwSt., zzgl. {formatEuro(site.shipping.flatCents)} Versand</p>}
+              {product.needsInfo && <Placeholder label={`Angaben folgen: ${product.needsInfo}`} className="mt-4 whitespace-normal text-left" />}
 
               <Reveal delay={150}>
                 <p className="mt-10 max-w-lg text-lg leading-relaxed text-muted md:text-xl">{product.description}</p>
@@ -82,7 +105,7 @@ export function ProductDetail({ initial }: { initial: Product }) {
                 <Button
                   size="lg"
                   className="min-w-64 flex-1"
-                  disabled={!product.active || product.stock <= 0}
+                  disabled={!product.active || product.stock <= 0 || noPrice}
                   onClick={() => {
                     add({ productId: product.id, quantity: qty });
                     setAdded(true);
@@ -90,7 +113,7 @@ export function ProductDetail({ initial }: { initial: Product }) {
                   }}
                 >
                   {added && <Check className="h-4 w-4" strokeWidth={2} />}
-                  {product.stock <= 0 ? 'Gerade ausverkauft' : added ? 'Im Warenkorb' : `In den Warenkorb · ${formatEuro(product.priceCents * qty)}`}
+                  {noPrice ? 'Bald im Shop' : product.stock <= 0 ? 'Gerade ausverkauft' : added ? 'Im Warenkorb' : `In den Warenkorb · ${formatEuro(product.priceCents * qty)}`}
                 </Button>
               </div>
 

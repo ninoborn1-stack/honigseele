@@ -49,14 +49,14 @@ export function SmartImg({
       decoding="async"
       onLoad={done}
       style={entry.position ? { objectPosition: entry.position, transformOrigin: entry.position, ...style } : style}
-      className={cn('transition-opacity duration-700 ease-[var(--ease-soft)]', loaded ? 'opacity-100' : 'opacity-0', className)}
+      className={cn('transition-opacity duration-700 ease-[var(--ease-soft)]', loaded ? 'opacity-100' : 'opacity-0', entry.blend === 'multiply' && 'mix-blend-multiply', className)}
       {...rest}
     />
   );
 }
 
 /** Hintergrund mit Unschärfe-Vorschau, bis das echte Bild da ist */
-export const blurStyle = (entry: ImageEntry) => (entry.blur ? { backgroundImage: `url(${entry.blur})`, backgroundSize: 'cover', backgroundPosition: entry.position ?? 'center' } : undefined);
+export const blurStyle = (entry: ImageEntry) => (entry.blur && !entry.blend ? { backgroundImage: `url(${entry.blur})`, backgroundSize: 'cover', backgroundPosition: entry.position ?? 'center' } : undefined);
 
 /**
  * Bild aus der zentralen Zuordnung (Schlüssel wie "hero.shop") oder per Pfad.
